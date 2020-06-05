@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rolling Sky Evolution</title>
+	<link rel="stylesheet" href="ten_style.css">
+	<link href="css.css" rel="stylesheet">
+	<link rel="icon" href="img/icon.png">
+</head>
+<body>
+  <div id="canvascontainer">
+    <div id="percent">0%</div>
+  </div>
+  <div id="main">
+    <div id="level"></div>
+    <div id="score">☆10</div>
+    <div id="stars"></div>
+        <div id="level-d" >Extraステージ 登場！</div>
+        <a href="index.html" id="one_level">☆1</a>
+        <a href="two_index.html" href="two_index.html" id="two_level">☆2</a>
+        <a href="three_index.html" id="three_level">☆3</a>
+        <a href="four_index.html" id="four_level">☆4</a>
+        <a href="five_index.html" id="five_level">☆5</a>
+        <a href="six_index.html" id="six_level">☆6</a>
+        <a href="seven_index.html" id="seven_level">☆7</a>
+        <a href="eight_index.html" id="eight_level">☆8</a>
+        <a href="nine_index.html" id="nine_level">☆9</a>
+        <a href="ten_index.html" id="ten_level">☆10</a>
+    <div class="button" id="play">
+      <img id="play-arrow" src="img/arrow-right.svg">
+    </div>
+    <div class="button" id="retry">
+      <img id="retry-icon" src="img/arrow-right.svg">
+    </div>
+    <div class="button" id="next" onclick="nextLevel()">
+      <img id="next-arrow" src="img/next.svg">
+    </div>
+    <div class="button" id="prev" onclick="prevLevel()">
+      <img id="prev-arrow" src="img/previous.svg">
+    </div>
+  </div>
+  <audio src="bgm/Coming Soon.mp3" id="cs" loop></audio>
+  <script src="System/three.js"></script>
+	<script src="System/jquery.js"></script>
+	<script src="classes.js"></script>
+	<script src="ten_main.js"></script>
+	<script src="System/controls.js"></script>
+</body>
+</html>
