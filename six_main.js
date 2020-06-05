@@ -37,10 +37,6 @@ $.getJSON('six_levels.json', d => {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('Redo');
-         $('#stars').html('☆☆☆☆☆☆');
-        } else if (level == 4) {
          $('#level-d').html('50%までを無料でプレイできます');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
@@ -69,8 +65,6 @@ function start(e) {
             } else if (level == 2) {
             $('#summer').get(0).play();
             } else if (level == 3) {
-            $('#redo').get(0).play();
-            } else if (level == 4) {
             $('#yukkuri').get(0).play();
             } else {
             $('#cloud').get(0).play();
@@ -136,6 +130,12 @@ function nextLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#prev').show();
+  $('#retry').hide();
+  $('#play').show();
+  if (level == 3) {
+    $('#next').hide();
+  }
   if (level == 1) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('Dream of Space');
@@ -145,24 +145,16 @@ function nextLevel() {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('Redo');
-         $('#stars').html('☆☆☆☆☆☆');
-        } else if (level == 4) {
-         $('#level-d').html('50%までを無料でプレイできます');
+         $('#level-d').html('有料ステージ');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#play').hide();
+         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
            }
-  $('#prev').show();
-  $('#retry').hide();
-  $('#play').show();
-  if (level == 4) {
-    $('#next').hide();
-  }
 }
 
 function prevLevel() {
@@ -180,6 +172,12 @@ function prevLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#next').show();
+  $('#retry').hide();
+  $('#play').show();
+  if (level == 1) {
+    $('#prev').hide();
+  }
   if (level == 1) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('Dream of Space');
@@ -189,24 +187,16 @@ function prevLevel() {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('Redo');
-         $('#stars').html('☆☆☆☆☆☆');
-        } else if (level == 4) {
          $('#level-d').html('50%までを無料でプレイできます');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#play').hide();
+         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
            }
-  $('#next').show();
-  $('#retry').hide();
-  $('#play').show();
-  if (level == 1) {
-    $('#prev').hide();
-  }
 }
 
 const light = new THREE.HemisphereLight(0xeeeeee, 0x777777);
@@ -337,14 +327,6 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
-      if (star == 2) {
-      $('#level-d').html('未来を解き放つ');
-      }
-      $('#redo').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 4) {
       if (star == 2) {
       $('#level-d').html('続きを製品版でプレイしよう！');
       }
