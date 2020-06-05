@@ -133,6 +133,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
+  $('#PresentCode').hide();
   if (level == 3) {
     $('#next').hide();
   }
@@ -145,6 +146,7 @@ function nextLevel() {
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
          $('#play').hide();
+         $('#PresentCode').show();
         } else if (level == 3) {
          $('#level-d').html('Rolling Sky の財宝は俺様がいただくぜ');
          $('#level').html('The Lupin');
@@ -174,6 +176,7 @@ function prevLevel() {
   $('#next').show();
   $('#retry').hide();
   $('#play').show();
+  $('#PresentCode').hide();
   if (level == 1) {
     $('#prev').hide();
   }
@@ -186,6 +189,7 @@ function prevLevel() {
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
          $('#play').hide();
+         $('#PresentCode').show();
         } else if (level == 3) {
          $('#level-d').html('Rolling Sky の財宝は俺様がいただくぜ');
          $('#level').html('The Lupin');
