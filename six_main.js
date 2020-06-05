@@ -37,7 +37,7 @@ $.getJSON('six_levels.json', d => {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('50%までを無料でプレイできます');
+         $('#level-d').html('開催日　7月3日');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
         } else {
@@ -145,7 +145,7 @@ function nextLevel() {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('有料ステージ');
+         $('#level-d').html('開催日　7月3日');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
          $('#play').hide();
@@ -187,7 +187,7 @@ function prevLevel() {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('50%までを無料でプレイできます');
+         $('#level-d').html('開催日　7月3日');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
          $('#play').hide();
@@ -317,6 +317,9 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+      if (star == 2) {
+      $('#level-d').html('宇宙へと旅立つ');
+      }
       $('#dreamofspace').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
@@ -328,7 +331,7 @@ function gameover() {
 });
      } else if (level == 3) {
       if (star == 2) {
-      $('#level-d').html('続きを製品版でプレイしよう！');
+      $('#level-d').html('神秘の森のゆっくりプレイス');
       }
       $('#yukkuri').each(function(){
     this.pause(); // Stop playing
