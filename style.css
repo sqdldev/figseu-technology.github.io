@@ -379,12 +379,12 @@ canvas {
   transform: 0.5em;
 }
 #seven_level {
-  color: #A1A1A1;
+  color: #00A0FF;
   position: fixed;
   text-decoration: none;
   top: 15%;
   left: 52%;
-  border: double #A1A1A1;
+  border: double #00A0FF;
   padding: 5px;
   border-radius: 1px;
   text-align: right;
@@ -395,12 +395,12 @@ canvas {
   transform: 0.5em;
 }
 #eight_level {
-  color: #A1A1A1;
+  color: #00B748;
   position: fixed;
   text-decoration: none;
   top: 15%;
   left: 63%;
-  border: double #A1A1A1;
+  border: double #00B748;
   padding: 5px;
   border-radius: 1px;
   text-align: right;
@@ -411,12 +411,12 @@ canvas {
   transform: 0.5em;
 }
 #nine_level {
-  color: #A1A1A1;
+  color: #FF4BCC;
   position: fixed;
   text-decoration: none;
   top: 15%;
   left: 74%;
-  border: double #A1A1A1;
+  border: double #FF4BCC;
   padding: 5px;
   border-radius: 1px;
   text-align: right;
@@ -427,12 +427,12 @@ canvas {
   transform: 0.5em;
 }
 #ten_level {
-  color: #A1A1A1;
+  color: #FF0D00;
   position: fixed;
   text-decoration: none;
   top: 15%;
   left: 85%;
-  border: double #A1A1A1;
+  border: double #FF221D;
   padding: 5px;
   border-radius: 1px;
   text-align: right;
