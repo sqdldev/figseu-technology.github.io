@@ -29,20 +29,12 @@ $.getJSON('four_levels.json', d => {
   $('#next').show();
   $('#score').hide();
   if (level == 1) {
-      $('#level-d').html('Extraステージ');
-      $('#level').html('夢色サンドイッチ');
-      $('#stars').html('☆☆☆☆');
-     } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('Bluestone Alley');
          $('#stars').html('☆☆☆☆');
-        } else if (level == 3) {
+        } else if (level == 2) {
          $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
-         $('#stars').html('☆☆☆☆');
-        } else if (level == 4) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('Ghost Dance');
          $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -65,13 +57,9 @@ function start(e) {
     $('#main').fadeOut(300);
     $('#name').hide();
     if (level == 1) {
-        $('#syounen').get(0).play();
-        } else if (level == 2) {
             $('#ever_down').get(0).play();
-            } else if (level == 3) {
+            } else if (level == 2) {
             $('#bad_apple').get(0).play();
-            } else if (level == 4) {
-            $('#ecchi').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -137,20 +125,12 @@ function nextLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-      $('#level-d').html('Extraステージ');
-      $('#level').html('夢色サンドイッチ');
-      $('#stars').html('☆☆☆☆');
-     } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('Bluestone Alley');
          $('#stars').html('☆☆☆☆');
-        } else if (level == 3) {
+        } else if (level == 2) {
          $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
-         $('#stars').html('☆☆☆☆');
-        } else if (level == 4) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('Ghost Dance');
          $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -160,7 +140,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 2) {
     $('#next').hide();
   }
 }
@@ -181,20 +161,12 @@ function prevLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-      $('#level-d').html('Extraステージ');
-      $('#level').html('夢色サンドイッチ');
-      $('#stars').html('☆☆☆☆');
-     } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('Bluestone Alley');
          $('#stars').html('☆☆☆☆');
-        } else if (level == 3) {
+        } else if (level == 2) {
          $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
-         $('#stars').html('☆☆☆☆');
-        } else if (level == 4) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('Ghost Dance');
          $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -327,15 +299,6 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
-      if (star == 2) {
-      $('#level-d').html('パステルカラードリーム');
-      $('#stars').html('☆☆☆☆');
-      }
-      $('#syounen').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 2) {
          if (star == 2) {
       $('#level-d').html('甦る記憶の隅に');
       }
@@ -343,19 +306,11 @@ function gameover() {
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
-     } else if (level == 3) {
+     } else if (level == 2) {
          if (star == 2) {
       $('#level-d').html('全てを壊す光');
       }
       $('#bad_apple').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 4) {
-         if (star == 2) {
-      $('#level-d').html('ループする世界');
-      }
-      $('#ecchi').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
