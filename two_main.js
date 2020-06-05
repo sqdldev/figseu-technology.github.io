@@ -148,9 +148,10 @@ function nextLevel() {
          $('#play').hide();
          $('#PresentCode').show();
         } else if (level == 3) {
-         $('#level-d').html('Rolling Sky の財宝は俺様がいただくぜ');
-         $('#level').html('The Lupin');
+         $('#level-d').html('');
+         $('#level').html('Coming Soon');
          $('#stars').html('☆☆');
+         $('#play').hide();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -191,9 +192,10 @@ function prevLevel() {
          $('#play').hide();
          $('#PresentCode').show();
         } else if (level == 3) {
-         $('#level-d').html('Rolling Sky の財宝は俺様がいただくぜ');
-         $('#level').html('The Lupin');
+         $('#level-d').html('');
+         $('#level').html('Coming Soon');
          $('#stars').html('☆☆');
+         $('#play').hide();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
