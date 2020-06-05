@@ -134,7 +134,7 @@ function nextLevel() {
   $('#retry').hide();
   $('#play').show();
   $('#PresentCode').hide();
-  if (level == 3) {
+  if (level == 2) {
     $('#next').hide();
   }
   if (level == 1) {
