@@ -315,7 +315,7 @@ function gameover() {
   if (level == 1) {
       if (star == 2) {
       $('#level-d').html('Lets go Rolling Sky World !!');
-      $('#stars').html('☆');
+      $('#stars').html('☆☆☆☆☆☆');
       }
       $('#cloud').each(function(){
     this.pause(); // Stop playing
