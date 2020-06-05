@@ -30,15 +30,11 @@ $.getJSON('two_levels.json', d => {
   $('#score').hide();
   if (level == 1) {
          $('#level-d').html('ボーナスステージ');
-         $('#level').html('無限列車');
+         $('#level').html('霧の洞窟');
          $('#stars').html('☆☆');
         } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('幻想郷');
-         $('#stars').html('☆☆');
-        } else if (level == 3) {
-         $('#level-d').html('Rolling Sky の財宝は俺様がいただくぜ');
-         $('#level').html('The Lupin');
          $('#stars').html('☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -64,8 +60,6 @@ function start(e) {
         $('#kimetu').get(0).play();
             } else if (level == 2) {
             $('#piknik').get(0).play();
-            } else if (level == 3) {
-            $('#lupin').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -139,7 +133,7 @@ function nextLevel() {
   }
   if (level == 1) {
          $('#level-d').html('ボーナスステージ');
-         $('#level').html('無限列車');
+         $('#level').html('霧の洞窟');
          $('#stars').html('☆☆');
         } else if (level == 2) {
          $('#level-d').html('有料ステージ');
@@ -183,7 +177,7 @@ function prevLevel() {
   }
   if (level == 1) {
          $('#level-d').html('ボーナスステージ');
-         $('#level').html('無限列車');
+         $('#level').html('霧の洞窟');
          $('#stars').html('☆☆');
         } else if (level == 2) {
          $('#level-d').html('有料ステージ');
@@ -321,6 +315,9 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+        if (star == 2) {
+             $('#level-d').html('帰らずの洞穴');
+      }
       $('#kimetu').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
