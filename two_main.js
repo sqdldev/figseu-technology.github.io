@@ -130,14 +130,21 @@ function nextLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#prev').show();
+  $('#retry').hide();
+  $('#play').show();
+  if (level == 3) {
+    $('#next').hide();
+  }
   if (level == 1) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('無限列車');
          $('#stars').html('☆☆');
         } else if (level == 2) {
-         $('#level-d').html('ボーナスステージ');
+         $('#level-d').html('有料ステージ');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
+         $('#play').hide();
         } else if (level == 3) {
          $('#level-d').html('Rolling Sky の財宝は俺様がいただくぜ');
          $('#level').html('The Lupin');
@@ -147,12 +154,6 @@ function nextLevel() {
             $('#level').html('Level ' + level);
             $('#stars').html('');
            }
-  $('#prev').show();
-  $('#retry').hide();
-  $('#play').show();
-  if (level == 3) {
-    $('#next').hide();
-  }
 }
 
 function prevLevel() {
@@ -170,14 +171,21 @@ function prevLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#next').show();
+  $('#retry').hide();
+  $('#play').show();
+  if (level == 1) {
+    $('#prev').hide();
+  }
   if (level == 1) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('無限列車');
          $('#stars').html('☆☆');
         } else if (level == 2) {
-         $('#level-d').html('ボーナスステージ');
+         $('#level-d').html('有料ステージ');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
+         $('#play').hide();
         } else if (level == 3) {
          $('#level-d').html('Rolling Sky の財宝は俺様がいただくぜ');
          $('#level').html('The Lupin');
@@ -187,12 +195,6 @@ function prevLevel() {
             $('#level').html('Level ' + level);
             $('#stars').html('');
            }
-  $('#next').show();
-  $('#retry').hide();
-  $('#play').show();
-  if (level == 1) {
-    $('#prev').hide();
-  }
 }
 
 const light = new THREE.HemisphereLight(0xeeeeee, 0x777777);
