@@ -192,7 +192,6 @@ class Ball {
             this.landed = true;
             v.mesh.position.y = -0.4;
             v.line.position.y = -0.4;
-            $('#UPBlock').get(0).play();
           }
         }
       });
@@ -202,55 +201,30 @@ class Ball {
             this.landed = true;
             v.mesh.position.y = -0.4;
             v.line.position.y = -0.4;
-            $('#UPBlock').each(function(){
-                  this.pause(); // Stop playing
-                  this.currentTime = 0; // Reset time
-            });
-            $('#UPBlock').get(0).play();
           }
         }
       });
       world.forEach(v => {
         if (v instanceof Speedup && this.landed) {
           if (v.detect() && started) {
-            $('#speedup').each(function(){
-                  this.pause(); // Stop playing
-                  this.currentTime = 0; // Reset time
-            });
-            $('#speedup').get(0).play();
           }
         }
       });
       world.forEach(v => {
         if (v instanceof Speeddown && this.landed) {
           if (v.detect() && started) {
-            $('#speeddown').each(function(){
-                  this.pause(); // Stop playing
-                  this.currentTime = 0; // Reset time
-            });
-            $('#speeddown').get(0).play();
           }
         }
       });
       world.forEach(v => {
         if (v instanceof Hole && this.landed) {
           if (v.detect() && started) {
-           $('#speedup').each(function(){
-                  this.pause(); // Stop playing
-                  this.currentTime = 0; // Reset time
-            });
-           $('#speedup').get(0).play();
           }
         }
       });
       world.forEach(v => {
         if (v instanceof Back && this.landed) {
           if (v.detect() && started) {
-            $('#speeddown').each(function(){
-                  this.pause(); // Stop playing
-                  this.currentTime = 0; // Reset time
-            });
-            $('#speeddown').get(0).play();
           }
         }
       });
