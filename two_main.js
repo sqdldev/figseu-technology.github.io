@@ -136,7 +136,7 @@ function nextLevel() {
          $('#level').html('霧の洞窟');
          $('#stars').html('☆☆');
         } else if (level == 2) {
-         $('#level-d').html('有料ステージ');
+         $('#level-d').html('開催日　3月7日');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
          $('#play').hide();
@@ -180,7 +180,7 @@ function prevLevel() {
          $('#level').html('霧の洞窟');
          $('#stars').html('☆☆');
         } else if (level == 2) {
-         $('#level-d').html('有料ステージ');
+         $('#level-d').html('開催日　3月7日');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
          $('#play').hide();
