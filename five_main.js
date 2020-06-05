@@ -33,26 +33,14 @@ $.getJSON('five_levels.json', d => {
          $('#level').html('桜');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('Music by サカナクション');
-         $('#level').html('新 宝 島');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 3) {
          $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Fifty Fifty');
          $('#stars').html('☆☆☆☆☆');
-        } else if (level == 4) {
+        } else if (level == 3) {
          $('#level-d').html('カリスマのステージ');
          $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
-        } else if (level == 5) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('アスノヨゾラ哨戒班');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 6) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('紅蓮華');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 7) {
+        } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
@@ -79,16 +67,10 @@ function start(e) {
     if (level == 1) {
             $('#sakura').get(0).play();
             } else if (level == 2) {
-            $('#sintakarajima').get(0).play();
-            } else if (level == 3) {
             $('#fifty').get(0).play();
-            } else if (level == 4) {
+            } else if (level == 3) {
             $('#pinsir').get(0).play();
-            } else if (level == 5) {
-            $('#ay').get(0).play();
-            } else if (level == 6) {
-            $('#kimetu').get(0).play();
-            } else if (level == 7) {
+            } else if (level == 4) {
             $('#piknik').get(0).play();
             } else {
             $('#cloud').get(0).play();
@@ -159,26 +141,14 @@ function nextLevel() {
          $('#level').html('桜');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('Music by サカナクション');
-         $('#level').html('新 宝 島');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 3) {
          $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Fifty Fifty');
          $('#stars').html('☆☆☆☆☆');
-        } else if (level == 4) {
+        } else if (level == 3) {
          $('#level-d').html('カリスマのステージ');
          $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
-        } else if (level == 5) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('アスノヨゾラ哨戒班');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 6) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('紅蓮華');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 7) {
+        } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
@@ -190,7 +160,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 7) {
+  if (level == 4) {
     $('#next').hide();
   }
 }
@@ -215,26 +185,14 @@ function prevLevel() {
          $('#level').html('桜');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('Music by サカナクション');
-         $('#level').html('新 宝 島');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 3) {
          $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Fifty Fifty');
          $('#stars').html('☆☆☆☆☆');
-        } else if (level == 4) {
+        } else if (level == 3) {
          $('#level-d').html('カリスマのステージ');
          $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
-        } else if (level == 5) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('アスノヨゾラ哨戒班');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 6) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('紅蓮華');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 7) {
+        } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
@@ -384,37 +342,16 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
-      $('#sintakarajima').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 3) {
       $('#fifty').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
-     } else if (level == 4) {
+     } else if (level == 3) {
       $('#pinsir').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
-     } else if (level == 5) {
-      if (star == 2) {
-          $('#level-d').html('今日の日をいつか思い出せ僕ら！');
-         }
-      $('#ay').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 6) {
-      if (star == 2) {
-          $('#level-d').html('運命を照らして');
-         }
-      $('#kimetu').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 7) {
+     } else if (level == 4) {
          if (star == 2) {
              $('#level-d').html('Thanks you for playing!!');
       }
