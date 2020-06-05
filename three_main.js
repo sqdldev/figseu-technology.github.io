@@ -37,7 +37,7 @@ $.getJSON('three_levels.json', d => {
          $('#level').html('戦国時代');
          $('#stars').html('☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('50%までを無料でプレイできます');
+         $('#level-d').html('開催日　5月14日');
          $('#level').html('滅びた文明');
          $('#stars').html('☆☆☆');
         } else {
@@ -130,6 +130,12 @@ function nextLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#prev').show();
+  $('#retry').hide();
+  $('#play').show();
+  if (level == 3) {
+    $('#next').hide();
+  }
   if (level == 1) {
          $('#level-d').html('Designed by ムー');
          $('#level').html('スタジアム');
@@ -139,20 +145,16 @@ function nextLevel() {
          $('#level').html('戦国時代');
          $('#stars').html('☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('50%までを無料でプレイできます');
+         $('#level-d').html('開催日　5月14日');
          $('#level').html('滅びた文明');
          $('#stars').html('☆☆☆');
+         $('#play').hide();
+         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
            }
-  $('#prev').show();
-  $('#retry').hide();
-  $('#play').show();
-  if (level == 3) {
-    $('#next').hide();
-  }
 }
 
 function prevLevel() {
@@ -170,6 +172,12 @@ function prevLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#next').show();
+  $('#retry').hide();
+  $('#play').show();
+  if (level == 1) {
+    $('#prev').hide();
+  }
   if (level == 1) {
          $('#level-d').html('Designed by ムー');
          $('#level').html('スタジアム');
@@ -179,20 +187,16 @@ function prevLevel() {
          $('#level').html('戦国時代');
          $('#stars').html('☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('50%までを無料でプレイできます');
+         $('#level-d').html('開催日　5月14日');
          $('#level').html('滅びた文明');
          $('#stars').html('☆☆☆');
+         $('#play').hide();
+         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
            }
-  $('#next').show();
-  $('#retry').hide();
-  $('#play').show();
-  if (level == 1) {
-    $('#prev').hide();
-  }
 }
 
 const light = new THREE.HemisphereLight(0xeeeeee, 0x777777);
@@ -327,7 +331,7 @@ function gameover() {
 });
      } else if (level == 3) {
        if (star == 2) {
-             $('#level-d').html('続きは製品版でプレイ！');
+             $('#level-d').html('文明は甦る夢を見る');
       }
       $('#fell').each(function(){
     this.pause(); // Stop playing
