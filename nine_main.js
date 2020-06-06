@@ -24,7 +24,8 @@ let reqId;
 $.getJSON('nine_levels.json', d => {
   data = d;
   loadLevel(level);
-  $('#play').show();
+  $('#play').hide();
+  $('#PresentCode').show();
   $('#play').click(start);
   $('#next').hide();
   $('#score').hide();
