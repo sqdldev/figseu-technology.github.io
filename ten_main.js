@@ -121,7 +121,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 3) {
+  if (level == 4) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -146,6 +146,8 @@ function nextLevel() {
       $('#level-d').html('開催日　8月1日');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -196,6 +198,8 @@ function prevLevel() {
       $('#level-d').html('開催日　8月1日');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
