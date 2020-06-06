@@ -26,14 +26,10 @@ $.getJSON('nine_levels.json', d => {
   loadLevel(level);
   $('#play').show();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
   if (level == 1) {
-      $('#level-d').html('Extraステージ');
-      $('#level').html('Micro Emotion');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-     } else if (level == 2) {
-      $('#level-d').html('Extraステージ');
+      $('#level-d').html('開催日　6月6日');
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
@@ -57,13 +53,9 @@ function start(e) {
     $('#main').fadeOut(300);
     $('#name').hide();
     if (level == 1) {
-        $('#HJA').get(0).play();
-        } else if (level == 1) {
-        $('#HJA').get(0).play();
-        } else if (level == 2) {
         $('#FELL').get(0).play();
         } else {
-            $('#HJA').get(0).play();
+            $('#FELL').get(0).play();
             }
     reset();
     world.forEach(v => {
@@ -126,12 +118,14 @@ function nextLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#prev').show();
+  $('#retry').hide();
+  $('#play').show();
   if (level == 1) {
-      $('#level-d').html('Extraステージ');
-      $('#level').html('Micro Emotion');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-     } else if (level == 2) {
-      $('#level-d').html('Extraステージ');
+    $('#next').hide();
+  }
+  if (level == 1) {
+      $('#level-d').html('開催日　6月6日');
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
@@ -139,12 +133,6 @@ function nextLevel() {
             $('#level').html('Level ' + level);
             $('#stars').html('');
            }
-  $('#prev').show();
-  $('#retry').hide();
-  $('#play').show();
-  if (level == 2) {
-    $('#next').hide();
-  }
 }
 
 function prevLevel() {
@@ -162,12 +150,14 @@ function prevLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#next').show();
+  $('#retry').hide();
+  $('#play').show();
   if (level == 1) {
-      $('#level-d').html('Extraステージ');
-      $('#level').html('Micro Emotion');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-     } else if (level == 2) {
-      $('#level-d').html('Extraステージ');
+    $('#prev').hide();
+  }
+  if (level == 1) {
+      $('#level-d').html('開催日　6月6日');
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
@@ -175,12 +165,6 @@ function prevLevel() {
             $('#level').html('Level ' + level);
             $('#stars').html('');
            }
-  $('#next').show();
-  $('#retry').hide();
-  $('#play').show();
-  if (level == 1) {
-    $('#prev').hide();
-  }
 }
 
 const light = new THREE.HemisphereLight(0xeeeeee, 0x777777);
@@ -300,15 +284,7 @@ function gameover() {
   $('#score').show();
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
-  if (level == 1) {
-      if (star == 2) {
-      $('#level-d').html('ハッカーの悪遊戯');
-      }
-      $('#HJA').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 2) { 
+  if (level == 1) { 
      if (star == 2) {
       $('#level-d').html('滅びる世界');
       }
