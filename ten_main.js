@@ -128,14 +128,20 @@ function nextLevel() {
       $('#level-d').html('開催日　9月21日');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else if (level == 2) {
       $('#level-d').html('開催日　3月4日');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else if (level == 3) {
       $('#level-d').html('開催日　1月1日');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else if (level == 4) {
       $('#level-d').html('開催日　8月1日');
       $('#level').html('The Kyanite');
@@ -172,14 +178,20 @@ function prevLevel() {
       $('#level-d').html('開催日　9月21日');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else if (level == 2) {
       $('#level-d').html('開催日　3月4日');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else if (level == 3) {
       $('#level-d').html('開催日　1月1日');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else if (level == 4) {
       $('#level-d').html('開催日　8月1日');
       $('#level').html('The Kyanite');
