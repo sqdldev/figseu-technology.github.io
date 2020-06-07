@@ -180,8 +180,8 @@ function prevLevel() {
       $('#level-d').html('開催日　9月21日');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      $('#play').hide();
-      $('#PresentCode').show();
+      $('#play').show();
+      $('#PresentCode').hide();
      } else if (level == 2) {
       $('#level-d').html('開催日　3月4日');
       $('#level').html('The Beryl');
