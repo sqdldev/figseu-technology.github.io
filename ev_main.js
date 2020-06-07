@@ -23,8 +23,8 @@ let reqId;
 $.getJSON('ev_levels.json', d => {
   data = d;
   loadLevel(level);
-  $('#play').hide();
-  $('#PresentCode').show();
+  $('#play').show();
+  $('#PresentCode').hide();
   $('#play').click(start);
   $('#next').hide();
   $('#score').hide();
