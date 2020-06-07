@@ -442,6 +442,22 @@ canvas {
   font-size: 20px;
   transform: 0.5em;
 }
+#ev_level {
+  color: #FFA500;
+  position: fixed;
+  text-decoration: none;
+  top: 2%;
+  left: 80%;
+  border: double #FFA500;
+  padding: 5px;
+  border-radius: 1px;
+  text-align: right;
+  display: inline-block;
+  font-family: serif;
+  font-weight: 700;
+  font-size: 20px;
+  transform: 0.5em;
+}
 #play-arrow {
   width: 50px;
   padding: 20px;
