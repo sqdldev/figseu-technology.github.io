@@ -29,7 +29,7 @@ $.getJSON('ten_levels.json', d => {
   $('#next').show();
   $('#score').hide();
   if (level == 1) {
-      $('#level-d').html('開催日　9月21日');
+      $('#level-d').html('超難関');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
@@ -125,7 +125,7 @@ function nextLevel() {
     $('#next').hide();
   }
   if (level == 1) {
-      $('#level-d').html('開催日　9月21日');
+      $('#level-d').html('超難関');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       $('#play').show();
@@ -177,7 +177,7 @@ function prevLevel() {
     $('#prev').hide();
   }
   if (level == 1) {
-      $('#level-d').html('開催日　9月21日');
+      $('#level-d').html('超難関');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       $('#play').show();
