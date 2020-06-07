@@ -31,7 +31,7 @@ $.getJSON('ev_levels.json', d => {
   if (level == 1) {
       $('#level-d').html('イベントステージ');
       $('#level').html('Meison');
-      $('#stars').html('');
+      $('#stars').html('☆☆☆☆☆');
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
