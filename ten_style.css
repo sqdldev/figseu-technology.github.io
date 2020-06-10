@@ -78,6 +78,7 @@ canvas {
   bottom: 20px;
 }
 #next{
+  color: #FFFFFF;
   display: none;
   width: 70px;
   height: 70px;
@@ -86,6 +87,7 @@ canvas {
   font-size: 50px;
 }
 #prev{
+  color: #FFFFFF;
   display: none;
   width: 70px;
   height: 70px;
