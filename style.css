@@ -5,6 +5,9 @@ body {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 }
+h3 {
+  color: #FFFFFF;
+}
 #PresentCode {
   display: none;
   border: solid #969696;
