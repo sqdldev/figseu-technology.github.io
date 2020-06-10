@@ -58,6 +58,7 @@ canvas {
   font-weight: 700;
 }
 #play{
+  color: #FFFFFF;
   display: none;
   width: 200px;
   height: 100px;
