@@ -465,6 +465,7 @@ canvas {
   transform: 0.5em;
 }
 #play-arrow {
+  color: #FFFFFF;
   width: 50px;
   padding: 20px;
 }
