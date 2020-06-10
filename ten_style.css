@@ -6,6 +6,7 @@ body {
 	-ms-user-select: none;
 }
 #PresentCode {
+  color: #FFFFFF;
   display: none;
   border: solid #FF322F;
   position: fixed;
