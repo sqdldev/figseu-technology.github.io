@@ -20,7 +20,7 @@ let level = 1;
 let star = 0;
 let data;
 let reqId;
-$.getJSON('ten_levels.json', d => {
+$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
