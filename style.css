@@ -211,7 +211,7 @@ canvas {
     width: 200px;
     height: 100px;
     left: 40%;
-    top: 5%;
+    top: 10%;
 }
 #retry{
   display: none;
