@@ -21,7 +21,7 @@ let star = 0;
 let wave = 0;
 let data;
 let reqId;
-$.getJSON('levels.json', d => {
+$.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
@@ -39,6 +39,18 @@ $.getJSON('levels.json', d => {
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('決勝戦');
+         $('#stars').html('☆');
+        } else if (level == 4) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('デジタルの世界');
+         $('#stars').html('☆');
+        } else if (level == 5) {
+         $('#level-d').html('チュートリアルステージ');
+         $('#level').html('孤島');
+         $('#stars').html('☆');
+        } else if (level == 6) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('ピクニック');
          $('#stars').html('☆');
         } else {
             $('#level-d').html('開発中');
@@ -66,6 +78,12 @@ function start(e) {
             $('#sta').get(0).play();
             } else if (level == 3) {
             $('#cst').get(0).play();
+            } else if (level == 4) {
+            $('#dtw').get(0).play();
+            } else if (level == 5) {
+            $('#kt').get(0).play();
+            } else if (level == 6) {
+            $('#pknk').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -142,6 +160,18 @@ function nextLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('決勝戦');
          $('#stars').html('☆');
+        } else if (level == 4) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('デジタルの世界');
+         $('#stars').html('☆');
+        } else if (level == 5) {
+         $('#level-d').html('チュートリアルステージ');
+         $('#level').html('孤島');
+         $('#stars').html('☆');
+        } else if (level == 6) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('ピクニック');
+         $('#stars').html('☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -150,7 +180,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 3) {
+  if (level == 6) {
     $('#next').hide();
   }
 }
@@ -177,6 +207,18 @@ function prevLevel() {
      } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('夜道');
+         $('#stars').html('☆');
+        } else if (level == 4) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('デジタルの世界');
+         $('#stars').html('☆');
+        } else if (level == 5) {
+         $('#level-d').html('チュートリアルステージ');
+         $('#level').html('孤島');
+         $('#stars').html('☆');
+        } else if (level == 6) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('ピクニック');
          $('#stars').html('☆');
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
@@ -328,6 +370,21 @@ function gameover() {
 });
      } else if (level == 3) {
       $('#cst').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 4) {
+      $('#dtw').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) {
+      $('#kt').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 6) {
+      $('#pknk').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
