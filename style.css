@@ -181,6 +181,38 @@ canvas {
   left: calc(50% - 200px / 2);
   bottom: 20px;
 }
+#play_nav {
+    position: fixed;
+    color: #FFFFFF;
+    width: 200px;
+    height: 100px;
+    left: 40%;
+    bottom: 48px;
+}
+#next_nav {
+    position: fixed;
+    color: #FFFFFF;
+    width: 200px;
+    height: 100px;
+    left: 70%;
+    bottom: 48px;
+}
+#prev_nav {
+    position: fixed;
+    color: #FFFFFF;
+    width: 200px;
+    height: 100px;
+    left: 0%;
+    bottom: 48px;
+}
+#level_nav {
+    position: fixed;
+    color: #FFFFFF;
+    width: 200px;
+    height: 100px;
+    left: 40%;
+    top: 25%;
+}
 #retry{
   display: none;
   width: 200px;
