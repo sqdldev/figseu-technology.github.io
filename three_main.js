@@ -40,6 +40,10 @@ $.getJSON('three_levels.json', d => {
          $('#level-d').html('開催日　5月14日');
          $('#level').html('滅びた文明');
          $('#stars').html('☆☆☆');
+        } else if (level == 4) {
+         $('#level-d').html('6月限定ステージ');
+         $('#level').html('梅雨');
+         $('#stars').html('☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -66,6 +70,8 @@ function start(e) {
             $('#samurai').get(0).play();
             } else if (level == 3) {
             $('#fell').get(0).play();
+            } else if (level == 4) {
+            $('#rain').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -150,6 +156,10 @@ function nextLevel() {
          $('#stars').html('☆☆☆');
          $('#play').hide();
          $('#PresentCode').show();
+        } else if (level == 4) {
+         $('#level-d').html('6月限定ステージ');
+         $('#level').html('梅雨');
+         $('#stars').html('☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -192,6 +202,10 @@ function prevLevel() {
          $('#stars').html('☆☆☆');
          $('#play').hide();
          $('#PresentCode').show();
+        } else if (level == 4) {
+         $('#level-d').html('6月限定ステージ');
+         $('#level').html('梅雨');
+         $('#stars').html('☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -334,6 +348,14 @@ function gameover() {
              $('#level-d').html('文明は甦る夢を見る');
       }
       $('#fell').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 4) {
+       if (star == 2) {
+             $('#level-d').html('空に舞う雨のダンス');
+      }
+      $('#rain').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
