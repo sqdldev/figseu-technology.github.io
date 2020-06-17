@@ -21,7 +21,7 @@ let star = 0;
 let wave = 0;
 let data;
 let reqId;
-$.getJSON('three_levels.json', d => {
+$.getJSON('QrJSs7WNhkQM4mkdWzwu8jGCtHVenGBz7VVEYG35FYwtF36TKt.json', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
