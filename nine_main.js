@@ -33,6 +33,10 @@ $.getJSON('nine_levels.json', d => {
       $('#level-d').html('開催日　6月6日');
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
+     } else if (level == 2) {
+      $('#level-d').html('開催日　1月1日');
+      $('#level').html('True Fell Gate');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -55,6 +59,8 @@ function start(e) {
     $('#name').hide();
     if (level == 1) {
         $('#FELL').get(0).play();
+        } else if (level == 2) {
+        $('#TFE').get(0).play();
         } else {
             $('#FELL').get(0).play();
             }
@@ -128,6 +134,10 @@ function nextLevel() {
   if (level == 1) {
       $('#level-d').html('開催日　6月6日');
       $('#level').html('Fell Gate');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+     } else if (level == 2) {
+      $('#level-d').html('開催日　1月1日');
+      $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
             $('#level-d').html('開発中');
@@ -290,6 +300,14 @@ function gameover() {
       $('#level-d').html('滅びる世界');
       }
       $('#FELL').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 2) { 
+     if (star == 2) {
+      $('#level-d').html('世界は新たに創造される');
+      }
+      $('#TFE').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
