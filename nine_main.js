@@ -36,7 +36,7 @@ $.getJSON('nine_levels.json', d => {
      } else if (level == 2) {
       $('#level-d').html('開催日　1月1日');
       $('#level').html('True Fell Gate');
-      $('#stars').html('☆☆☆☆✭☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -138,7 +138,7 @@ function nextLevel() {
      } else if (level == 2) {
       $('#level-d').html('開催日　1月1日');
       $('#level').html('True Fell Gate');
-      $('#stars').html('☆☆☆☆✭☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#play').hide();
       $('#PresentCode').show();
      } else {
@@ -176,7 +176,7 @@ function prevLevel() {
      } else if (level == 2) {
       $('#level-d').html('開催日　1月1日');
       $('#level').html('True Fell Gate');
-      $('#stars').html('☆☆☆☆✭☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#play').hide();
       $('#PresentCode').show();
      } else {
