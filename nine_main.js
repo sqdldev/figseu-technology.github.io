@@ -24,13 +24,13 @@ let reqId;
 $.getJSON('nine_levels.json', d => {
   data = d;
   loadLevel(level);
-  $('#play').hide();
-  $('#PresentCode').show();
+  $('#play').show();
+  $('#PresentCode').hide();
   $('#play').click(start);
-  $('#next').hide();
+  $('#next').show();
   $('#score').hide();
   if (level == 1) {
-      $('#level-d').html('開催日　6月6日');
+      $('#level-d').html('Extra ステージ');
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
@@ -128,17 +128,19 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 1) {
+  if (level == 2) {
     $('#next').hide();
   }
   if (level == 1) {
-      $('#level-d').html('開催日　6月6日');
+      $('#level-d').html('Extra ステージ');
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
       $('#level-d').html('開催日　1月1日');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -168,9 +170,15 @@ function prevLevel() {
     $('#prev').hide();
   }
   if (level == 1) {
-      $('#level-d').html('開催日　6月6日');
+      $('#level-d').html('Extra ステージ');
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
+     } else if (level == 2) {
+      $('#level-d').html('開催日　1月1日');
+      $('#level').html('True Fell Gate');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#PresentCode').show();
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -185,6 +193,7 @@ function loadLevel(level) {
   const index = level - 1;
   renderer.setClearColor(parseInt(data[index].background));
   ball.mesh.material.color.setHex(parseInt(data[index].ball));
+  scene.fog = new THREE.Fog(0x98FFEF, 3, 13);
   for (var i in data[index].data) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
