@@ -27,12 +27,18 @@ $.getJSON('seven_levels.json', d => {
   $('#play').hide();
   $('#PresentCode').show();
   $('#play').click(start);
-  $('#next').hide();
+  $('#next').show();
   $('#score').hide();
   if (level == 1) {
-         $('#level-d').html('開催日　2月15日');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+        } else if (level == 2) {
+         $('#level-d').html('開催日　2月15日');
+         $('#level').html('True Shrine');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#play').hide();
+         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -55,6 +61,8 @@ function start(e) {
     $('#name').hide();
     if (level == 1) {
             $('#shrine').get(0).play();
+            } else if (level == 2) {
+            $('#ts').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -120,9 +128,15 @@ function nextLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-         $('#level-d').html('開催日　2月15日');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+        } else if (level == 2) {
+         $('#level-d').html('開催日　2月15日');
+         $('#level').html('True Shrine');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#play').hide();
+         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -131,7 +145,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 1) {
+  if (level == 2) {
     $('#next').hide();
   }
 }
@@ -152,9 +166,15 @@ function prevLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-         $('#level-d').html('開催日　2月15日');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+        } else if (level == 2) {
+         $('#level-d').html('開催日　2月15日');
+         $('#level').html('True Shrine');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#play').hide();
+         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -175,6 +195,7 @@ function loadLevel(level) {
   const index = level - 1;
   renderer.setClearColor(parseInt(data[index].background));
   ball.mesh.material.color.setHex(parseInt(data[index].ball));
+  scene.fog = new THREE.Fog(0x00F3FF, 3, 13);
   for (var i in data[index].data) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
@@ -290,6 +311,14 @@ function gameover() {
       $('#level-d').html('今日もいい天気☆');
       }
       $('#shrine').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 2) { 
+     if (star == 2) {
+      $('#level-d').html('二人は幸せなキスをして終了');
+      }
+      $('#ts').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
