@@ -1694,11 +1694,11 @@
   },
   {
     "author": "Kotou",
-    "background": "0x00FFE3",
-    "ball": "0xFF7ECF",
-    "mat": "0x005EFF",
-    "bouncer": "0x00E6FF",
-    "obstacle": "0x00DA73",
+    "background": "0x850079",
+    "ball": "0x09D800",
+    "mat": "0x008EFF",
+    "bouncer": "0x00D98D",
+    "obstacle": "0xE0120E",
     "data":
     [
       [1, 1, 1, 1, 1],
