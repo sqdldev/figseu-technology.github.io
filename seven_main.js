@@ -36,7 +36,7 @@ $.getJSON('seven_levels.json', d => {
         } else if (level == 2) {
          $('#level-d').html('開催日　2月15日');
          $('#level').html('True Shrine');
-         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆');
          $('#play').hide();
          $('#PresentCode').show();
         } else {
@@ -135,7 +135,7 @@ function nextLevel() {
         } else if (level == 2) {
          $('#level-d').html('開催日　2月15日');
          $('#level').html('True Shrine');
-         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆');
          $('#play').hide();
          $('#PresentCode').show();
         } else {
@@ -173,7 +173,7 @@ function prevLevel() {
         } else if (level == 2) {
          $('#level-d').html('開催日　2月15日');
          $('#level').html('True Shrine');
-         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆');
          $('#play').hide();
          $('#PresentCode').show();
         } else {
