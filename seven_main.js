@@ -24,8 +24,8 @@ let reqId;
 $.getJSON('seven_levels.json', d => {
   data = d;
   loadLevel(level);
-  $('#play').hide();
-  $('#PresentCode').show();
+  $('#play').show();
+  $('#PresentCode').hide();
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
@@ -127,6 +127,7 @@ function nextLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#play').show();
   if (level == 1) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('Shrine');
@@ -144,7 +145,6 @@ function nextLevel() {
            }
   $('#prev').show();
   $('#retry').hide();
-  $('#play').show();
   if (level == 2) {
     $('#next').hide();
   }
@@ -165,6 +165,7 @@ function prevLevel() {
   $('#score').hide();
   $('#level').show();
   $('#stars').show();
+  $('#play').show();
   if (level == 1) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('Shrine');
@@ -182,7 +183,6 @@ function prevLevel() {
            }
   $('#next').show();
   $('#retry').hide();
-  $('#play').show();
   if (level == 1) {
     $('#prev').hide();
   }
