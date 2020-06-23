@@ -86,16 +86,19 @@ class Ball {
       if (this.count2Lose >= 5) gameover();
     }
     world.forEach(v => {
+      if (v instanceof Goal)
+      if (v.detect()) gameover();
+      star = 2;
+    });
+    world.forEach(v => {
       if (v instanceof Obstacle)
       if (v.detect()) gameover();
+      star = 1;
     });
    world.forEach(v => {
       if (v instanceof Dreamcube)
       if (v.detect()) gameover();
-    });
-   world.forEach(v => {
-      if (v instanceof Goal)
-      if (v.detect()) gameover();
+      star = 1;
     });
   }
 }
