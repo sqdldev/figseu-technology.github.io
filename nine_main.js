@@ -145,6 +145,7 @@ function nextLevel() {
 ) {
       $('#play').show();
       $('#PresentCode').hide();
+      $('#level-d').html('Extra ステージ');
       } else {
       $('#play').hide();
       $('#PresentCode').show();
@@ -189,6 +190,7 @@ function prevLevel() {
 ) {
       $('#play').show();
       $('#PresentCode').hide();
+      $('#level-d').html('Extra ステージ');
       } else {
       $('#play').hide();
       $('#PresentCode').show();
