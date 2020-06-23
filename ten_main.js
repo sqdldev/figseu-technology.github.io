@@ -18,6 +18,8 @@ camera.rotation.x -= 0.75;
 let scoreSubmitted = false;
 let level = 1;
 let star = 0;
+let url = location.href;
+let fgnc = url.substr( 66 );
 let data;
 let reqId;
 $.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {
@@ -33,15 +35,15 @@ $.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level-d').html('開催日　3月4日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 3) {
-      $('#level-d').html('開催日　1月1日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
-      $('#level-d').html('開催日　8月1日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else {
@@ -125,29 +127,47 @@ function nextLevel() {
     $('#next').hide();
   }
   if (level == 1) {
-      $('#level-d').html('超難関');
+      $('#level-d').html('超難関 ステージ');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
-      $('#level-d').html('開催日　3月4日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 670455346848446928844724571688801125823716090970215205684765249498424614307126029537974715) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('超難関 ステージ');
+      } else {
       $('#play').hide();
       $('#PresentCode').show();
+      }
      } else if (level == 3) {
-      $('#level-d').html('開催日　1月1日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 2) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('超難関 ステージ');
+      } else {
       $('#play').hide();
       $('#PresentCode').show();
+      }
      } else if (level == 4) {
-      $('#level-d').html('開催日　8月1日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 2) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('ラスト ステージ');
+      } else {
       $('#play').hide();
       $('#PresentCode').show();
+      }
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -177,29 +197,47 @@ function prevLevel() {
     $('#prev').hide();
   }
   if (level == 1) {
-      $('#level-d').html('超難関');
+      $('#level-d').html('超難関 ステージ');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
-      $('#level-d').html('開催日　3月4日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 670455346848446928844724571688801125823716090970215205684765249498424614307126029537974715) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('超難関 ステージ');
+      } else {
       $('#play').hide();
       $('#PresentCode').show();
+      }
      } else if (level == 3) {
-      $('#level-d').html('開催日　1月1日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 2) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('超難関 ステージ');
+      } else {
       $('#play').hide();
       $('#PresentCode').show();
+      }
      } else if (level == 4) {
-      $('#level-d').html('開催日　8月1日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 2) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('超難関 ステージ');
+      } else {
       $('#play').hide();
       $('#PresentCode').show();
+      }
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -285,21 +323,33 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+    if (star == 2) {
+      $('#level-d').html('情熱を抱く紅の光');
+      }
       $('#ruby').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
+       if (star == 2) {
+      $('#level-d').html('未来を貫く緑の光');
+      }
       $('#rgw').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
+       if (star == 2) {
+      $('#level-d').html('決意は砕けない');
+      }
       $('#dia').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
+       if (star == 2) {
+      $('#level-d').html('天から差し込む光をただ、眺めていた');
+      }
       $('#kya').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
