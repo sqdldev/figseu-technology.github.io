@@ -36,7 +36,7 @@ $.getJSON('nine_levels.json', d => {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level-d').html('開催日　1月1日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
@@ -138,10 +138,10 @@ function nextLevel() {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level-d').html('開催日　1月1日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 333) {
+      if (fgnc == f6rzf8JZstnGcNPjPYTsJ9u2AMnB4ebLRiCTpmxrWuCA5CuXZf3EcC7iCXrBwAyDWSVD6Z2LpB8N5H8ETKRaExMmk42FpnBtWwwL) {
       $('#play').show();
       $('#PresentCode').hide();
       } else {
@@ -181,10 +181,10 @@ function prevLevel() {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level-d').html('開催日　1月1日');
+      $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 333) {
+      if (fgnc == f6rzf8JZstnGcNPjPYTsJ9u2AMnB4ebLRiCTpmxrWuCA5CuXZf3EcC7iCXrBwAyDWSVD6Z2LpB8N5H8ETKRaExMmk42FpnBtWwwL) {
       $('#play').show();
       $('#PresentCode').hide();
       } else {
@@ -319,6 +319,8 @@ function gameover() {
   if (level == 1) { 
      if (star == 2) {
       $('#level-d').html('滅びる世界');
+      $('#play').hide();
+      $('#fell_key').show();
       }
       $('#FELL').each(function(){
     this.pause(); // Stop playing
