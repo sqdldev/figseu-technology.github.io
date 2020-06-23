@@ -323,6 +323,8 @@ function gameover() {
       $('#level-d').html('滅びる世界');
       $('#play').hide();
       $('#fell_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
       }
       $('#FELL').each(function(){
     this.pause(); // Stop playing
