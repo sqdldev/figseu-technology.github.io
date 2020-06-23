@@ -19,6 +19,8 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let url = location.href;
+let fgnc = url.substr( 67 );
 let data;
 let reqId;
 $.getJSON('nine_levels.json', d => {
@@ -139,8 +141,13 @@ function nextLevel() {
       $('#level-d').html('開催日　1月1日');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 333) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      } else {
       $('#play').hide();
       $('#PresentCode').show();
+      }
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -177,8 +184,13 @@ function prevLevel() {
       $('#level-d').html('開催日　1月1日');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 333) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      } else {
       $('#play').hide();
       $('#PresentCode').show();
+      }
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
