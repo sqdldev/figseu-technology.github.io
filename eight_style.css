@@ -27,6 +27,7 @@ body {
   border: solid #FFFFFF;
   position: fixed;
   background-color: rgba(0,0,0,0);
+  text-decoration: none;
   font-family: sans-serif;
   font-weight: 700; 
   font-size: 240%;
@@ -44,6 +45,7 @@ body {
   border: solid #FFFFFF;
   position: fixed;
   background-color: rgba(0,0,0,0);
+  text-decoration: none;
   font-family: sans-serif;
   font-weight: 700; 
   font-size: 240%;
