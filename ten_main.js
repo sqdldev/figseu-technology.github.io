@@ -148,7 +148,7 @@ function nextLevel() {
       $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 2) {
+      if (fgnc == 52867353458815241279372166427305653048730729738030) {
       $('#play').show();
       $('#PresentCode').hide();
       $('#level-d').html('超難関 ステージ');
@@ -218,7 +218,7 @@ function prevLevel() {
       $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 2) {
+      if (fgnc == 52867353458815241279372166427305653048730729738030) {
       $('#play').show();
       $('#PresentCode').hide();
       $('#level-d').html('超難関 ステージ');
