@@ -19,6 +19,8 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let url = location.href;
+let fgnc = url.substr( 68 );
 let data;
 let reqId;
 $.getJSON('seven_levels.json', d => {
@@ -37,8 +39,13 @@ $.getJSON('seven_levels.json', d => {
          $('#level-d').html('開催日　2月15日');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
-         $('#play').hide();
-         $('#PresentCode').show();
+         if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+      }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -136,8 +143,13 @@ function nextLevel() {
          $('#level-d').html('開催日　2月15日');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
-         $('#play').hide();
-         $('#PresentCode').show();
+         if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+      }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -174,8 +186,13 @@ function prevLevel() {
          $('#level-d').html('開催日　2月15日');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+         if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
+         $('#play').show();
+         $('#PresentCode').hide();
+         } else {
          $('#play').hide();
          $('#PresentCode').show();
+         }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -309,6 +326,10 @@ function gameover() {
   if (level == 1) {
          if (star == 2) {
       $('#level-d').html('今日もいい天気☆');
+      $('#play').hide();
+      $('#stage_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
       }
       $('#shrine').each(function(){
     this.pause(); // Stop playing
