@@ -335,6 +335,10 @@ function gameover() {
      } else if (level == 2) { 
      if (star == 2) {
       $('#level-d').html('世界は新たに創造される');
+      $('#play').hide();
+      $('#kyanite_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
       }
       $('#TFE').each(function(){
     this.pause(); // Stop playing
