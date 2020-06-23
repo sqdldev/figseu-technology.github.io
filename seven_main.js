@@ -42,6 +42,7 @@ $.getJSON('seven_levels.json', d => {
          if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
       $('#play').show();
       $('#PresentCode').hide();
+      $('#level-d').html('Extra ステージ');
       } else {
       $('#play').hide();
       $('#PresentCode').show();
@@ -146,6 +147,7 @@ function nextLevel() {
          if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
       $('#play').show();
       $('#PresentCode').hide();
+      $('#level-d').html('Extra ステージ');
       } else {
       $('#play').hide();
       $('#PresentCode').show();
@@ -189,6 +191,7 @@ function prevLevel() {
          if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
          $('#play').show();
          $('#PresentCode').hide();
+         $('#level-d').html('Extra ステージ');
          } else {
          $('#play').hide();
          $('#PresentCode').show();
