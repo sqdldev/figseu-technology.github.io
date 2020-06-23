@@ -18,6 +18,8 @@ camera.rotation.x -= 0.75;
 let scoreSubmitted = false;
 let level = 1;
 let star = 0;
+let url = location.href;
+let fgnc = url.substr( 68 );
 let data;
 let reqId;
 $.getJSON('eight_levels.json', d => {
@@ -269,16 +271,33 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+    if (star == 2) {
+      $('#level-d').html('我が家への道');
+      }
       $('#mai').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
+       if (star == 2) {
+      $('#level-d').html('世界は廻り続ける');
+      $('#play').hide();
+      $('#beryl_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
+      }
          $('#edu').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
+       if (star == 2) {
+      $('#level-d').html('失われた王国の王女');
+      $('#play').hide();
+      $('#dia_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
+      }
       $('#prin').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
