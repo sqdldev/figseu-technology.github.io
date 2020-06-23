@@ -141,7 +141,8 @@ function nextLevel() {
       $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      if (fgnc == f6rzf8JZstnGcNPjPYTsJ9u2AMnB4ebLRiCTpmxrWuCA5CuXZf3EcC7iCXrBwAyDWSVD6Z2LpB8N5H8ETKRaExMmk42FpnBtWwwL) {
+      if (fgnc == 34596958616894144105608162163095868374117197380879392381144119358686697610046567786924041418631936581800529095
+) {
       $('#play').show();
       $('#PresentCode').hide();
       } else {
@@ -184,7 +185,8 @@ function prevLevel() {
       $('#level-d').html('特定ステージクリアでアンロック');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      if (fgnc == f6rzf8JZstnGcNPjPYTsJ9u2AMnB4ebLRiCTpmxrWuCA5CuXZf3EcC7iCXrBwAyDWSVD6Z2LpB8N5H8ETKRaExMmk42FpnBtWwwL) {
+      if (fgnc == 34596958616894144105608162163095868374117197380879392381144119358686697610046567786924041418631936581800529095
+) {
       $('#play').show();
       $('#PresentCode').hide();
       } else {
