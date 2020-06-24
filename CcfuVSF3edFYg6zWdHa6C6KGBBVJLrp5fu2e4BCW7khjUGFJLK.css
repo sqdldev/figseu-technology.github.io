@@ -22,4 +22,6 @@ font-size: 13px;
 background: #282828;
 color: #ffffff;
 }
-
+h1:hover {
+  text-shadow: 1px 2px 3px #FFB400; 
+}
