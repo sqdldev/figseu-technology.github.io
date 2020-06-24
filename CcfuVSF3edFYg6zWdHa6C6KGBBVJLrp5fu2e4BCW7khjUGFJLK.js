@@ -218,3 +218,7 @@
 	}
 
 })(jQuery);
+
+function BGM() {
+	$('#ending_music').get(0).play();
+}
