@@ -20,6 +20,7 @@
             delay : 1000,
             fadeTime : 4000
       };
+      $('#ending_music').get(0).play();
       var setting = $.extend(defaults,options);
       setting.allTime = setting.allTime * sectionNum;
 
@@ -47,7 +48,6 @@
        	//フェード処理
        	function fadeAnimation(){
        		var pageI = 0;
-		$('#ending_music').get(0).play();
 
           function fadeMode(){
 				    if(pageI == sectionNum - 1){
