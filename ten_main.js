@@ -349,6 +349,11 @@ function gameover() {
      } else if (level == 4) {
        if (star == 2) {
       $('#level-d').html('天から差し込む光をただ、眺めていた');
+      $('#play').hide();
+      $('#prev').hide();
+      $('#end_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
       }
       $('#kya').each(function(){
     this.pause(); // Stop playing
