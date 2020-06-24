@@ -1,13 +1,3 @@
-/**
-* staffRoll.js
-* jQuery required.
-*
-* * Copyright 2014 (c) webdrawer-kashu
-* * http://webdrawer.net/
-* * Licensed Under the MIT.
-*
-*/
-
 
 (function($) {
     
@@ -57,6 +47,7 @@
        	//フェード処理
        	function fadeAnimation(){
        		var pageI = 0;
+		$('#ending_music').get(0).play();
 
           function fadeMode(){
 				    if(pageI == sectionNum - 1){
