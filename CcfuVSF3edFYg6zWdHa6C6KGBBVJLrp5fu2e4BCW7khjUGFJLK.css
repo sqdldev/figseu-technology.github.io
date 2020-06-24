@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+* {
+margin: 0;
+padding: 0;
+font-weight: normal;
+color: #ffffff;
+}
+
+p,li {
+line-height: 1.4;
+}
+
+h1 {
+padding: 20px;
+width: 90%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 20;
+font-size: 13px;
+background: #282828;
+color: #ffffff;
+}
+
