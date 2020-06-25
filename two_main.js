@@ -19,6 +19,8 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let url = location.href;
+let fgnc = url.substr( 66 );
 let data;
 let reqId;
 $.getJSON('two_levels.json', d => {
@@ -136,11 +138,17 @@ function nextLevel() {
          $('#level').html('霧の洞窟');
          $('#stars').html('☆☆');
         } else if (level == 2) {
-         $('#level-d').html('開催日　3月7日');
+         $('#level-d').html('ボーナスステージ');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
-         $('#play').hide();
-         $('#PresentCode').show();
+         if (fgnc == 2) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('ボーナスステージ');
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+      }
         } else if (level == 3) {
          $('#level-d').html('');
          $('#level').html('Coming Soon');
@@ -180,11 +188,17 @@ function prevLevel() {
          $('#level').html('霧の洞窟');
          $('#stars').html('☆☆');
         } else if (level == 2) {
-         $('#level-d').html('開催日　3月7日');
+         $('#level-d').html('ボーナスステージ');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
-         $('#play').hide();
-         $('#PresentCode').show();
+         if (fgnc == 2) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('Extra ステージ');
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+      }
         } else if (level == 3) {
          $('#level-d').html('');
          $('#level').html('Coming Soon');
@@ -332,7 +346,7 @@ function gameover() {
 });
      } else if (level == 3) {
          if (star == 2) {
-             $('#level-d').html('ごくろうさん');
+             $('#level-d').html('ようこそ あわれな ハッカー よ');
       }
       $('#lupin').each(function(){
     this.pause(); // Stop playing
