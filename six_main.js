@@ -147,7 +147,7 @@ function nextLevel() {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('開催日　7月3日');
+         $('#level-d').html('特定ステージクリアでアンロック');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
          if (fgnc == 21257270831415101218051843920787270385869056086848) {
@@ -195,7 +195,7 @@ function prevLevel() {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('開催日　7月3日');
+         $('#level-d').html('特定ステージクリアでアンロック');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
          if (fgnc == 21257270831415101218051843920787270385869056086848) {
