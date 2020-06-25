@@ -19,6 +19,8 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let url = location.href;
+let fgnc = url.substr( 66 );
 let data;
 let reqId;
 $.getJSON('six_levels.json', d => {
@@ -148,8 +150,14 @@ function nextLevel() {
          $('#level-d').html('開催日　7月3日');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
-         $('#play').hide();
-         $('#PresentCode').show();
+         if (fgnc == 2) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('Extra ステージ');
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+      }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -190,8 +198,14 @@ function prevLevel() {
          $('#level-d').html('開催日　7月3日');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
-         $('#play').hide();
-         $('#PresentCode').show();
+         if (fgnc == 2) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('Extra ステージ');
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+      }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
