@@ -150,7 +150,7 @@ function nextLevel() {
          $('#level-d').html('開催日　7月3日');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
-         if (fgnc == 2) {
+         if (fgnc == 21257270831415101218051843920787270385869056086848) {
       $('#play').show();
       $('#PresentCode').hide();
       $('#level-d').html('Extra ステージ');
@@ -198,7 +198,7 @@ function prevLevel() {
          $('#level-d').html('開催日　7月3日');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
-         if (fgnc == 2) {
+         if (fgnc == 21257270831415101218051843920787270385869056086848) {
       $('#play').show();
       $('#PresentCode').hide();
       $('#level-d').html('Extra ステージ');
