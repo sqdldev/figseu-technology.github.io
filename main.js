@@ -19,6 +19,8 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let url = location.href;
+let fgnc = url.substr( 62 );
 let data;
 let reqId;
 $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
@@ -358,6 +360,10 @@ function gameover() {
       if (star == 2) {
       $('#level-d').html('Lets go Rolling Sky World !!');
       $('#stars').html('☆☆☆☆☆☆');
+      $('#play').hide();
+      $('#stage_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
       }
       $('#cloud').each(function(){
     this.pause(); // Stop playing
