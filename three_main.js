@@ -19,6 +19,8 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let url = location.href;
+let fgnc = url.substr( 68 );
 let data;
 let reqId;
 $.getJSON('QrJSs7WNhkQM4mkdWzwu8jGCtHVenGBz7VVEYG35FYwtF36TKt.json', d => {
@@ -157,9 +159,17 @@ function nextLevel() {
          $('#play').hide();
          $('#PresentCode').show();
         } else if (level == 4) {
-         $('#level-d').html('6月限定ステージ');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('梅雨');
          $('#stars').html('☆☆☆');
+         if (fgnc == 432737707458933564065180059703468227602185200453146149076917164552540333926002833815597382607008699384651707976180218029960925525916061) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('Extra ステージ');
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+         }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -203,9 +213,17 @@ function prevLevel() {
          $('#play').hide();
          $('#PresentCode').show();
         } else if (level == 4) {
-         $('#level-d').html('6月限定ステージ');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('梅雨');
          $('#stars').html('☆☆☆');
+         if (fgnc == 432737707458933564065180059703468227602185200453146149076917164552540333926002833815597382607008699384651707976180218029960925525916061) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      $('#level-d').html('Extra ステージ');
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+         }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -354,6 +372,10 @@ function gameover() {
      } else if (level == 4) {
        if (star == 2) {
              $('#level-d').html('空に舞う雨のダンス');
+             $('#play').hide();
+             $('#stage_key').show();
+             $('#PresentCode').hide();
+             $('#next').hide();
       }
       $('#rain').each(function(){
     this.pause(); // Stop playing
