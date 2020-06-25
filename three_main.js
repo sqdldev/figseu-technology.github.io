@@ -156,8 +156,6 @@ function nextLevel() {
          $('#level-d').html('開催日　5月14日');
          $('#level').html('滅びた文明');
          $('#stars').html('☆☆☆');
-         $('#play').hide();
-         $('#PresentCode').show();
         } else if (level == 4) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('梅雨');
@@ -210,8 +208,6 @@ function prevLevel() {
          $('#level-d').html('開催日　5月14日');
          $('#level').html('滅びた文明');
          $('#stars').html('☆☆☆');
-         $('#play').hide();
-         $('#PresentCode').show();
         } else if (level == 4) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('梅雨');
