@@ -20,7 +20,6 @@
             delay : 1000,
             fadeTime : 4000
       };
-      $('#ending_music').get(0).play();
       var setting = $.extend(defaults,options);
       setting.allTime = setting.allTime * sectionNum;
 
@@ -81,6 +80,7 @@
        		wrap.delay(setting.delay).animate({'top': '-' + totalHeight}, setting.allTime , 'linear',function(){
             endFunction();
           });
+	$('#ending_music').get(0).play();
        	}
 
         //スライド処理
