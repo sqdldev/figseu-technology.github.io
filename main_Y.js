@@ -45,8 +45,7 @@ let reqId;
   );
 
 function fileload() {
-  $.getJSON(ipt, d => {
-  data = d;
+  data = ipt;
   loadLevel(level);
     });
 }
