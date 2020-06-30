@@ -217,11 +217,11 @@ scene.add(light);
 const world = [];
 function loadLevel(level) {
   const index = level - 1;
-  renderer.setClearColor(parseInt(ipt[index].background));
-  ball.mesh.material.color.setHex(parseInt(ipt[index].ball));
-  for (var i in ipt[index].data) {
-    for (var j in ipt[index].data[i]) {
-      switch (ipt[index].data[i][j]) {
+  renderer.setClearColor(parseInt(data[index].background));
+  ball.mesh.material.color.setHex(parseInt(data[index].ball));
+  for (var i in data[index].data) {
+    for (var j in data[index].data[i]) {
+      switch (data[index].data[i][j]) {
         case 1:
           world.push(new Mat(j - 2, -i, data[index].mat));
           break;
