@@ -39,7 +39,7 @@ $.getJSON('QrJSs7WNhkQM4mkdWzwu8jGCtHVenGBz7VVEYG35FYwtF36TKt.json', d => {
          $('#level').html('戦国時代');
          $('#stars').html('☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('開催日　5月14日');
+         $('#level-d').html('ボーナスステージ');
          $('#level').html('滅びた文明');
          $('#stars').html('☆☆☆');
         } else if (level == 4) {
@@ -153,7 +153,7 @@ function nextLevel() {
          $('#level').html('戦国時代');
          $('#stars').html('☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('開催日　5月14日');
+         $('#level-d').html('ボーナスステージ');
          $('#level').html('滅びた文明');
          $('#stars').html('☆☆☆');
         } else if (level == 4) {
@@ -205,7 +205,7 @@ function prevLevel() {
          $('#level').html('戦国時代');
          $('#stars').html('☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('開催日　5月14日');
+         $('#level-d').html('ボーナスステージ');
          $('#level').html('滅びた文明');
          $('#stars').html('☆☆☆');
         } else if (level == 4) {
