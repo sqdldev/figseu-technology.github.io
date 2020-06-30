@@ -47,7 +47,7 @@ let reqId;
 function fileload() {
   $.getJSON(ipt, d => {
   data = d;
-  loadLevel(level);
+  loadLevel(ipt);
     });
 }
 
@@ -217,7 +217,7 @@ function prevLevel() {
 const light = new THREE.HemisphereLight(0xeeeeee, 0x777777);
 scene.add(light);
 const world = [];
-function loadLevel(level) {
+function loadLevel(ipt) {
   const index = level - 1;
   renderer.setClearColor(parseInt(data[index].background));
   ball.mesh.material.color.setHex(parseInt(data[index].ball));
