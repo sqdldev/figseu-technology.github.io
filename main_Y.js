@@ -48,7 +48,7 @@ function fileload() {
   $.getJSON(ipt, d => {
   data = d;
   loadLevel(level);
-    }
+    });
 }
 
 //start function
