@@ -2,6 +2,13 @@ body {
 	overflow: hidden;
 	user-select: none;
 }
+input {
+	display: none;
+}
+label {
+	color: #FFFFFF;
+	background-color: rgba(0,0,0,0);
+}
 #PresentCode {
   display: none;
   border: solid #FF322F;
@@ -465,7 +472,7 @@ canvas {
   position: fixed;
   text-decoration: none;
   top: 2%;
-  left: 60%;
+  left: 55%;
   border: double #FFFFFF;
   padding: 5px;
   border-radius: 1px;
