@@ -47,7 +47,6 @@ let reqId;
 function fileload() {
   data = ipt;
   loadLevel(level);
-    });
 }
 
 //start function
