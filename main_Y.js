@@ -24,10 +24,7 @@ let reqId;
   let stage_name = prompt("名前を決めてください");
   let stage_info = prompt("ステージの概要を決めてください");
   let stage_star = prompt("ステージの星の数を決めてください");
-  alert('ステージのデータを file:///sdcard/RSE/levels.json に配置。音楽のデータを file:///sdcard/music/BGM.mp3 に配置してください。')
-  $.getJSON('file:///sdcard/RSE/levels.json', d => {
-  data = d;
-  loadLevel(level);
+  alert('ステージのデータを file:///sdcard/RSE/levels.json に配置。音楽のデータを file:///sdcard/music/BGM.mp3 に配置してください。');
   $('#play').show();
   $('#play').click(start);
   $('#next').hide();
@@ -47,6 +44,13 @@ let reqId;
     "最終ステージ - The END　～遊んでくれてありがとう～"
   );
 });
+
+function fileload() {
+  $.getJSON(ipt, d => {
+  data = d;
+  loadLevel(level);
+    }
+}
 
 //start function
 function start(e) {
