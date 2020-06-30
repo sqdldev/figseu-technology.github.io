@@ -25,7 +25,12 @@ let reqId;
   let stage_info = prompt("ステージの概要を決めてください");
   let stage_star = prompt("ステージの星の数を決めてください");
   alert('ステージのデータを file:///sdcard/RSE/levels.json に配置。音楽のデータを file:///sdcard/music/BGM.mp3 に配置してください。')
-  $.getJSON('file:///sdcard/RSE/levels.json', d => {
+  $.ajax({
+  dataType: "json",
+  url: file:///sdcard/RSE/levels.json,
+  data: data,
+  success: success
+  });
   data = d;
   loadLevel(level);
   $('#play').show();
