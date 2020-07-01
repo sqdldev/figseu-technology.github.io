@@ -57,6 +57,24 @@ body {
   left: calc(50% - 200px / 2);
   bottom: 50px;
 }
+#kyanite_key {
+  display: none;
+  color: #FFFFFF;
+  border: solid #FFFFFF;
+  text-decoration: none;
+  position: fixed;
+  background-color: rgba(0,0,0,0);
+  font-family: sans-serif,serif;
+  font-weight: 700; 
+  font-size: 240%;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  width: 200px;
+  height: 50px;
+  left: calc(50% - 200px / 2);
+  bottom: 50px;
+}
 img {
 	filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(107%) contrast(101%);
 }
