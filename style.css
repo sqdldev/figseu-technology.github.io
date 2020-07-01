@@ -43,6 +43,22 @@ h3 {
   left: calc(50% - 200px / 2);
   bottom: 50px;
 }
+#update_button {
+  color: #FFFFFF;
+  position: fixed;
+  text-decoration: none;
+  top: 25%;
+  left: 5%;
+  border: double #FFFFFF;
+  padding: 5px;
+  border-radius: 1px;
+  text-align: right;
+  display: inline-block;
+  font-family: serif;
+  font-weight: 700;
+  font-size: 20px;
+  transform: 0.5em;
+}
 #RGW {
   display: none;
   border: solid #FF2300;
