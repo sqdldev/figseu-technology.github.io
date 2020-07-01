@@ -23,15 +23,15 @@ let reqId;
 $.getJSON('ev_levels.json', d => {
   data = d;
   loadLevel(level);
-  $('#play').hide();
-  $('#PresentCode').show();
+  $('#play').show();
+  $('#PresentCode').hide();
   $('#play').click(start);
   $('#next').hide();
   $('#score').hide();
   if (level == 1) {
-      $('#level-d').html('イベントステージ');
-      $('#level').html('イベントは開催されていません');
-      $('#stars').html('');
+      $('#level-d').html('復刻ステージ');
+      $('#level').html('アスノヨゾラ哨戒班');
+      $('#stars').html('☆☆☆☆☆');
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
