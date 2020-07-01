@@ -44,7 +44,7 @@ $.getJSON('eight_levels.json', d => {
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
-         $('#level').html('覇王への道');
+         $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -123,7 +123,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 3) {
+  if (level == 4) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -140,7 +140,7 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
-         $('#level').html('覇王への道');
+         $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -184,7 +184,7 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
-         $('#level').html('覇王への道');
+         $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -303,6 +303,13 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
+       if (star == 2) {
+      $('#level-d').html('天空の花園');
+      $('#play').hide();
+      $('#kyanite_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
+      }
       $('#los').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
