@@ -60,7 +60,7 @@ function start(e) {
     reset();
     world.forEach(v => {
       if (v instanceof Bouncer) {
-        v.line.position.y = 0;
+        v.mesh.position.y = 0;
       }
     });
     world.forEach(v => {
