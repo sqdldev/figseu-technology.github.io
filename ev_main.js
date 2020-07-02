@@ -190,6 +190,43 @@ function loadLevel(level) {
           break;
         case 9:
           world.push(new Goal(j - 2, -i, data[index].obstacle));
+        break;
+        case 10:
+          world.push(new Speedup(j - 2, -i, data[index].mat));
+          break;
+        case 11:
+          world.push(new Speednormal(j - 2, -i, data[index].mat));
+          break;
+        case 12:
+          world.push(new Speeddown(j - 2, -i, data[index].mat));
+          break;
+        case 13:
+          world.push(new Back(j - 2, -i, data[index].mat));
+          break;
+        case 14:
+          world.push(new Holemat(j - 2, -i, data[index].mat));
+          world.push(new Hole(j - 2, -i, data[index].bouncer));
+          break;
+        case 15:
+          world.push(new Fastbouncer(j - 2, -i, data[index].bouncer));
+          break;
+        case 16:
+          world.push(new Highobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 17:
+          world.push(new Tower(j - 2, -i, data[index].obstacle));
+          break;
+        case 18:
+          world.push(new Upobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 19:
+          world.push(new Downobstacle(j - 2, -i, data[index].mat));
+          break;
+        case 20:
+          world.push(new Deltemat(j - 2, -i, data[index].mat));
+          break;
+        case 21:
+          world.push(new Worpmat(j - 2, -i, data[index].mat));
       }
     }
   }
