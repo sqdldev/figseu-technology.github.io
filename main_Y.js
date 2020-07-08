@@ -24,12 +24,21 @@ let reqId;
   let stage_name = prompt("名前を決めてください");
   let stage_info = prompt("ステージの概要を決めてください");
   let stage_star = prompt("ステージの星の数を決めてください");
-  alert('ステージのデータを読み込み、音楽のデータを file:///sdcard/music/BGM.mp3 に配置してください');
+  let level = prompt("ステージのデータを決めてください 1 ～ 3");
   $('#play').show();
   $('#play').click(start);
   $('#next').hide();
+  $('#prev').hide();
   $('#score').hide();
   if (level == 1) {
+      $('#level-d').html(stage_info);
+      $('#level').html(stage_name);
+      $('#stars').html(stage_star);
+     } else if (level == 2) {
+      $('#level-d').html(stage_info);
+      $('#level').html(stage_name);
+      $('#stars').html(stage_star);
+     } else if (level == 3) {
       $('#level-d').html(stage_info);
       $('#level').html(stage_name);
       $('#stars').html(stage_star);
