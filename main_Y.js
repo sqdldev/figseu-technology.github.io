@@ -58,11 +58,6 @@ $.getJSON('Y_levels.json', d => {
   );
 });
 
-function fileload() {
-  data = ipt;
-  loadLevel(level);
-}
-
 //start function
 function start(e) {
   e.preventDefault();
