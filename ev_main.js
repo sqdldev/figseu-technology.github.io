@@ -264,6 +264,9 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+      if (star == 2) {
+      $('#level-d').html('明日へと向かう');
+      }
       $('#evmu').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
