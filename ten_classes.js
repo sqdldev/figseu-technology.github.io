@@ -43,6 +43,11 @@ class Ball {
             this.speed.y = 0.5;
             this.tmpZ = this.mesh.position.z;
             v.line.position.y = 0.8;
+            $('#jump').each(function(){
+                  this.pause(); // Stop playing
+                  this.currentTime = 0; // Reset time
+            });
+            $('#jump').get(0).play();
           }
         }
       });
@@ -51,6 +56,11 @@ class Ball {
           if (v.detect() && started) {
             this.landed = false;
             v.mesh.position.y = 0;
+            $('#crown').each(function(){
+                  this.pause(); // Stop playing
+                  this.currentTime = 0; // Reset time
+            });
+            $('#crown').get(0).play();
           }
         }
       });
@@ -59,6 +69,11 @@ class Ball {
           if (v.detect() && started) {
             this.landed = false;
             v.mesh.position.y = 0;
+            $('#gem').each(function(){
+                  this.pause(); // Stop playing
+                  this.currentTime = 0; // Reset time
+            });
+            $('#gem').get(0).play();
           }
         }
       });
