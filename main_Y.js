@@ -16,6 +16,7 @@ let percent = 0;
 camera.position.set(0, 5, distance);
 camera.rotation.x -= 0.75;
 let scoreSubmitted = false;
+let level = 1;
 let star = 0;
 let wave = 0;
 let data;
@@ -24,14 +25,13 @@ let stage_name = prompt("名前を決めてください");
 let stage_info = prompt("ステージの概要を決めてください");
 let stage_star = prompt("ステージの星の数を決めてください");
 let level = prompt("ステージのデータを決めてください");
-alert("音源はまだ指定することができません。録画後に編集ソフト等で音楽を差し替えてください。");
+alert("音源はまだ指定することができません。録画後に編集ソフト等で音楽を差し替えてください");
 $.getJSON('Y_levels.json', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
   $('#play').click(start);
   $('#next').hide();
-  $('#prev').hide();
   $('#score').hide();
   if (level == 1) {
       $('#level-d').html(stage_info);
@@ -46,10 +46,10 @@ $.getJSON('Y_levels.json', d => {
       $('#level').html(stage_name);
       $('#stars').html(stage_star);
      } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+      $('#level-d').html(stage_info);
+      $('#level').html(stage_name);
+      $('#stars').html(stage_star);
+     }
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
