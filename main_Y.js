@@ -16,7 +16,6 @@ let percent = 0;
 camera.position.set(0, 5, distance);
 camera.rotation.x -= 0.75;
 let scoreSubmitted = false;
-let level = 1;
 let star = 0;
 let wave = 0;
 let data;
