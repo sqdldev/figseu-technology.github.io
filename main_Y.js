@@ -24,7 +24,7 @@ let reqId;
 let stage_name = prompt("名前を決めてください");
 let stage_info = prompt("ステージの概要を決めてください");
 let stage_star = prompt("ステージの星の数を決めてください");
-let level = prompt("ステージのデータを決めてください 1 ～ 3");
+let level = prompt("ステージのデータを決めてください");
 alert("音源はまだ指定することができません。録画後に編集ソフト等で音楽を差し替えてください。");
 $.getJSON('Y_levels.json', d => {
   data = d;
