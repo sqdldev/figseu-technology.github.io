@@ -21,6 +21,9 @@ let star = 0;
 let wave = 0;
 let data;
 let reqId;
+  $.getJSON('Y_levels.json', d => {
+  data = d;
+  loadLevel(level);
   let stage_name = prompt("名前を決めてください");
   let stage_info = prompt("ステージの概要を決めてください");
   let stage_star = prompt("ステージの星の数を決めてください");
@@ -53,6 +56,7 @@ let reqId;
   console.log(
     "二次創作ステージ　～君のステージを作ろう！～"
   );
+});
 
 function fileload() {
   data = ipt;
