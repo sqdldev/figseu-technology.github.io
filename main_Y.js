@@ -25,6 +25,7 @@ let reqId;
   let stage_info = prompt("ステージの概要を決めてください");
   let stage_star = prompt("ステージの星の数を決めてください");
   let level = prompt("ステージのデータを決めてください 1 ～ 3");
+  alert('音源はまだ指定することができません。録画後に編集ソフト等で音楽を差し替えてください。');
   $('#play').show();
   $('#play').click(start);
   $('#next').hide();
@@ -50,7 +51,7 @@ let reqId;
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
-    "最終ステージ - The END　～遊んでくれてありがとう～"
+    "二次創作ステージ　～君のステージを作ろう！～"
   );
 
 function fileload() {
