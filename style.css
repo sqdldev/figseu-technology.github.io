@@ -550,12 +550,28 @@ canvas {
   font-size: 20px;
   transform: 0.5em;
 }
+
 #play-arrow {
   color: #FFFFFF;
   width: 50px;
   padding: 20px;
 }
-
+#creator_studio {
+  color: #FFFFFF;
+  position: fixed;
+  text-decoration: none;
+  top: 25%;
+  left: 40%;
+  border: double #FFFFFF;
+  padding: 5px;
+  border-radius: 1px;
+  text-align: right;
+  display: inline-block;
+  font-family: serif;
+  font-weight: 700;
+  font-size: 20px;
+  transform: 0.5em;
+}
 #next-arrow, #prev-arrow {
   width: 70px;
 }
