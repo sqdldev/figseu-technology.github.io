@@ -25,14 +25,14 @@ let stage_name = prompt("名前を決めてください");
 let stage_info = prompt("ステージの概要を決めてください");
 let stage_star = prompt("ステージの星の数を決めてください");
 alert("音源はまだ指定することができません。録画後に編集ソフト等で音楽を差し替えてください");
-if (stage_name = ) {
-  stage_name = Cloud
+if (stage_name = "null") {
+  stage_name = "Cloud"
 }
-if (stage_info = ) {
-  stage_info = イベントステージ
+if (stage_info = "null") {
+  stage_info = "イベントステージ"
 }
-if (stage_star = ) {
-  stage_star = ☆☆
+if (stage_star = "null") {
+  stage_star = "☆☆"
 }
 $.getJSON('Y_levels.json', d => {
   data = d;
