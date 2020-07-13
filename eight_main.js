@@ -22,7 +22,7 @@ let url = location.href;
 let fgnc = url.substr( 68 );
 let data;
 let reqId;
-$.getJSON('eight_levels.json', d => {
+$.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCybmrxwpB.json', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
