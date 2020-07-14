@@ -21,23 +21,19 @@ let star = 0;
 let wave = 0;
 let data;
 let reqId;
-let stage_name = prompt("名前を決めてください");
-let stage_info = prompt("ステージの概要を決めてください");
-let stage_star = prompt("ステージの星の数を決めてください");
-alert("音源はまだ指定することができません。録画後に編集ソフト等で音楽を差し替えてください");
 if (stage_name = "null") {
-  stage_name = "Cloud";
+  stage_name = "現在使用できません";
 }
 if (stage_info = "null") {
-  stage_info = "イベントステージ";
+  stage_info = "NO DATA";
 }
 if (stage_star = "null") {
-  stage_star = "☆☆";
+  stage_star = " ";
 }
 $.getJSON('Y_levels.json', d => {
   data = d;
   loadLevel(level);
-  $('#play').show();
+  $('#play').hide();
   $('#play').click(start);
   $('#next').hide();
   $('#score').hide();
