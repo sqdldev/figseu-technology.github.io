@@ -38,6 +38,10 @@ $.getJSON('two_levels.json', d => {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
+        } else if (level == 3) {
+         $('#level-d').html('チュートリアルステージ');
+         $('#level').html('Cloud');
+         $('#stars').html('☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -62,6 +66,8 @@ function start(e) {
         $('#kimetu').get(0).play();
             } else if (level == 2) {
             $('#piknik').get(0).play();
+            } else if (level == 3) {
+            $('#cloud').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -130,7 +136,7 @@ function nextLevel() {
   $('#retry').hide();
   $('#play').show();
   $('#PresentCode').hide();
-  if (level == 2) {
+  if (level == 3) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -150,10 +156,9 @@ function nextLevel() {
       $('#PresentCode').show();
       }
         } else if (level == 3) {
-         $('#level-d').html('');
-         $('#level').html('Coming Soon');
+         $('#level-d').html('チュートリアルステージ');
+         $('#level').html('Cloud');
          $('#stars').html('☆☆');
-         $('#play').hide();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -200,10 +205,9 @@ function prevLevel() {
       $('#PresentCode').show();
       }
         } else if (level == 3) {
-         $('#level-d').html('');
-         $('#level').html('Coming Soon');
+         $('#level-d').html('チュートリアルステージ');
+         $('#level').html('Cloud');
          $('#stars').html('☆☆');
-         $('#play').hide();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -350,9 +354,9 @@ function gameover() {
 });
      } else if (level == 3) {
          if (star == 2) {
-             $('#level-d').html('ようこそ あわれな ハッカー よ');
+             $('#level-d').html('空に浮かぶ宮殿');
       }
-      $('#lupin').each(function(){
+      $('#cloud').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
