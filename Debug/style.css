@@ -204,6 +204,7 @@ canvas {
   right: 20px;
   top: 20px;
   color: white;
+  text-shadow: 1px 2px 3px #808080; 
   font-size: 40px;
   font-family: serif;
   font-weight: 700;
@@ -346,6 +347,7 @@ canvas {
 
 #level-d{
   color: #FFFFFF;
+  text-shadow: 1px 2px 3px #808080; 
   position: fixed;
   top: 5%;
   left: 5%;
