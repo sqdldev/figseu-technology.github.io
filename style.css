@@ -521,7 +521,6 @@ canvas {
 }
 #ev_level {
   color: #FFA500;
-  display: none;
   position: fixed;
   text-decoration: none;
   top: 2%;
