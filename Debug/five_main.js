@@ -29,19 +29,15 @@ $.getJSON('five_levels.json', d => {
   $('#next').show();
   $('#score').hide();
   if (level == 1) {
-         $('#level-d').html('Designed by Itary Cogu ');
          $('#level').html('桜');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Fifty Fifty');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('カリスマのステージ');
          $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 4) {
-         $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
         } else {
@@ -137,19 +133,15 @@ function nextLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-         $('#level-d').html('Designed by Itary Cogu ');
          $('#level').html('桜');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Fifty Fifty');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('カリスマのステージ');
          $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 4) {
-         $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
         } else {
@@ -181,19 +173,15 @@ function prevLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-         $('#level-d').html('Designed by Itary Cogu ');
          $('#level').html('桜');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Fifty Fifty');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('カリスマのステージ');
          $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
         } else if (level == 4) {
-         $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
         } else {
@@ -352,9 +340,6 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
-         if (star == 2) {
-             $('#level-d').html('Thanks you for playing!!');
-      }
       $('#piknik').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
