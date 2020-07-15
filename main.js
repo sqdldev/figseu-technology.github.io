@@ -30,6 +30,7 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
+  $('#ev_level).show();
   if (level == 1) {
       $('#level-d').html('チュートリアルステージ');
       $('#level').html('Rolling Sky');
