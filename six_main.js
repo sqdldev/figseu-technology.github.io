@@ -147,7 +147,7 @@ function nextLevel() {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('特定ステージクリアでアンロック');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
          if (fgnc == 21257270831415101218051843920787270385869056086848) {
@@ -195,7 +195,7 @@ function prevLevel() {
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
         } else if (level == 3) {
-         $('#level-d').html('特定ステージクリアでアンロック');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
          if (fgnc == 21257270831415101218051843920787270385869056086848) {
@@ -339,7 +339,10 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
-         $('#summer').each(function(){
+      if (star == 2) {
+      $('#level-d').html('真夏の日の思い出');
+      }
+      $('#summer').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
