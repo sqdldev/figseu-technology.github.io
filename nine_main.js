@@ -36,7 +36,7 @@ $.getJSON('nine_levels.json', d => {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level-d').html('特定ステージクリアでアンロック');
+      $('#level-d').html('？？？');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
@@ -138,7 +138,7 @@ function nextLevel() {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level-d').html('特定ステージクリアでアンロック');
+      $('#level-d').html('？？？');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       if (fgnc == 34596958616894144105608162163095868374117197380879392381144119358686697610046567786924041418631936581800529095
@@ -183,7 +183,7 @@ function prevLevel() {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level-d').html('特定ステージクリアでアンロック');
+      $('#level-d').html('？？？');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       if (fgnc == 34596958616894144105608162163095868374117197380879392381144119358686697610046567786924041418631936581800529095
