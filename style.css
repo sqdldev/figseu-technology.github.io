@@ -45,7 +45,6 @@ h3 {
 }
 #update_button {
   color: #FFFFFF;
-  display: none;
   position: fixed;
   text-decoration: none;
   top: 25%;
@@ -521,7 +520,6 @@ canvas {
 }
 #ev_level {
   color: #FFA500;
-  display: none;
   position: fixed;
   text-decoration: none;
   top: 2%;
@@ -560,7 +558,6 @@ canvas {
 }
 #creator_studio {
   color: #FFFFFF;
-  display: none;
   position: fixed;
   text-decoration: none;
   top: 25%;
