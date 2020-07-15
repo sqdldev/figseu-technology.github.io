@@ -145,10 +145,6 @@ function nextLevel() {
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
         } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
-        } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
