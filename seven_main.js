@@ -36,7 +36,7 @@ $.getJSON('seven_levels.json', d => {
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('特定ステージクリアでアンロック');
+         $('#level-d').html('？？？');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
          if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
@@ -141,7 +141,7 @@ function nextLevel() {
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('特定ステージクリアでアンロック');
+         $('#level-d').html('？？？');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
          if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
@@ -185,7 +185,7 @@ function prevLevel() {
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('特定ステージクリアでアンロック');
+         $('#level-d').html('？？？');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
          if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
@@ -340,7 +340,7 @@ function gameover() {
 });
      } else if (level == 2) { 
      if (star == 2) {
-      $('#level-d').html('二人は幸せなキスをして終了');
+      $('#level-d').html('神々が宿る聖地');
       }
       $('#ts').each(function(){
     this.pause(); // Stop playing
