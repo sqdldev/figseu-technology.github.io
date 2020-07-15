@@ -29,11 +29,9 @@ $.getJSON('four_levels.json', d => {
   $('#next').show();
   $('#score').hide();
   if (level == 1) {
-         $('#level-d').html('ボーナスステージ');
          $('#level').html('Bluestone Alley');
          $('#stars').html('☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
          $('#stars').html('☆☆☆☆');
         } else {
@@ -125,11 +123,9 @@ function nextLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-         $('#level-d').html('ボーナスステージ');
          $('#level').html('Bluestone Alley');
          $('#stars').html('☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
          $('#stars').html('☆☆☆☆');
         } else {
@@ -161,11 +157,9 @@ function prevLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-         $('#level-d').html('ボーナスステージ');
          $('#level').html('Bluestone Alley');
          $('#stars').html('☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
          $('#stars').html('☆☆☆☆');
         } else {
@@ -299,17 +293,11 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
-         if (star == 2) {
-      $('#level-d').html('甦る記憶の隅に');
-      }
       $('#ever_down').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
-         if (star == 2) {
-      $('#level-d').html('全てを壊す光');
-      }
       $('#bad_apple').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
