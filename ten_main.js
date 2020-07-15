@@ -133,7 +133,7 @@ function nextLevel() {
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
-      $('#level-d').html('特定ステージクリアでアンロック');
+      $('#level-d').html('？？？');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       if (fgnc == 670455346848446928844724571688801125823716090970215205684765249498424614307126029537974715) {
@@ -145,7 +145,7 @@ function nextLevel() {
       $('#PresentCode').show();
       }
      } else if (level == 3) {
-      $('#level-d').html('特定ステージクリアでアンロック');
+      $('#level-d').html('超難関 ステージ');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       if (fgnc == 52867353458815241279372166427305653048730729738030) {
@@ -157,7 +157,7 @@ function nextLevel() {
       $('#PresentCode').show();
       }
      } else if (level == 4) {
-      $('#level-d').html('特定ステージクリアでアンロック');
+      $('#level-d').html('？？？');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       if (fgnc == 221056609606473014421787380872987949552598734383276262255704476947548653120155421475962648952692356060998846772971920849007988994134210953094269317516) {
@@ -203,7 +203,7 @@ function prevLevel() {
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
-      $('#level-d').html('特定ステージクリアでアンロック');
+      $('#level-d').html('？？？');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       if (fgnc == 670455346848446928844724571688801125823716090970215205684765249498424614307126029537974715) {
@@ -215,7 +215,7 @@ function prevLevel() {
       $('#PresentCode').show();
       }
      } else if (level == 3) {
-      $('#level-d').html('特定ステージクリアでアンロック');
+      $('#level-d').html('超難関 ステージ');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       if (fgnc == 52867353458815241279372166427305653048730729738030) {
@@ -227,13 +227,13 @@ function prevLevel() {
       $('#PresentCode').show();
       }
      } else if (level == 4) {
-      $('#level-d').html('特定ステージクリアでアンロック');
+      $('#level-d').html('？？？');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       if (fgnc == 221056609606473014421787380872987949552598734383276262255704476947548653120155421475962648952692356060998846772971920849007988994134210953094269317516) {
       $('#play').show();
       $('#PresentCode').hide();
-      $('#level-d').html('超難関 ステージ');
+      $('#level-d').html('ラスト ステージ');
       } else {
       $('#play').hide();
       $('#PresentCode').show();
