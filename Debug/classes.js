@@ -797,12 +797,12 @@ class Upobstacle {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
-      ball.mesh.position.z <= 0.5 &&
-      ball.mesh.position.y < this.mesh.position.y + 2
+      ball.mesh.position.x >= this.mesh.position.x - 0 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0 &&
+      ball.mesh.position.z <= 0 &&
+      ball.mesh.position.y < this.mesh.position.y + 0
     ) return true;
   }
 }
@@ -825,12 +825,12 @@ class Downobstacle {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0 &&
-      ball.mesh.position.z <= 0 &&
-      ball.mesh.position.y < this.mesh.position.y + 0
+      ball.mesh.position.x >= this.mesh.position.x - 0.8 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.8 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.8 &&
+      ball.mesh.position.z <= 0.8 &&
+      ball.mesh.position.y < this.mesh.position.y + 0.8
     ) return true;
   }
 }
