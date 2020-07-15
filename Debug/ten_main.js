@@ -34,17 +34,7 @@ $.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level').html('The Beryl');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      $('#play').show();
-      $('#PresentCode').hide();
-     } else if (level == 3) {
       $('#level').html('The Dia');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      $('#play').show();
-      $('#PresentCode').hide();
-     } else if (level == 4) {
-      $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       $('#play').show();
       $('#PresentCode').hide();
@@ -71,11 +61,7 @@ function start(e) {
     if (level == 1) {
         $('#ruby').get(0).play();
         } else if (level == 2) {
-        $('#rgw').get(0).play();
-        } else if (level == 3) {
         $('#dia').get(0).play();
-        } else if (level == 4) {
-        $('#kya').get(0).play();
         } else {
             $('#cloud').get(0).play();
             }
@@ -125,7 +111,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 3) {
+  if (level == 2) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -134,17 +120,7 @@ function nextLevel() {
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
-      $('#level').html('The Beryl');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      $('#play').show();
-      $('#PresentCode').hide();
-     } else if (level == 3) {
       $('#level').html('The Dia');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      $('#play').show();
-      $('#PresentCode').hide();
-     } else if (level == 4) {
-      $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       $('#play').show();
       $('#PresentCode').hide();
@@ -182,17 +158,7 @@ function prevLevel() {
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
-      $('#level').html('The Beryl');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      $('#play').show();
-      $('#PresentCode').hide();
-     } else if (level == 3) {
       $('#level').html('The Dia');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      $('#play').show();
-      $('#PresentCode').hide();
-     } else if (level == 4) {
-      $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       $('#play').show();
       $('#PresentCode').hide();
@@ -286,17 +252,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
-      $('#rgw').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 3) {
       $('#dia').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 4) {
-      $('#kya').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
