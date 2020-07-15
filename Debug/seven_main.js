@@ -38,10 +38,6 @@ $.getJSON('seven_levels.json', d => {
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
         } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
-        } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
