@@ -39,7 +39,15 @@ $.getJSON('nine_levels.json', d => {
       $('#level-d').html('？？？');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
-     } else {
+     } else if (level == 3) {
+      $('#level-d').html('Extra ステージ');
+      $('#level').html('Days');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+     } else if (level == 4) {
+      $('#level-d').html('？？？');
+      $('#level').html('True Days');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
@@ -63,6 +71,10 @@ function start(e) {
         $('#FELL').get(0).play();
         } else if (level == 2) {
         $('#TFE').get(0).play();
+        } else if (level == 3) {
+        $('#DAYS').get(0).play();
+        } else if (level == 4) {
+        $('#TDAYS').get(0).play();
         } else {
             $('#FELL').get(0).play();
             }
@@ -130,7 +142,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 2) {
+  if (level == 3) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -150,7 +162,15 @@ function nextLevel() {
       $('#play').hide();
       $('#PresentCode').show();
       }
-     } else {
+     } else if (level == 3) {
+      $('#level-d').html('Extra ステージ');
+      $('#level').html('Days');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+     } else if (level == 4) {
+      $('#level-d').html('？？？');
+      $('#level').html('True Days');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
@@ -195,7 +215,15 @@ function prevLevel() {
       $('#play').hide();
       $('#PresentCode').show();
       }
-     } else {
+     } else if (level == 3) {
+      $('#level-d').html('Extra ステージ');
+      $('#level').html('Days');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+     } else if (level == 4) {
+      $('#level-d').html('？？？');
+      $('#level').html('True Days');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
@@ -341,6 +369,22 @@ function gameover() {
       $('#next').hide();
       }
       $('#TFE').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 3) { 
+     if (star == 2) {
+      $('#level-d').html('運命が蠢く日');
+      }
+      $('#DAYS').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 4) { 
+     if (star == 2) {
+      $('#level-d').html('私は運命を動かし、あなたは運命に抗う');
+      }
+      $('#TDAYS').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
