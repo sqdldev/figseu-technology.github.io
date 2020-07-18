@@ -170,6 +170,13 @@ function nextLevel() {
       $('#level-d').html('？？？');
       $('#level').html('True Days');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 1085873048182393003104848095238476254538454144805944462563863122678075250008096541984) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+      }
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -223,6 +230,13 @@ function prevLevel() {
       $('#level-d').html('？？？');
       $('#level').html('True Days');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      if (fgnc == 1085873048182393003104848095238476254538454144805944462563863122678075250008096541984) {
+      $('#play').show();
+      $('#PresentCode').hide();
+      } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+      }
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
