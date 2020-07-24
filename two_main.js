@@ -42,6 +42,10 @@ $.getJSON('two_levels.json', d => {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('Cloud');
          $('#stars').html('☆☆');
+        } else if (level == 4) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('ピクニック');
+         $('#stars').html('☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -65,9 +69,11 @@ function start(e) {
     if (level == 1) {
         $('#kimetu').get(0).play();
             } else if (level == 2) {
-            $('#piknik').get(0).play();
+            $('#touhou').get(0).play();
             } else if (level == 3) {
             $('#cloud').get(0).play();
+            } else if (level == 4) {
+            $('#piknik').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -136,7 +142,7 @@ function nextLevel() {
   $('#retry').hide();
   $('#play').show();
   $('#PresentCode').hide();
-  if (level == 3) {
+  if (level == 4) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -158,6 +164,10 @@ function nextLevel() {
         } else if (level == 3) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('Cloud');
+         $('#stars').html('☆☆');
+        } else if (level == 4) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('ピクニック');
          $('#stars').html('☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -207,6 +217,10 @@ function prevLevel() {
         } else if (level == 3) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('Cloud');
+         $('#stars').html('☆☆');
+        } else if (level == 4) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('ピクニック');
          $('#stars').html('☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -348,7 +362,7 @@ function gameover() {
              $('#PresentCode').hide();
              $('#next').hide();
       }
-      $('#piknik').each(function(){
+      $('#touhou').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
@@ -357,6 +371,14 @@ function gameover() {
              $('#level-d').html('空に浮かぶ宮殿');
       }
       $('#cloud').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 4) {
+         if (star == 2) {
+             $('#level-d').html('君に恋をした日');
+      }
+      $('#piknik').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
