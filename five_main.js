@@ -71,7 +71,7 @@ function start(e) {
             } else if (level == 3) {
             $('#pinsir').get(0).play();
             } else if (level == 4) {
-            $('#piknik').get(0).play();
+            $('#the_end').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -355,7 +355,7 @@ function gameover() {
          if (star == 2) {
              $('#level-d').html('Thanks you for playing!!');
       }
-      $('#piknik').each(function(){
+      $('#the_end').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
