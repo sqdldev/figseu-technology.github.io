@@ -36,6 +36,10 @@ $.getJSON('four_levels.json', d => {
          $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
          $('#stars').html('☆☆☆☆');
+        } else if (level == 3) {
+         $('#level-d').html('Extraステージ');
+         $('#level').html('夢色サンドイッチ');
+         $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -60,6 +64,8 @@ function start(e) {
             $('#ever_down').get(0).play();
             } else if (level == 2) {
             $('#bad_apple').get(0).play();
+            } else if (level == 3) {
+            $('#bang_dream').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -132,6 +138,10 @@ function nextLevel() {
          $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
          $('#stars').html('☆☆☆☆');
+        } else if (level == 3) {
+         $('#level-d').html('Extraステージ');
+         $('#level').html('夢色サンドイッチ');
+         $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -167,6 +177,10 @@ function prevLevel() {
         } else if (level == 2) {
          $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
+         $('#stars').html('☆☆☆☆');
+        } else if (level == 3) {
+         $('#level-d').html('Extraステージ');
+         $('#level').html('夢色サンドイッチ');
          $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -311,6 +325,15 @@ function gameover() {
       $('#level-d').html('全てを壊す光');
       }
       $('#bad_apple').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 3) {
+      if (star == 2) {
+      $('#level-d').html('パステルカラードリーム');
+      $('#stars').html('☆☆☆☆☆');
+      }
+      $('#bang_dream').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
