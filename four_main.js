@@ -38,7 +38,7 @@ $.getJSON('four_levels.json', d => {
          $('#stars').html('☆☆☆☆');
         } else if (level == 3) {
          $('#level-d').html('Extraステージ');
-         $('#level').html('夢色サンドイッチ');
+         $('#level').html('ふわふわ ゆめいろサンドイッチ');
          $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -140,7 +140,7 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆');
         } else if (level == 3) {
          $('#level-d').html('Extraステージ');
-         $('#level').html('夢色サンドイッチ');
+         $('#level').html('ふわふわ ゆめいろサンドイッチ');
          $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -180,7 +180,7 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆');
         } else if (level == 3) {
          $('#level-d').html('Extraステージ');
-         $('#level').html('夢色サンドイッチ');
+         $('#level').html('ふわふわ ゆめいろサンドイッチ');
          $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
