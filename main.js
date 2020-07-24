@@ -171,8 +171,8 @@ function nextLevel() {
          $('#level').html('孤島');
          $('#stars').html('☆');
         } else if (level == 6) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('ピクニック');
+         $('#level-d').html('チュートリアルステージ');
+         $('#level').html('夕方のピクニック');
          $('#stars').html('☆');
         } else {
             $('#level-d').html('開発中');
@@ -210,6 +210,10 @@ function prevLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('夜道');
          $('#stars').html('☆');
+        } else if (level == 3) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('決勝戦');
+         $('#stars').html('☆');
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('デジタルの世界');
@@ -219,12 +223,8 @@ function prevLevel() {
          $('#level').html('孤島');
          $('#stars').html('☆');
         } else if (level == 6) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('ピクニック');
-         $('#stars').html('☆');
-        } else if (level == 3) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('決勝戦');
+         $('#level-d').html('チュートリアルステージ');
+         $('#level').html('夕方のピクニック');
          $('#stars').html('☆');
         } else {
             $('#level-d').html('開発中');
