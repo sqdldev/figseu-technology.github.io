@@ -89,8 +89,8 @@ function start(e) {
     });
     world.forEach(v => {
       if (v instanceof Upobstacle) {
-        v.mesh.position.y = -0.4;
-        v.line.position.y = -0.4;
+        v.mesh.position.y = 0;
+        v.line.position.y = 0;
       }
     });
     world.forEach(v => {
