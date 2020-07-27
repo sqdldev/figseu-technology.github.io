@@ -44,6 +44,10 @@ $.getJSON('five_levels.json', d => {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
+        } else if (level == 5) {
+         $('#level-d').html('Music by サカナクション');
+         $('#level').html('新 宝 島');
+         $('#stars').html('☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -72,6 +76,8 @@ function start(e) {
             $('#pinsir').get(0).play();
             } else if (level == 4) {
             $('#the_end').get(0).play();
+            } else if (level == 5) {
+            $('#sintakarajima').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -152,6 +158,10 @@ function nextLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
+        } else if (level == 5) {
+         $('#level-d').html('Music by サカナクション');
+         $('#level').html('新 宝 島');
+         $('#stars').html('☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -160,7 +170,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 5) {
     $('#next').hide();
   }
 }
@@ -195,6 +205,10 @@ function prevLevel() {
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
+         $('#stars').html('☆☆☆☆☆');
+        } else if (level == 5) {
+         $('#level-d').html('Music by サカナクション');
+         $('#level').html('新 宝 島');
          $('#stars').html('☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -356,6 +370,11 @@ function gameover() {
              $('#level-d').html('Thanks you for playing!!');
       }
       $('#the_end').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) {
+      $('#sintakarajima').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
