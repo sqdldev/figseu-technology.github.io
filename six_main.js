@@ -42,6 +42,10 @@ $.getJSON('six_levels.json', d => {
          $('#level-d').html('開催日　7月3日');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
+        } else if (level == 4) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('Redo');
+         $('#stars').html('☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -68,6 +72,8 @@ function start(e) {
             $('#summer').get(0).play();
             } else if (level == 3) {
             $('#yukkuri').get(0).play();
+            } else if (level == 4) {
+            $('#redo').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -158,6 +164,10 @@ function nextLevel() {
       $('#play').hide();
       $('#PresentCode').show();
       }
+        } else if (level == 4) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('Redo');
+         $('#stars').html('☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -206,6 +216,10 @@ function prevLevel() {
       $('#play').hide();
       $('#PresentCode').show();
       }
+        } else if (level == 4) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('Redo');
+         $('#stars').html('☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -351,6 +365,14 @@ function gameover() {
       $('#level-d').html('神秘の森のゆっくりプレイス');
       }
       $('#yukkuri').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 4) {
+      if (star == 2) {
+      $('#level-d').html('未来を解き放つ');
+      }
+      $('#redo').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
