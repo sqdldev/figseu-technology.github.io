@@ -45,7 +45,7 @@ $.getJSON('nine_levels.json', d => {
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
       $('#level-d').html('？？？');
-      $('#level').html('True Days');
+      $('#level').html('чЬЯхоЯуБоф ЦчХМ');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       } else {
             $('#level-d').html('開発中');
@@ -142,7 +142,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 3) {
+  if (level == 4) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -168,11 +168,13 @@ function nextLevel() {
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
       $('#level-d').html('？？？');
-      $('#level').html('True Days');
+      $('#level').html('чЬЯхоЯуБоф ЦчХМ');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       if (fgnc == 1085873048182393003104848095238476254538454144805944462563863122678075250008096541984) {
       $('#play').show();
       $('#PresentCode').hide();
+      $('#level-d').html('真実への道');
+      $('#level').html('True Days');
       } else {
       $('#play').hide();
       $('#PresentCode').show();
@@ -228,11 +230,13 @@ function prevLevel() {
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
       $('#level-d').html('？？？');
-      $('#level').html('True Days');
+      $('#level').html('чЬЯхоЯуБоф ЦчХМ');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       if (fgnc == 1085873048182393003104848095238476254538454144805944462563863122678075250008096541984) {
       $('#play').show();
       $('#PresentCode').hide();
+      $('#level-d').html('真実への道');
+      $('#level').html('True Days');
       } else {
       $('#play').hide();
       $('#PresentCode').show();
