@@ -43,6 +43,7 @@
         };
         heightCalc();
 
+        $('#ending_music').get(0).play();
 
        	//フェード処理
        	function fadeAnimation(){
