@@ -29,7 +29,7 @@ $.getJSON('nine_levels.json', d => {
   $('#play').show();
   $('#PresentCode').hide();
   $('#play').click(start);
-  $('#next').hide();
+  $('#next').show();
   $('#score').hide();
   if (level == 1) {
       $('#level').html('Fell Gate');
@@ -135,7 +135,7 @@ function nextLevel() {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level').html('True Fell Gate');
+      $('#level').html('Days');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
             $('#level-d').html('開発中');
@@ -169,7 +169,7 @@ function prevLevel() {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level').html('True Fell Gate');
+      $('#level').html('Days');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else {
             $('#level-d').html('開発中');
