@@ -40,6 +40,10 @@ $.getJSON('four_levels.json', d => {
          $('#level-d').html('Extraステージ');
          $('#level').html('ふわふわ ゆめいろサンドイッチ');
          $('#stars').html('☆☆☆☆');
+        } else if (level == 4) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('華麗に舞う少女');
+         $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -142,6 +146,10 @@ function nextLevel() {
          $('#level-d').html('Extraステージ');
          $('#level').html('ふわふわ ゆめいろサンドイッチ');
          $('#stars').html('☆☆☆☆');
+        } else if (level == 4) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('華麗に舞う少女');
+         $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -181,6 +189,10 @@ function prevLevel() {
         } else if (level == 3) {
          $('#level-d').html('Extraステージ');
          $('#level').html('ふわふわ ゆめいろサンドイッチ');
+         $('#stars').html('☆☆☆☆');
+        } else if (level == 4) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('華麗に舞う少女');
          $('#stars').html('☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
