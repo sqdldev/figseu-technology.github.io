@@ -160,7 +160,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 3) {
+  if (level == 4) {
     $('#next').hide();
   }
 }
