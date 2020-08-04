@@ -70,6 +70,8 @@ function start(e) {
             $('#bad_apple').get(0).play();
             } else if (level == 3) {
             $('#bang_dream').get(0).play();
+            } else if (level == 4) {
+            $('#girls_party').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -346,6 +348,14 @@ function gameover() {
       $('#stars').html('☆☆☆☆☆');
       }
       $('#bang_dream').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 4) {
+         if (star == 2) {
+      $('#level-d').html('君とダンスを踊り、舞う');
+      }
+      $('#girls_party').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
