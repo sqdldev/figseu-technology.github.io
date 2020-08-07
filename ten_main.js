@@ -31,27 +31,9 @@ $.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  if (level == 1) {
-      $('#level-d').html('超難関');
-      $('#level').html('The Ruby');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-     } else if (level == 2) {
-      $('#level-d').html('特定ステージクリアでアンロック');
-      $('#level').html('The Beryl');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-     } else if (level == 3) {
-      $('#level-d').html('特定ステージクリアでアンロック');
-      $('#level').html('The Dia');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-     } else if (level == 4) {
-      $('#level-d').html('特定ステージクリアでアンロック');
-      $('#level').html('The Kyanite');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-     } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+  $('#level-d').html('超難関');
+  $('#level').html('The Ruby');
+  $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
