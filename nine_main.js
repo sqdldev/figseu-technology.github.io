@@ -19,6 +19,7 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let random = Math.random();
 let url = location.href;
 let fgnc = url.substr( 67 );
 let data;
@@ -31,27 +32,9 @@ $.getJSON('nine_levels.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  if (level == 1) {
-      $('#level-d').html('Extra ステージ');
-      $('#level').html('Fell Gate');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-     } else if (level == 2) {
-      $('#level-d').html('？？？');
-      $('#level').html('True Fell Gate');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-     } else if (level == 3) {
-      $('#level-d').html('Extra ステージ');
-      $('#level').html('Days');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-     } else if (level == 4) {
-      $('#level-d').html('？？？');
-      $('#level').html('чЬЯхоЯуБоф ЦчХМ');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+  $('#level-d').html('Extra ステージ');
+  $('#level').html('Fell Gate');
+  $('#stars').html('☆☆☆☆☆☆☆☆☆');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
