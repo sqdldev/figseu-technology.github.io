@@ -48,6 +48,10 @@ $.getJSON('five_levels.json', d => {
          $('#level-d').html('Music by サカナクション');
          $('#level').html('新 宝 島');
          $('#stars').html('☆☆☆☆☆');
+        } else if (level == 6) {
+         $('#level-d').html('Request by R');
+         $('#level').html('MOON PRIDE');
+         $('#stars').html('☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -78,6 +82,8 @@ function start(e) {
             $('#the_end').get(0).play();
             } else if (level == 5) {
             $('#sintakarajima').get(0).play();
+            } else if (level == 6) {
+            $('#moonpride').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -162,6 +168,10 @@ function nextLevel() {
          $('#level-d').html('Music by サカナクション');
          $('#level').html('新 宝 島');
          $('#stars').html('☆☆☆☆☆');
+        } else if (level == 6) {
+         $('#level-d').html('Request by R');
+         $('#level').html('MOON PRIDE');
+         $('#stars').html('☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -170,7 +180,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 5) {
+  if (level == 6) {
     $('#next').hide();
   }
 }
@@ -209,6 +219,10 @@ function prevLevel() {
         } else if (level == 5) {
          $('#level-d').html('Music by サカナクション');
          $('#level').html('新 宝 島');
+         $('#stars').html('☆☆☆☆☆');
+        } else if (level == 6) {
+         $('#level-d').html('Request by R');
+         $('#level').html('MOON PRIDE');
          $('#stars').html('☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -375,6 +389,14 @@ function gameover() {
 });
      } else if (level == 5) {
       $('#sintakarajima').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 6) {
+         if (star == 2) {
+             $('#level-d').html('新しい伝説が今ここから始まる');
+      }
+      $('#moonpride').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
