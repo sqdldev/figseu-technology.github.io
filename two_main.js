@@ -30,27 +30,9 @@ $.getJSON('two_levels.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  if (level == 1) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('霧の洞窟');
-         $('#stars').html('☆☆');
-        } else if (level == 2) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('幻想郷');
-         $('#stars').html('☆☆');
-        } else if (level == 3) {
-         $('#level-d').html('チュートリアルステージ');
-         $('#level').html('Cloud');
-         $('#stars').html('☆☆');
-        } else if (level == 4) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('ピクニック');
-         $('#stars').html('☆☆');
-        } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+  $('#level-d').html('ボーナスステージ');
+  $('#level').html('霧の洞窟');
+  $('#stars').html('☆☆');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -74,6 +56,8 @@ function start(e) {
             $('#cloud').get(0).play();
             } else if (level == 4) {
             $('#piknik').get(0).play();
+            } else if (level == 5) {
+            $('#moon').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -142,7 +126,7 @@ function nextLevel() {
   $('#retry').hide();
   $('#play').show();
   $('#PresentCode').hide();
-  if (level == 4) {
+  if (level == 5) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -168,6 +152,10 @@ function nextLevel() {
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('ピクニック');
+         $('#stars').html('☆☆');
+        } else if (level == 5) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('月下の舞');
          $('#stars').html('☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -221,6 +209,10 @@ function prevLevel() {
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('ピクニック');
+         $('#stars').html('☆☆');
+        } else if (level == 5) {
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('月下の舞');
          $('#stars').html('☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -379,6 +371,14 @@ function gameover() {
              $('#level-d').html('君に恋をした日');
       }
       $('#piknik').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) {
+         if (star == 2) {
+             $('#level-d').html('月の光に掲げる');
+      }
+      $('#moon').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
