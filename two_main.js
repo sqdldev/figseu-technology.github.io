@@ -137,14 +137,6 @@ function nextLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
-         if (fgnc == 9151296156707903858333253080656982985406674316002277255110615127438971) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('ボーナスステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
         } else if (level == 3) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('Cloud');
@@ -194,14 +186,6 @@ function prevLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
-         if (fgnc == 9151296156707903858333253080656982985406674316002277255110615127438971) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('Extra ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
         } else if (level == 3) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('Cloud');
