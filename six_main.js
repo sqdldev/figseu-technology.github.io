@@ -156,14 +156,6 @@ function nextLevel() {
          $('#level-d').html('Extra ステージ');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
-         if (fgnc == 21257270831415101218051843920787270385869056086848) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('Extra ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
         } else if (level == 4) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('Redo');
@@ -208,14 +200,6 @@ function prevLevel() {
          $('#level-d').html('Extra ステージ');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
-         if (fgnc == 21257270831415101218051843920787270385869056086848) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('Extra ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
         } else if (level == 4) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('Redo');
