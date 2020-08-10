@@ -164,7 +164,7 @@ class Ball {
         if (v instanceof Mysterybox && this.landed) {
           if (v.detect() && started) {
             this.landed = false;
-            v.mesh.position.y = -0.5;
+            v.mesh.position.y = -20;
             $('#crown').each(function(){
                   this.pause(); // Stop playing
                   this.currentTime = 0; // Reset time
@@ -177,7 +177,7 @@ class Ball {
         if (v instanceof Gem && this.landed) {
           if (v.detect() && started) {
             this.landed = false;
-            v.mesh.position.y = -0.5;
+            v.mesh.position.y = -20;
             $('#gem').each(function(){
                   this.pause(); // Stop playing
                   this.currentTime = 0; // Reset time
