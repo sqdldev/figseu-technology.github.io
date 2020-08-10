@@ -360,10 +360,6 @@ function gameover() {
       if (star == 2) {
       $('#level-d').html('Lets go Rolling Sky World !!');
       $('#stars').html('☆☆☆☆☆☆');
-      $('#play').hide();
-      $('#stage_key').show();
-      $('#PresentCode').hide();
-      $('#next').hide();
       }
       $('#cloud').each(function(){
     this.pause(); // Stop playing
