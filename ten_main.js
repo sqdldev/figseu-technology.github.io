@@ -131,26 +131,10 @@ function nextLevel() {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 52867353458815241279372166427305653048730729738030) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('超難関 ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
      } else if (level == 4) {
       $('#level-d').html('？？？');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 221056609606473014421787380872987949552598734383276262255704476947548653120155421475962648952692356060998846772971920849007988994134210953094269317516) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('ラスト ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -201,26 +185,10 @@ function prevLevel() {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 52867353458815241279372166427305653048730729738030) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('超難関 ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
      } else if (level == 4) {
       $('#level-d').html('？？？');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 221056609606473014421787380872987949552598734383276262255704476947548653120155421475962648952692356060998846772971920849007988994134210953094269317516) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('ラスト ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
