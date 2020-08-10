@@ -352,10 +352,6 @@ function gameover() {
      } else if (level == 4) {
        if (star == 2) {
              $('#level-d').html('空に舞う雨のダンス');
-             $('#play').hide();
-             $('#stage_key').show();
-             $('#PresentCode').hide();
-             $('#next').hide();
       }
       $('#rain').each(function(){
     this.pause(); // Stop playing
