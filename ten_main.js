@@ -132,7 +132,7 @@ function nextLevel() {
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
-      $('#level-d').html('？？？');
+      $('#level-d').html('ラストステージ');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else {
@@ -186,7 +186,7 @@ function prevLevel() {
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
-      $('#level-d').html('？？？');
+      $('#level-d').html('ラストステージ');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else {
