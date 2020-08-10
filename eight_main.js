@@ -18,6 +18,7 @@ camera.rotation.x -= 0.75;
 let scoreSubmitted = false;
 let level = 1;
 let star = 0;
+let train = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 68 );
 let data;
@@ -30,27 +31,9 @@ $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCyb
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  if (level == 1) {
-      $('#level-d').html('ボーナスステージ');
-      $('#level').html('Maison');
-      $('#stars').html('☆☆☆☆☆☆☆☆');
-     } else if (level == 2) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('輪廻転生');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
-        } else if (level == 3) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('雷光の姫君');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
-        } else if (level == 4) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('The Eden');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
-        } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+  $('#level-d').html('ボーナスステージ');
+  $('#level').html('Maison');
+  $('#stars').html('☆☆☆☆☆☆☆☆');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -74,6 +57,8 @@ function start(e) {
             $('#prin').get(0).play();
             } else if (level == 4) {
             $('#los').get(0).play();
+            } else if (level == 5) {
+            $('#ef').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -142,6 +127,10 @@ function nextLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
+        } else if (level == 5) {
+         $('#level-d').html('？？？');
+         $('#level').html('EF66');
+         $('#stars').html('☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -185,6 +174,10 @@ function prevLevel() {
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The Eden');
+         $('#stars').html('☆☆☆☆☆☆☆☆');
+        } else if (level == 5) {
+         $('#level-d').html('？？？');
+         $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -314,7 +307,14 @@ function gameover() {
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
-     } else {
+     } else if (level == 5) {
+      if (star == 2) {
+      $('#level-d').html('夢を運ぶ　ブルートレイン');
+      }
+      $('#ef').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});else {
       $('#cloud').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
