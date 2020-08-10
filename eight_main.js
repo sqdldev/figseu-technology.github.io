@@ -310,7 +310,8 @@ function gameover() {
       $('#ef').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
-});else {
+});
+     } else {
       $('#cloud').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
