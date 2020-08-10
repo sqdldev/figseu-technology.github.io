@@ -36,17 +36,9 @@ $.getJSON('seven_levels.json', d => {
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('？？？');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
-         if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('Extra ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -141,17 +133,9 @@ function nextLevel() {
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('？？？');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
-         if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('Extra ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -185,17 +169,9 @@ function prevLevel() {
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
         } else if (level == 2) {
-         $('#level-d').html('？？？');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
-         if (fgnc == 62627875084526733921364425818106857462976096488136379584814849840888703537616979195253571844542400012173858425) {
-         $('#play').show();
-         $('#PresentCode').hide();
-         $('#level-d').html('Extra ステージ');
-         } else {
-         $('#play').hide();
-         $('#PresentCode').show();
-         }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -329,10 +305,6 @@ function gameover() {
   if (level == 1) {
          if (star == 2) {
       $('#level-d').html('今日もいい天気☆');
-      $('#play').hide();
-      $('#stage_key').show();
-      $('#PresentCode').hide();
-      $('#next').hide();
       }
       $('#shrine').each(function(){
     this.pause(); // Stop playing
