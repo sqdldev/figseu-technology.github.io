@@ -290,10 +290,6 @@ function gameover() {
      } else if (level == 3) {
        if (star == 2) {
       $('#level-d').html('失われた王国の王女');
-      $('#play').hide();
-      $('#dia_key').show();
-      $('#PresentCode').hide();
-      $('#next').hide();
       }
       $('#prin').each(function(){
     this.pause(); // Stop playing
@@ -302,10 +298,6 @@ function gameover() {
      } else if (level == 4) {
        if (star == 2) {
       $('#level-d').html('天空の花園');
-      $('#play').hide();
-      $('#kyanite_key').show();
-      $('#PresentCode').hide();
-      $('#next').hide();
       }
       $('#los').each(function(){
     this.pause(); // Stop playing
