@@ -133,35 +133,17 @@ function nextLevel() {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level-d').html('？？？');
+      $('#level-d').html('創造の地');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 34596958616894144105608162163095868374117197380879392381144119358686697610046567786924041418631936581800529095
-) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('Extra ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
      } else if (level == 3) {
       $('#level-d').html('Extra ステージ');
       $('#level').html('Days');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
-      $('#level-d').html('？？？');
-      $('#level').html('чЬЯхоЯуБоф ЦчХМ');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 1085873048182393003104848095238476254538454144805944462563863122678075250008096541984) {
-      $('#play').show();
-      $('#PresentCode').hide();
       $('#level-d').html('真実への道');
       $('#level').html('True Days');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -195,35 +177,17 @@ function prevLevel() {
       $('#level').html('Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
-      $('#level-d').html('？？？');
+      $('#level-d').html('創造の地');
       $('#level').html('True Fell Gate');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 34596958616894144105608162163095868374117197380879392381144119358686697610046567786924041418631936581800529095
-) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('Extra ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
      } else if (level == 3) {
       $('#level-d').html('Extra ステージ');
       $('#level').html('Days');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
-      $('#level-d').html('？？？');
-      $('#level').html('чЬЯхоЯуБоф ЦчХМ');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 1085873048182393003104848095238476254538454144805944462563863122678075250008096541984) {
-      $('#play').show();
-      $('#PresentCode').hide();
       $('#level-d').html('真実への道');
       $('#level').html('True Days');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -352,10 +316,6 @@ function gameover() {
   if (level == 1) { 
      if (star == 2) {
       $('#level-d').html('滅びる世界');
-      $('#play').hide();
-      $('#fell_key').show();
-      $('#PresentCode').hide();
-      $('#next').hide();
       }
       $('#FELL').each(function(){
     this.pause(); // Stop playing
@@ -372,10 +332,6 @@ function gameover() {
      } else if (level == 3) { 
      if (star == 2) {
       $('#level-d').html('運命が蠢く日');
-      $('#play').hide();
-      $('#kyanite_key').show();
-      $('#PresentCode').hide();
-      $('#next').hide();
       }
       $('#DAYS').each(function(){
     this.pause(); // Stop playing
