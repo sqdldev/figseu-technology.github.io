@@ -108,7 +108,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 5) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -131,6 +131,8 @@ function nextLevel() {
          $('#level-d').html('？？？');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#play').hide();
+         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -179,6 +181,8 @@ function prevLevel() {
          $('#level-d').html('？？？');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#play').hide();
+         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
