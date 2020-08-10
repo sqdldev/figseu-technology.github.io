@@ -333,10 +333,6 @@ function gameover() {
      } else if (level == 2) {
          if (star == 2) {
              $('#level-d').html('夢の世界が集う場所');
-             $('#play').hide();
-             $('#stage_key').show();
-             $('#PresentCode').hide();
-             $('#next').hide();
       }
       $('#touhou').each(function(){
     this.pause(); // Stop playing
