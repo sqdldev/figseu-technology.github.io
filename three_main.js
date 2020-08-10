@@ -160,14 +160,6 @@ function nextLevel() {
          $('#level-d').html('Extra ステージ');
          $('#level').html('梅雨');
          $('#stars').html('☆☆☆');
-         if (fgnc == 432737707458933564065180059703468227602185200453146149076917164552540333926002833815597382607008699384651707976180218029960925525916061) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('Extra ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-         }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -212,14 +204,6 @@ function prevLevel() {
          $('#level-d').html('Extra ステージ');
          $('#level').html('梅雨');
          $('#stars').html('☆☆☆');
-         if (fgnc == 432737707458933564065180059703468227602185200453146149076917164552540333926002833815597382607008699384651707976180218029960925525916061) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('Extra ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-         }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
