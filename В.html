@@ -24,7 +24,14 @@ img {
 	text-decoration: none;
 }
 </style>
+<script>
+function BGM() {
+	$('#bgm').get(0).play();
+}
+</script>
+<audio rel="preload" src="bgm/The Kyanite.mp3" id="bgm" preload="auto" loop></audio>
 </head>
+<body onload="BGM()">
 <h1 align="center">Rolling Sky Evolution</h1>
 <h2 align="center">В</h2>
 
@@ -32,10 +39,13 @@ img {
 
 <h2 align="center">----------------------------------</h2>
 
-<div align="center"><img src="img_A/В.png"/></div>
+<div align="center"><a onclick="BGM()"><img src="img_A/В.png"/></a></div>
 
 <br> </br>
 
 <p align="center"><a align="center" href="index.html" class="button">戻る</a></p>
 
 <br> </br>
+
+</body>
+<script src="System/jquery.js"></script>
