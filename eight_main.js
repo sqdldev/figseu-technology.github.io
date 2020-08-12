@@ -278,10 +278,6 @@ function gameover() {
      } else if (level == 2) {
        if (star == 2) {
       $('#level-d').html('世界は廻り続ける');
-      $('#play').hide();
-      $('#beryl_key').show();
-      $('#PresentCode').hide();
-      $('#next').hide();
       }
          $('#edu').each(function(){
     this.pause(); // Stop playing
