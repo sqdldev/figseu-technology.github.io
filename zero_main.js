@@ -32,7 +32,7 @@ $.getJSON('RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhj
   $('#next').hide();
   $('#score').hide();
   $('#level-d').html('最後の試練');
-  $('#level').html('0');
+  $('#level').html('Zero');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
   reqId = requestAnimationFrame(render);
   console.clear();
@@ -100,7 +100,7 @@ function nextLevel() {
     $('#next').hide();
   }
   $('#level-d').html('最後の試練');
-  $('#level').html('0');
+  $('#level').html('Zero');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
 }
 
@@ -126,7 +126,7 @@ function prevLevel() {
     $('#prev').hide();
   }
   $('#level-d').html('最後の試練');
-  $('#level').html('0');
+  $('#level').html('Zero');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
 }
 
