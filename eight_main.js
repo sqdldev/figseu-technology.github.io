@@ -270,6 +270,10 @@ function gameover() {
   if (level == 1) {
     if (star == 2) {
       $('#level-d').html('我が家への道');
+      $('#play').hide();
+      $('#dia_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
       }
       $('#mai').each(function(){
     this.pause(); // Stop playing
