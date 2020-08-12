@@ -131,8 +131,14 @@ function nextLevel() {
          $('#level-d').html('？？？');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#play').hide();
-         $('#PresentCode').show();
+         if (fgnc == 9484402180315021546985633082138842594288955408656796465853324060779867) {
+             $('#play').show();
+             $('#PresentCode').hide();
+             $('#level-d').html('Extra ステージ');
+         } else {
+             $('#play').hide();
+             $('#PresentCode').show();
+         }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -181,7 +187,14 @@ function prevLevel() {
          $('#level-d').html('？？？');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#play').hide();
+         if (fgnc == 9484402180315021546985633082138842594288955408656796465853324060779867) {
+             $('#play').show();
+             $('#PresentCode').hide();
+             $('#level-d').html('Extra ステージ');
+         } else {
+             $('#play').hide();
+             $('#PresentCode').show();
+         }
          $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
