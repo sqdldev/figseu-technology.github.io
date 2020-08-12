@@ -128,17 +128,9 @@ function nextLevel() {
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
-         $('#level-d').html('？？？');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         if (fgnc == 9484402180315021546985633082138842594288955408656796465853324060779867) {
-             $('#play').show();
-             $('#PresentCode').hide();
-             $('#level-d').html('Extra ステージ');
-         } else {
-             $('#play').hide();
-             $('#PresentCode').show();
-         }
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -184,18 +176,9 @@ function prevLevel() {
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
-         $('#level-d').html('？？？');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         if (fgnc == 9484402180315021546985633082138842594288955408656796465853324060779867) {
-             $('#play').show();
-             $('#PresentCode').hide();
-             $('#level-d').html('Extra ステージ');
-         } else {
-             $('#play').hide();
-             $('#PresentCode').show();
-         }
-         $('#PresentCode').show();
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
