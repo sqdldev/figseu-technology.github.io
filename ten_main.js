@@ -116,17 +116,9 @@ function nextLevel() {
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
-      $('#level-d').html('？？？');
+      $('#level-d').html('超難関 ステージ');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 670455346848446928844724571688801125823716090970215205684765249498424614307126029537974715) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('超難関 ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
      } else if (level == 3) {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Dia');
@@ -170,17 +162,9 @@ function prevLevel() {
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
-      $('#level-d').html('？？？');
+      $('#level-d').html('超難関 ステージ');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-      if (fgnc == 670455346848446928844724571688801125823716090970215205684765249498424614307126029537974715) {
-      $('#play').show();
-      $('#PresentCode').hide();
-      $('#level-d').html('超難関 ステージ');
-      } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-      }
      } else if (level == 3) {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Dia');
