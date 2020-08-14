@@ -59,6 +59,8 @@ function start(e) {
             $('#los').get(0).play();
             } else if (level == 5) {
             $('#ef').get(0).play();
+            } else if (level == 6) {
+            $('#alive').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -108,7 +110,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 5) {
+  if (level == 6) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -130,6 +132,10 @@ function nextLevel() {
         } else if (level == 5) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('EF66');
+         $('#stars').html('☆☆☆☆☆☆☆☆');
+        } else if (level == 6) {
+         $('#level-d').html('ボーナス ステージ');
+         $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -178,6 +184,10 @@ function prevLevel() {
         } else if (level == 5) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('EF66');
+         $('#stars').html('☆☆☆☆☆☆☆☆');
+        } else if (level == 6) {
+         $('#level-d').html('ボーナス ステージ');
+         $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -300,6 +310,14 @@ function gameover() {
       $('#level-d').html('夢を運ぶ　ブルートレイン');
       }
       $('#ef').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 6) {
+      if (star == 2) {
+      $('#level-d').html('未完成のパズル');
+      }
+      $('#alive').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
