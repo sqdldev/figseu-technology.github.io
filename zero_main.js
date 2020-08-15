@@ -23,7 +23,7 @@ let url = location.href;
 let fgnc = url.substr( 66 );
 let data;
 let reqId;
-$.getJSON('1_RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhjnTQurtXT5ApBMebE.json', d => {
+$.getJSON('RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhjnTQurtXT5ApBMebE.json', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
@@ -54,6 +54,11 @@ function start(e) {
     world.forEach(v => {
       if (v instanceof Bouncer) {
         v.line.position.y = 0;
+      }
+    });
+    world.forEach(v => {
+      if (v instanceof Points) {
+        v.line.position.y = 1.5;
       }
     });
     world.forEach(v => {
@@ -149,10 +154,13 @@ function loadLevel(level) {
           break;
         case 3:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
+          world.push(new Crystal(j - 2, -i, data[index].obstacle));
+          world.push(new Points(j - 2, -i, data[index].obstacle));
           break;
         case 4:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           world.push(new Dreamcube(j - 2, -i, data[index].obstacle));
+          world.push(new Crystal(j - 2, -i, data[index].obstacle));
           break;
         case 5:
           world.push(new Mat(j - 2, -i, data[index].mat));
