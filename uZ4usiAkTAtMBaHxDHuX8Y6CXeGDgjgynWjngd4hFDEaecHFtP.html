@@ -7,13 +7,17 @@
 <link rel="stylesheet" href="uZ4usiAkTAtMBaHxDHuX8Y6CXeGDgjgynWjngd4hFDEaecHFtP.css">
 <script type="text/javascript" src="System/jquery.js"></script>
 <script type="text/javascript" src="uZ4usiAkTAtMBaHxDHuX8Y6CXeGDgjgynWjngd4hFDEaecHFtP.js"></script>
+<audio rel="preload" src="bgm/uZ4usiAkTAtMBaHxDHuX8Y6CXeGDgjgynWjngd4hFDEaecHFtP.mp3" id="bgm" preload="auto"></audio>
 <script type="text/javascript">
 $(function(){
 	$('#staffRoll').staffRoll({type: 2});
 });
+function BGM() {
+        $('#bgm').get(0).play();
+}
 </script>
 </head>
-<body>
+<body onload="BGM()" onclick="BGM()">
 
 <h3 align="center">Rolling Sky Evolution</h3>
 
