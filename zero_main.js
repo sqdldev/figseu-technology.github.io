@@ -216,6 +216,11 @@ function gameover() {
   $('#main').css('pointer-events', 'auto');
   if (star == 2) {
       $('#level-d').html('あの日、あの場所で交わした約束');
+      $('#play').hide();
+      $('#prev').hide();
+      $('#end_key').show();
+      $('#PresentCode').hide();
+      $('#next').hide();
   }
   $('#zero').each(function(){
     this.pause(); // Stop playing
