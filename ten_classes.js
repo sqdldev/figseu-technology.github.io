@@ -174,11 +174,11 @@ class Obstacle {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.x >= this.mesh.position.x - 0.3 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.3 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.3 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.3 &&
+      ball.mesh.position.z <= 0.3 &&
       ball.mesh.position.y < this.mesh.position.y + 0.4
     ) return true;
   }
@@ -202,11 +202,11 @@ class Dreamcube {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.x >= this.mesh.position.x - 0.45 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.45 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.45 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.45 &&
+      ball.mesh.position.z <= 0.45 &&
       ball.mesh.position.y < this.mesh.position.y + 4
     ) return true;
   }
