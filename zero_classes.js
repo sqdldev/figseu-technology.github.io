@@ -408,12 +408,12 @@ class Points {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0 &&
-      ball.mesh.position.z <= 0 &&
-      ball.mesh.position.y < this.mesh.position.y + 0
+      ball.mesh.position.x >= this.mesh.position.x - 0.1 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.1 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.1 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.1 &&
+      ball.mesh.position.z <= 10 &&
+      ball.mesh.position.y < this.mesh.position.y + 1
     ) return true;
   }
 }
