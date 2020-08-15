@@ -154,7 +154,6 @@ function loadLevel(level) {
           break;
         case 3:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
-          world.push(new Crystal(j - 2, -i, data[index].obstacle));
           world.push(new Points(j - 2, -i, data[index].obstacle));
           break;
         case 4:
