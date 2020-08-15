@@ -1,13 +1,3 @@
-/**
-* staffRoll.js
-* jQuery required.
-*
-* * Copyright 2014 (c) webdrawer-kashu
-* * http://webdrawer.net/
-* * Licensed Under the MIT.
-*
-*/
-
 
 (function($) {
     
