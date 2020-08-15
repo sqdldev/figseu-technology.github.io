@@ -15,12 +15,9 @@
 $(function(){
 	$('#staffRoll').staffRoll({type: 2});
 });
-function BGM() {
-        $('#bgm').get(0).play();
-}
 </script>
 </head>
-<body onload="BGM()" onclick="BGM()">
+<body onclick="BGM()">
 
 <h3 align="center">Rolling Sky Evolution</h3>
 
@@ -41,7 +38,7 @@ function BGM() {
 <h2 align="center">Rolling Sky Evolution</h2>
 <li>　</li>
 <li>　</li>
-<p><font color="#A7A7A7">タップするとBGMが流れます</p>
+<p><font color="#A7A7A7">タップするとBGMが流れます</font></p>
 <ul>
 <li>　</li>
 </ul>
@@ -713,4 +710,9 @@ function BGM() {
 
 </div>
 </body>
+<script>
+function BGM() {
+        $('#bgm').get(0).play();
+}
+</script>
 </html>
