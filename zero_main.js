@@ -58,7 +58,7 @@ function start(e) {
     });
     world.forEach(v => {
       if (v instanceof Points) {
-        v.line.position.y = 1.5;
+        v.line.position.y = 0.5;
       }
     });
     world.forEach(v => {
