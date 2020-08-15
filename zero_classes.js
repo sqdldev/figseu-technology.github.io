@@ -81,7 +81,7 @@ class Ball {
         if (v instanceof Points && this.landed) {
           if (v.detect() && started) {
             this.landed = false;
-            v.line.position.y = -2.5;
+            v.line.position.y = 1.5;
           }
         }
       });
