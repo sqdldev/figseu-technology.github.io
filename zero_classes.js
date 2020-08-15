@@ -77,6 +77,14 @@ class Ball {
           }
         }
       });
+      world.forEach(v => {
+        if (v instanceof Points && this.landed) {
+          if (v.detect() && started) {
+            this.landed = false;
+            v.line.position.y = -2.5;
+          }
+        }
+      });
     } else {
       this.landed = false;
       this.speed.y -= 0.04;
