@@ -13,8 +13,8 @@ const canvas = $('#canvascontainer').append(renderer.domElement);
 let distance = 4;
 let started = false;
 let percent = 0;
-camera.position.set(0, 5, distance);
-camera.rotation.x -= 0.75;
+camera.position.set(0, -10, distance);
+camera.rotation.x -= 5;
 let scoreSubmitted = false;
 let level = 1;
 let star = 0;
@@ -57,11 +57,6 @@ function start(e) {
       }
     });
     world.forEach(v => {
-      if (v instanceof Points) {
-        v.line.position.y = 0.5;
-      }
-    });
-    world.forEach(v => {
       if (v instanceof Mysterybox) {
         v.mesh.position.y = 1.1;
       }
@@ -77,7 +72,7 @@ function start(e) {
 function reset() {
   ball.landed = true;
   ball.tmpZ = 0;
-  camera.position.set(0, 5, distance);
+  camera.position.set(0, -10, distance);
   ball.mesh.position.set(0, 0.6, 0);
   ball.speed.y = 0;
   ball.count2Lose = 0;
@@ -216,11 +211,6 @@ function gameover() {
   $('#main').css('pointer-events', 'auto');
   if (star == 2) {
       $('#level-d').html('あの日、あの場所で交わした約束');
-      $('#play').hide();
-      $('#prev').hide();
-      $('#end_key').show();
-      $('#PresentCode').hide();
-      $('#next').hide();
   }
   $('#zero').each(function(){
     this.pause(); // Stop playing
