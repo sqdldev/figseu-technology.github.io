@@ -76,6 +76,22 @@ body {
   left: calc(50% - 200px / 2);
   bottom: 50px;
 }
+#update_button {
+  color: #00D2FF;
+  position: fixed;
+  text-decoration: none;
+  top: 27%;
+  left: 5%;
+  border: double #00D2FF;
+  padding: 5px;
+  border-radius: 1px;
+  text-align: right;
+  display: inline-block;
+  font-family: serif;
+  font-weight: 700;
+  font-size: 20px;
+  transform: 0.5em;
+}
 img {
 	filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(107%) contrast(101%);
 }
