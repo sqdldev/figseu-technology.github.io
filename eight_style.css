@@ -191,7 +191,7 @@ canvas {
 
 #stars{
   position: fixed;
-  top: 40%;
+  top: 50%;
   left: 0;
   width: 100%;
   font-family: serif;
@@ -203,7 +203,7 @@ canvas {
 
 #level{
   position: fixed;
-  top: 25%;
+  top: 35%;
   left: 0;
   width: 100%;
   font-family: sans-serif,serif;
