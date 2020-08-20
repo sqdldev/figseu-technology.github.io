@@ -141,7 +141,7 @@ function nextLevel() {
         } else if (level == 3) {
          $('#level-d').html('伝説への道');
          $('#level').html('True Moon Pride');
-         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -181,7 +181,7 @@ function prevLevel() {
         } else if (level == 3) {
          $('#level-d').html('伝説への道');
          $('#level').html('True Moon Pride');
-         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
