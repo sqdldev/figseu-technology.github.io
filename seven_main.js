@@ -63,7 +63,9 @@ function start(e) {
             $('#shrine').get(0).play();
             } else if (level == 2) {
             $('#ts').get(0).play();
-            } else {
+            } else if (level == 3) {
+            $('#tmp').get(0).play();
+           } else {
             $('#cloud').get(0).play();
             }
     reset();
@@ -136,6 +138,10 @@ function nextLevel() {
          $('#level-d').html('Extra ステージ');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+        } else if (level == 3) {
+         $('#level-d').html('伝説への道');
+         $('#level').html('True Moon Pride');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -143,7 +149,7 @@ function nextLevel() {
            }
   $('#prev').show();
   $('#retry').hide();
-  if (level == 2) {
+  if (level == 3) {
     $('#next').hide();
   }
 }
@@ -172,6 +178,10 @@ function prevLevel() {
          $('#level-d').html('Extra ステージ');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+        } else if (level == 3) {
+         $('#level-d').html('伝説への道');
+         $('#level').html('True Moon Pride');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -315,6 +325,14 @@ function gameover() {
       $('#level-d').html('神々が宿る聖地');
       }
       $('#ts').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 3) { 
+     if (star == 2) {
+      $('#level-d').html('伝説は虚しく滅び去っていった');
+      }
+      $('#tmp').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
