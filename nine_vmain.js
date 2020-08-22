@@ -79,12 +79,12 @@ function start(e) {
     });
     world.forEach(v => {
       if (v instanceof Mysterybox) {
-        v.line.position.y = 1.1;
+        v.mesh.position.y = 1.1;
       }
     });
     world.forEach(v => {
       if (v instanceof Gem) {
-        v.line.position.y = 1.1;
+        v.mesh.position.y = 1.1;
       }
     });
     world.forEach(v => {
