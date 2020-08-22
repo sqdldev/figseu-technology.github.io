@@ -13,8 +13,8 @@ const canvas = $('#canvascontainer').append(renderer.domElement);
 let distance = 4;
 let started = false;
 let percent = 0;
-camera.position.set(0, 5, distance);
-camera.rotation.x -= 0.75;
+camera.position.set(0, -10, distance);
+camera.rotation.x -= 5;
 let scoreSubmitted = false;
 let level = 1;
 let star = 0;
@@ -98,7 +98,7 @@ function start(e) {
 function reset() {
   ball.landed = true;
   ball.tmpZ = 0;
-  camera.position.set(0, 5, distance);
+  camera.position.set(0, -10, distance);
   ball.mesh.position.set(0, 0.6, 0);
   ball.speed.y = 0;
   ball.count2Lose = 0;
