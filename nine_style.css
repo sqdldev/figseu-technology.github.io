@@ -76,6 +76,22 @@ body {
   left: calc(50% - 200px / 2);
   bottom: 50px;
 }
+#update_button {
+  color: #00D2FF;
+  position: fixed;
+  text-decoration: none;
+  top: 27%;
+  left: 5%;
+  border: double #00D2FF;
+  padding: 5px;
+  border-radius: 1px;
+  text-align: right;
+  display: inline-block;
+  font-family: serif;
+  font-weight: 700;
+  font-size: 20px;
+  transform: 0.5em;
+}
 #RGW {
   display: none;
   border: solid #FF2300;
@@ -232,7 +248,7 @@ canvas {
   font-weight: 700;
   font-size: 50px;
   text-align: center;
-  color: #FF00A1;
+  color: #00C2FF;
 }
 
 #stars{
@@ -329,7 +345,7 @@ canvas {
   color: #FFFFFF;
   position: fixed;
   text-decoration: none;
-  top: 17%;
+  top: 18%;
   left: 8%;
   border: double #FFFFFF;
   padding: 5px;
@@ -345,7 +361,7 @@ canvas {
   color: #FFFFFF;
   position: fixed;
   text-decoration: none;
-  top: 17%;
+  top: 18%;
   left: 19%;
   border: double #FFFFFF;
   padding: 5px;
@@ -361,7 +377,7 @@ canvas {
   color: #FFFFFF;
   position: fixed;
   text-decoration: none;
-  top: 17%;
+  top: 18%;
   left: 30%;
   border: double #FFFFFF;
   padding: 5px;
@@ -377,7 +393,7 @@ canvas {
   color: #FFFFFF;
   position: fixed;
   text-decoration: none;
-  top: 17%;
+  top: 18%;
   left: 41%;
   border: double #FFFFFF;
   padding: 5px;
@@ -393,7 +409,7 @@ canvas {
   color: #00A0FF;
   position: fixed;
   text-decoration: none;
-  top: 17%;
+  top: 18%;
   left: 52%;
   border: double #00A0FF;
   padding: 5px;
@@ -409,7 +425,7 @@ canvas {
   color: #00B748;
   position: fixed;
   text-decoration: none;
-  top: 17%;
+  top: 18%;
   left: 63%;
   border: double #00B748;
   padding: 5px;
@@ -425,7 +441,7 @@ canvas {
   color: #FF4BCC;
   position: fixed;
   text-decoration: none;
-  top: 17%;
+  top: 18%;
   left: 74%;
   border: double #FF4BCC;
   padding: 5px;
@@ -441,7 +457,7 @@ canvas {
   color: #FF0D00;
   position: fixed;
   text-decoration: none;
-  top: 17%;
+  top: 18%;
   left: 85%;
   border: double #FF221D;
   padding: 5px;
