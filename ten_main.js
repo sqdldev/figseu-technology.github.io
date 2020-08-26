@@ -1,45 +1,6 @@
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-  60,
-  window.innerWidth / window.innerHeight,
-  1,
-  10000
-);
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0xaaaaaa, 1);
-
-const canvas = $('#canvascontainer').append(renderer.domElement);
-let distance = 4;
-let started = false;
-let percent = 0;
-camera.position.set(0, 5, distance);
-camera.rotation.x -= 0.75;
-let scoreSubmitted = false;
-let level = 1;
-let star = 0;
-let gya = Math.floor( Math.random() * 11 );
-let url = location.href;
-let fgnc = url.substr( 66 );
-let data;
-let reqId;
-$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {
-  data = d;
-  loadLevel(level);
-  $('#play').show();
-  $('#PresentCode').hide();
-  $('#play').click(start);
-  $('#next').show();
-  $('#score').hide();
-  $('#level-d').html('超難関');
-  $('#level').html('The Ruby');
-  $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-  reqId = requestAnimationFrame(render);
-  console.clear();
-  console.log(
-    "超高難度 - The Ruby　血祭りの時間だ"
-  );
-});
+const scene = new THREE.Scene();const camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,10000);const renderer = new THREE.WebGLRenderer({ antialias: true });renderer.setSize(window.innerWidth, window.innerHeight);renderer.setClearColor(0xaaaaaa, 1);const canvas = $('#canvascontainer').append(renderer.domElement);
+let distance = 4;let started = false;let percent = 0;camera.position.set(0, 5, distance);camera.rotation.x -= 0.75;let scoreSubmitted = false;let level = 1;let star = 0;let gya = Math.floor( Math.random() * 11 );let url = location.href;let fgnc = url.substr( 66 );let data;let reqId;
+$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {data = d;loadLevel(level);$('#play').show();$('#PresentCode').hide();$('#play').click(start);$('#next').show();$('#score').hide();$('#level-d').html('超難関');$('#level').html('The Ruby');$('#stars').html('☆☆☆☆☆☆☆☆☆☆');reqId = requestAnimationFrame(render);console.clear();console.log("超高難度 - The Ruby　血祭りの時間だ");});
 
 //start function
 function start(e) {
