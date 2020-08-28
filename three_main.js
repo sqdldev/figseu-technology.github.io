@@ -66,6 +66,7 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
+    wave++;
     if (level == 1) {
         $('#stadium').get(0).play();
             } else if (level == 2) {
@@ -126,6 +127,7 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
+  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -170,6 +172,7 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
+  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
@@ -314,7 +317,7 @@ function render() {
 //controls
 
 function gameover() {
-  if (star == 2) {
+  if (star == 1) {
       wave = 0;
      }
   started = false;
@@ -363,4 +366,5 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
+   $('#Waves').html('☆ × ' + wave);
 }
