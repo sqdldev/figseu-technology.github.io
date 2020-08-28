@@ -92,6 +92,22 @@ body {
   font-size: 20px;
   transform: 0.5em;
 }
+#Waves {
+  color: #FFB900;
+  position: fixed;
+  text-decoration: none;
+  top: 27%;
+  left: 60%;
+  border: double #FFB900;
+  padding: 5px;
+  border-radius: 1px;
+  text-align: right;
+  display: inline-block;
+  font-family: serif;
+  font-weight: 700;
+  font-size: 20px;
+  transform: 0.5em;
+}
 img {
 	filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(107%) contrast(101%);
 }
