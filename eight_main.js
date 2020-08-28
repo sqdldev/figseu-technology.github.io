@@ -18,6 +18,7 @@ camera.rotation.x -= 0.75;
 let scoreSubmitted = false;
 let level = 1;
 let star = 0;
+let wave = 0;
 let train = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 68 );
@@ -49,6 +50,7 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
+    wave++;
     if (level == 1) {
         $('#mai').get(0).play();
         } else if (level == 2) {
@@ -95,6 +97,7 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
+  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -147,6 +150,7 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
+  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
@@ -262,6 +266,9 @@ function render() {
 //controls
 
 function gameover() {
+  if (star == 1) {
+     wave = 0;
+  }
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -327,4 +334,5 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
+   $('#Waves').html('☆ × ' + wave);
 }
