@@ -19,6 +19,15 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let wave_t = 0;
+let wave_th = 0;
+let wave_f = 0;
+let wave_fi = 0;
+wave = $.cookie('f_wave');
+wave_t = $.cookie('f_wave_t');
+wave_th = $.cookie('f_wave_th');
+wave_f = $.cookie('f_wave_f');
+wave_fi = $.cookie('f_wave_fi');
 let data;
 let reqId;
 $.getJSON('four_levels.json', d => {
@@ -28,27 +37,10 @@ $.getJSON('four_levels.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  if (level == 1) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('Bluestone Alley');
-         $('#stars').html('☆☆☆☆');
-        } else if (level == 2) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('Bad Apple');
-         $('#stars').html('☆☆☆☆');
-        } else if (level == 3) {
-         $('#level-d').html('Extraステージ');
-         $('#level').html('ふわふわ ゆめいろサンドイッチ');
-         $('#stars').html('☆☆☆☆');
-        } else if (level == 4) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('華麗に舞う少女');
-         $('#stars').html('☆☆☆☆');
-        } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+  $('#level-d').html('ボーナスステージ');
+  $('#level').html('Bluestone Alley');
+  $('#stars').html('☆☆☆☆');
+  $('#Waves').html('☆ × ' + $.cookie('f_wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -64,15 +56,42 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    wave++;
+    if (typeof wave == 'undefined') {
+        wave = 0;
+        $.cookie('f_wave', wave, { expires: 30 });
+     }
+     if (typeof wave_t == 'undefined') {
+        wave_t = 0;
+        $.cookie('f_wave_t', wave_t, { expires: 30 });
+     }
+     if (typeof wave_th == 'undefined') {
+        wave_th = 0;
+        $.cookie('f_wave_th', wave_th, { expires: 30 });
+     }
+     if (typeof wave_f == 'undefined') {
+        wave_f = 0;
+        $.cookie('f_wave_f', wave_f, { expires: 30 });
+     }
+     if (typeof wave_fi == 'undefined') {
+        wave_fi = 0;
+        $.cookie('f_wave_fi', wave_fi, { expires: 30 });
+     }
     if (level == 1) {
             $('#ever_down').get(0).play();
+            wave++;
+            $.cookie('f_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#bad_apple').get(0).play();
+            wave_t++;
+            $.cookie('f_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#bang_dream').get(0).play();
+            wave_th++;
+            $.cookie('f_wave_th', wave_th, { expires: 30 });
             } else if (level == 4) {
             $('#girls_party').get(0).play();
+            wave_f++;
+            $.cookie('f_wave_f', wave_f, { expires: 30 });
             } else {
             $('#cloud').get(0).play();
             }
@@ -125,7 +144,6 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -142,18 +160,22 @@ function nextLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('Bluestone Alley');
          $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave'));
         } else if (level == 2) {
          $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
          $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('Extraステージ');
          $('#level').html('ふわふわ ゆめいろサンドイッチ');
          $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('華麗に舞う少女');
          $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave_f'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -170,7 +192,6 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
@@ -187,18 +208,22 @@ function prevLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('Bluestone Alley');
          $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave'));
         } else if (level == 2) {
          $('#level-d').html('Extraステージ');
          $('#level').html('Bad Apple');
          $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('Extraステージ');
          $('#level').html('ふわふわ ゆめいろサンドイッチ');
          $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('華麗に舞う少女');
          $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave_f'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -316,8 +341,23 @@ function render() {
 
 function gameover() {
   if (star == 1) {
-      wave = 0;
+     if (level == 1) {
+     wave = 0;
+     } else if (level == 2) {
+     wave_t = 0;
+     } else if (level == 3) {
+     wave_th = 0;
+     } else if (level == 4) {
+     wave_f = 0;
+     } else if (level == 5) {
+     wave_fi = 0;
      }
+     $.cookie('f_wave', wave, { expires: 30 });
+     $.cookie('f_wave_t', wave_t, { expires: 30 });
+     $.cookie('f_wave_th', wave_th, { expires: 30 });
+     $.cookie('f_wave_f', wave_f, { expires: 30 });
+     $.cookie('f_wave_fi', wave_fi, { expires: 30 });
+  }
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -330,6 +370,7 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+      $('#Waves').html('☆ × ' + $.cookie('f_wave'));
          if (star == 2) {
       $('#level-d').html('甦る記憶の隅に');
       }
@@ -338,6 +379,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
+      $('#Waves').html('☆ × ' + $.cookie('f_wave_t'));
          if (star == 2) {
       $('#level-d').html('全てを壊す光');
       }
@@ -346,6 +388,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
+      $('#Waves').html('☆ × ' + $.cookie('f_wave_th'));
       if (star == 2) {
       $('#level-d').html('パステルカラードリーム');
       $('#stars').html('☆☆☆☆☆');
@@ -355,6 +398,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
+      $('#Waves').html('☆ × ' + $.cookie('f_wave_f'));
          if (star == 2) {
       $('#level-d').html('君とダンスを踊り、舞う');
       }
@@ -368,5 +412,4 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
-   $('#Waves').html('☆ × ' + wave);
 }
