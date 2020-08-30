@@ -32,15 +32,15 @@ wave_fi = $.cookie('wave_fi') * 1;
 wave_s = $.cookie('wave_s') * 1;
 if (wave == NaN) {
      wave = 0;
-     } else if (wave_t == NaN) {
+     } else if (wave_t == undefined) {
      wave_t = 0;
-     } else if (wave_th == NaN) {
+     } else if (wave_th == undefined) {
      wave_th = 0;
-     } else if (wave_f == NaN) {
+     } else if (wave_f == undefined) {
      wave_f = 0;
-     } else if (wave_fi == NaN) {
+     } else if (wave_fi == undefined) {
      wave_fi = 0;
-     } else if (wave_s == NaN) {
+     } else if (wave_s == undefined) {
      wave_s = 0;
 }
 let train = Math.floor( Math.random() * 11 );
