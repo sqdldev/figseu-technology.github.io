@@ -36,6 +36,7 @@ $.getJSON('RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhj
   $('#level-d').html('最後の試練');
   $('#level').html('Zero');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  $('#Waves').html('☆ × ' + $.cookie('z_wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
