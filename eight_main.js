@@ -40,8 +40,7 @@ $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCyb
   $('#level-d').html('ボーナスステージ');
   $('#level').html('Maison');
   $('#stars').html('☆☆☆☆☆☆☆☆');
-  $('#wave').text($.cookie('wave'));
-  $('#Waves').html('☆ × ' + wave);
+  $('#Waves').html('☆ × ' + $.cookie('wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -137,38 +136,32 @@ function nextLevel() {
       $('#level-d').html('ボーナスステージ');
       $('#level').html('Maison');
       $('#stars').html('☆☆☆☆☆☆☆☆');
-      $('#wave').text($.cookie('wave'));
-         $('#Waves').html('☆ × ' + wave);
+      $('#Waves').html('☆ × ' + $.cookie('wave'));
      } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('輪廻転生');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_t').text($.cookie('wave_t'));
-         $('#Waves').html('☆ × ' + wave_t);
+         $('#Waves').html('☆ × ' + $.cookie('wave_t'));
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('雷光の姫君');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_th').text($.cookie('wave_th'));
-         $('#Waves').html('☆ × ' + wave_th);
+         $('#Waves').html('☆ × ' + $.cookie('wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_f').text($.cookie('wave_f'));
-         $('#Waves').html('☆ × ' + wave_f);
+         $('#Waves').html('☆ × ' + $.cookie('wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_fi').text($.cookie('wave_fi'));
-         $('#Waves').html('☆ × ' + wave_fi);
+         $('#Waves').html('☆ × ' + $.cookie('wave_fi'));
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_s').text($.cookie('wave_s'));
-         $('#Waves').html('☆ × ' + wave_s);
+         $('#Waves').html('☆ × ' + $.cookie('wave_s'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -201,38 +194,32 @@ function prevLevel() {
       $('#level-d').html('ボーナスステージ');
       $('#level').html('Maison');
       $('#stars').html('☆☆☆☆☆☆☆☆');
-      $('#wave').text($.cookie('wave'));
-      $('#Waves').html('☆ × ' + wave);
+      $('#Waves').html('☆ × ' + $.cookie('wave'));
      } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('輪廻転生');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_t').text($.cookie('wave_t'));
-         $('#Waves').html('☆ × ' + wave_t);
+         $('#Waves').html('☆ × ' + $.cookie('wave_t'));
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('雷光の姫君');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_th').text($.cookie('wave_th'));
-         $('#Waves').html('☆ × ' + wave_th);
+         $('#Waves').html('☆ × ' + $.cookie('wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_f').text($.cookie('wave_f'));
-         $('#Waves').html('☆ × ' + wave_f);
+         $('#Waves').html('☆ × ' + $.cookie('wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_fi').text($.cookie('wave_fi'));
-         $('#Waves').html('☆ × ' + wave_fi);
+         $('#Waves').html('☆ × ' + $.cookie('wave_fi'));
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#wave_s').text($.cookie('wave_s'));
-         $('#Waves').html('☆ × ' + wave_s);
+         $('#Waves').html('☆ × ' + $.cookie('wave_s'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -307,12 +294,19 @@ function render() {
 
 function gameover() {
   if (star == 1) {
+     if (level == 1) {
      wave = 0;
+     } else if (level == 2) {
      wave_t = 0;
+     } else if (level == 3) {
      wave_th = 0;
+     } else if (level == 4) {
      wave_f = 0;
+     } else if (level == 5) {
      wave_fi = 0;
+     } else if (level == 6) {
      wave_s = 0;
+     }
      $.cookie('wave', wave);
      $.cookie('wave_t', wave_t);
      $.cookie('wave_th', wave_th);
@@ -332,7 +326,7 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
-    $('#Waves').html('☆ × ' + wave);
+    $('#Waves').html('☆ × ' + $.cookie('wave'));
     if (star == 2) {
       $('#level-d').html('我が家への道');
     }
@@ -341,7 +335,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
-       $('#Waves').html('☆ × ' + wave_t);
+       $('#Waves').html('☆ × ' + $.cookie('wave_t'));
        if (star == 2) {
       $('#level-d').html('世界は廻り続ける');
       }
@@ -350,7 +344,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
-       $('#Waves').html('☆ × ' + wave_th);
+       $('#Waves').html('☆ × ' + $.cookie('wave_th'));
        if (star == 2) {
       $('#level-d').html('失われた王国の王女');
       }
@@ -359,7 +353,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
-       $('#Waves').html('☆ × ' + wave_f);
+       $('#Waves').html('☆ × ' + $.cookie('wave_f'));
        if (star == 2) {
       $('#level-d').html('天空の花園');
       }
@@ -368,7 +362,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 5) {
-      $('#Waves').html('☆ × ' + wave_fi);
+      $('#Waves').html('☆ × ' + $.cookie('wave_fi'));
       if (star == 2) {
       $('#level-d').html('夢を運ぶ　ブルートレイン');
       }
@@ -377,7 +371,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 6) {
-      $('#Waves').html('☆ × ' + wave_s);
+      $('#Waves').html('☆ × ' + $.cookie('wave_s'));
       if (star == 2) {
       $('#level-d').html('未完成のパズル');
       }
