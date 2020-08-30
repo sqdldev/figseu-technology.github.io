@@ -59,27 +59,27 @@ function start(e) {
     if (level == 1) {
         $('#mai').get(0).play();
         wave++;
-        $.cookie('wave', wave);
+        $.cookie('wave', wave, { expires: 30 });
     } else if (level == 2) {
             $('#edu').get(0).play();
             wave_t++;
-            $.cookie('wave_t', wave_t);
+            $.cookie('wave_t', wave_t, { expires: 30 });
     } else if (level == 3) {
             $('#prin').get(0).play();
             wave_th++;
-            $.cookie('wave_th', wave_th);
+            $.cookie('wave_th', wave_th, { expires: 30 });
     } else if (level == 4) {
             $('#los').get(0).play();
             wave_f++;
-            $.cookie('wave_f', wave_f);
+            $.cookie('wave_f', wave_f, { expires: 30 });
     } else if (level == 5) {
             $('#ef').get(0).play();
             wave_fi++;
-            $.cookie('wave_fi', wave_fi);
+            $.cookie('wave_fi', wave_fi, { expires: 30 });
     } else if (level == 6) {
             $('#alive').get(0).play();
             wave_s++;
-            $.cookie('wave_t', wave_t);
+            $.cookie('wave_t', wave_t, { expires: 30 });
     } else {
             $('#cloud').get(0).play();
     }
@@ -307,12 +307,12 @@ function gameover() {
      } else if (level == 6) {
      wave_s = 0;
      }
-     $.cookie('wave', wave);
-     $.cookie('wave_t', wave_t);
-     $.cookie('wave_th', wave_th);
-     $.cookie('wave_f', wave_f);
-     $.cookie('wave_fi', wave_fi);
-     $.cookie('wave_s', wave_s);
+     $.cookie('wave', wave, { expires: 30 });
+     $.cookie('wave_t', wave_t, { expires: 30 });
+     $.cookie('wave_th', wave_th, { expires: 30 });
+     $.cookie('wave_f', wave_f, { expires: 30 });
+     $.cookie('wave_fi', wave_fi, { expires: 30 });
+     $.cookie('wave_s', wave_s, { expires: 30 });
   }
   started = false;
   ball.speed.z = 0;
