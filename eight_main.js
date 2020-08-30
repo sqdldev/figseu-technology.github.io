@@ -24,31 +24,12 @@ let wave_th = 0;
 let wave_f = 0;
 let wave_fi = 0;
 let wave_s = 0;
-wave = $.cookie('wave') * 1;
-wave_t = $.cookie('wave_t') * 1;
-wave_th = $.cookie('wave_th') * 1;
-wave_f = $.cookie('wave_f') * 1;
-wave_fi = $.cookie('wave_fi') * 1;
-wave_s = $.cookie('wave_s') * 1;
-if (typeof wave == 'undefined') {
-     wave = 0;
-     $.cookie('wave', wave, { expires: 30 });
-     } else if (typeof wave_t == 'undefined') {
-     wave_t = 0;
-     $.cookie('wave_t', wave_t, { expires: 30 });
-     } else if (typeof wave_th == 'undefined') {
-     wave_th = 0;
-     $.cookie('wave_th', wave_th, { expires: 30 });
-     } else if (typeof wave_f == 'undefined') {
-     wave_f = 0;
-     $.cookie('wave_f', wave_f, { expires: 30 });
-     } else if (typeof wave_fi == 'undefined') {
-     wave_fi = 0;
-     $.cookie('wave_fi', wave_fi, { expires: 30 });
-     } else if (typeof wave_s == 'undefined') {
-     wave_s = 0;
-     $.cookie('wave_s', wave_s, { expires: 30 });
-     }
+wave = $.cookie('wave');
+wave_t = $.cookie('wave_t');
+wave_th = $.cookie('wave_th');
+wave_f = $.cookie('wave_f');
+wave_fi = $.cookie('wave_fi');
+wave_s = $.cookie('wave_s');
 let train = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 68 );
@@ -81,6 +62,25 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
+    if (typeof wave == 'undefined') {
+     wave = 0;
+     $.cookie('wave', wave, { expires: 30 });
+     } else if (typeof wave_t == 'undefined') {
+     wave_t = 0;
+     $.cookie('wave_t', wave_t, { expires: 30 });
+     } else if (typeof wave_th == 'undefined') {
+     wave_th = 0;
+     $.cookie('wave_th', wave_th, { expires: 30 });
+     } else if (typeof wave_f == 'undefined') {
+     wave_f = 0;
+     $.cookie('wave_f', wave_f, { expires: 30 });
+     } else if (typeof wave_fi == 'undefined') {
+     wave_fi = 0;
+     $.cookie('wave_fi', wave_fi, { expires: 30 });
+     } else if (typeof wave_s == 'undefined') {
+     wave_s = 0;
+     $.cookie('wave_s', wave_s, { expires: 30 });
+     }
     if (level == 1) {
         $('#mai').get(0).play();
         wave++;
