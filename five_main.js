@@ -19,6 +19,17 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let wave_t = 0;
+let wave_th = 0;
+let wave_f = 0;
+let wave_fi = 0;
+let wave_s = 0;
+wave = $.cookie('fi_wave');
+wave_t = $.cookie('fi_wave_t');
+wave_th = $.cookie('fi_wave_th');
+wave_f = $.cookie('fi_wave_f');
+wave_fi = $.cookie('fi_wave_fi');
+wave_s = $.cookie('fi_wave_s');
 let data;
 let reqId;
 $.getJSON('five_levels.json', d => {
@@ -28,35 +39,10 @@ $.getJSON('five_levels.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  if (level == 1) {
-         $('#level-d').html('Designed by Itary Cogu ');
-         $('#level').html('桜');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 2) {
-         $('#level-d').html('Designed by Itary Cogu');
-         $('#level').html('Fifty Fifty');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 3) {
-         $('#level-d').html('カリスマのステージ');
-         $('#level').html('Pinsir');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 4) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('The END');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 5) {
-         $('#level-d').html('Music by サカナクション');
-         $('#level').html('新 宝 島');
-         $('#stars').html('☆☆☆☆☆');
-        } else if (level == 6) {
-         $('#level-d').html('Request by R');
-         $('#level').html('MOON PRIDE');
-         $('#stars').html('☆☆☆☆☆');
-        } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+  $('#level-d').html('Designed by Itary Cogu ');
+  $('#level').html('桜');
+  $('#stars').html('☆☆☆☆☆');
+  $('#Waves').html('☆ × ' + $.cookie('fi_wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -72,19 +58,48 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    wave++;
+    if (typeof wave == 'undefined') {
+        wave = 0;
+        $.cookie('fi_wave', wave, { expires: 30 });
+     }
+     if (typeof wave_t == 'undefined') {
+        wave_t = 0;
+        $.cookie('fi_wave_t', wave_t, { expires: 30 });
+     }
+     if (typeof wave_th == 'undefined') {
+        wave_th = 0;
+        $.cookie('fi_wave_th', wave_th, { expires: 30 });
+     }
+     if (typeof wave_f == 'undefined') {
+        wave_f = 0;
+        $.cookie('fi_wave_f', wave_f, { expires: 30 });
+     }
+     if (typeof wave_fi == 'undefined') {
+        wave_fi = 0;
+        $.cookie('fi_wave_fi', wave_fi, { expires: 30 });
+     }
+     if (typeof wave_s == 'undefined') {
+        wave_s = 0;
+        $.cookie('fi_wave_s', wave_s, { expires: 30 });
+     }
     if (level == 1) {
             $('#sakura').get(0).play();
+            $.cookie('fi_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#fifty').get(0).play();
+            $.cookie('fi_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#pinsir').get(0).play();
+            $.cookie('fi_wave_th', wave_th, { expires: 30 });
             } else if (level == 4) {
             $('#the_end').get(0).play();
+            $.cookie('fi_wave_f', wave_f, { expires: 30 });
             } else if (level == 5) {
             $('#sintakarajima').get(0).play();
+            $.cookie('fi_wave_fi', wave_fi, { expires: 30 });
             } else if (level == 6) {
             $('#moonpride').get(0).play();
+            $.cookie('fi_wave_s', wave_s, { expires: 30 });
             } else {
             $('#cloud').get(0).play();
             }
@@ -137,7 +152,6 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -154,26 +168,32 @@ function nextLevel() {
          $('#level-d').html('Designed by Itary Cogu ');
          $('#level').html('桜');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave'));
         } else if (level == 2) {
          $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Fifty Fifty');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('カリスマのステージ');
          $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Music by サカナクション');
          $('#level').html('新 宝 島');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
          $('#level-d').html('Request by R');
          $('#level').html('MOON PRIDE');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -190,7 +210,6 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
@@ -207,26 +226,32 @@ function prevLevel() {
          $('#level-d').html('Designed by Itary Cogu ');
          $('#level').html('桜');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave'));
         } else if (level == 2) {
          $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Fifty Fifty');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('カリスマのステージ');
          $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The END');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Music by サカナクション');
          $('#level').html('新 宝 島');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
          $('#level-d').html('Request by R');
          $('#level').html('MOON PRIDE');
          $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -344,22 +369,30 @@ function render() {
 
 function gameover() {
   if (star == 1) {
-      wave = 0;
+     if (level == 1) {
+     wave = 0;
+     } else if (level == 2) {
+     wave_t = 0;
+     } else if (level == 3) {
+     wave_th = 0;
+     } else if (level == 4) {
+     wave_f = 0;
+     } else if (level == 5) {
+     wave_fi = 0;
+     } else if (level == 6) {
+     wave_s = 0;
      }
+     $.cookie('fi_wave', wave, { expires: 30 });
+     $.cookie('fi_wave_t', wave_t, { expires: 30 });
+     $.cookie('fi_wave_th', wave_th, { expires: 30 });
+     $.cookie('fi_wave_f', wave_f, { expires: 30 });
+     $.cookie('fi_wave_fi', wave_fi, { expires: 30 });
+     $.cookie('fi_wave_s', wave_s, { expires: 30 });
+  }
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
   $('#retry').hide();
-  if (star == 1) {
-      $('#PKNK').hide();
-      $('#PKNKTW').hide();
-      $('#RGW').hide();
-      $('#Kimetu').hide();
-      $('#AYH').hide();
-      $('#PresentCode').hide();
-      $('#Redo').hide();
-      $('#shrine').hide();
-     }
   $('#play').show();
   $('#play').click(start);
   $('#level').show();
@@ -368,22 +401,32 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+      $('#Waves').html('☆ × ' + $.cookie('fi_wave'));
+      if (star == 2) {
+             $('#level-d').html('桜の舞う春');
+      }
       $('#sakura').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
+      $('#Waves').html('☆ × ' + $.cookie('fi_wave_t'));
+      if (star == 2) {
+             $('#level-d').html('ねじれた回廊');
+      }
       $('#fifty').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
+      $('#Waves').html('☆ × ' + $.cookie('fi_wave_th'));
       $('#pinsir').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
-         if (star == 2) {
+      $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
+      if (star == 2) {
              $('#level-d').html('Thanks you for playing!!');
       }
       $('#the_end').each(function(){
@@ -391,12 +434,17 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 5) {
+      $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
+      if (star == 2) {
+             $('#level-d').html('君の歌を歌う');
+      }
       $('#sintakarajima').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 6) {
-         if (star == 2) {
+      $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
+      if (star == 2) {
              $('#level-d').html('新しい伝説が今ここから始まる');
       }
       $('#moonpride').each(function(){
@@ -409,5 +457,4 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
-   $('#Waves').html('☆ × ' + wave);
 }
