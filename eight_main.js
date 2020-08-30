@@ -62,24 +62,29 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    if (typeof wave == 'undefined') {
-     wave = 0;
-     $.cookie('wave', wave, { expires: 30 });
-     } else if (typeof wave_t == 'undefined') {
-     wave_t = 0;
-     $.cookie('wave_t', wave_t, { expires: 30 });
-     } else if (typeof wave_th == 'undefined') {
-     wave_th = 0;
-     $.cookie('wave_th', wave_th, { expires: 30 });
-     } else if (typeof wave_f == 'undefined') {
-     wave_f = 0;
-     $.cookie('wave_f', wave_f, { expires: 30 });
-     } else if (typeof wave_fi == 'undefined') {
-     wave_fi = 0;
-     $.cookie('wave_fi', wave_fi, { expires: 30 });
-     } else if (typeof wave_s == 'undefined') {
-     wave_s = 0;
-     $.cookie('wave_s', wave_s, { expires: 30 });
+     if (typeof wave == 'undefined') {
+        wave = 0;
+        $.cookie('wave', wave, { expires: 30 });
+     }
+     if (typeof wave_t == 'undefined') {
+        wave_t = 0;
+        $.cookie('wave_t', wave_t, { expires: 30 });
+     }
+     if (typeof wave_th == 'undefined') {
+        wave_th = 0;
+        $.cookie('wave_th', wave_th, { expires: 30 });
+     }
+     if (typeof wave_f == 'undefined') {
+        wave_f = 0;
+        $.cookie('wave_f', wave_f, { expires: 30 });
+     }
+     if (typeof wave_fi == 'undefined') {
+        wave_fi = 0;
+        $.cookie('wave_fi', wave_fi, { expires: 30 });
+     }
+     if (typeof wave_s == 'undefined') {
+        wave_s = 0;
+        $.cookie('wave_s', wave_s, { expires: 30 });
      }
     if (level == 1) {
         $('#mai').get(0).play();
