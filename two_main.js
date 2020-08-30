@@ -19,6 +19,15 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let wave_t = 0;
+let wave_th = 0;
+let wave_f = 0;
+let wave_fi = 0;
+wave = $.cookie('t_wave');
+wave_t = $.cookie('t_wave_t');
+wave_th = $.cookie('t_wave_th');
+wave_f = $.cookie('t_wave_f');
+wave_fi = $.cookie('t_wave_fi');
 let url = location.href;
 let fgnc = url.substr( 66 );
 let data;
@@ -33,6 +42,7 @@ $.getJSON('two_levels.json', d => {
   $('#level-d').html('ボーナスステージ');
   $('#level').html('霧の洞窟');
   $('#stars').html('☆☆');
+  $('#Waves').html('☆ × ' + $.cookie('t_wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -48,17 +58,46 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    wave++;
+    if (typeof wave == 'undefined') {
+        wave = 0;
+        $.cookie('t_wave', wave, { expires: 30 });
+     }
+     if (typeof wave_t == 'undefined') {
+        wave_t = 0;
+        $.cookie('t_wave_t', wave_t, { expires: 30 });
+     }
+     if (typeof wave_th == 'undefined') {
+        wave_th = 0;
+        $.cookie('t_wave_th', wave_th, { expires: 30 });
+     }
+     if (typeof wave_f == 'undefined') {
+        wave_f = 0;
+        $.cookie('t_wave_f', wave_f, { expires: 30 });
+     }
+     if (typeof wave_fi == 'undefined') {
+        wave_fi = 0;
+        $.cookie('t_wave_fi', wave_fi, { expires: 30 });
+     }
     if (level == 1) {
         $('#kimetu').get(0).play();
+        wave++;
+        $.cookie('t_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#touhou').get(0).play();
+            wave_t++;
+            $.cookie('t_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#cloud').get(0).play();
+            wave_th++;
+            $.cookie('t_wave_th', wave_th, { expires: 30 });
             } else if (level == 4) {
             $('#piknik').get(0).play();
+            wave_f++;
+            $.cookie('t_wave_f', wave_f, { expires: 30 });
             } else if (level == 5) {
             $('#moon').get(0).play();
+            wave_fi++;
+            $.cookie('t_wave_fi', wave_fi, { expires: 30 });
             } else {
             $('#cloud').get(0).play();
             }
@@ -111,7 +150,6 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -135,22 +173,27 @@ function nextLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('霧の洞窟');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave'));
         } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('Cloud');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('ピクニック');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('月下の舞');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -161,7 +204,6 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
@@ -185,22 +227,27 @@ function prevLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('霧の洞窟');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave'));
         } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('幻想郷');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('Cloud');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('ピクニック');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('月下の舞');
          $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -312,8 +359,23 @@ function render() {
 
 function gameover() {
   if (star == 1) {
-      wave = 0;
+     if (level == 1) {
+     wave = 0;
+     } else if (level == 2) {
+     wave_t = 0;
+     } else if (level == 3) {
+     wave_th = 0;
+     } else if (level == 4) {
+     wave_f = 0;
+     } else if (level == 5) {
+     wave_fi = 0;
      }
+     $.cookie('t_wave', wave, { expires: 30 });
+     $.cookie('t_wave_t', wave_t, { expires: 30 });
+     $.cookie('t_wave_th', wave_th, { expires: 30 });
+     $.cookie('t_wave_f', wave_f, { expires: 30 });
+     $.cookie('t_wave_fi', wave_fi, { expires: 30 });
+  }
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -326,6 +388,7 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+         $('#Waves').html('☆ × ' + $.cookie('t_wave'));
         if (star == 2) {
              $('#level-d').html('帰らずの洞穴');
       }
@@ -334,6 +397,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_t'));
          if (star == 2) {
              $('#level-d').html('夢の世界が集う場所');
       }
@@ -342,6 +406,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_th'));
          if (star == 2) {
              $('#level-d').html('空に浮かぶ宮殿');
       }
@@ -350,6 +415,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_f'));
          if (star == 2) {
              $('#level-d').html('君に恋をした日');
       }
@@ -358,6 +424,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 5) {
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_fi'));
          if (star == 2) {
              $('#level-d').html('月の光に掲げる');
       }
@@ -371,5 +438,4 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
-   $('#Waves').html('☆ × ' + wave);
 }
