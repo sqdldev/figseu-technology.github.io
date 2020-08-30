@@ -19,6 +19,17 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let wave_t = 0;
+let wave_th = 0;
+let wave_f = 0;
+let wave_fi = 0;
+let wave_s = 0;
+wave = $.cookie('wave');
+wave_t = $.cookie('wave_t');
+wave_th = $.cookie('wave_th');
+wave_f = $.cookie('wave_f');
+wave_fi = $.cookie('wave_fi');
+wave_s = $.cookie('wave_s');
 let url = location.href;
 let fgnc = url.substr( 62 );
 let data;
@@ -30,35 +41,10 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  if (level == 1) {
-      $('#level-d').html('チュートリアルステージ');
-      $('#level').html('Rolling Sky');
-      $('#stars').html('☆');
-     } else if (level == 2) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('夜道');
-         $('#stars').html('☆');
-        } else if (level == 3) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('決勝戦');
-         $('#stars').html('☆');
-        } else if (level == 4) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('デジタルの世界');
-         $('#stars').html('☆');
-        } else if (level == 5) {
-         $('#level-d').html('チュートリアルステージ');
-         $('#level').html('孤島');
-         $('#stars').html('☆');
-        } else if (level == 6) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('ピクニック');
-         $('#stars').html('☆');
-        } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+  $('#level-d').html('チュートリアルステージ');
+  $('#level').html('Rolling Sky');
+  $('#stars').html('☆');
+  $('#Waves').html('☆ × ' + $.cookie('wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -74,19 +60,54 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    wave++;
+    if (typeof wave == 'undefined') {
+        wave = 0;
+        $.cookie('wave', wave, { expires: 30 });
+     }
+     if (typeof wave_t == 'undefined') {
+        wave_t = 0;
+        $.cookie('wave_t', wave_t, { expires: 30 });
+     }
+     if (typeof wave_th == 'undefined') {
+        wave_th = 0;
+        $.cookie('wave_th', wave_th, { expires: 30 });
+     }
+     if (typeof wave_f == 'undefined') {
+        wave_f = 0;
+        $.cookie('wave_f', wave_f, { expires: 30 });
+     }
+     if (typeof wave_fi == 'undefined') {
+        wave_fi = 0;
+        $.cookie('wave_fi', wave_fi, { expires: 30 });
+     }
+     if (typeof wave_s == 'undefined') {
+        wave_s = 0;
+        $.cookie('wave_s', wave_s, { expires: 30 });
+     }
     if (level == 1) {
         $('#cloud').get(0).play();
+        wave = 0;
+        $.cookie('wave', wave, { expires: 30 });
         } else if (level == 2) {
             $('#sta').get(0).play();
+            wave_t++;
+            $.cookie('wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#cst').get(0).play();
+            wave_th++;
+            $.cookie('wave_th', wave_th, { expires: 30 });
             } else if (level == 4) {
             $('#dtw').get(0).play();
+            wave_f++;
+            $.cookie('wave_f', wave_f, { expires: 30 });
             } else if (level == 5) {
             $('#kt').get(0).play();
+            wave_fi++;
+            $.cookie('wave_fi', wave_fi, { expires: 30 });
             } else if (level == 6) {
             $('#pknk').get(0).play();
+            wave_s++;
+            $.cookie('wave_s', wave_s, { expires: 30 });
             } else {
             $('#cloud').get(0).play();
             }
@@ -139,7 +160,6 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -156,26 +176,32 @@ function nextLevel() {
       $('#level-d').html('チュートリアルステージ');
       $('#level').html('Rolling Sky');
       $('#stars').html('☆');
+      $('#Waves').html('☆ × ' + $.cookie('wave'));
      } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('夜道');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_t'));
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('決勝戦');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('デジタルの世界');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_f'));
         } else if (level == 5) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('孤島');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_fi'));
         } else if (level == 6) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('夕方のピクニック');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_s'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -209,26 +235,32 @@ function prevLevel() {
       $('#level-d').html('チュートリアルステージ');
       $('#level').html('Rolling Sky');
       $('#stars').html('☆');
+      $('#Waves').html('☆ × ' + $.cookie('wave'));
      } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('夜道');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_t'));
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('決勝戦');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('デジタルの世界');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_f'));
         } else if (level == 5) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('孤島');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_fi'));
         } else if (level == 6) {
          $('#level-d').html('チュートリアルステージ');
          $('#level').html('夕方のピクニック');
          $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('wave_s'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -346,8 +378,26 @@ function render() {
 
 function gameover() {
   if (star == 1) {
-      wave = 0;
+     if (level == 1) {
+     wave = 0;
+     } else if (level == 2) {
+     wave_t = 0;
+     } else if (level == 3) {
+     wave_th = 0;
+     } else if (level == 4) {
+     wave_f = 0;
+     } else if (level == 5) {
+     wave_fi = 0;
+     } else if (level == 6) {
+     wave_s = 0;
      }
+     $.cookie('wave', wave, { expires: 30 });
+     $.cookie('wave_t', wave_t, { expires: 30 });
+     $.cookie('wave_th', wave_th, { expires: 30 });
+     $.cookie('wave_f', wave_f, { expires: 30 });
+     $.cookie('wave_fi', wave_fi, { expires: 30 });
+     $.cookie('wave_s', wave_s, { expires: 30 });
+  }
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -360,6 +410,7 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+      $('#Waves').html('☆ × ' + $.cookie('wave'));
       if (star == 2) {
       $('#level-d').html('Lets go Rolling Sky World !!');
       $('#stars').html('☆☆☆☆☆☆');
@@ -369,26 +420,31 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
+      $('#Waves').html('☆ × ' + $.cookie('wave_t'));
       $('#sta').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
+      $('#Waves').html('☆ × ' + $.cookie('wave_th'));
       $('#cst').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
+      $('#Waves').html('☆ × ' + $.cookie('wave_f'));
       $('#dtw').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 5) {
+      $('#Waves').html('☆ × ' + $.cookie('wave_fi'));
       $('#kt').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 6) {
+      $('#Waves').html('☆ × ' + $.cookie('wave_s'));
       $('#pknk').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
@@ -399,5 +455,4 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
-   $('#Waves').html('☆ × ' + wave);
 }
