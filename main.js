@@ -86,7 +86,7 @@ function start(e) {
      }
     if (level == 1) {
         $('#cloud').get(0).play();
-        wave = 0;
+        wave++;
         $.cookie('o_wave', wave, { expires: 30 });
         } else if (level == 2) {
             $('#sta').get(0).play();
