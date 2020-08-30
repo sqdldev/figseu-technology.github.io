@@ -40,6 +40,7 @@ $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCyb
   $('#level-d').html('ボーナスステージ');
   $('#level').html('Maison');
   $('#stars').html('☆☆☆☆☆☆☆☆');
+  $('#wave').text($.cookie('wave'));
   $('#Waves').html('☆ × ' + wave);
   reqId = requestAnimationFrame(render);
   console.clear();
@@ -56,28 +57,33 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    wave++;
     if (level == 1) {
         $('#mai').get(0).play();
+        wave++;
         $.cookie('wave', wave);
-        } else if (level == 2) {
+    } else if (level == 2) {
             $('#edu').get(0).play();
+            wave_t++;
             $.cookie('wave_t', wave_t);
-            } else if (level == 3) {
+    } else if (level == 3) {
             $('#prin').get(0).play();
+            wave_th++;
             $.cookie('wave_th', wave_th);
-            } else if (level == 4) {
+    } else if (level == 4) {
             $('#los').get(0).play();
+            wave_f++;
             $.cookie('wave_f', wave_f);
-            } else if (level == 5) {
+    } else if (level == 5) {
             $('#ef').get(0).play();
+            wave_fi++;
             $.cookie('wave_fi', wave_fi);
-            } else if (level == 6) {
+    } else if (level == 6) {
             $('#alive').get(0).play();
+            wave_s++;
             $.cookie('wave_t', wave_t);
-            } else {
+    } else {
             $('#cloud').get(0).play();
-            }
+    }
     reset();
     world.forEach(v => {
       if (v instanceof Bouncer) {
@@ -132,31 +138,37 @@ function nextLevel() {
       $('#level').html('Maison');
       $('#stars').html('☆☆☆☆☆☆☆☆');
       $('#wave').text($.cookie('wave'));
+         $('#Waves').html('☆ × ' + wave);
      } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('輪廻転生');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_t').text($.cookie('wave_t'));
+         $('#Waves').html('☆ × ' + wave_t);
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('雷光の姫君');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_th').text($.cookie('wave_th'));
+         $('#Waves').html('☆ × ' + wave_th);
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_f').text($.cookie('wave_f'));
+         $('#Waves').html('☆ × ' + wave_f);
         } else if (level == 5) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_fi').text($.cookie('wave_fi'));
+         $('#Waves').html('☆ × ' + wave_fi);
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_s').text($.cookie('wave_s'));
+         $('#Waves').html('☆ × ' + wave_s);
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -190,31 +202,37 @@ function prevLevel() {
       $('#level').html('Maison');
       $('#stars').html('☆☆☆☆☆☆☆☆');
       $('#wave').text($.cookie('wave'));
+      $('#Waves').html('☆ × ' + wave);
      } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('輪廻転生');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_t').text($.cookie('wave_t'));
+         $('#Waves').html('☆ × ' + wave_t);
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('雷光の姫君');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_th').text($.cookie('wave_th'));
+         $('#Waves').html('☆ × ' + wave_th);
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_f').text($.cookie('wave_f'));
+         $('#Waves').html('☆ × ' + wave_f);
         } else if (level == 5) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('EF66');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_fi').text($.cookie('wave_fi'));
+         $('#Waves').html('☆ × ' + wave_fi);
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#wave_s').text($.cookie('wave_s'));
+         $('#Waves').html('☆ × ' + wave_s);
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -290,6 +308,17 @@ function render() {
 function gameover() {
   if (star == 1) {
      wave = 0;
+     wave_t = 0;
+     wave_th = 0;
+     wave_f = 0;
+     wave_fi = 0;
+     wave_s = 0;
+     $.cookie('wave', wave);
+     $.cookie('wave_t', wave_t);
+     $.cookie('wave_th', wave_th);
+     $.cookie('wave_f', wave_f);
+     $.cookie('wave_fi', wave_fi);
+     $.cookie('wave_s', wave_s);
   }
   started = false;
   ball.speed.z = 0;
