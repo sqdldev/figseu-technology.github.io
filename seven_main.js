@@ -19,6 +19,11 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let wave_t = 0;
+let wave_th = 0;
+wave = $.cookie('se_wave');
+wave_t = $.cookie('se_wave_t');
+wave_th = $.cookie('se_wave_th');
 let url = location.href;
 let fgnc = url.substr( 68 );
 let data;
@@ -31,19 +36,10 @@ $.getJSON('seven_levels.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  if (level == 1) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('Shrine');
-         $('#stars').html('☆☆☆☆☆☆☆');
-        } else if (level == 2) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('True Shrine');
-         $('#stars').html('☆☆☆☆☆☆☆');
-        } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+  $('#level-d').html('Extra ステージ');
+  $('#level').html('Shrine');
+  $('#stars').html('☆☆☆☆☆☆☆');
+  $('#Waves').html('☆ × ' + $.cookie('se_wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -59,13 +55,30 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    wave++;
+    if (typeof wave == 'undefined') {
+        wave = 0;
+        $.cookie('se_wave', wave, { expires: 30 });
+     }
+     if (typeof wave_t == 'undefined') {
+        wave_t = 0;
+        $.cookie('se_wave_t', wave_t, { expires: 30 });
+     }
+     if (typeof wave_th == 'undefined') {
+        wave_th = 0;
+        $.cookie('se_wave_th', wave_th, { expires: 30 });
+     }
     if (level == 1) {
             $('#shrine').get(0).play();
+            wave++;
+            $.cookie('se_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#ts').get(0).play();
+            wave_t++;
+            $.cookie('se_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#tmp').get(0).play();
+            wave_th++;
+            $.cookie('se_wave_th', wave_th, { expires: 30 });
            } else {
             $('#cloud').get(0).play();
             }
@@ -118,7 +131,6 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -136,14 +148,17 @@ function nextLevel() {
          $('#level-d').html('Extra ステージ');
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave'));
         } else if (level == 2) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('伝説への道');
          $('#level').html('True Moon Pride');
          $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave_th'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -159,7 +174,6 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
@@ -177,14 +191,17 @@ function prevLevel() {
          $('#level-d').html('Extra ステージ');
          $('#level').html('Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave'));
         } else if (level == 2) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('True Shrine');
          $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('伝説への道');
          $('#level').html('True Moon Pride');
          $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave_th'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -302,8 +319,17 @@ function render() {
 
 function gameover() {
   if (star == 1) {
-      wave = 0;
+     if (level == 1) {
+     wave = 0;
+     } else if (level == 2) {
+     wave_t = 0;
+     } else if (level == 3) {
+     wave_th = 0;
      }
+     $.cookie('se_wave', wave, { expires: 30 });
+     $.cookie('se_wave_t', wave_t, { expires: 30 });
+     $.cookie('se_wave_th', wave_th, { expires: 30 });
+  }
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -316,6 +342,7 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+      $('#Waves').html('☆ × ' + $.cookie('se_wave'));
          if (star == 2) {
       $('#level-d').html('今日もいい天気☆');
       }
@@ -324,6 +351,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) { 
+      $('#Waves').html('☆ × ' + $.cookie('se_wave_t'));
      if (star == 2) {
       $('#level-d').html('神々が宿る聖地');
       }
@@ -332,6 +360,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) { 
+      $('#Waves').html('☆ × ' + $.cookie('se_wave_th'));
      if (star == 2) {
       $('#level-d').html('伝説は虚しく滅び去っていった');
       }
@@ -345,5 +374,4 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
-   $('#Waves').html('☆ × ' + wave);
 }
