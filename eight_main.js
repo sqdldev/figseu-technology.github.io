@@ -18,12 +18,26 @@ camera.rotation.x -= 0.75;
 let scoreSubmitted = false;
 let level = 1;
 let star = 0;
-let wave = 0;
-let wave_t = 0;
-let wave_th = 0;
-let wave_f = 0;
-let wave_fi = 0;
-let wave_s = 0;
+if ($.cookie('wave') == undefined) {
+    let wave = 0;
+} else if ($.cookie('wave_t') == undefined) {
+    let wave_t = 0;
+} else if ($.cookie('wave_th') == undefined) {
+    let wave_th = 0;
+} else if ($.cookie('wave_f') == undefined) {
+    let wave_f = 0;
+} else if ($.cookie('wave_fi') == undefined) {
+    let wave_fi = 0;
+} else if ($.cookie('wave_s') == undefined) {
+    let wave_s = 0;
+} else {
+let wave = $.cookie('wave');
+let wave_t = $.cookie('wave_t');
+let wave_th = $.cookie('wave_th');;
+let wave_f = $.cookie('wave_f');;
+let wave_fi = $.cookie('wave_fi');;
+let wave_s = $.cookie('wave_s');;
+}
 let train = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 68 );
