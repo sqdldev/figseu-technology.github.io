@@ -30,19 +30,6 @@ wave_th = $.cookie('wave_th') * 1;
 wave_f = $.cookie('wave_f') * 1;
 wave_fi = $.cookie('wave_fi') * 1;
 wave_s = $.cookie('wave_s') * 1;
-if (wave == NaN) {
-     wave = 0;
-     } else if (wave_t == undefined) {
-     wave_t = 0;
-     } else if (wave_th == undefined) {
-     wave_th = 0;
-     } else if (wave_f == undefined) {
-     wave_f = 0;
-     } else if (wave_fi == undefined) {
-     wave_fi = 0;
-     } else if (wave_s == undefined) {
-     wave_s = 0;
-}
 let train = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 68 );
@@ -332,6 +319,26 @@ function gameover() {
      $.cookie('wave_f', wave_f, { expires: 30 });
      $.cookie('wave_fi', wave_fi, { expires: 30 });
      $.cookie('wave_s', wave_s, { expires: 30 });
+  } else if (star == 2) {
+     if (wave == NaN) {
+     wave = 1;
+     $.cookie('wave', wave, { expires: 30 });
+     } else if (wave_t == NaN) {
+     wave_t = 1;
+     $.cookie('wave_t', wave_t, { expires: 30 });
+     } else if (wave_th == NaN) {
+     wave_th = 1;
+     $.cookie('wave_th', wave_th, { expires: 30 });
+     } else if (wave_f == NaN) {
+     wave_f = 1;
+     $.cookie('wave_f', wave_f, { expires: 30 });
+     } else if (wave_fi == NaN) {
+     wave_fi = 1;
+     $.cookie('wave_fi', wave_fi, { expires: 30 });
+     } else if (wave_s == NaN) {
+     wave_s = 1;
+     $.cookie('wave_s', wave_s, { expires: 30 });
+     }
   }
   started = false;
   ball.speed.z = 0;
