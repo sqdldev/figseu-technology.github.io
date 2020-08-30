@@ -19,6 +19,9 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+let wave_t = 0;
+let wave_th = 0;
+let wave_f = 0;
 let url = location.href;
 let fgnc = url.substr( 66 );
 let data;
@@ -30,27 +33,10 @@ $.getJSON('six_levels.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  if (level == 1) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('Dream of Space');
-         $('#stars').html('☆☆☆☆☆☆');
-        } else if (level == 2) {
-         $('#level-d').html('Designed by Itary Cogu');
-         $('#level').html('Summer');
-         $('#stars').html('☆☆☆☆☆☆');
-        } else if (level == 3) {
-         $('#level-d').html('開催日　7月3日');
-         $('#level').html('ゆっくりの森');
-         $('#stars').html('☆☆☆☆☆☆');
-        } else if (level == 4) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('Redo');
-         $('#stars').html('☆☆☆☆☆☆');
-        } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
-           }
+  $('#level-d').html('ボーナスステージ');
+  $('#level').html('Dream of Space');
+  $('#stars').html('☆☆☆☆☆☆');
+  $('#Waves').html('☆ × ' + $.cookie('s_wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -66,15 +52,38 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    wave++;
+    if (typeof wave == 'undefined') {
+        wave = 0;
+        $.cookie('s_wave', wave, { expires: 30 });
+     }
+     if (typeof wave_t == 'undefined') {
+        wave_t = 0;
+        $.cookie('s_wave_t', wave_t, { expires: 30 });
+     }
+     if (typeof wave_th == 'undefined') {
+        wave_th = 0;
+        $.cookie('s_wave_th', wave_th, { expires: 30 });
+     }
+     if (typeof wave_f == 'undefined') {
+        wave_f = 0;
+        $.cookie('s_wave_f', wave_f, { expires: 30 });
+     }
     if (level == 1) {
         $('#dreamofspace').get(0).play();
+        wave++;
+        $.cookie('s_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#summer').get(0).play();
+            wave_t++;
+            $.cookie('s_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#yukkuri').get(0).play();
+            wave_th++;
+            $.cookie('s_wave_th', wave_th, { expires: 30 });
             } else if (level == 4) {
             $('#redo').get(0).play();
+            wave_f++;
+            $.cookie('s_wave_f', wave_f, { expires: 30 });
             } else {
             $('#cloud').get(0).play();
             }
@@ -127,7 +136,6 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -150,18 +158,22 @@ function nextLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('Dream of Space');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave'));
         } else if (level == 2) {
          $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('Redo');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave_f'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -172,7 +184,6 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
@@ -195,18 +206,22 @@ function prevLevel() {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('Dream of Space');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave'));
         } else if (level == 2) {
          $('#level-d').html('Designed by Itary Cogu');
          $('#level').html('Summer');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave_t'));
         } else if (level == 3) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('ゆっくりの森');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('Extra ステージ');
          $('#level').html('Redo');
          $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave_f'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -318,8 +333,20 @@ function render() {
 
 function gameover() {
   if (star == 1) {
-      wave = 0;
+     if (level == 1) {
+     wave = 0;
+     } else if (level == 2) {
+     wave_t = 0;
+     } else if (level == 3) {
+     wave_th = 0;
+     } else if (level == 4) {
+     wave_f = 0;
      }
+     $.cookie('s_wave', wave, { expires: 30 });
+     $.cookie('s_wave_t', wave_t, { expires: 30 });
+     $.cookie('s_wave_th', wave_th, { expires: 30 });
+     $.cookie('s_wave_f', wave_f, { expires: 30 });
+  }
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -332,6 +359,7 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+      $('#Waves').html('☆ × ' + $.cookie('s_wave'));
       if (star == 2) {
       $('#level-d').html('宇宙へと旅立つ');
       }
@@ -340,6 +368,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
+      $('#Waves').html('☆ × ' + $.cookie('s_wave_t'));
       if (star == 2) {
       $('#level-d').html('真夏の日の思い出');
       }
@@ -348,6 +377,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
+      $('#Waves').html('☆ × ' + $.cookie('s_wave_th'));
       if (star == 2) {
       $('#level-d').html('神秘の森のゆっくりプレイス');
       }
@@ -356,6 +386,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
+      $('#Waves').html('☆ × ' + $.cookie('s_wave_f'));
       if (star == 2) {
       $('#level-d').html('未来を解き放つ');
       }
@@ -369,5 +400,4 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
-   $('#Waves').html('☆ × ' + wave);
 }
