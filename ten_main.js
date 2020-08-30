@@ -1,6 +1,6 @@
 const scene = new THREE.Scene();const camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,10000);const renderer = new THREE.WebGLRenderer({ antialias: true });renderer.setSize(window.innerWidth, window.innerHeight);renderer.setClearColor(0xaaaaaa, 1);const canvas = $('#canvascontainer').append(renderer.domElement);
-let distance = 4;let started = false;let percent = 0;camera.position.set(0, 5, distance);camera.rotation.x -= 0.75;let scoreSubmitted = false;let level = 1;let star = 0;let wave = 0;let gya = Math.floor( Math.random() * 11 );let url = location.href;let fgnc = url.substr( 66 );let data;let reqId;
-$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {data = d;loadLevel(level);$('#play').show();$('#PresentCode').hide();$('#play').click(start);$('#next').show();$('#score').hide();$('#level-d').html('超難関');$('#level').html('The Ruby');$('#stars').html('☆☆☆☆☆☆☆☆☆☆');reqId = requestAnimationFrame(render);console.clear();console.log("超高難度 - The Ruby　血祭りの時間だ");});
+let distance = 4;let started = false;let percent = 0;camera.position.set(0, 5, distance);camera.rotation.x -= 0.75;let scoreSubmitted = false;let level = 1;let star = 0;let wave = 0;let wave_t = 0;let wave_th = 0;let wave_f = 0;wave = $.cookie('te_wave');wave_t = $.cookie('te_wave_t');wave_th = $.cookie('te_wave_th');wave_f = $.cookie('te_wave_f');
+let gya = Math.floor( Math.random() * 11 );let url = location.href;let fgnc = url.substr( 66 );let data;let reqId;$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {data = d;loadLevel(level);$('#play').show();$('#PresentCode').hide();$('#play').click(start);$('#next').show();$('#score').hide();$('#level-d').html('超難関');$('#level').html('The Ruby');$('#stars').html('☆☆☆☆☆☆☆☆☆☆');$('#Waves').html('☆ × ' + $.cookie('te_wave'));reqId = requestAnimationFrame(render);console.clear();console.log("超高難度 - The Ruby　血祭りの時間だ");});
 
 //start function
 function start(e) {
@@ -10,15 +10,38 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    wave++;
+    if (typeof wave == 'undefined') {
+        wave = 0;
+        $.cookie('te_wave', wave, { expires: 30 });
+     }
+     if (typeof wave_t == 'undefined') {
+        wave_t = 0;
+        $.cookie('te_wave_t', wave_t, { expires: 30 });
+     }
+     if (typeof wave_th == 'undefined') {
+        wave_th = 0;
+        $.cookie('te_wave_th', wave_th, { expires: 30 });
+     }
+     if (typeof wave_f == 'undefined') {
+        wave_f = 0;
+        $.cookie('te_wave_f', wave_f, { expires: 30 });
+     }
     if (level == 1) {
         $('#ruby').get(0).play();
+        wave++;
+        $.cookie('te_wave', wave, { expires: 30 });
         } else if (level == 2) {
         $('#rgw').get(0).play();
+        wave_t++;
+        $.cookie('te_wave_t', wave_t, { expires: 30 });
         } else if (level == 3) {
         $('#dia').get(0).play();
+        wave_th++;
+        $.cookie('te_wave_th', wave_th, { expires: 30 });
         } else if (level == 4) {
         $('#kya').get(0).play();
+        wave_f++;
+        $.cookie('te_wave_f', wave_f, { expires: 30 });
         } else {
             $('#cloud').get(0).play();
             }
@@ -53,7 +76,6 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -76,20 +98,24 @@ function nextLevel() {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('te_wave'));
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('te_wave_t'));
      } else if (level == 3) {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('te_wave_th'));
      } else if (level == 4) {
       $('#level-d').html('ラストステージ');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('te_wave_f'));
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -100,7 +126,6 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
@@ -123,20 +148,24 @@ function prevLevel() {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Ruby');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('te_wave'));
       $('#play').show();
       $('#PresentCode').hide();
      } else if (level == 2) {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Beryl');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('te_wave_t'));
      } else if (level == 3) {
       $('#level-d').html('超難関 ステージ');
       $('#level').html('The Dia');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('te_wave_th'));
      } else if (level == 4) {
       $('#level-d').html('ラストステージ');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('te_wave_f'));
      } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -211,7 +240,19 @@ function render() {
 
 function gameover() {
   if (star == 1) {
+     if (level == 1) {
      wave = 0;
+     } else if (level == 2) {
+     wave_t = 0;
+     } else if (level == 3) {
+     wave_th = 0;
+     } else if (level == 4) {
+     wave_f = 0;
+     }
+     $.cookie('te_wave', wave, { expires: 30 });
+     $.cookie('te_wave_t', wave_t, { expires: 30 });
+     $.cookie('te_wave_th', wave_th, { expires: 30 });
+     $.cookie('te_wave_f', wave_f, { expires: 30 });
   }
   started = false;
   ball.speed.z = 0;
@@ -225,6 +266,7 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+      $('#Waves').html('☆ × ' + $.cookie('te_wave'));
     if (star == 2) {
       $('#level-d').html('情熱を抱く紅の光');
       }
@@ -233,6 +275,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
+      $('#Waves').html('☆ × ' + $.cookie('te_wave_t'));
        if (star == 2) {
       $('#level-d').html('未来を貫く緑の光');
       }
@@ -241,6 +284,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
+      $('#Waves').html('☆ × ' + $.cookie('te_wave_th'));
        if (star == 2) {
       $('#level-d').html('決意は砕けない');
       }
@@ -249,6 +293,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
+      $('#Waves').html('☆ × ' + $.cookie('te_wave_f'));
        if (star == 2) {
       $('#level-d').html('天から差し込む光をただ、眺めていた');
       $('#play').hide();
@@ -267,5 +312,4 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
-   $('#Waves').html('☆ × ' + wave);
 }
