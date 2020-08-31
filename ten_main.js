@@ -249,10 +249,6 @@ function gameover() {
      } else if (level == 4) {
      wave_f = 0;
      }
-     $.cookie('te_wave', wave, { expires: 30 });
-     $.cookie('te_wave_t', wave_t, { expires: 30 });
-     $.cookie('te_wave_th', wave_th, { expires: 30 });
-     $.cookie('te_wave_f', wave_f, { expires: 30 });
   }
   started = false;
   ball.speed.z = 0;
