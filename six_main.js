@@ -22,6 +22,10 @@ let wave = 0;
 let wave_t = 0;
 let wave_th = 0;
 let wave_f = 0;
+wave = $.cookie('s_wave');
+wave_t = $.cookie('s_wave_t');
+wave_th = $.cookie('s_wave_th');
+wave_f = $.cookie('s_wave_f');
 let url = location.href;
 let fgnc = url.substr( 66 );
 let data;
@@ -71,19 +75,15 @@ function start(e) {
     if (level == 1) {
         $('#dreamofspace').get(0).play();
         wave++;
-        $.cookie('s_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#summer').get(0).play();
             wave_t++;
-            $.cookie('s_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#yukkuri').get(0).play();
             wave_th++;
-            $.cookie('s_wave_th', wave_th, { expires: 30 });
             } else if (level == 4) {
             $('#redo').get(0).play();
             wave_f++;
-            $.cookie('s_wave_f', wave_f, { expires: 30 });
             } else {
             $('#cloud').get(0).play();
             }
@@ -342,11 +342,11 @@ function gameover() {
      } else if (level == 4) {
      wave_f = 0;
      }
-     $.cookie('s_wave', wave, { expires: 30 });
-     $.cookie('s_wave_t', wave_t, { expires: 30 });
-     $.cookie('s_wave_th', wave_th, { expires: 30 });
-     $.cookie('s_wave_f', wave_f, { expires: 30 });
   }
+  $.cookie('s_wave', wave, { expires: 252 });
+  $.cookie('s_wave_t', wave_t, { expires: 252 });
+  $.cookie('s_wave_th', wave_th, { expires: 252 });
+  $.cookie('s_wave_f', wave_f, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
