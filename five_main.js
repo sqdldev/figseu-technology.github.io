@@ -85,27 +85,21 @@ function start(e) {
     if (level == 1) {
             $('#sakura').get(0).play();
             wave++;
-            $.cookie('fi_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#fifty').get(0).play();
             wave_t++;
-            $.cookie('fi_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#pinsir').get(0).play();
             wave_th++;
-            $.cookie('fi_wave_th', wave_th, { expires: 30 });
             } else if (level == 4) {
             $('#the_end').get(0).play();
             wave_f++;
-            $.cookie('fi_wave_f', wave_f, { expires: 30 });
             } else if (level == 5) {
             $('#sintakarajima').get(0).play();
             wave_fi++;
-            $.cookie('fi_wave_fi', wave_fi, { expires: 30 });
             } else if (level == 6) {
             $('#moonpride').get(0).play();
             wave_s++;
-            $.cookie('fi_wave_s', wave_s, { expires: 30 });
             } else {
             $('#cloud').get(0).play();
             }
@@ -388,13 +382,13 @@ function gameover() {
      } else if (level == 6) {
      wave_s = 0;
      }
-     $.cookie('fi_wave', wave, { expires: 30 });
-     $.cookie('fi_wave_t', wave_t, { expires: 30 });
-     $.cookie('fi_wave_th', wave_th, { expires: 30 });
-     $.cookie('fi_wave_f', wave_f, { expires: 30 });
-     $.cookie('fi_wave_fi', wave_fi, { expires: 30 });
-     $.cookie('fi_wave_s', wave_s, { expires: 30 });
   }
+  $.cookie('fi_wave', wave, { expires: 252 });
+  $.cookie('fi_wave_t', wave_t, { expires: 252 });
+  $.cookie('fi_wave_th', wave_th, { expires: 252 });
+  $.cookie('fi_wave_f', wave_f, { expires: 252 });
+  $.cookie('fi_wave_fi', wave_fi, { expires: 252 });
+  $.cookie('fi_wave_s', wave_s, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
