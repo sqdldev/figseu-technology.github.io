@@ -350,6 +350,7 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
+    $.cookie('e_wave', wave, { expires: 252 });
     $('#Waves').html('☆ × ' + $.cookie('e_wave'));
     if (star == 2) {
       $('#level-d').html('我が家への道');
@@ -359,6 +360,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 2) {
+       $.cookie('e_wave_t', wave_t, { expires: 252 });
        $('#Waves').html('☆ × ' + $.cookie('e_wave_t'));
        if (star == 2) {
       $('#level-d').html('世界は廻り続ける');
@@ -368,6 +370,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 3) {
+       $.cookie('e_wave_th', wave_th, { expires: 252 });
        $('#Waves').html('☆ × ' + $.cookie('e_wave_th'));
        if (star == 2) {
       $('#level-d').html('失われた王国の王女');
@@ -377,6 +380,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) {
+       $.cookie('e_wave_f', wave_f, { expires: 252 });
        $('#Waves').html('☆ × ' + $.cookie('e_wave_f'));
        if (star == 2) {
       $('#level-d').html('天空の花園');
@@ -386,6 +390,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 5) {
+      $.cookie('e_wave_fi', wave_fi, { expires: 252 });
       $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
       if (star == 2) {
       $('#level-d').html('夢を運ぶ　ブルートレイン');
@@ -395,6 +400,7 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 6) {
+      $.cookie('e_wave_s', wave_s, { expires: 252 });
       $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
       if (star == 2) {
       $('#level-d').html('未完成のパズル');
@@ -409,10 +415,4 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
-   $.cookie('e_wave', wave, { expires: 252 });
-   $.cookie('e_wave_t', wave_t, { expires: 252 });
-   $.cookie('e_wave_th', wave_th, { expires: 252 });
-   $.cookie('e_wave_f', wave_f, { expires: 252 });
-   $.cookie('e_wave_fi', wave_fi, { expires: 252 });
-   $.cookie('e_wave_s', wave_s, { expires: 252 });
 }
