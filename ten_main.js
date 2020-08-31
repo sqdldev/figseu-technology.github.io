@@ -246,6 +246,10 @@ function gameover() {
      wave_f = 0;
      }
   }
+  $.cookie('te_wave', wave, { expires: 252 });
+  $.cookie('te_wave_t', wave_t, { expires: 252 });
+  $.cookie('te_wave_th', wave_th, { expires: 252 });
+  $.cookie('te_wave_f', wave_f, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -304,8 +308,4 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
-   $.cookie('te_wave', wave, { expires: 252 });
-   $.cookie('te_wave_t', wave_t, { expires: 252 });
-   $.cookie('te_wave_th', wave_th, { expires: 252 });
-   $.cookie('te_wave_f', wave_f, { expires: 252 });
 }
