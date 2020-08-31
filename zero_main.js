@@ -58,7 +58,6 @@ function start(e) {
      }
     $('#zero').get(0).play();
     wave++;
-    $.cookie('z_wave', wave, { expires: 30 });
     reset();
     world.forEach(v => {
       if (v instanceof Bouncer) {
@@ -211,8 +210,8 @@ function render() {
 function gameover() {
   if (star == 1) {
      wave = 0;
-     $.cookie('z_wave', wave, { expires: 30 });
   }
+  $.cookie('z_wave', wave, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
