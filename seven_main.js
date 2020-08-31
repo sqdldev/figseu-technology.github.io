@@ -70,15 +70,12 @@ function start(e) {
     if (level == 1) {
             $('#shrine').get(0).play();
             wave++;
-            $.cookie('se_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#ts').get(0).play();
             wave_t++;
-            $.cookie('se_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#tmp').get(0).play();
             wave_th++;
-            $.cookie('se_wave_th', wave_th, { expires: 30 });
            } else {
             $('#cloud').get(0).play();
             }
@@ -326,10 +323,10 @@ function gameover() {
      } else if (level == 3) {
      wave_th = 0;
      }
-     $.cookie('se_wave', wave, { expires: 30 });
-     $.cookie('se_wave_t', wave_t, { expires: 30 });
-     $.cookie('se_wave_th', wave_th, { expires: 30 });
   }
+  $.cookie('se_wave', wave, { expires: 252 });
+  $.cookie('se_wave_t', wave_t, { expires: 252 });
+  $.cookie('se_wave_th', wave_th, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
