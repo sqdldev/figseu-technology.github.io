@@ -79,19 +79,15 @@ function start(e) {
     if (level == 1) {
             $('#ever_down').get(0).play();
             wave++;
-            $.cookie('f_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#bad_apple').get(0).play();
             wave_t++;
-            $.cookie('f_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#bang_dream').get(0).play();
             wave_th++;
-            $.cookie('f_wave_th', wave_th, { expires: 30 });
             } else if (level == 4) {
             $('#girls_party').get(0).play();
             wave_f++;
-            $.cookie('f_wave_f', wave_f, { expires: 30 });
             } else {
             $('#cloud').get(0).play();
             }
@@ -352,12 +348,12 @@ function gameover() {
      } else if (level == 5) {
      wave_fi = 0;
      }
-     $.cookie('f_wave', wave, { expires: 30 });
-     $.cookie('f_wave_t', wave_t, { expires: 30 });
-     $.cookie('f_wave_th', wave_th, { expires: 30 });
-     $.cookie('f_wave_f', wave_f, { expires: 30 });
-     $.cookie('f_wave_fi', wave_fi, { expires: 30 });
   }
+  $.cookie('f_wave', wave, { expires: 252 });
+  $.cookie('f_wave_t', wave_t, { expires: 252 });
+  $.cookie('f_wave_th', wave_th, { expires: 252 });
+  $.cookie('f_wave_f', wave_f, { expires: 252 });
+  $.cookie('f_wave_fi', wave_fi, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
