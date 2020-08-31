@@ -77,19 +77,19 @@ function start(e) {
     if (level == 1) {
         $('#FELL').get(0).play();
         wave++;
-        $.cookie('n_wave', wave, { expires: 30 });
+        $.cookie('n_wave', wave);
         } else if (level == 2) {
         $('#TFE').get(0).play();
         wave_t++;
-        $.cookie('n_wave_t', wave_t, { expires: 30 });
+        $.cookie('n_wave_t', wave_t);
         } else if (level == 3) {
         $('#DAYS').get(0).play();
         wave_th++;
-        $.cookie('n_wave_th', wave_th, { expires: 30 });
+        $.cookie('n_wave_th', wave_th);
         } else if (level == 4) {
         $('#TDAYS').get(0).play();
         wave_f++;
-        $.cookie('n_wave_f', wave_f, { expires: 30 });
+        $.cookie('n_wave_f', wave_f);
         } else {
             $('#FELL').get(0).play();
             }
@@ -407,4 +407,8 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
+   $.cookie('n_wave', wave, { expires: 252 });
+   $.cookie('n_wave_t', wave_t, { expires: 252 });
+   $.cookie('n_wave_th', wave_th, { expires: 252 });
+   $.cookie('n_wave_f', wave_f, { expires: 252 });
 }
