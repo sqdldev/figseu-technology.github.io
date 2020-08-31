@@ -231,8 +231,8 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Deltemat && this.landed) {
           if (v.detect() && started) {
-            v.mesh.position.y = -10;
-            v.line.position.y = -10;
+            v.mesh.position.y = -100;
+            v.line.position.y = -100;
           }
         }
       });
