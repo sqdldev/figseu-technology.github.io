@@ -29,19 +29,19 @@ function start(e) {
     if (level == 1) {
         $('#ruby').get(0).play();
         wave++;
-        $.cookie('te_wave', wave, { expires: 30 });
+        $.cookie('te_wave', wave);
         } else if (level == 2) {
         $('#rgw').get(0).play();
         wave_t++;
-        $.cookie('te_wave_t', wave_t, { expires: 30 });
+        $.cookie('te_wave_t', wave_t);
         } else if (level == 3) {
         $('#dia').get(0).play();
         wave_th++;
-        $.cookie('te_wave_th', wave_th, { expires: 30 });
+        $.cookie('te_wave_th', wave_th);
         } else if (level == 4) {
         $('#kya').get(0).play();
         wave_f++;
-        $.cookie('te_wave_f', wave_f, { expires: 30 });
+        $.cookie('te_wave_f', wave_f);
         } else {
             $('#cloud').get(0).play();
             }
@@ -312,4 +312,8 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      }
+   $.cookie('te_wave', wave, { expires: 252 });
+   $.cookie('te_wave_t', wave_t, { expires: 252 });
+   $.cookie('te_wave_th', wave_th, { expires: 252 });
+   $.cookie('te_wave_f', wave_f, { expires: 252 });
 }
