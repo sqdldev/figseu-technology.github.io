@@ -337,6 +337,10 @@ function gameover() {
      } else if (level == 6) {
      wave_s = 0;
      }
+    $.cookie('e_wave', wave, { expires: 252 });
+    $.cookie('e_wave_t', wave_t, { expires: 252 });
+    $.cookie('e_wave_th', wave_th, { expires: 252 });
+    $.cookie('e_wave_f', wave_f, { expires: 252 });
   }
   started = false;
   ball.speed.z = 0;
