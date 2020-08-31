@@ -75,19 +75,15 @@ function start(e) {
     if (level == 1) {
         $('#stadium').get(0).play();
         wave++;
-        $.cookie('th_wave', wave, { expires: 30 });
             } else if (level == 2) {
             $('#samurai').get(0).play();
             wave_t++;
-            $.cookie('th_wave_t', wave_t, { expires: 30 });
             } else if (level == 3) {
             $('#fell').get(0).play();
             wave_th++;
-            $.cookie('th_wave_th', wave_th, { expires: 30 });
             } else if (level == 4) {
             $('#rain').get(0).play();
             wave_f++;
-            $.cookie('th_wave_f', wave_f, { expires: 30 });
             } else {
             $('#cloud').get(0).play();
             }
@@ -346,11 +342,11 @@ function gameover() {
      } else if (level == 4) {
      wave_f = 0;
      }
-     $.cookie('th_wave', wave, { expires: 30 });
-     $.cookie('th_wave_t', wave_t, { expires: 30 });
-     $.cookie('th_wave_th', wave_th, { expires: 30 });
-     $.cookie('th_wave_f', wave_f, { expires: 30 });
   }
+  $.cookie('th_wave', wave, { expires: 252 });
+  $.cookie('th_wave_t', wave_t, { expires: 252 });
+  $.cookie('th_wave_th', wave_th, { expires: 252 });
+  $.cookie('th_wave_f', wave_f, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
