@@ -24,12 +24,14 @@ let wave_th = 0;
 let wave_f = 0;
 let wave_fi = 0;
 let wave_s = 0;
+let wave_se = 0;
 wave = $.cookie('e_wave');
 wave_t = $.cookie('e_wave_t');
 wave_th = $.cookie('e_wave_th');
 wave_f = $.cookie('e_wave_f');
 wave_fi = $.cookie('e_wave_fi');
 wave_s = $.cookie('e_wave_s');
+wave_se = $.cookie('e_wave_se');
 let train = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 68 );
@@ -86,6 +88,10 @@ function start(e) {
         wave_s = 0;
         $.cookie('e_wave_s', wave_s, { expires: 30 });
      }
+     if (typeof wave_se == 'undefined') {
+        wave_s = 0;
+        $.cookie('e_wave_se', wave_se, { expires: 30 });
+     }
     if (level == 1) {
         $('#mai').get(0).play();
         wave++;
@@ -99,11 +105,14 @@ function start(e) {
             $('#los').get(0).play();
             wave_f++;
     } else if (level == 5) {
-            $('#ef').get(0).play();
+            $('#alive').get(0).play();
             wave_fi++;
     } else if (level == 6) {
-            $('#alive').get(0).play();
+            $('#clo').get(0).play();
             wave_s++;
+    } else if (level == 7) {
+            $('#clo').get(0).play();
+            wave_se++;
     } else {
             $('#cloud').get(0).play();
     }
@@ -153,7 +162,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 6) {
+  if (level == 5) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -177,15 +186,10 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('EF66');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
-        } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
+         $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -235,15 +239,10 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('EF66');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
-        } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
+         $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -330,6 +329,8 @@ function gameover() {
      wave_fi = 0;
      } else if (level == 6) {
      wave_s = 0;
+     } else if (level == 7) {
+     wave_se = 0;
      }
   }
   $.cookie('e_wave', wave, { expires: 252 });
@@ -338,6 +339,7 @@ function gameover() {
   $.cookie('e_wave_f', wave_f, { expires: 252 });
   $.cookie('e_wave_fi', wave_fi, { expires: 252 });
   $.cookie('e_wave_s', wave_s, { expires: 252 });
+  $.cookie('e_wave_se', wave_se, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -388,18 +390,27 @@ function gameover() {
      } else if (level == 5) {
       $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
       if (star == 2) {
-      $('#level-d').html('夢を運ぶ　ブルートレイン');
+      $('#level-d').html('未完成のパズル');
       }
-      $('#ef').each(function(){
+      $('#alive').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else if (level == 6) {
       $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
       if (star == 2) {
-      $('#level-d').html('未完成のパズル');
+      $('#level-d').html('???');
       }
-      $('#alive').each(function(){
+      $('#ef').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 7) {
+      $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
+      if (star == 2) {
+      $('#level-d').html('???');
+      }
+      $('#ef').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
