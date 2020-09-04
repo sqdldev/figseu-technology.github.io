@@ -89,7 +89,7 @@ function start(e) {
         $.cookie('e_wave_s', wave_s, { expires: 30 });
      }
      if (typeof wave_se == 'undefined') {
-        wave_s = 0;
+        wave_se = 0;
         $.cookie('e_wave_se', wave_se, { expires: 30 });
      }
     if (level == 1) {
