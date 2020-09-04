@@ -166,7 +166,7 @@ canvas {
   font-weight: 700;
   font-size: 50px;
   text-align: center;
-  color: #FF3C56;
+  color: #009CFF;
 }
 
 #stars{
@@ -178,7 +178,7 @@ canvas {
   font-weight: 700;
   font-size: 40px;
   text-align: center;
-  color: #FF584F;
+  color: #009CFF;
 }
 
 #level{
@@ -213,11 +213,11 @@ canvas {
 }
 
 #level-d{
-  color: #FF5C36;
+  color: #009CFF6;
   position: fixed;
   top: 5%;
   left: 5%;
-  border: double #FF5C36;
+  border: double #009CFF;
   padding: 5px;
   border-radius: 20px;
   text-align: right;
@@ -372,12 +372,12 @@ canvas {
   transform: 0.5em;
 }
 #ten_level {
-  color: #FF0D00;
+  color: #009CFF;
   position: fixed;
   text-decoration: none;
   top: 18%;
   left: 85%;
-  border: double #FF221D;
+  border: double #009CFF;
   padding: 5px;
   border-radius: 1px;
   text-align: right;
