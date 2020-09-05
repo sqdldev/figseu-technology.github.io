@@ -100,6 +100,11 @@ class Ball {
       if (v.detect()) gameover();
       star = 1;
     });
+   world.forEach(v => {
+      if (v instanceof Dreamtower)
+      if (v.detect()) gameover();
+      star = 1;
+    });
   }
 }
 
@@ -357,14 +362,14 @@ class Goal {
 class Crystal {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.SphereGeometry(0.7, 2, 2);
-    this.material = new THREE.MeshPhongMaterial({ color: color });
+    this.geometry = new THREE.SphereGeometry(1000, 6, 4);
+    this.material = new THREE.MeshPhongMaterial({ color: 0xFF0018 });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
-    this.edgesMaterial = new THREE.LineBasicMaterial({ color: color });
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xFF0018 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 1.1, zpos);
-    this.line.position.set(xpos, 1.1, zpos);
+    this.mesh.position.set(xpos, -2, zpos);
+    this.line.position.set(xpos, -2, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.line);
@@ -372,12 +377,40 @@ class Crystal {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
-      ball.mesh.position.y < this.mesh.position.y + 5
+      ball.mesh.position.x >= this.mesh.position.x - 0 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0 &&
+      ball.mesh.position.z <= 0 &&
+      ball.mesh.position.y < this.mesh.position.y + 0
+    ) return true;
+  }
+}
+
+class Dreamtower {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.CylinderGeometry(0.5, 0.5, 5);
+    this.material = new THREE.MeshPhongMaterial({ color: 0x9900AF });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xE8A2FF });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0.7, zpos);
+    this.line.position.set(xpos, 4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
+      ball.mesh.position.z <= 0.5 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
     ) return true;
   }
 }
