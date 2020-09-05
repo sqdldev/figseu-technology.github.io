@@ -121,7 +121,6 @@ class Mat {
     this.line.position.set(xpos, 0, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
-    scene.fog = new THREE.Fog(0x00734B, 5, 15);
     scene.add(this.line);
   }
   detect() {
