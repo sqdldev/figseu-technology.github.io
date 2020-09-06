@@ -24,12 +24,14 @@ let wave_th = 0;
 let wave_f = 0;
 let wave_fi = 0;
 let wave_s = 0;
+let wave_se = 0;
 wave = $.cookie('fi_wave');
 wave_t = $.cookie('fi_wave_t');
 wave_th = $.cookie('fi_wave_th');
 wave_f = $.cookie('fi_wave_f');
 wave_fi = $.cookie('fi_wave_fi');
 wave_s = $.cookie('fi_wave_s');
+wave_se = $.cookie('fi_wave_se');
 let data;
 let reqId;
 $.getJSON('five_levels.json', d => {
@@ -82,6 +84,10 @@ function start(e) {
         wave_s = 0;
         $.cookie('fi_wave_s', wave_s, { expires: 30 });
      }
+     if (typeof wave_se == 'undefined') {
+        wave_se = 0;
+        $.cookie('fi_wave_se', wave_se, { expires: 30 });
+     }
     if (level == 1) {
             $('#sakura').get(0).play();
             wave++;
@@ -89,7 +95,7 @@ function start(e) {
             $('#fifty').get(0).play();
             wave_t++;
             } else if (level == 3) {
-            $('#pinsir').get(0).play();
+            $('#ay').get(0).play();
             wave_th++;
             } else if (level == 4) {
             $('#the_end').get(0).play();
@@ -100,6 +106,9 @@ function start(e) {
             } else if (level == 6) {
             $('#moonpride').get(0).play();
             wave_s++;
+            } else if (level == 7) {
+            $('#kimetu').get(0).play();
+            wave_se++;
             } else {
             $('#cloud').get(0).play();
             }
@@ -175,8 +184,8 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_t'));
         } else if (level == 3) {
-         $('#level-d').html('カリスマのステージ');
-         $('#level').html('Pinsir');
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('アスノヨゾラ哨戒班');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_th'));
         } else if (level == 4) {
@@ -194,6 +203,11 @@ function nextLevel() {
          $('#level').html('MOON PRIDE');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
+        } else if (level == 7) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('紅蓮華');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -233,8 +247,8 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_t'));
         } else if (level == 3) {
-         $('#level-d').html('カリスマのステージ');
-         $('#level').html('Pinsir');
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('アスノヨゾラ哨戒班');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_th'));
         } else if (level == 4) {
@@ -252,6 +266,11 @@ function prevLevel() {
          $('#level').html('MOON PRIDE');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
+        } else if (level == 7) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('紅蓮華');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -381,6 +400,8 @@ function gameover() {
      wave_fi = 0;
      } else if (level == 6) {
      wave_s = 0;
+     } else if (level == 7) {
+     wave_se = 0;
      }
   }
   $.cookie('fi_wave', wave, { expires: 252 });
@@ -389,6 +410,7 @@ function gameover() {
   $.cookie('fi_wave_f', wave_f, { expires: 252 });
   $.cookie('fi_wave_fi', wave_fi, { expires: 252 });
   $.cookie('fi_wave_s', wave_s, { expires: 252 });
+  $.cookie('fi_wave_se', wave_se, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -420,7 +442,10 @@ function gameover() {
 });
      } else if (level == 3) {
       $('#Waves').html('☆ × ' + $.cookie('fi_wave_th'));
-      $('#pinsir').each(function(){
+      if (star == 2) {
+          $('#level-d').html('今日の日をいつか思い出せ僕ら！');
+      }
+      $('#ay').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
@@ -448,6 +473,15 @@ function gameover() {
              $('#level-d').html('新しい伝説が今ここから始まる');
       }
       $('#moonpride').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 7) {
+      $('#Waves').html('☆ × ' + $.cookie('fi_wave_se'));
+      if (star == 2) {
+          $('#level-d').html('運命を照らして');
+      }
+      $('#kimetu').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
