@@ -44,12 +44,12 @@ h3 {
   bottom: 50px;
 }
 #update_button {
-  color: #D55989;
+  color: #0094FF;
   position: fixed;
   text-decoration: none;
   top: 27%;
   left: 5%;
-  border: double #D55989;
+  border: double #0094FF;
   padding: 5px;
   border-radius: 1px;
   text-align: right;
