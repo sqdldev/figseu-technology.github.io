@@ -183,7 +183,7 @@ function nextLevel() {
          $('#Waves').html('☆ × ' + $.cookie('f_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Extra ステージ');
-         $('#level').html('only my railgun);
+         $('#level').html('only my railgun');
          $('#stars').html('☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('f_wave_fi'));
         } else {
@@ -236,7 +236,7 @@ function prevLevel() {
          $('#Waves').html('☆ × ' + $.cookie('f_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Extra ステージ');
-         $('#level').html('only my railgun);
+         $('#level').html('only my railgun');
          $('#stars').html('☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('f_wave_fi'));
         } else {
