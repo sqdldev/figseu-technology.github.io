@@ -23,11 +23,13 @@ let wave_t = 0;
 let wave_th = 0;
 let wave_f = 0;
 let wave_fi = 0;
+let wave_s = 0;
 wave = $.cookie('f_wave');
 wave_t = $.cookie('f_wave_t');
 wave_th = $.cookie('f_wave_th');
 wave_f = $.cookie('f_wave_f');
 wave_fi = $.cookie('f_wave_fi');
+wave_s = $.cookie('f_wave_s');
 let data;
 let reqId;
 $.getJSON('four_levels.json', d => {
@@ -76,6 +78,10 @@ function start(e) {
         wave_fi = 0;
         $.cookie('f_wave_fi', wave_fi, { expires: 30 });
      }
+     if (typeof wave_s == 'undefined') {
+        wave_s = 0;
+        $.cookie('f_wave_s', wave_s, { expires: 30 });
+     }
     if (level == 1) {
             $('#ever_down').get(0).play();
             wave++;
@@ -88,6 +94,9 @@ function start(e) {
             } else if (level == 4) {
             $('#girls_party').get(0).play();
             wave_f++;
+            } else if (level == 5) {
+            $('#railgun').get(0).play();
+            wave_fi++;
             } else {
             $('#cloud').get(0).play();
             }
@@ -158,12 +167,12 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('f_wave'));
         } else if (level == 2) {
-         $('#level-d').html('Extraステージ');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('Bad Apple');
          $('#stars').html('☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('f_wave_t'));
         } else if (level == 3) {
-         $('#level-d').html('Extraステージ');
+         $('#level-d').html('Extra ステージ');
          $('#level').html('ふわふわ ゆめいろサンドイッチ');
          $('#stars').html('☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('f_wave_th'));
@@ -172,6 +181,11 @@ function nextLevel() {
          $('#level').html('華麗に舞う少女');
          $('#stars').html('☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('f_wave_f'));
+        } else if (level == 5) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('only my railgun);
+         $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -220,6 +234,11 @@ function prevLevel() {
          $('#level').html('華麗に舞う少女');
          $('#stars').html('☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('f_wave_f'));
+        } else if (level == 5) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('only my railgun);
+         $('#stars').html('☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('f_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -311,6 +330,10 @@ function loadLevel(level) {
           break;
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
+          break;
+        case 26:
+          world.push(new Railgun(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
@@ -399,6 +422,15 @@ function gameover() {
       $('#level-d').html('君とダンスを踊り、舞う');
       }
       $('#girls_party').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) {
+      $('#Waves').html('☆ × ' + $.cookie('f_wave_fi'));
+         if (star == 2) {
+      $('#level-d').html('それさえも強さになる');
+      }
+      $('#railgun').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
