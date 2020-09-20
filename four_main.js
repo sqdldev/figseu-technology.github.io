@@ -56,6 +56,7 @@ function start(e) {
   if (!started) {
     started = true;
     ball.speed.z = -0.15;
+    camera.rotation.x -= 0.75;
     $('#main').fadeOut(300);
     $('#name').hide();
     if (typeof wave == 'undefined') {
@@ -149,6 +150,7 @@ function reset() {
 function nextLevel() {
   percent = 0;
   star = 0;
+  camera.rotation.x -= 0.75;
   while (
     (selectedObject = scene.getObjectByName('level component')) !== undefined
   ) {
@@ -202,6 +204,7 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
+  camera.rotation.x -= 0.75;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
