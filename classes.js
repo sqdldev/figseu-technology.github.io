@@ -127,7 +127,7 @@ class Ball {
           if (v.detect()) {
             this.landed = true;
             this.speed.y = 0;
-            camera.rotation.x -= 0.01;
+            camera.rotation.y += 0.01;
             if (this.tmpZ) {
               this.mesh.position.z = this.tmpZ - 4;
               camera.position.z = this.tmpZ - 4 + distance;
