@@ -127,7 +127,7 @@ class Ball {
           if (v.detect()) {
             this.landed = true;
             this.speed.y = 0;
-            camera.rotation.x -= 0.1;
+            camera.rotation.x -= 0.01;
             if (this.tmpZ) {
               this.mesh.position.z = this.tmpZ - 4;
               camera.position.z = this.tmpZ - 4 + distance;
@@ -138,7 +138,7 @@ class Ball {
           if (v.detect()) {
             this.landed = true;
             this.speed.y = 0;
-            camera.rotation.y -= 0.1;
+            camera.rotation.y -= 0.01;
             if (this.tmpZ) {
               this.mesh.position.z = this.tmpZ - 4;
               camera.position.z = this.tmpZ - 4 + distance;
@@ -984,8 +984,8 @@ class Rightmat {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 3, zpos);
-    this.line.position.set(xpos, 3, zpos);
+    this.mesh.position.set(xpos, 0, zpos);
+    this.line.position.set(xpos, 0, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.line);
