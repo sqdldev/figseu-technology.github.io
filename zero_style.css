@@ -216,8 +216,8 @@ canvas {
   color: #FFFFFF;
   position: fixed;
   text-decoration: none;
-  top: 9%;
-  left: 76%;
+  top: 2%;
+  left: 77%;
   border: double #FFFFFF;
   padding: 5px;
   border-radius: 1px;
@@ -233,7 +233,7 @@ canvas {
   position: fixed;
   text-decoration: none;
   top: 9%;
-  left: 87%;
+  left: 76%;
   border: double #FFFFFF;
   padding: 5px;
   border-radius: 1px;
