@@ -80,7 +80,7 @@ body {
   color: #00D2FF;
   position: fixed;
   text-decoration: none;
-  top: 27%;
+  top: 17%;
   left: 5%;
   border: double #00D2FF;
   padding: 5px;
@@ -271,7 +271,7 @@ canvas {
   position: fixed;
   text-decoration: none;
   top: 2%;
-  left: 2%;
+  right: 2%;
   border: double #FFFFFF;
   padding: 5px;
   border-radius: 1px;
