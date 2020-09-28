@@ -96,7 +96,7 @@ body {
   color: #FFB900;
   position: fixed;
   text-decoration: none;
-  top: 27%;
+  top: 2%;
   left: 60%;
   border: double #FFB900;
   padding: 5px;
@@ -106,7 +106,10 @@ body {
   font-family: serif;
   font-weight: 700;
   font-size: 20px;
-  transform: 0.5em;
+  transform: 0.5s;
+}
+#Waves:hover {
+  color: #00B748;
 }
 img {
 	filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(107%) contrast(101%);
@@ -267,8 +270,8 @@ canvas {
   color: #FFFFFF;
   position: fixed;
   text-decoration: none;
-  top: 9%;
-  left: 76%;
+  top: 2%;
+  left: 2%;
   border: double #FFFFFF;
   padding: 5px;
   border-radius: 1px;
