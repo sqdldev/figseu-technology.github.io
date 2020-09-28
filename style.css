@@ -63,7 +63,7 @@ h3 {
   color: #FFB900;
   position: fixed;
   text-decoration: none;
-  top: 27%;
+  top: 2%;
   left: 60%;
   border: double #FFB900;
   padding: 5px;
@@ -379,8 +379,8 @@ canvas {
   color: #FFFFFF;
   position: fixed;
   text-decoration: none;
-  top: 9%;
-  left: 76%;
+  top: 2%;
+  right: 2%;
   border: double #FFFFFF;
   padding: 5px;
   border-radius: 1px;
