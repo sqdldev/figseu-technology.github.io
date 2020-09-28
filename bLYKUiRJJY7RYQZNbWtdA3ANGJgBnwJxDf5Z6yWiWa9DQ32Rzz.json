@@ -4307,7 +4307,7 @@
   {
     "author": "EF66",
     "background": "0x000000",
-    "ball": "0x00eaff",
+    "ball": "0x28DF84",
     "mat": "0x282106ff",
     "bouncer": "0xbbaa85",
     "obstacle": "0xd6e95e",
@@ -5661,7 +5661,7 @@
   {
     "author": "EF210",
     "background": "0x000000",
-    "ball": "0xE6552106",
+    "ball": "0x00eaff",
     "mat": "0x0067FF",
     "bouncer": "0xFF68BD",
     "obstacle": "0xFFFFFF",
