@@ -57,6 +57,12 @@ function start(e) {
         $('#dia').get(0).play();
         } else if (level == 4) {
         $('#kya').get(0).play();
+        } else if (level == 5) {
+        $('#ef').get(0).play();
+        } else if (level == 6) {
+        $('#eft').get(0).play();
+        } else if (level == 7) {
+        $('#kiha').get(0).play();
         } else {
             $('#cloud').get(0).play();
             }
@@ -106,7 +112,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 6) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -127,7 +133,19 @@ function nextLevel() {
       $('#level-d').html('ラストステージ');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-     } else {
+     } else if (level == 5) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('EF66');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+     } else if (level == 6) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('EF210');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+     } else if (level == 7) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('K i h a');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+        } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
@@ -173,7 +191,19 @@ function prevLevel() {
       $('#level-d').html('ラストステージ');
       $('#level').html('The Kyanite');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-     } else {
+     } else if (level == 5) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('EF66');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+     } else if (level == 6) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('EF210');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+     } else if (level == 7) {
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('K i h a');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+        } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
             $('#stars').html('');
@@ -221,6 +251,11 @@ function loadLevel(level) {
           break;
         case 9:
           world.push(new Goal(j - 2, -i, data[index].obstacle));
+          break;
+        case 210:
+          world.push(new Dreamtower(j - 2, -i, data[index].obstacle));
+          world.push(new Crystal(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
@@ -291,6 +326,30 @@ function gameover() {
       $('#next').hide();
       }
       $('#kya').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) {
+      if (star == 2) {
+      $('#level-d').html('夢を運ぶ　ブルートレイン');
+      }
+      $('#ef').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 6) {
+      if (star == 2) {
+      $('#level-d').html('天を　貫く');
+      }
+      $('#eft').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 7) {
+      if (star == 2) {
+      $('#level-d').html('頭をよぎる追憶');
+      }
+      $('#kiha').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
