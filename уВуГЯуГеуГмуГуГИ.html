@@ -63,9 +63,6 @@ R_key = $.cookie('te_wave_t');
 G_key = $.cookie('n_wave_f');
 B_key = $.cookie('te_wave_f');
 N_key = $.cookie('n_wave_t');
-function BGM() {
-	$('#bgm').get(0).play();
-}
 if (A_key >= 0) {
     $('#A').hide();
         if (X_key >= 0) {
@@ -88,6 +85,9 @@ if (A_key >= 0) {
                 }
             }
         }
+}
+function BGM() {
+	$('#bgm').get(0).play();
 }
 </script>
 </head>
