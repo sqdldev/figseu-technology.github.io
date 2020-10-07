@@ -30,10 +30,60 @@ img {
 	text-decoration: none;
         text-shadow: 1px 2px 3px #808080;
 }
+#A {
+        display: none;
+}
+#X {
+        display: none;
+}
+#R {
+        display: none;
+}
+#G {
+        display: none;
+}
+#B {
+        display: none;
+}
+#N {
+        display: none;
+}
+#Z {
+        display: none;
+}
+#HZ {
+        display: none;
+}
 </style>
 <script>
+Zero_K = 0;
 function BGM() {
 	$('#bgm').get(0).play();
+}
+function Zero_key {
+    if ($.cookie('e_wave_th') >= 0) {
+    $('#A').hide();
+        if ($.cookie('te_wave_fi') >= 0) {
+        $('#X').hide();
+            if ($.cookie('te_wave_t') >= 0) {
+            $('#R').hide();
+                if ($.cookie('n_wave_f') >= 0) {
+                $('#G').hide();
+                    if ($.cookie('te_wave_f') >= 0) {
+                    $('#B').hide();
+                        if ($.cookie('n_wave_t') >= 0) {
+                        $('#N').hide();
+                        $('#Z').hide();
+                        $('#HZ').hide();
+                            Zero_K = 1;
+                            $.cookie('Zero_KEY', Zero_K, { expires: 252 });
+                            $('#zerzer').html('全ての紋章が解放されました。');
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 </script>
 </head>
@@ -43,7 +93,7 @@ function BGM() {
 
 <div align="center"><a onclick="BGM()"><img src="img_A/FULLING.png"/></a></div>
 
-<p align="center">全ての紋章が解放されました。</p>
+<p align="center"><div id="zerzer">特定のステージをクリアして、全ての紋章を解放しましょう。</div></p>
 
 <br> </br>
 
@@ -51,7 +101,7 @@ function BGM() {
 
 <br> </br>
 
-<p align="center"><a href="zero_vindex.html" align="center" class="button">反転モード に挑む</a></p>
+<div id="HZ"><p align="center"><a href="zero_vindex.html" align="center" class="button">反転モード に挑む</a></p></div>
 
 <br> </br>
 
@@ -59,13 +109,13 @@ function BGM() {
 
 <br> </br>
 
-<p align="center">А の紋章 : 解放済</p>
+<p align="center">А の紋章</p>
 
 <p align="center">効果 : The Dia、梅雨 を永久アンロック</p>
 
 <br> </br>
 
-<p align="center"><a align="center" href="А.html" class="button">石板を見る</a></p>
+<div id="A"><p align="center"><a align="center" href="А.html" class="button">石板を見る</a></p></div>
 
 <br> </br>
 
@@ -73,13 +123,13 @@ function BGM() {
 
 <br> </br>
 
-<p align="center">Хの紋章 : 解放済</p>
+<p align="center">Хの紋章</p>
 
 <p align="center">効果 : Zero を永久アンロック</p>
 
 <br> </br>
 
-<p align="center"><a align="center" href="Х.html" class="button">石板を見る</a></p>
+<div id="X"><p align="center"><a align="center" href="Х.html" class="button">石板を見る</a></p></div>
 
 <br> </br>
 
@@ -87,13 +137,13 @@ function BGM() {
 
 <br> </br>
 
-<p align="center">Яの紋章 : 解放済</p>
+<p align="center">Яの紋章</p>
 
 <p align="center">効果 : The Beryl 、EF66 を永久アンロック</p>
 
 <br> </br>
 
-<p align="center"><a align="center" href="Я.html" class="button">石板を見る</a></p>
+<div id="R"><p align="center"><a align="center" href="Я.html" class="button">石板を見る</a></p></div>
 
 <br> </br>
 
@@ -101,13 +151,13 @@ function BGM() {
 
 <br> </br>
 
-<p align="center">Г の紋章 : 解放済</p>
+<p align="center">Г の紋章</p>
 
 <p align="center">効果 : True Days、ゆっくりの森 を永久アンロック</p>
 
 <br> </br>
 
-<p align="center"><a align="center" href="Г.html" class="button">石板を見る</a></p>
+<div id="G"><p align="center"><a align="center" href="Г.html" class="button">石板を見る</a></p></div>
 
 <br> </br>
 
@@ -115,13 +165,13 @@ function BGM() {
 
 <br> </br>
 
-<p align="center">В の紋章 : 解放済</p>
+<p align="center">В の紋章</p>
 
 <p align="center">効果 : The Kyanite、True Shrine を永久アンロック</p>
 
 <br> </br>
 
-<p align="center"><a align="center" href="В.html" class="button">石板を見る</a></p>
+<div id="B"><p align="center"><a align="center" href="В.html" class="button">石板を見る</a></p></div>
 
 <br> </br>
 
@@ -129,13 +179,13 @@ function BGM() {
 
 <br> </br>
 
-<p align="center">И の紋章 : 解放済</p>
+<p align="center">И の紋章</p>
 
 <p align="center">効果 : True Fell Gate を永久アンロック</p>
 
 <br> </br>
 
-<p align="center"><a align="center" href="И.html" class="button">石板を見る</a></p>
+<div id="N"><p align="center"><a align="center" href="И.html" class="button">石板を見る</a></p></div>
 
 <br> </br>
 
@@ -143,13 +193,13 @@ function BGM() {
 
 <br> </br>
 
-<p align="center">0 の紋章 : 解放済</p>
+<p align="center">0 の紋章</p>
 
 <p align="center">効果 : 全てのステージを永久アンロック (今後のアップデートで追加されるステージも含む)</p>
 
 <br> </br>
 
-<p align="center"><a align="center" href="0.html" class="button">石板を見る</a></p>
+<div id="Z"><p align="center"><a align="center" href="0.html" class="button">石板を見る</a></p></div>
 
 <br> </br>
 
@@ -163,3 +213,4 @@ function BGM() {
 
 </body>
 <script src="System/jquery.js"></script>
+<script src="System/cookie.js"></script>
