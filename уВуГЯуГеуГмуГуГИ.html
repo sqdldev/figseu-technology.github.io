@@ -63,19 +63,19 @@ function BGM() {
 if ($.cookie('e_wave_th') >= 0) {
     $('#A').hide();
         if ($.cookie('te_wave_fi') >= 0) {
-        $('#X').hide();
+        $('#X').show();
             if ($.cookie('te_wave_t') >= 0) {
-            $('#R').hide();
+            $('#R').show();
                 if ($.cookie('n_wave_f') >= 0) {
-                $('#G').hide();
+                $('#G').show();
                     if ($.cookie('te_wave_f') >= 0) {
-                    $('#B').hide();
+                    $('#B').show();
                         if ($.cookie('n_wave_t') >= 0) {
-                        $('#N').hide();
-                        $('#Z').hide();
-                        $('#HZ').hide();
+                        $('#N').show();
+                        $('#Z').show();
+                        $('#HZ').show();
                             Zero_K = 1;
-                            $.cookie('Zero_KEY', Zero_K, { expires: 252 });
+                            $.cookie('Zero_KEY', Zero_K, { expires: 3000 });
                             $('#zerzer').html('全ての紋章が解放されました。');
                         }
                     }
