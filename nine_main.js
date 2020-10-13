@@ -288,7 +288,7 @@ function loadLevel(level) {
           break;
         case 14:
           world.push(new Holemat(j - 2, -i, data[index].mat));
-          world.push(new Hole(j - 2, -i, data[index].bouncer));
+          world.push(new FellGate(j - 2, -i, data[index].bouncer));
           break;
         case 15:
           world.push(new Fastbouncer(j - 2, -i, data[index].bouncer));
