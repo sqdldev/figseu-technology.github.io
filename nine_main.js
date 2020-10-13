@@ -310,6 +310,10 @@ function loadLevel(level) {
           break;
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
+          break;
+        case 39:
+          world.push(new FellObstacle(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
