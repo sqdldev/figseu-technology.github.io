@@ -1068,7 +1068,7 @@ class DaysCube {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
     this.geometry = new THREE.BoxGeometry(1, 1, 1);
-    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/Days_C.png') });
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/Days_C.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
