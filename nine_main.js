@@ -314,6 +314,9 @@ function loadLevel(level) {
         case 39:
           world.push(new FellObstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 98:
+          world.push(new DaysCube(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
