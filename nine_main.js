@@ -238,7 +238,7 @@ function loadLevel(level) {
   const index = level - 1;
   renderer.setClearColor(parseInt(data[index].background));
   ball.mesh.material.color.setHex(parseInt(data[index].ball));
-  scene.fog = new THREE.Fog(parseInt(data[index].background), 10, 50);
+  scene.fog = new THREE.Fog(parseInt(data[index].background), 3, 13);
   for (var i in data[index].data) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
