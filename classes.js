@@ -1101,7 +1101,7 @@ class ElectronicRound {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
     this.geometry = new THREE.BoxGeometry(1, 1, 1);
-    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/ElectronicRound.gif') });
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/ElectronicRound.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
