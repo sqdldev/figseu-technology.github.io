@@ -1106,8 +1106,8 @@ class ElectronicRound {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 0.45, zpos);
-    this.line.position.set(xpos, 0.45, zpos);
+    this.mesh.position.set(xpos, 0.6, zpos);
+    this.line.position.set(xpos, 0.6, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.line);
