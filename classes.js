@@ -1100,14 +1100,14 @@ class DaysCube {
 class ElectronicRound {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.BoxGeometry(1, 1, 1);
+    this.geometry = new THREE.BoxGeometry(1.2, 1.2, 1.2);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/ElectronicRound.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 0.6, zpos);
-    this.line.position.set(xpos, 0.6, zpos);
+    this.mesh.position.set(xpos, 0.8, zpos);
+    this.line.position.set(xpos, 0.8, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.line);
@@ -1116,12 +1116,12 @@ class ElectronicRound {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
-      ball.mesh.position.y < this.mesh.position.y + 0.4
+      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
+      ball.mesh.position.z <= 0.5 &&
+      ball.mesh.position.y < this.mesh.position.y + 0.5
     ) return true;
   }
 }
