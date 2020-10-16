@@ -279,6 +279,11 @@ class Ball {
       star = 1;
     });
     world.forEach(v => {
+      if (v instanceof ElectronicRound)
+      if (v.detect()) gameover();
+      star = 1;
+    });
+    world.forEach(v => {
       if (v instanceof FellObstacle)
       if (v.detect()) gameover();
       star = 1;
@@ -1075,6 +1080,34 @@ class DaysCube {
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
     this.mesh.position.set(xpos, 2.4, zpos);
     this.line.position.set(xpos, 2.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
+      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.y < this.mesh.position.y + 0.4
+    ) return true;
+  }
+}
+class ElectronicRound {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.BoxGeometry(1, 1, 1);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/ElectronicRound.cmf') });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0.45, zpos);
+    this.line.position.set(xpos, 0.45, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.line);
