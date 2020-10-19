@@ -288,11 +288,6 @@ class Ball {
       star = 1;
     });
    world.forEach(v => {
-      if (v instanceof Bluestoneobstacle)
-      if (v.detect()) gameover();
-      star = 1;
-    });
-   world.forEach(v => {
       if (v instanceof Dreamcube)
       if (v.detect()) gameover();
       star = 1;
