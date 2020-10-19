@@ -410,10 +410,10 @@ class Points {
     if (
       ball.mesh.position.x >= this.line.position.x - 10 &&
       ball.mesh.position.x <= this.line.position.x + 10 &&
-      ball.mesh.position.z >= this.line.position.z - 10 &&
-      ball.mesh.position.z <= this.line.position.z + 10 &&
-      ball.mesh.position.z <= 10 &&
-      ball.mesh.position.y < this.line.position.y + 5
+      ball.mesh.position.z >= this.line.position.z - 0.4 &&
+      ball.mesh.position.z <= this.line.position.z + 0.4 &&
+      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.y < this.line.position.y + 0.4
     ) return true;
   }
 }
