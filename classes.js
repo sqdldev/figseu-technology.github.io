@@ -219,6 +219,7 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Hole && this.landed) {
           if (v.detect() && started) {
+          v.mesh.rotation.z += 0.1;
           }
         }
       });
@@ -240,6 +241,7 @@ class Ball {
         if (v instanceof Leftmat && this.landed) {
           if (v.detect() && started) {
             camera.rotation.y += 0.01;
+            v.mesh.rotation.z += 0.1;
           }
         }
       });
@@ -247,13 +249,14 @@ class Ball {
         if (v instanceof Rightmat && this.landed) {
           if (v.detect() && started) {
             camera.rotation.y -= 0.01;
+            v.mesh.rotation.z += 0.1;
           }
         }
       });
       world.forEach(v => {
         if (v instanceof Bluestoneobstacle && this.landed) {
           if (v.detect() && started) {
-            v.mesh.rotation.y += 0.01;
+            v.mesh.rotation.y += 0.1;
           }
         }
       });
