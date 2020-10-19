@@ -253,7 +253,7 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Bluestoneobstacle && this.landed) {
           if (v.detect() && started) {
-            camera.rotation.x += 0.01;
+            v.mesh.rotation.y += 0.01;
           }
         }
       });
