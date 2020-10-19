@@ -250,6 +250,13 @@ class Ball {
           }
         }
       });
+      world.forEach(v => {
+        if (v instanceof Bluestoneobstacle && this.landed) {
+          if (v.detect() && started) {
+            Bluestoneobstacle.rotation.y += 0.01;
+          }
+        }
+      });
       star = 1;
     } else {
       this.landed = false;
@@ -1114,6 +1121,34 @@ class ElectronicRound {
       ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
       ball.mesh.position.z <= 0.5 &&
       ball.mesh.position.y < this.mesh.position.y + 0.5
+    ) return true;
+  }
+}
+class Bluestoneobstacle {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.BoxGeometry(1, 1, 1);
+    this.material = new THREE.MeshPhongMaterial({ color: 0x0A0030 });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0.4, zpos);
+    this.line.position.set(xpos, 0.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 10 &&
+      ball.mesh.position.x <= this.mesh.position.x + 10 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
+      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.y < this.mesh.position.y + 0.4
     ) return true;
   }
 }
