@@ -349,6 +349,9 @@ function loadLevel(level) {
           world.push(new Leftmat(j - 2, -i, data[index].obstacle));
           world.push(new Mat(j - 2, -i, data[index].mat));
           break;
+        case 76:
+          world.push(new Bluestoneobstacle(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
