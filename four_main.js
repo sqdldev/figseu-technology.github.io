@@ -342,10 +342,12 @@ function loadLevel(level) {
           world.push(new Railgun(j - 2, -i, data[index].obstacle));
           break;
         case 38:
-          world.push(new Rightmat(j - 2, -i, data[index].mat));
+          world.push(new Rightmat(j - 2, -i, data[index].obstacle));
+          world.push(new Mat(j - 2, -i, data[index].mat));
           break;
         case 39:
-          world.push(new Leftmat(j - 2, -i, data[index].mat));
+          world.push(new Leftmat(j - 2, -i, data[index].obstacle));
+          world.push(new Mat(j - 2, -i, data[index].mat));
           break;
       }
     }
