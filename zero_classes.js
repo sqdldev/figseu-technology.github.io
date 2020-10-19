@@ -413,7 +413,7 @@ class Points {
       ball.mesh.position.z >= this.mesh.position.z - 10 &&
       ball.mesh.position.z <= this.mesh.position.z + 10 &&
       ball.mesh.position.z <= 10 &&
-      ball.mesh.position.y < this.mesh.position.y + 0.4
+      ball.mesh.position.y < this.mesh.position.y + 5
     ) return true;
   }
 }
