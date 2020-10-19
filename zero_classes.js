@@ -81,7 +81,7 @@ class Ball {
         if (v instanceof Points && this.landed) {
           if (v.detect() && started) {
             this.landed = false;
-            v.line.rotation.x -= 0.5;
+            v.line.rotation.x -= 0.7;
           }
         }
       });
@@ -410,10 +410,10 @@ class Points {
     if (
       ball.mesh.position.x >= this.line.position.x - 10 &&
       ball.mesh.position.x <= this.line.position.x + 10 &&
-      ball.mesh.position.z >= this.line.position.z - 0.4 &&
-      ball.mesh.position.z <= this.line.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
-      ball.mesh.position.y < this.line.position.y + 0.4
+      ball.mesh.position.z >= this.line.position.z - 1 &&
+      ball.mesh.position.z <= this.line.position.z + 1 &&
+      ball.mesh.position.z <= 1 &&
+      ball.mesh.position.y < this.line.position.y + 1
     ) return true;
   }
 }
