@@ -123,28 +123,6 @@ class Ball {
               this.tmpZ = 0;
             }
           }
-        } else if (v instanceof Leftmat || v instanceof Bouncer) {
-          if (v.detect()) {
-            this.landed = true;
-            this.speed.y = 0;
-            camera.rotation.y += 0.01;
-            if (this.tmpZ) {
-              this.mesh.position.z = this.tmpZ - 4;
-              camera.position.z = this.tmpZ - 4 + distance;
-              this.tmpZ = 0;
-            }
-          }
-        } else if (v instanceof Rightmat || v instanceof Bouncer) {
-          if (v.detect()) {
-            this.landed = true;
-            this.speed.y = 0;
-            camera.rotation.y -= 0.01;
-            if (this.tmpZ) {
-              this.mesh.position.z = this.tmpZ - 4;
-              camera.position.z = this.tmpZ - 4 + distance;
-              this.tmpZ = 0;
-            }
-          }
         }
       });
 
@@ -255,6 +233,20 @@ class Ball {
           if (v.detect() && started) {
             v.mesh.position.y = -100;
             v.line.position.y = -100;
+          }
+        }
+      });
+      world.forEach(v => {
+        if (v instanceof Leftmat && this.landed) {
+          if (v.detect() && started) {
+            camera.rotation.y += 0.01;
+          }
+        }
+      });
+      world.forEach(v => {
+        if (v instanceof Rightmat && this.landed) {
+          if (v.detect() && started) {
+            camera.rotation.y -= 0.01;
           }
         }
       });
@@ -960,8 +952,8 @@ class Railgun {
 class Leftmat {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
-    this.material = new THREE.MeshPhongMaterial({ color: color });
+    this.geometry = new THREE.TorusGeometry(1, 0.2, 5);
+    this.material = new THREE.MeshPhongMaterial({ color: 0x00BF10 });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
@@ -976,8 +968,8 @@ class Leftmat {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.8 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.8 &&
+      ball.mesh.position.x >= this.mesh.position.x - 10 &&
+      ball.mesh.position.x <= this.mesh.position.x + 10 &&
       ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
       ball.mesh.position.z <= this.mesh.position.z + 0.8 &&
       ball.mesh.position.z <= 0.8 &&
@@ -988,8 +980,8 @@ class Leftmat {
 class Rightmat {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
-    this.material = new THREE.MeshPhongMaterial({ color: color });
+    this.geometry = new THREE.TorusGeometry(1, 0.2, 5);
+    this.material = new THREE.MeshPhongMaterial({ color: 0xFF9500 });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
@@ -1004,8 +996,8 @@ class Rightmat {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.8 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.8 &&
+      ball.mesh.position.x >= this.mesh.position.x - 10 &&
+      ball.mesh.position.x <= this.mesh.position.x + 10 &&
       ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
       ball.mesh.position.z <= this.mesh.position.z + 0.8 &&
       ball.mesh.position.z <= 0.8 &&
