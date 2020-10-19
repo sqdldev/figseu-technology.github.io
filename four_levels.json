@@ -3,8 +3,8 @@
     "author": "Bluestone Alley",
     "background": "0x00FFDB",
     "ball": "0xFF6600",
-    "mat": "0xDFF76AC",
-    "bouncer": "0x0A00760",
+    "mat": "0xDFF3AC",
+    "bouncer": "0x0A0030",
     "obstacle": "0xF1F1F1",
     "data":
     [
