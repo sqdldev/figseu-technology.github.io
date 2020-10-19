@@ -220,6 +220,7 @@ class Ball {
         if (v instanceof Hole && this.landed) {
           if (v.detect() && started) {
           v.mesh.rotation.z += 0.5;
+          v.line.rotation.z -= 0.5;
           }
         }
       });
@@ -227,6 +228,7 @@ class Ball {
         if (v instanceof FellGate && this.landed) {
           if (v.detect() && started) {
           v.mesh.rotation.z += 0.5;
+          v.line.rotation.z -= 0.5;
           }
         }
       });
@@ -239,8 +241,8 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Deltemat && this.landed) {
           if (v.detect() && started) {
-            v.mesh.position.y -= 1.5;
-            v.line.position.y -= 1.5;
+            v.mesh.position.y -= 0.5;
+            v.line.position.y -= 0.5;
           }
         }
       });
@@ -249,6 +251,7 @@ class Ball {
           if (v.detect() && started) {
             camera.rotation.y += 0.01;
             v.mesh.rotation.z += 0.5;
+            v.line.rotation.z -= 0.5;
           }
         }
       });
@@ -257,13 +260,15 @@ class Ball {
           if (v.detect() && started) {
             camera.rotation.y -= 0.01;
             v.mesh.rotation.z += 0.5;
+            v.line.rotation.z -= 0.5;
           }
         }
       });
       world.forEach(v => {
         if (v instanceof Bluestoneobstacle && this.landed) {
           if (v.detect() && started) {
-            v.mesh.rotation.y += 1.5;
+            v.mesh.rotation.y += 0.5;
+            v.line.rotation.y -= 0.5;
           }
         }
       });
