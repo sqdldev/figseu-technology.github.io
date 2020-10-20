@@ -80,7 +80,6 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Deltemat && this.landed) {
           if (v.detect() && started) {
-            v.mesh.position.y -= 0.5;
             v.line.position.y -= 0.5;
           }
         }
