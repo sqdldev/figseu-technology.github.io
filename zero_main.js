@@ -188,6 +188,10 @@ function loadLevel(level) {
           break;
         case 9:
           world.push(new Goal(j - 2, -i, data[index].obstacle));
+          break;
+        case 20:
+          world.push(new Deltemat(j - 2, -i, data[index].mat));
+          break;
       }
     }
   }
