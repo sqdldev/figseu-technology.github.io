@@ -80,7 +80,7 @@ function start(e) {
       }
     });
     world.forEach(v => {
-      if (v instanceof Deltemat) {
+      if (v instanceof Delteobstacle) {
         v.line.position.y = 0.4;
       }
     });
