@@ -79,6 +79,11 @@ function start(e) {
         v.line.position.y = 0;
       }
     });
+    world.forEach(v => {
+      if (v instanceof Deltemat) {
+        v.line.position.y = 0.4;
+      }
+    });
     $('#main').css('pointer-events', 'none');
   }
 }
@@ -191,6 +196,9 @@ function loadLevel(level) {
           break;
         case 20:
           world.push(new Deltemat(j - 2, -i, data[index].mat));
+          break;
+        case 23:
+          world.push(new Delteobstacle(j - 2, -i, data[index].obstacle));
           break;
       }
     }
