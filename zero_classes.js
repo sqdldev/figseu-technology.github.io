@@ -85,6 +85,13 @@ class Ball {
         }
       });
       world.forEach(v => {
+        if (v instanceof Delteobstacle && this.landed) {
+          if (v.detect() && started) {
+            v.line.position.y += 0.1;
+          }
+        }
+      });
+      world.forEach(v => {
         if (v instanceof Points && this.landed) {
           if (v.detect() && started) {
             this.landed = false;
@@ -435,6 +442,33 @@ class Deltemat {
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
     this.mesh.position.set(xpos, 0, zpos);
     this.line.position.set(xpos, 0, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 10 &&
+      ball.mesh.position.x <= this.mesh.position.x + 10 &&
+      ball.mesh.position.z >= this.mesh.position.z - 7 &&
+      ball.mesh.position.z <= this.mesh.position.z + 7 &&
+      ball.mesh.position.z <= 7 &&
+      ball.mesh.position.y < this.mesh.position.y + 7
+    ) return true;
+  }
+}
+class Delteobstacle {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.BoxGeometry(1, 1, 1);
+    this.material = new THREE.MeshPhongMaterial({ color: 0xFF0000 });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xFF0000 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0.4, zpos);
+    this.line.position.set(xpos, 0.4, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.line);
