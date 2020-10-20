@@ -173,6 +173,17 @@ function loadLevel(level) {
           break;
         case 9:
           world.push(new Goal(j - 2, -i, data[index].obstacle));
+          break;
+        case 20:
+          world.push(new Deltemat(j - 2, -i, data[index].mat));
+          break;
+        case 23:
+          world.push(new Delteobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 33:
+          world.push(new Mat(j - 2, -i, data[index].mat));
+          world.push(new Delteobstacle(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
