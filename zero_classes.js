@@ -78,6 +78,14 @@ class Ball {
         }
       });
       world.forEach(v => {
+        if (v instanceof Deltemat && this.landed) {
+          if (v.detect() && started) {
+            v.mesh.position.y -= 0.5;
+            v.line.position.y -= 0.5;
+          }
+        }
+      });
+      world.forEach(v => {
         if (v instanceof Points && this.landed) {
           if (v.detect() && started) {
             this.landed = false;
@@ -414,6 +422,33 @@ class Points {
       ball.mesh.position.z <= this.line.position.z + 1 &&
       ball.mesh.position.z <= 1 &&
       ball.mesh.position.y < this.line.position.y + 1
+    ) return true;
+  }
+}
+class Deltemat {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
+    this.material = new THREE.MeshPhongMaterial({ color: color });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: color });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0, zpos);
+    this.line.position.set(xpos, 0, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 10 &&
+      ball.mesh.position.x <= this.mesh.position.x + 10 &&
+      ball.mesh.position.z >= this.mesh.position.z - 7 &&
+      ball.mesh.position.z <= this.mesh.position.z + 7 &&
+      ball.mesh.position.z <= 7 &&
+      ball.mesh.position.y < this.mesh.position.y + 7
     ) return true;
   }
 }
