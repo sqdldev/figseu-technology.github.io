@@ -270,6 +270,14 @@ function loadLevel(level) {
           break;
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
+          break;
+        case 39:
+          world.push(new Obstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 98:
+          world.push(new Mat(j - 2, -i, data[index].mat));
+          world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
