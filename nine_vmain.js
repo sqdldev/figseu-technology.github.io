@@ -89,6 +89,7 @@ function start(e) {
     });
     world.forEach(v => {
       if (v instanceof Deltemat) {
+        v.mesh.position.y = 0;
         v.line.position.y = 0;
       }
     });
