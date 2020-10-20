@@ -217,6 +217,8 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Hole && this.landed) {
           if (v.detect() && started) {
+          v.mesh.rotation.z += 0.5;
+          v.line.rotation.z -= 0.5;
           }
         }
       });
@@ -229,7 +231,8 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Deltemat && this.landed) {
           if (v.detect() && started) {
-            v.line.position.y = -10;
+            v.mesh.position.y -= 0.5;
+            v.line.position.y -= 0.5;
           }
         }
       });
