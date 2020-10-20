@@ -74,6 +74,11 @@ function start(e) {
         v.mesh.position.y = 1.1;
       }
     });
+    world.forEach(v => {
+      if (v instanceof Deltemat) {
+        v.mesh.position.y = 0;
+      }
+    });
     $('#main').css('pointer-events', 'none');
   }
 }
