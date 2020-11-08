@@ -423,8 +423,8 @@ class Traffic_1 {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -2.4, zpos);
-    this.line.position.set(xpos, -2.4, zpos);
+    this.mesh.position.set(xpos, -0.4, zpos);
+    this.line.position.set(xpos, -0.4, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
@@ -450,8 +450,8 @@ class Traffic_2 {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -2.4, zpos);
-    this.line.position.set(xpos, -2.4, zpos);
+    this.mesh.position.set(xpos, -0.4, zpos);
+    this.line.position.set(xpos, -0.4, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
@@ -477,8 +477,8 @@ class Traffic_3 {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -2.4, zpos);
-    this.line.position.set(xpos, -2.4, zpos);
+    this.mesh.position.set(xpos, -0.4, zpos);
+    this.line.position.set(xpos, -0.4, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
@@ -504,8 +504,8 @@ class Traffic_4 {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -2.4, zpos);
-    this.line.position.set(xpos, -2.4, zpos);
+    this.mesh.position.set(xpos, -0.4, zpos);
+    this.line.position.set(xpos, -0.4, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
@@ -531,8 +531,8 @@ class Traffic_5 {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -2.4, zpos);
-    this.line.position.set(xpos, -2.4, zpos);
+    this.mesh.position.set(xpos, -0.4, zpos);
+    this.line.position.set(xpos, -0.4, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
