@@ -266,6 +266,21 @@ function loadLevel(level) {
           world.push(new Dreamtower(j - 2, -i, data[index].obstacle));
           world.push(new Crystal(j - 2, -i, data[index].obstacle));
           break;
+        case 101:
+          world.push(new Traffic_1(j - 2, -i, data[index].obstacle));
+          break;
+        case 102:
+          world.push(new Traffic_2(j - 2, -i, data[index].obstacle));
+          break;
+        case 103:
+          world.push(new Traffic_3(j - 2, -i, data[index].obstacle));
+          break;
+        case 104:
+          world.push(new Traffic_4(j - 2, -i, data[index].obstacle));
+          break;
+        case 105:
+          world.push(new Traffic_5(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
