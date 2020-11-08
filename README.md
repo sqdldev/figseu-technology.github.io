@@ -4,7 +4,7 @@
 このゲームはあくまで二次創作です。
 
 ↓ Play Now ↓
-https://fex-uranus.github.io/RollingSkyEvolution/index.html
+https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
 
 # 利用規約
 
