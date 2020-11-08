@@ -417,14 +417,14 @@ class Dreamtower {
 class Traffic_1 {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.PlaneGeometry(1.3, 1.8, 1);
+    this.geometry = new THREE.PlaneGeometry(1.5, 2, 2);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/train/Traffic_1.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -1.4, zpos);
-    this.line.position.set(xpos, -1.4, zpos);
+    this.mesh.position.set(xpos, -2.5, zpos);
+    this.line.position.set(xpos, -2.5, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
@@ -432,26 +432,26 @@ class Traffic_1 {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
-      ball.mesh.position.y < this.mesh.position.y + 0.4
+      ball.mesh.position.x >= this.mesh.position.x - 0 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0 &&
+      ball.mesh.position.z <= 0 &&
+      ball.mesh.position.y < this.mesh.position.y + 0
     ) return true;
   }
 }
 class Traffic_2 {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.PlaneGeometry(1.3, 1.8, 1);
+    this.geometry = new THREE.PlaneGeometry(1.5, 2, 2);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/train/Traffic_2.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -1.4, zpos);
-    this.line.position.set(xpos, -1.4, zpos);
+    this.mesh.position.set(xpos, -2.5, zpos);
+    this.line.position.set(xpos, -2.5, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
@@ -471,14 +471,14 @@ class Traffic_2 {
 class Traffic_3 {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.PlaneGeometry(1.3, 1.8, 1);
+    this.geometry = new THREE.PlaneGeometry(1.5, 2, 2);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/train/Traffic_3.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -1.4, zpos);
-    this.line.position.set(xpos, -1.4, zpos);
+    this.mesh.position.set(xpos, -2.5, zpos);
+    this.line.position.set(xpos, -2.5, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
@@ -498,14 +498,14 @@ class Traffic_3 {
 class Traffic_4 {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.PlaneGeometry(1.3, 1.8, 1);
+    this.geometry = new THREE.PlaneGeometry(1.5, 2, 2);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/train/Traffic_4.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -1.4, zpos);
-    this.line.position.set(xpos, -1.4, zpos);
+    this.mesh.position.set(xpos, -2.5, zpos);
+    this.line.position.set(xpos, -2.5, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
@@ -525,14 +525,14 @@ class Traffic_4 {
 class Traffic_5 {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.PlaneGeometry(1.3, 1.8, 1);
+    this.geometry = new THREE.PlaneGeometry(1.5, 2, 2);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/train/Traffic_5.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -1.4, zpos);
-    this.line.position.set(xpos, -1.4, zpos);
+    this.mesh.position.set(xpos, -2.5, zpos);
+    this.line.position.set(xpos, -2.5, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
