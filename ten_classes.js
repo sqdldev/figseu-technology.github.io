@@ -549,3 +549,85 @@ class Traffic_5 {
     ) return true;
   }
 }
+
+class EF66_1 {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.PlaneGeometry(10, 0.01, 5);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/train/EF66_1.cmr') });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, -3, zpos);
+    this.line.position.set(xpos, -3, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0 &&
+      ball.mesh.position.z <= 0 &&
+      ball.mesh.position.y < this.mesh.position.y + 0
+    ) return true;
+  }
+}
+class EF66_2 {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.PlaneGeometry(10, 0.01, 5);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/train/EF66_2.cmr') });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, -3, zpos);
+    this.line.position.set(xpos, -3, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0 &&
+      ball.mesh.position.z <= 0 &&
+      ball.mesh.position.y < this.mesh.position.y + 0
+    ) return true;
+  }
+}
+class EF66_3 {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.PlaneGeometry(10, 0.01, 5);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/train/EF66_3.cmr') });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, -3, zpos);
+    this.line.position.set(xpos, -3, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0 &&
+      ball.mesh.position.z <= 0 &&
+      ball.mesh.position.y < this.mesh.position.y + 0
+    ) return true;
+  }
+}
