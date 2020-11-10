@@ -281,6 +281,15 @@ function loadLevel(level) {
         case 105:
           world.push(new Traffic_5(j - 2, -i, data[index].obstacle));
           break;
+        case 66:
+          world.push(new EF66_1(j - 2, -i, data[index].obstacle));
+          break;
+        case 113:
+          world.push(new EF66_2(j - 2, -i, data[index].obstacle));
+          break;
+        case 68:
+          world.push(new EF66_3(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
