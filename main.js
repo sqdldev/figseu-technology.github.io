@@ -34,6 +34,25 @@ let url = location.href;
 let fgnc = url.substr( 62 );
 let data;
 let reqId;
+if (fgnc = DDDDD) {
+  $.getJSON('DDDDDDDDDDDDDDDDDDDDDDD.agte', d => {
+  data = d;
+  loadLevel(level);
+  $('#play').show();
+  $('#play').click(start);
+  $('#next').show();
+  $('#score').hide();
+  $('#level-d').html('隠されたステージ');
+  $('#level').html('D D D D D');
+  $('#stars').html('');
+  $('#Waves').html('☆ × ' + $.cookie('o_wave'));
+  reqId = requestAnimationFrame(render);
+  console.clear();
+  console.log(
+    "最終ステージ - The END　～遊んでくれてありがとう～"
+  );
+});
+} else {
 $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
   data = d;
   loadLevel(level);
@@ -51,6 +70,7 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
     "最終ステージ - The END　～遊んでくれてありがとう～"
   );
 });
+}
 
 //start function
 function start(e) {
