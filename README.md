@@ -6,7 +6,7 @@
 ↓ Play Now ↓
 https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
 
-↓アプリをお持ちの方↓
+↓アプリをお持ちの方 (※ブラウザによっては機能しない場合があります)↓
 https://rollingskyevolution/
 
 # 利用規約
