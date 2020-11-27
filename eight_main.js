@@ -108,10 +108,10 @@ function start(e) {
             $('#alive').get(0).play();
             wave_fi++;
     } else if (level == 6) {
-            $('#clo').get(0).play();
+            $('#hina').get(0).play();
             wave_s++;
     } else if (level == 7) {
-            $('#clo').get(0).play();
+            $('#aya').get(0).play();
             wave_se++;
     } else {
             $('#cloud').get(0).play();
@@ -162,7 +162,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 5) {
+  if (level == 6) {
     $('#next').hide();
   }
   if (level == 1) {
