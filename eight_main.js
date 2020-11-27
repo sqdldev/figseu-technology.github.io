@@ -426,7 +426,7 @@ function gameover() {
       if (star == 2) {
       $('#level-d').html('安全と信頼を届ける');
       }
-      $('#ef').each(function(){
+      $('#hina').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
@@ -435,7 +435,7 @@ function gameover() {
       if (star == 2) {
       $('#level-d').html('???');
       }
-      $('#ef').each(function(){
+      $('#aya').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
