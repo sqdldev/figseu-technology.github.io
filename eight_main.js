@@ -52,7 +52,7 @@ $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCyb
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
-    "超高難度 - The Ruby　血祭りの時間だ"
+    "超高難度 - Zero　あの日交わした約束"
   );
 });
 
@@ -190,6 +190,16 @@ function nextLevel() {
          $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
+        } else if (level == 6) {
+         $('#level-d').html('ボーナス ステージ');
+         $('#level').html('Happy Synthesizer');
+         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
+        } else if (level == 7) {
+         $('#level-d').html('ボーナス ステージ');
+         $('#level').html('六兆年と一夜物語');
+         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -243,6 +253,16 @@ function prevLevel() {
          $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
+        } else if (level == 6) {
+         $('#level-d').html('ボーナス ステージ');
+         $('#level').html('Happy Synthesizer');
+         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
+        } else if (level == 7) {
+         $('#level-d').html('ボーナス ステージ');
+         $('#level').html('六兆年と一夜物語');
+         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -395,7 +415,7 @@ function gameover() {
      } else if (level == 5) {
       $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
       if (star == 2) {
-      $('#level-d').html('未完成のパズル');
+      $('#level-d').html('我等の希望を託して');
       }
       $('#alive').each(function(){
     this.pause(); // Stop playing
@@ -404,7 +424,7 @@ function gameover() {
      } else if (level == 6) {
       $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
       if (star == 2) {
-      $('#level-d').html('???');
+      $('#level-d').html('安全と信頼を届ける');
       }
       $('#ef').each(function(){
     this.pause(); // Stop playing
