@@ -7,7 +7,7 @@
 https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
 
 ↓アプリをお持ちの方 (※ブラウザによっては機能しない場合があります)↓
-https://rollingskyevolution/
+https://rollingskyevolution/home
 
 # 利用規約
 
