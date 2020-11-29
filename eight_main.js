@@ -144,7 +144,7 @@ function reset() {
   ball.count2Lose = 0;
 }
 function cl() {
-  $('#cl_1').get(0).play();
+  $('#cd_1').get(0).play();
 }
 
 function nextLevel() {
