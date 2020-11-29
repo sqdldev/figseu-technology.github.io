@@ -89,6 +89,9 @@ function reset() {
   ball.speed.y = 0;
   ball.count2Lose = 0;
 }
+function cl() {
+  $('#cd_1').get(0).play();
+}
 
 function nextLevel() {
   percent = 0;
