@@ -72,6 +72,10 @@ body {
   font-size: 20px;
   transform: 0.5em;
 }
+#Waves:hover {
+  color: #009CFF;
+  border: double #009CFF;
+}
 img {
 	filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(107%) contrast(101%);
 }
