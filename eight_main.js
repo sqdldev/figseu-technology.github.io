@@ -34,7 +34,7 @@ wave_s = $.cookie('e_wave_s');
 wave_se = $.cookie('e_wave_se');
 let train = Math.floor( Math.random() * 11 );
 let url = location.href;
-let fgnc = url.substr( 68 );
+let fgnc = url.substr( 75 );
 let data;
 let reqId;
 $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCybmrxwpB.json', d => {
