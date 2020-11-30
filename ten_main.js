@@ -48,8 +48,16 @@ function start(e) {
         $('#dia').get(0).play();
         wave_th++;
         } else if (level == 4) {
-        $('#kya').get(0).play();
-        wave_f++;
+          if (fgnc == 113) {
+            $('#kya_e').get(0).play();
+            wave_f++;
+          } else if (fgnc == 320) {
+            $('#kya_g').get(0).play();
+            wave_f++;
+          } else {
+            $('#kya').get(0).play();
+          }
+          wave_f++;
         } else if (level == 5) {
         $('#ef').get(0).play();
         wave_fi++;
