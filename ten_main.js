@@ -90,11 +90,10 @@ function reset() {
   ball.count2Lose = 0;
 }
 function cl() {
-let cd_time_1 = getHour();
-cd_time_1 = cd_time_1 * 10;
-let cd_time_2 = getMinutes();
+let Hour = now.getHours() * 10;
+let Min = now.getMinutes();
 let cd_time = 0;
-cd_time = cd_time_1 + cd_time_2;
+cd_time = Hour + Min;
   if (cd_time == 66) {
     $('#cd_2').get(0).play();
   } else if (cd_time == 210) {
