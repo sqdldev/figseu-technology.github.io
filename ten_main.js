@@ -395,10 +395,22 @@ function gameover() {
       $('#PresentCode').hide();
       $('#next').hide();
       }
-      $('#kya').each(function(){
+      if (fgnc == 113) {
+        $('#kya_e').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
+      } else if (fgnc == 320) {
+        $('#kya_g').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+      } else {
+        $('#kya').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     }
      } else if (level == 5) {
       $('#Waves').html('☆ × ' + $.cookie('te_wave_fi'));
       if (star == 2) {
