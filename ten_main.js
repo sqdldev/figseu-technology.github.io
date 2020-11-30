@@ -91,7 +91,7 @@ function reset() {
 }
 function cl() {
 let cd_time_1 = getHour();
-cd_time_1 = cd_time_1 ; 10;
+cd_time_1 = cd_time_1 * 10;
 let cd_time_2 = getMinutes();
 let cd_time = 0;
 cd_time = cd_time_1 + cd_time_2;
