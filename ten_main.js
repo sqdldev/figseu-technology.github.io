@@ -1,6 +1,6 @@
 const scene = new THREE.Scene();const camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,10000);const renderer = new THREE.WebGLRenderer({ antialias: true });renderer.setSize(window.innerWidth, window.innerHeight);renderer.setClearColor(0xaaaaaa, 1);const canvas = $('#canvascontainer').append(renderer.domElement);
 let distance = 4;let started = false;let percent = 0;camera.position.set(0, 5, distance);camera.rotation.x -= 0.75;let scoreSubmitted = false;let level = 1;let star = 0;let wave = 0;let wave_t = 0;let wave_th = 0;let wave_f = 0;let wave_fi = 0;let wave_s = 0;let wave_se = 0;wave = $.cookie('te_wave');wave_t = $.cookie('te_wave_t');wave_th = $.cookie('te_wave_th');wave_f = $.cookie('te_wave_f');wave_f = $.cookie('te_wave_fi');wave_f = $.cookie('te_wave_s');wave_f = $.cookie('te_wave_se');
-let Hour = now.getHours();let Min = now.getMinutes();let cd_time = 0;let gya = Math.floor( Math.random() * 11 );let url = location.href;let fgnc = url.substr( 66 );let data;let reqId;$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {data = d;loadLevel(level);$('#play').show();$('#PresentCode').hide();$('#play').click(start);$('#next').show();$('#score').hide();$('#level-d').html('超難関');$('#level').html('The Ruby');$('#stars').html('☆☆☆☆☆☆☆☆☆☆');$('#Waves').html('☆ × ' + $.cookie('te_wave'));reqId = requestAnimationFrame(render);console.clear();console.log("超高難度 - The Ruby　血祭りの時間だ");});
+let gya = Math.floor( Math.random() * 11 );let url = location.href;let fgnc = url.substr( 66 );let data;let reqId;$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {data = d;loadLevel(level);$('#play').show();$('#PresentCode').hide();$('#play').click(start);$('#next').show();$('#score').hide();$('#level-d').html('超難関');$('#level').html('The Ruby');$('#stars').html('☆☆☆☆☆☆☆☆☆☆');$('#Waves').html('☆ × ' + $.cookie('te_wave'));reqId = requestAnimationFrame(render);console.clear();console.log("超高難度 - The Ruby　血祭りの時間だ");});
 
 //start function
 function start(e) {
@@ -90,15 +90,13 @@ function reset() {
   ball.count2Lose = 0;
 }
 function cl() {
-
-cd_time = Hour + Min;
-  if (cd_time == 66) {
+  if (url == 66) {
     $('#cd_2').get(0).play();
-  } else if (cd_time == 210) {
+  } else if (url == 210) {
     $('#cd_3').get(0).play();
-  } else if (cd_time == 186) {
+  } else if (url == 186) {
     $('#cd_2').get(0).play();
-  } else if (cd_time == 30) {
+  } else if (url == 30) {
     $('#cd_3').get(0).play();
   } else {
     $('#cd_1').get(0).play();
