@@ -93,6 +93,12 @@ function cl() {
 cd_time = cd_time_1 + cd_time_2;
   if (cd_time == 66) {
     $('#cd_2').get(0).play();
+  } else if (cd_time == 210) {
+    $('#cd_3').get(0).play();
+  } else if (cd_time == 186) {
+    $('#cd_2').get(0).play();
+  } else if (cd_time == 30) {
+    $('#cd_3').get(0).play();
   } else {
     $('#cd_1').get(0).play();
   }
