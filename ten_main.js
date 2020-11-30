@@ -90,6 +90,7 @@ function reset() {
   ball.count2Lose = 0;
 }
 function cl() {
+url = url * 1; 
   if (url == 66) {
     $('#cd_2').get(0).play();
   } else if (url == 210) {
