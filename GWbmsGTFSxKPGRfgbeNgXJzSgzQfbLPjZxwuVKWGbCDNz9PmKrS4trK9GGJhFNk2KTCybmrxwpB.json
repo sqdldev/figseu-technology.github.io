@@ -4001,8 +4001,8 @@
     "author": "Stay Alive",
     "background": "0x000000",
     "ball": "0x00eaff",
-    "mat": "0x00FF7A",
-    "bouncer": "0xbbaa85",
+    "mat": "0xbbaa85",
+    "bouncer": "0x282106",
     "obstacle": "0xd6e95e",
     "data":
     [
