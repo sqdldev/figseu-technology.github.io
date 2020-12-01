@@ -105,8 +105,13 @@ function start(e) {
             $('#los').get(0).play();
             wave_f++;
     } else if (level == 5) {
-            $('#alive').get(0).play();
-            wave_fi++;
+       if (fgnc == 66) {
+                $('#alive_g').get(0).play();
+                wave_fi += 2;
+            } else {
+                $('#alive').get(0).play();
+                wave_fi += 1;
+            }
     } else if (level == 6) {
         if (fgnc == 210) {
                 $('#hina_g').get(0).play();
@@ -200,13 +205,23 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('ボーナス ステージ');
-         $('#level').html('Stay Alive');
+         if (fgnc == 66) {
+                $('#level-d').html('特殊 ステージ');
+                $('#level').html('マヤ文明');
+          } else {
+                $('#level-d').html('ボーナス ステージ');
+                $('#level').html('Stay Alive');
+          }
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
         } else if (level == 6) {
-         $('#level-d').html('ボーナス ステージ');
-         $('#level').html('Happy Synthesizer');
+          if (fgnc == 210) {
+                $('#level-d').html('特殊 ステージ');
+                $('#level').html('EF210');
+          } else {
+                $('#level-d').html('ボーナス ステージ');
+                $('#level').html('Happy Synthesizer');
+          }
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
         } else if (level == 7) {
@@ -263,13 +278,23 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('ボーナス ステージ');
-         $('#level').html('Stay Alive');
+         if (fgnc == 66) {
+                $('#level-d').html('特殊 ステージ');
+                $('#level').html('マヤ文明');
+          } else {
+                $('#level-d').html('ボーナス ステージ');
+                $('#level').html('Stay Alive');
+          }
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
         } else if (level == 6) {
-         $('#level-d').html('ボーナス ステージ');
-         $('#level').html('Happy Synthesizer');
+         if (fgnc == 210) {
+                $('#level-d').html('特殊 ステージ');
+                $('#level').html('EF210');
+          } else {
+                $('#level-d').html('ボーナス ステージ');
+                $('#level').html('Happy Synthesizer');
+          }
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
         } else if (level == 7) {
@@ -431,10 +456,17 @@ function gameover() {
       if (star == 2) {
       $('#level-d').html('我等の希望を託して');
       }
-      $('#alive').each(function(){
+      if (fgnc == 66) {
+        $('#alive_g').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
+     } else {
+        $('#alive').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     }
      } else if (level == 6) {
       $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
       if (star == 2) {
