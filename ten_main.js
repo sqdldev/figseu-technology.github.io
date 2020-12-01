@@ -50,13 +50,13 @@ function start(e) {
         } else if (level == 4) {
           if (fgnc == 113) {
             $('#kya_e').get(0).play();
-            wave_f += 2;
+            wave_f++;
           } else if (fgnc == 320) {
             $('#kya_g').get(0).play();
-            wave_f += 2;
+            wave_f++;
           } else {
             $('#kya').get(0).play();
-            wave_f += 1;
+            wave_f++;
           }
         } else if (level == 5) {
         $('#ef').get(0).play();
@@ -64,10 +64,10 @@ function start(e) {
         } else if (level == 6) {
           if (fgnc == 210) {
             $('#eft_g').get(0).play();
-            wave_s += 2;
+            wave_s++;
           } else {
             $('#eft').get(0).play();
-            wave_s += 1;
+            wave_s++;
           }
         } else if (level == 7) {
         $('#kiha').get(0).play();
@@ -151,8 +151,16 @@ function nextLevel() {
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('te_wave_th'));
      } else if (level == 4) {
-      $('#level-d').html('ラストステージ');
-      $('#level').html('The Kyanite');
+      if (fgnc == 113) {
+                $('#level-d').html('特殊 ステージ');
+                $('#level').html('The Kyanite');
+          } else if (fgnc == 320) {
+                $('#level-d').html('特殊 ステージ');
+                $('#level').html('The Kyanite');
+          } else {
+                $('#level-d').html('ラストステージ');
+                $('#level').html('The Kyanite');
+          }
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('te_wave_f'));
      } else if (level == 5) {
@@ -161,8 +169,13 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('te_wave_fi'));
      } else if (level == 6) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('EF210');
+         if (fgnc == 210) {
+                $('#level-d').html('特殊 ステージ');
+                $('#level').html('Happy Synthesizer');
+          } else {
+                $('#level-d').html('Extra ステージ');
+                $('#level').html('EF210');
+          }
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('te_wave_s'));
      } else if (level == 7) {
@@ -226,8 +239,13 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('te_wave_fi'));
      } else if (level == 6) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('EF210');
+         if (fgnc == 210) {
+                $('#level-d').html('特殊 ステージ');
+                $('#level').html('Happy Synthesizer');
+          } else {
+                $('#level-d').html('Extra ステージ');
+                $('#level').html('EF210');
+          }
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('te_wave_s'));
      } else if (level == 7) {
