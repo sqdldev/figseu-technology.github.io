@@ -111,7 +111,7 @@ function start(e) {
         if (fgnc == 210) {
                 $('#hina_g').get(0).play();
                 wave_s += 2;
-              } else if {
+              } else {
                 $('#hina').get(0).play();
                 wave_s += 1;
               }
