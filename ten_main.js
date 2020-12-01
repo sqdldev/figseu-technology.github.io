@@ -430,10 +430,17 @@ function gameover() {
       if (star == 2) {
       $('#level-d').html('天を　貫く');
       }
+      if (fgnc == 210) {
+      $('#eft_g').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else {
       $('#eft').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
+     }
      } else if (level == 7) {
       $('#Waves').html('☆ × ' + $.cookie('te_wave_se'));
       if (star == 2) {
