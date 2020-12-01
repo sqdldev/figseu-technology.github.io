@@ -110,10 +110,11 @@ function start(e) {
     } else if (level == 6) {
         if (fgnc == 210) {
                 $('#hina_g').get(0).play();
+                wave_s += 2;
               } else if {
                 $('#hina').get(0).play();
+                wave_s += 1;
               }
-            wave_s++;
     } else if (level == 7) {
             $('#aya').get(0).play();
             wave_se++;
@@ -439,10 +440,17 @@ function gameover() {
       if (star == 2) {
       $('#level-d').html('安全と信頼を届ける');
       }
-      $('#hina').each(function(){
+      if (fgnc == 210) {
+        $('#hina_g').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
+     } else {
+       $('#hina').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     }
      } else if (level == 7) {
       $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
       if (star == 2) {
