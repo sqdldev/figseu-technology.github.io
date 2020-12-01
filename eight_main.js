@@ -207,7 +207,7 @@ function nextLevel() {
         } else if (level == 5) {
          if (fgnc == 66) {
                 $('#level-d').html('特殊 ステージ');
-                $('#level').html('マヤ文明');
+                $('#level').html('MAYA');
           } else {
                 $('#level-d').html('ボーナス ステージ');
                 $('#level').html('Stay Alive');
@@ -280,7 +280,7 @@ function prevLevel() {
         } else if (level == 5) {
          if (fgnc == 66) {
                 $('#level-d').html('特殊 ステージ');
-                $('#level').html('マヤ文明');
+                $('#level').html('MAYA');
           } else {
                 $('#level-d').html('ボーナス ステージ');
                 $('#level').html('Stay Alive');
