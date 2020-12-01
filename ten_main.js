@@ -50,20 +50,25 @@ function start(e) {
         } else if (level == 4) {
           if (fgnc == 113) {
             $('#kya_e').get(0).play();
-            wave_f++;
+            wave_f += 2;
           } else if (fgnc == 320) {
             $('#kya_g').get(0).play();
-            wave_f++;
+            wave_f += 2;
           } else {
             $('#kya').get(0).play();
+            wave_f += 1;
           }
-          wave_f++;
         } else if (level == 5) {
         $('#ef').get(0).play();
         wave_fi++;
         } else if (level == 6) {
-        $('#eft').get(0).play();
-        wave_s++;
+          if (fgnc == 210) {
+            $('#eft_g').get(0).play();
+            wave_s += 2;
+          } else {
+            $('#eft').get(0).play();
+            wave_s += 1;
+          }
         } else if (level == 7) {
         $('#kiha').get(0).play();
         wave_se++;
