@@ -108,7 +108,11 @@ function start(e) {
             $('#alive').get(0).play();
             wave_fi++;
     } else if (level == 6) {
-            $('#hina').get(0).play();
+        if (fgnc == 210) {
+                $('#hina_g').get(0).play();
+              } else if {
+                $('#hina').get(0).play();
+              }
             wave_s++;
     } else if (level == 7) {
             $('#aya').get(0).play();
