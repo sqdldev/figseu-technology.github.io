@@ -4002,7 +4002,7 @@
     "background": "0x000000",
     "ball": "0x00eaff",
     "mat": "0xbbaa85",
-    "bouncer": "0x282106",
+    "bouncer": "0x282106ff",
     "obstacle": "0xd6e95e",
     "data":
     [
