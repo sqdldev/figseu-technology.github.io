@@ -107,18 +107,18 @@ function start(e) {
     } else if (level == 5) {
        if (fgnc == 66) {
                 $('#alive_g').get(0).play();
-                wave_fi += 2;
+                wave_fi++;
             } else {
                 $('#alive').get(0).play();
-                wave_fi += 1;
+                wave_fi++;
             }
     } else if (level == 6) {
         if (fgnc == 210) {
                 $('#hina_g').get(0).play();
-                wave_s += 2;
+                wave_s++;
               } else {
                 $('#hina').get(0).play();
-                wave_s += 1;
+                wave_s++;
               }
     } else if (level == 7) {
             $('#aya').get(0).play();
