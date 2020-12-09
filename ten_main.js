@@ -1,7 +1,7 @@
 const scene = new THREE.Scene();const camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,10000);const renderer = new THREE.WebGLRenderer({ antialias: true });renderer.setSize(window.innerWidth, window.innerHeight);renderer.setClearColor(0xaaaaaa, 1);const canvas = $('#canvascontainer').append(renderer.domElement);
 let distance = 4;let started = false;let percent = 0;camera.position.set(0, 5, distance);camera.rotation.x -= 0.75;let scoreSubmitted = false;let level = 1;let star = 0;let wave = 0;let wave_t = 0;let wave_th = 0;let wave_f = 0;let wave_fi = 0;let wave_s = 0;let wave_se = 0;wave = $.cookie('te_wave');wave_t = $.cookie('te_wave_t');wave_th = $.cookie('te_wave_th');wave_f = $.cookie('te_wave_f');wave_f = $.cookie('te_wave_fi');wave_f = $.cookie('te_wave_s');wave_f = $.cookie('te_wave_se');
 let gya = Math.floor( Math.random() * 11 );let url = location.href;let fgnc = url.substr( 73 );let data;let reqId;$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {data = d;loadLevel(level);$('#play').show();$('#PresentCode').hide();$('#play').click(start);$('#next').show();$('#score').hide();$('#level-d').html('超難関');$('#level').html('The Ruby');$('#stars').html('☆☆☆☆☆☆☆☆☆☆');$('#Waves').html('☆ × ' + $.cookie('te_wave'));reqId = requestAnimationFrame(render);console.clear();console.log("超高難度 - The Ruby　血祭りの時間だ");});
-$('#ruby').get(0);$('#rgw').get(0);$('#dia').get(0);$('#kya').get(0);$('#ef').get(0);$('#eft').get(0);
+$('#ruby').get(0);$('#rgw').get(0);$('#dia').get(0);$('#kya').get(0);$('#ef').get(0);$('#eft').get(0);$('#kya_e').get(0);$('#kya_g').get(0);$('#eft_g ').get(0);
 
 //start function
 function start(e) {
@@ -306,21 +306,6 @@ function loadLevel(level) {
         case 210:
           world.push(new Dreamtower(j - 2, -i, data[index].obstacle));
           world.push(new Crystal(j - 2, -i, data[index].obstacle));
-          break;
-        case 101:
-          world.push(new Traffic_1(j - 2, -i, data[index].obstacle));
-          break;
-        case 102:
-          world.push(new Traffic_2(j - 2, -i, data[index].obstacle));
-          break;
-        case 103:
-          world.push(new Traffic_3(j - 2, -i, data[index].obstacle));
-          break;
-        case 104:
-          world.push(new Traffic_4(j - 2, -i, data[index].obstacle));
-          break;
-        case 105:
-          world.push(new Traffic_5(j - 2, -i, data[index].obstacle));
           break;
       }
     }
