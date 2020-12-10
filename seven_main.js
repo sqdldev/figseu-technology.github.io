@@ -26,6 +26,9 @@ wave_t = $.cookie('se_wave_t');
 wave_th = $.cookie('se_wave_th');
 let url = location.href;
 let fgnc = url.substr( 68 );
+$('#shrine').get(0);
+$('#ts').get(0);
+$('#tmp').get(0);
 let data;
 let reqId;
 $.getJSON('seven_levels.json', d => {
