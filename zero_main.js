@@ -23,6 +23,7 @@ wave = $.cookie('z_wave');
 let gya = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 66 );
+$('#zero').get(0);
 let data;
 let reqId;
 $.getJSON('RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhjnTQurtXT5ApBMebE.json', d => {
