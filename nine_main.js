@@ -29,6 +29,10 @@ wave_f = $.cookie('n_wave_f');
 let girls = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 67 );
+$('#FELL').get(0);
+$('#TFE').get(0);
+$('#DAYS').get(0);
+$('#TDAYS').get(0);
 let data;
 let reqId;
 $.getJSON('nine_levels.json', d => {
