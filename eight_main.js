@@ -35,6 +35,14 @@ wave_se = $.cookie('e_wave_se');
 let train = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 75 );
+$('#mai').get(0);
+$('#edu').get(0);
+$('#prin').get(0);
+$('#los').get(0);
+$('#alive').get(0);
+$('#alive_g').get(0);
+$('#hina').get(0);
+$('#hina_g').get(0);
 let data;
 let reqId;
 $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCybmrxwpB.json', d => {
