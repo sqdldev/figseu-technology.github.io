@@ -279,6 +279,11 @@ canvas {
   right: 10px;
   bottom: 20px;
   font-size: 50px;
+  transition: 1s;
+}
+#next:active{
+  color: #bdbdbd;
+  padding-left: 1px;
 }
 #prev{
   color: #FFFFFF;
@@ -288,6 +293,11 @@ canvas {
   left: 10px;
   bottom: 20px;
   font-size: 50px;
+  transition: 1s;
+}
+#prev:active{
+  color: #bdbdbd;
+  padding-right: 1px;
 }
 .button{
   border: solid #FFFFFF;
