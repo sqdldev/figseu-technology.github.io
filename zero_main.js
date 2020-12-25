@@ -18,6 +18,7 @@ camera.rotation.x -= 0.75;
 let scoreSubmitted = false;
 let level = 1;
 let star = 0;
+let wave = 0;
 let gya = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 66 );
