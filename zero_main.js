@@ -108,12 +108,30 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 1) {
+  $('#PresentCode').hide();
+  if (level == 2) {
     $('#next').hide();
   }
-  $('#level-d').html('最後の試練');
-  $('#level').html('Zero');
-  $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  if (level == 1) {
+      $('#level-d').html('最後の試練');
+      $('#level').html('Zero');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  } else if (level == 2) {
+     if (fgnc == 1145141919810) {
+      $('#play').show();
+      $('#PresentCode').hide();
+     } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+     }
+      $('#level-d').html('一周年記念ステージ');
+      $('#level').html('Rolling Sky Evolution');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  } else {
+      $('#level-d').html('開発中');
+      $('#level').html('Level ' + level);
+      $('#stars').html('');
+  }
 }
 
 function prevLevel() {
@@ -134,12 +152,30 @@ function prevLevel() {
   $('#next').show();
   $('#retry').hide();
   $('#play').show();
+  $('#PresentCode').hide();
   if (level == 1) {
     $('#prev').hide();
   }
-  $('#level-d').html('最後の試練');
-  $('#level').html('Zero');
-  $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  if (level == 1) {
+      $('#level-d').html('最後の試練');
+      $('#level').html('Zero');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  } else if (level == 2) {
+     if (fgnc == 1145141919810) {
+      $('#play').show();
+      $('#PresentCode').hide();
+     } else {
+      $('#play').hide();
+      $('#PresentCode').show();
+     }
+      $('#level-d').html('一周年記念ステージ');
+      $('#level').html('Rolling Sky Evolution');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  } else {
+      $('#level-d').html('開発中');
+      $('#level').html('Level ' + level);
+      $('#stars').html('');
+  }
 }
 
 const light = new THREE.HemisphereLight(0xeeeeee, 0x777777);
