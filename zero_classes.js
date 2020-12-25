@@ -28,6 +28,16 @@ class Ball {
               camera.position.z = this.tmpZ - 4 + distance;
               this.tmpZ = 0;
             }
+          } else if (v instanceof Flootmat || v instanceof Bouncer) {
+          if (v.detect()) {
+            this.landed = true;
+            this.speed.y = 0;
+            this.mesh.position.y = 0;
+            if (this.tmpZ) {
+              this.mesh.position.z = this.tmpZ - 4;
+              camera.position.z = this.tmpZ - 4 + distance;
+              this.tmpZ = 0;
+            }
           }
         }
       });
