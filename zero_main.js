@@ -31,7 +31,7 @@ $.getJSON('RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhj
   $('#play').show();
   $('#PresentCode').hide();
   $('#play').click(start);
-  $('#next').hide();
+  $('#next').show();
   $('#score').hide();
   $('#level-d').html('最後の試練');
   $('#level').html('Zero');
