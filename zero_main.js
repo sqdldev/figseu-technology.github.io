@@ -18,8 +18,6 @@ camera.rotation.x -= 0.75;
 let scoreSubmitted = false;
 let level = 1;
 let star = 0;
-let wave = 0;
-wave = $.cookie('z_wave');
 let gya = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 66 );
@@ -37,7 +35,6 @@ $.getJSON('RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhj
   $('#level-d').html('最後の試練');
   $('#level').html('Zero');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('z_wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -53,12 +50,7 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    if (typeof wave == 'undefined') {
-        wave = 0;
-        $.cookie('z_wave', wave, { expires: 30 });
-     }
     $('#zero').get(0).play();
-    wave++;
     reset();
     world.forEach(v => {
       if (v instanceof Bouncer) {
@@ -121,7 +113,6 @@ function nextLevel() {
   $('#level-d').html('最後の試練');
   $('#level').html('Zero');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('z_wave'));
 }
 
 function prevLevel() {
@@ -148,7 +139,6 @@ function prevLevel() {
   $('#level-d').html('最後の試練');
   $('#level').html('Zero');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('z_wave'));
 }
 
 const light = new THREE.HemisphereLight(0xeeeeee, 0x777777);
@@ -198,6 +188,9 @@ function loadLevel(level) {
         case 20:
           world.push(new Deltemat(j - 2, -i, data[index].mat));
           break;
+        case 21:
+          world.push(new Flootmat(j - 2, -i, data[index].mat));
+          break;
         case 23:
           world.push(new Delteobstacle(j - 2, -i, data[index].obstacle));
           break;
@@ -230,10 +223,6 @@ function render() {
 //controls
 
 function gameover() {
-  if (star == 1) {
-     wave = 0;
-  }
-  $.cookie('z_wave', wave, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -253,7 +242,6 @@ function gameover() {
       $('#PresentCode').hide();
       $('#next').hide();
   }
-  $('#Waves').html('☆ × ' + $.cookie('z_wave'));
   $('#zero').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
