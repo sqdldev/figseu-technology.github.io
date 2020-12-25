@@ -21,7 +21,7 @@ let star = 0;
 let wave = 0;
 let gya = Math.floor( Math.random() * 11 );
 let url = location.href;
-let fgnc = url.substr( 66 );
+let fgnc = url.substr( 75 );
 $('#zero').get(0);
 let data;
 let reqId;
