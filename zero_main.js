@@ -19,6 +19,7 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
+wave = $.cookie('z_wave');
 let gya = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 75 );
@@ -36,6 +37,7 @@ $.getJSON('RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhj
   $('#level-d').html('最後の試練');
   $('#level').html('Zero');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  $('#Waves').html('☆ × ' + $.cookie('z_wave'));
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -51,7 +53,12 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
+    if (typeof wave == 'undefined') {
+        wave = 0;
+        $.cookie('e_wave', wave, { expires: 30 });
+    }
     $('#zero').get(0).play();
+    wave++;
     reset();
     world.forEach(v => {
       if (v instanceof Bouncer) {
@@ -89,6 +96,13 @@ function reset() {
   ball.speed.y = 0;
   ball.count2Lose = 0;
 }
+function cl() {
+  if (fgnc == 999) {
+    $('#cd_1').get(0).play();
+  } else {
+    $('#cd_1').get(0).play();
+  }
+}
 
 function nextLevel() {
   percent = 0;
@@ -112,26 +126,10 @@ function nextLevel() {
   if (level == 2) {
     $('#next').hide();
   }
-  if (level == 1) {
-      $('#level-d').html('最後の試練');
-      $('#level').html('Zero');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
-  } else if (level == 2) {
-     if (fgnc == 1145141919810) {
-      $('#play').show();
-      $('#PresentCode').hide();
-     } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-     }
-      $('#level-d').html('一周年記念ステージ');
-      $('#level').html('Rolling Sky Evolution');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
-  } else {
-      $('#level-d').html('開発中');
-      $('#level').html('Level ' + level);
-      $('#stars').html('');
-  }
+  $('#level-d').html('最後の試練');
+  $('#level').html('Zero');
+  $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  $('#Waves').html('☆ × ' + $.cookie('z_wave'));
 }
 
 function prevLevel() {
@@ -156,26 +154,10 @@ function prevLevel() {
   if (level == 1) {
     $('#prev').hide();
   }
-  if (level == 1) {
-      $('#level-d').html('最後の試練');
-      $('#level').html('Zero');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
-  } else if (level == 2) {
-     if (fgnc == 1145141919810) {
-      $('#play').show();
-      $('#PresentCode').hide();
-     } else {
-      $('#play').hide();
-      $('#PresentCode').show();
-     }
-      $('#level-d').html('一周年記念ステージ');
-      $('#level').html('Rolling Sky Evolution');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
-  } else {
-      $('#level-d').html('開発中');
-      $('#level').html('Level ' + level);
-      $('#stars').html('');
-  }
+  $('#level-d').html('最後の試練');
+  $('#level').html('Zero');
+  $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+  $('#Waves').html('☆ × ' + $.cookie('z_wave'));
 }
 
 const light = new THREE.HemisphereLight(0xeeeeee, 0x777777);
@@ -260,6 +242,10 @@ function render() {
 //controls
 
 function gameover() {
+  if (star == 1) {
+     wave = 0;
+  }
+  $.cookie('z_wave', wave, { expires: 252 });
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -271,6 +257,7 @@ function gameover() {
   $('#score').show();
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
+  $('#Waves').html('☆ × ' + $.cookie('z_wave'));
   if (star == 2) {
       $('#level-d').html('あの日、あの場所で交わした約束');
       $('#play').hide();
