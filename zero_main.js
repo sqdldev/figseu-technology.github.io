@@ -55,7 +55,7 @@ function start(e) {
     $('#name').hide();
     if (typeof wave == 'undefined') {
         wave = 0;
-        $.cookie('e_wave', wave, { expires: 30 });
+        $.cookie('e_wave', wave, { expires: 30 }, {domain:"figseu-technology.github.io", path: '/'});
     }
     $('#zero').get(0).play();
     wave++;
@@ -245,7 +245,7 @@ function gameover() {
   if (star == 1) {
      wave = 0;
   }
-  $.cookie('z_wave', wave, { expires: 252 });
+  $.cookie('z_wave', wave, { expires: 252 }, {domain:"figseu-technology.github.io", path: '/'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
