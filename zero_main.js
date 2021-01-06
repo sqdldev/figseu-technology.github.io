@@ -55,7 +55,7 @@ function start(e) {
     $('#name').hide();
     if (typeof wave == 'undefined') {
         wave = 0;
-        $.cookie('e_wave', wave, { expires: 30 }, {domain:'figseu-technology.github.io', path: '/'});
+        $.cookie('z_wave', wave, { expires: 30 }, {domain:'figseu-technology.github.io', path: '/'});
     }
     $('#zero').get(0).play();
     wave++;
