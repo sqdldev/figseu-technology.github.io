@@ -33,7 +33,7 @@ $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCyb
   $('#score').hide();
   $('#level-d').html('ボーナスステージ');
   $('#level').html('Maison');
-  $('#stars').html('☆☆☆☆☆☆☆☆');
+  $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -110,33 +110,33 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 6) {
     $('#next').hide();
   }
   if (level == 1) {
       $('#level-d').html('ボーナスステージ');
       $('#level').html('Maison');
-      $('#stars').html('☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('輪廻転生');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('雷光の姫君');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The Eden');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('Stay Alive');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('HappySynthesizer');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -182,13 +182,13 @@ function prevLevel() {
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('EF66');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
-        } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('Stay Alive');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+        } else if (level == 6) {
+         $('#level-d').html('ボーナス ステージ');
+         $('#level').html('HappySynthesizer');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
