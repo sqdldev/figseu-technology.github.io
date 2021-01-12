@@ -312,7 +312,7 @@ function gameover() {
 });
      } else if (level == 5) {
       if (star == 2) {
-      $('#level-d').html('夢を運ぶ　ブルートレイン');
+      $('#level-d').html('我等の希望を託して');
       }
       $('#ef').each(function(){
     this.pause(); // Stop playing
@@ -320,7 +320,7 @@ function gameover() {
 });
      } else if (level == 6) {
       if (star == 2) {
-      $('#level-d').html('未完成のパズル');
+      $('#level-d').html('安全と信頼を届ける');
       }
       $('#alive').each(function(){
     this.pause(); // Stop playing
