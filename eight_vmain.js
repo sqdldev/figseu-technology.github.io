@@ -130,12 +130,12 @@ function nextLevel() {
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('EF66');
+         $('#level-d').html('ボーナス ステージ');
+         $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
-         $('#level').html('Stay Alive');
+         $('#level').html('HappySynthesizer');
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -237,6 +237,11 @@ function loadLevel(level) {
           break;
         case 9:
           world.push(new Goal(j - 2, -i, data[index].obstacle));
+          break;
+        case 210:
+          world.push(new Dreamtower(j - 2, -i, data[index].obstacle));
+          world.push(new Crystal(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
