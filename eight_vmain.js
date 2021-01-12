@@ -58,9 +58,9 @@ function start(e) {
             } else if (level == 4) {
             $('#los').get(0).play();
             } else if (level == 5) {
-            $('#ef').get(0).play();
-            } else if (level == 6) {
             $('#alive').get(0).play();
+            } else if (level == 6) {
+            $('#hina').get(0).play();
             } else {
             $('#cloud').get(0).play();
             }
@@ -314,7 +314,7 @@ function gameover() {
       if (star == 2) {
       $('#level-d').html('我等の希望を託して');
       }
-      $('#ef').each(function(){
+      $('#alive').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
@@ -322,7 +322,7 @@ function gameover() {
       if (star == 2) {
       $('#level-d').html('安全と信頼を届ける');
       }
-      $('#alive').each(function(){
+      $('#hina').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
