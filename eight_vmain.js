@@ -131,11 +131,11 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
          $('#level-d').html('ボーナス ステージ');
-         $('#level').html('Stay Alive');
+         $('#level').html('マヤ文明');
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
-         $('#level').html('HappySynthesizer');
+         $('#level').html('Happy Synthesizer');
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
@@ -183,11 +183,11 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
          $('#level-d').html('ボーナス ステージ');
-         $('#level').html('Stay Alive');
+         $('#level').html('マヤ文明');
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
-         $('#level').html('HappySynthesizer');
+         $('#level').html('Happy Synthesizer');
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else {
             $('#level-d').html('開発中');
