@@ -345,6 +345,9 @@ function loadLevel(level) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 50:
+          world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
+          break;
         case 6:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
           break;
