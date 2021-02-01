@@ -168,19 +168,19 @@ function prevLevel() {
   if (level == 1) {
       $('#level-d').html('ボーナスステージ');
       $('#level').html('Maison');
-      $('#stars').html('☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('輪廻転生');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 3) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('雷光の姫君');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
          $('#level').html('The Eden');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
          $('#level-d').html('ボーナス ステージ');
          $('#level').html('マヤ文明');
@@ -222,6 +222,9 @@ function loadLevel(level) {
           break;
         case 5:
           world.push(new Mat(j - 2, -i, data[index].mat));
+          world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 50:
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
           break;
         case 6:
