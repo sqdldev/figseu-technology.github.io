@@ -65,6 +65,7 @@ hr {
 <h4>※ 一部のサントラは収録していません。</h4>
 <br> </br>
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
+<p align="center"><a align="center" onclick="TopPerformance()" class="back">実績</a></p>
 <br> </br>
 <h3>Rolling Sky - ☆ 1</h3>
 <h3><div id="Waves_1">☆ × 0</div></h3>
@@ -515,6 +516,8 @@ hr {
 </center>
 <hr>
 <br> </br>
+<h1 align="center">Rolling Sky Evolution Sound Room</h1>
+<h4>取得した実績を確認できます。</h4>
 <script src="System/jquery.js"></script>
 <script src="System/cookie.js"></script>
 <script>
@@ -660,6 +663,10 @@ $('#Waves_53').html('☆ × ' + $.cookie('te_wave_s'));
 $('#Waves_54').html('☆ × ' + $.cookie('z_wave'));
 function Top() {
    $('body, html').animate({ scrollTop: 0 }, 500);
+   return false;
+}
+function TopPerformance() {
+   $('body, html').animate({ scrollTop: $('#PF') }, 500);
    return false;
 }
 </script>
