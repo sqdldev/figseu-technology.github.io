@@ -524,9 +524,14 @@ hr {
 <hr>
 <h1 align="center" id="PF">Rolling Sky Evolution Sound Room</h1>
 <h4>取得した実績を確認できます。</h4>
+<hr>
 <br> </br>
 <h3><div id="Pf_1">始発 - 未取得</div></h3>
 <p>夜道、デジタルの世界、孤島、夕方のピクニック をクリアする。</p>
+<hr>
+<br> </br>
+<h3><div id="Pf_2">飛躍 - 未取得</div></h3>
+<p>Rolling Sky をクリアする。</p>
 <hr>
 <br> </br>
 <script src="System/jquery.js"></script>
@@ -676,6 +681,9 @@ if (o_wave_fi >= 1) {
    if (o_wave_s >= 1) {
       $('#Pf_1').html('始発 - 取得済');
    }
+}
+if (o_wave >= 1) {
+   $('#Pf_2').html('飛躍 - 取得済');
 }
 function Top() {
    $('body, html').animate({ scrollTop: 0 }, 500);
