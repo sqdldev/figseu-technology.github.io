@@ -273,18 +273,21 @@ hr {
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
 <br> </br>
 <h3>Shrine - ☆ 7</h3>
+<h3><div id="Waves_34">☆ × 0</div></h3>
 <center>
 <video src="bgm/Shrine.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>True Shrine - ☆ 7</h3>
+<h3><div id="Waves_35">☆ × 0</div></h3>
 <center>
 <video src="bgm/True Shrine.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>True Moon Pride - ☆ 7</h3>
+<h3><div id="Waves_36">☆ × 0</div></h3>
 <center>
 <video src="bgm/True Moon Pride.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -518,6 +521,9 @@ let fi_wave_f = 0;
 let s_wave = 0;
 let s_wave_t = 0;
 let s_wave_th = 0;
+let se_wave = 0;
+let se_wave_t = 0;
+let se_wave_th = 0;
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
 o_wave_th = $.cookie('o_wave_th');
@@ -543,6 +549,9 @@ fi_wave_f = $.cookie('fi_wave_f');
 s_wave = $.cookie('s_wave');
 s_wave_t = $.cookie('s_wave_t');
 s_wave_th = $.cookie('s_wave_th');
+se_wave = $.cookie('se_wave');
+se_wave_t = $.cookie('se_wave_t');
+se_wave_th = $.cookie('se_wave_th');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -568,6 +577,9 @@ $('#Waves_25').html('☆ × ' + $.cookie('fi_wave_f'));
 $('#Waves_30').html('☆ × ' + $.cookie('s_wave'));
 $('#Waves_31').html('☆ × ' + $.cookie('s_wave_t'));
 $('#Waves_32').html('☆ × ' + $.cookie('s_wave_th'));
+$('#Waves_34').html('☆ × ' + $.cookie('se_wave'));
+$('#Waves_35').html('☆ × ' + $.cookie('se_wave_t'));
+$('#Waves_36').html('☆ × ' + $.cookie('se_wave_th'));
 </script>
 </body>
 <footer>
