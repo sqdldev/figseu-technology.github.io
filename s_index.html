@@ -65,6 +65,7 @@ hr {
 <h4>※ 一部のサントラは収録していません。</h4>
 <br> </br>
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
+<br> </br>
 <p align="center"><a align="center" onclick="TopPerformance()" class="back">実績</a></p>
 <br> </br>
 <h3>Rolling Sky - ☆ 1</h3>
@@ -516,7 +517,10 @@ hr {
 </center>
 <hr>
 <br> </br>
-<h1 align="center">Rolling Sky Evolution Sound Room</h1>
+<a class="top" onclick="Top()">▲</a>
+<br> </br>
+<hr>
+<h1 align="center" id="PF">Rolling Sky Evolution Sound Room</h1>
 <h4>取得した実績を確認できます。</h4>
 <script src="System/jquery.js"></script>
 <script src="System/cookie.js"></script>
@@ -666,14 +670,14 @@ function Top() {
    return false;
 }
 function TopPerformance() {
-   $('body, html').animate({ scrollTop: $('#PF') }, 500);
+   $('body, html').animate({ scrollTop: $('#PF').offset().top }, 500);
    return false;
 }
 </script>
 </body>
 <footer>
 <div align="center">
-<a class="top" onclick="Top()">▲</a>
+<a class="top" onclick="TopPerformance()">▲</a>
 </div>
 <br> </br>
 </footer>
