@@ -214,12 +214,14 @@ hr {
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
 <br> </br>
 <h3>桜 - ☆ 5</h3>
+<h3><div id="Waves_22">☆ × 0</div></h3>
 <center>
 <video src="bgm/Sakura.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>Fifty Fifty - ☆ 5</h3>
+<h3><div id="Waves_23">☆ × 0</div></h3>
 <center>
 <video src="bgm/Fifty Fifty.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -232,12 +234,14 @@ hr {
 <hr>
 <br> </br>
 <h3>The END - ☆ 5</h3>
+<h3><div id="Waves_25">☆ × 0</div></h3>
 <center>
 <video src="bgm/The_END.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>？？？ - ☆ 5</h3>
+<h3><div id="Waves_29">☆ × 0</div></h3>
 <center>
 <video src="bgm/Shrine Ⅱ.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -246,18 +250,21 @@ hr {
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
 <br> </br>
 <h3>Dream of Space - ☆ 6</h3>
+<h3><div id="Waves_30">☆ × 0</div></h3>
 <center>
 <video src="bgm/Dream of Space.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>Summer - ☆ 6</h3>
+<h3><div id="Waves_31">☆ × 0</div></h3>
 <center>
 <video src="bgm/Summer.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>ゆっくりの森 - ☆ 6</h3>
+<h3><div id="Waves_32">☆ × 0</div></h3>
 <center>
 <video src="bgm/ゆっくりの森.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -505,6 +512,12 @@ let f_wave_th = 0;
 let f_wave_f = 0;
 let f_wave_fi = 0;
 let f_wave_s = 0;
+let fi_wave = 0;
+let fi_wave_t = 0;
+let fi_wave_f = 0;
+let s_wave = 0;
+let s_wave_t = 0;
+let s_wave_th = 0;
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
 o_wave_th = $.cookie('o_wave_th');
@@ -524,6 +537,12 @@ f_wave = $.cookie('f_wave');
 f_wave_t = $.cookie('f_wave_t');
 f_wave_th = $.cookie('f_wave_th');
 f_wave_f = $.cookie('f_wave_f');
+fi_wave = $.cookie('fi_wave');
+fi_wave_t = $.cookie('fi_wave_t');
+fi_wave_f = $.cookie('fi_wave_f');
+s_wave = $.cookie('s_wave');
+s_wave_t = $.cookie('s_wave_t');
+s_wave_th = $.cookie('s_wave_th');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -543,6 +562,12 @@ $('#Waves_17').html('☆ × ' + $.cookie('f_wave'));
 $('#Waves_18').html('☆ × ' + $.cookie('f_wave_t'));
 $('#Waves_19').html('☆ × ' + $.cookie('f_wave_th'));
 $('#Waves_20').html('☆ × ' + $.cookie('f_wave_f'));
+$('#Waves_22').html('☆ × ' + $.cookie('fi_wave'));
+$('#Waves_23').html('☆ × ' + $.cookie('fi_wave_t'));
+$('#Waves_25').html('☆ × ' + $.cookie('fi_wave_f'));
+$('#Waves_30').html('☆ × ' + $.cookie('s_wave'));
+$('#Waves_31').html('☆ × ' + $.cookie('s_wave_t'));
+$('#Waves_32').html('☆ × ' + $.cookie('s_wave_th'));
 </script>
 </body>
 <footer>
