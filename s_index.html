@@ -517,11 +517,18 @@ hr {
 </center>
 <hr>
 <br> </br>
+<div align="center">
 <a class="top" onclick="Top()">▲</a>
+</div>
 <br> </br>
 <hr>
 <h1 align="center" id="PF">Rolling Sky Evolution Sound Room</h1>
 <h4>取得した実績を確認できます。</h4>
+<br> </br>
+<h3><div id="Pf_1">始発 - 未取得</div></h3>
+<p>夜道、デジタルの世界、孤島、夕方のピクニック をクリアする。</p>
+<hr>
+<br> </br>
 <script src="System/jquery.js"></script>
 <script src="System/cookie.js"></script>
 <script>
@@ -665,6 +672,11 @@ $('#Waves_51').html('☆ × ' + $.cookie('te_wave_f'));
 $('#Waves_52').html('☆ × ' + $.cookie('te_wave_fi'));
 $('#Waves_53').html('☆ × ' + $.cookie('te_wave_s'));
 $('#Waves_54').html('☆ × ' + $.cookie('z_wave'));
+if (o_wave_fi >= 1) {
+   if (o_wave_s >= 1) {
+      $('#Pf_1').html('始発 - 取得済');
+   }
+}
 function Top() {
    $('body, html').animate({ scrollTop: 0 }, 500);
    return false;
