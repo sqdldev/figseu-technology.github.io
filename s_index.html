@@ -67,37 +67,42 @@ hr {
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
 <br> </br>
 <h3>Rolling Sky - ☆ 1</h3>
-<h3><div id="wave">☆ × 0</div></h3>
+<h3><div id="Waves_1">☆ × 0</div></h3>
 <center>
 <video src="bgm/Congfei Wei.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>夜道 - ☆ 1</h3>
+<h3><div id="Waves_2">☆ × 0</div></h3>
 <center>
 <video src="bgm/ST.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>決勝戦 - ☆ 1</h3>
+<h3><div id="Waves_3">☆ × 0</div></h3>
 <center>
 <video src="bgm/決勝戦.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>デジタルの世界 - ☆ 1</h3>
+<h3><div id="Waves_4">☆ × 0</div></h3>
 <center>
 <video src="bgm/デジタルの世界.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>孤島 - ☆ 1</h3>
+<h3><div id="Waves_5">☆ × 0</div></h3>
 <center>
 <video src="bgm/孤島.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>夕方のピクニック - ☆ 1</h3>
+<h3><div id="Waves_6">☆ × 0</div></h3>
 <center>
 <video src="bgm/夕方のピクニック.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -478,6 +483,12 @@ o_wave_th = $.cookie('o_wave_th');
 o_wave_f = $.cookie('o_wave_f');
 o_wave_fi = $.cookie('o_wave_fi');
 o_wave_s = $.cookie('o_wave_s');
+$('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
+$('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
+$('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
+$('#Waves_4').html('☆ × ' + $.cookie('o_wave_f'));
+$('#Waves_5').html('☆ × ' + $.cookie('o_wave_fi'));
+$('#Waves_6').html('☆ × ' + $.cookie('o_wave_s'));
 </script>
 </body>
 <footer>
