@@ -123,7 +123,7 @@ function start(e) {
     } else if (level == 6) {
         if (fgnc == 210) {
                 $('#hina_g').get(0).play();
-                wave_s++;
+                wave_se++;
               } else {
                 $('#hina').get(0).play();
                 wave_s++;
