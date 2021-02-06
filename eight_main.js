@@ -393,7 +393,11 @@ function gameover() {
      } else if (level == 4) {
      wave_f = 0;
      } else if (level == 5) {
-     wave_fi = 0;
+       if (fgnc == 66) {
+          wave_se = 0;
+       else {
+          wave_fi = 0;
+       }
      } else if (level == 6) {
      wave_s = 0;
      } else if (level == 7) {
