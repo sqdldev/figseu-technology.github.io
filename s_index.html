@@ -347,24 +347,28 @@ hr {
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
 <br> </br>
 <h3>Fell Gate - ☆ 9</h3>
+<h3><div id="Waves_44">☆ × 0</div></h3>
 <center>
 <video src="bgm/Fell Gate.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>True Fell Gate - ☆ 9</h3>
+<h3><div id="Waves_45">☆ × 0</div></h3>
 <center>
 <video src="bgm/True Fell Gate.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>Days - ☆ 9</h3>
+<h3><div id="Waves_46">☆ × 0</div></h3>
 <center>
 <video src="bgm/Days.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>True Days - ☆ 9</h3>
+<h3><div id="Waves_47">☆ × 0</div></h3>
 <center>
 <video src="bgm/True Days.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -544,6 +548,10 @@ let e_wave_f = 0;
 let e_wave_fi = 0;
 let e_wave_s = 0;
 let e_wave_se = 0;
+let n_wave = 0;
+let n_wave_t = 0;
+let n_wave_th = 0;
+let n_wave_f = 0;
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
 o_wave_th = $.cookie('o_wave_th');
@@ -572,7 +580,6 @@ s_wave_th = $.cookie('s_wave_th');
 se_wave = $.cookie('se_wave');
 se_wave_t = $.cookie('se_wave_t');
 se_wave_th = $.cookie('se_wave_th');
-
 e_wave = $.cookie('e_wave');
 e_wave_t = $.cookie('e_wave_t');
 e_wave_th = $.cookie('e_wave_th');
@@ -580,6 +587,10 @@ e_wave_f = $.cookie('e_wave_f');
 e_wave_fi = $.cookie('e_wave_fi');
 e_wave_s = $.cookie('e_wave_s');
 e_wave_se = $.cookie('e_wave_se');
+n_wave = $.cookie('n_wave');
+n_wave_t = $.cookie('n_wave_t');
+n_wave_th = $.cookie('n_wave_th');
+n_wave_f = $.cookie('n_wave_f');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -615,6 +626,10 @@ $('#Waves_40').html('☆ × ' + $.cookie('e_wave_f'));
 $('#Waves_41').html('☆ × ' + $.cookie('e_wave_fi'));
 $('#Waves_42').html('☆ × ' + $.cookie('e_wave_s'));
 $('#Waves_43').html('☆ × ' + $.cookie('e_wave_se'));
+$('#Waves_44').html('☆ × ' + $.cookie('n_wave'));
+$('#Waves_45').html('☆ × ' + $.cookie('n_wave_t'));
+$('#Waves_46').html('☆ × ' + $.cookie('n_wave_th'));
+$('#Waves_47').html('☆ × ' + $.cookie('n_wave_f'));
 </script>
 </body>
 <footer>
