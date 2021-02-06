@@ -216,12 +216,13 @@ function nextLevel() {
          if (fgnc == 66) {
                 $('#level-d').html('特殊 ステージ');
                 $('#level').html('MAYA');
+                $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
           } else {
                 $('#level-d').html('ボーナス ステージ');
                 $('#level').html('Stay Alive');
+                $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
           }
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
         } else if (level == 6) {
           if (fgnc == 210) {
                 $('#level-d').html('特殊 ステージ');
@@ -232,11 +233,6 @@ function nextLevel() {
           }
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
-        } else if (level == 7) {
-         $('#level-d').html('ボーナス ステージ');
-         $('#level').html('六兆年と一夜物語');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -289,12 +285,13 @@ function prevLevel() {
          if (fgnc == 66) {
                 $('#level-d').html('特殊 ステージ');
                 $('#level').html('MAYA');
+                $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
           } else {
                 $('#level-d').html('ボーナス ステージ');
                 $('#level').html('Stay Alive');
+                $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
           }
          $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
         } else if (level == 6) {
          if (fgnc == 210) {
                 $('#level-d').html('特殊 ステージ');
@@ -305,11 +302,6 @@ function prevLevel() {
           }
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_s'));
-        } else if (level == 7) {
-         $('#level-d').html('ボーナス ステージ');
-         $('#level').html('六兆年と一夜物語');
-         $('#stars').html('☆☆☆☆☆☆☆☆');
-         $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -463,16 +455,17 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 5) {
-      $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
       if (star == 2) {
       $('#level-d').html('我等の希望を託して');
       }
       if (fgnc == 66) {
+        $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
         $('#alive_g').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
      } else {
+        $('#Waves').html('☆ × ' + $.cookie('e_wave_fi'));
         $('#alive').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
