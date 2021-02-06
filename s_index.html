@@ -658,11 +658,15 @@ $('#Waves_51').html('☆ × ' + $.cookie('te_wave_f'));
 $('#Waves_52').html('☆ × ' + $.cookie('te_wave_fi'));
 $('#Waves_53').html('☆ × ' + $.cookie('te_wave_s'));
 $('#Waves_54').html('☆ × ' + $.cookie('z_wave'));
+function Top() {
+   $('body, html').animate({ scrollTop: 0 }, 500);
+   return false;
+}
 </script>
 </body>
 <footer>
 <div align="center">
-<a class="top" href="s_re.html?#toppage">▲</a>
+<a class="top" onclick="Top()">▲</a>
 </div>
 <br> </br>
 </footer>
