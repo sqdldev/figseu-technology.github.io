@@ -184,24 +184,28 @@ hr {
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
 <br> </br>
 <h3>Bluestone Alley - ☆ 4</h3>
+<h3><div id="Waves_17">☆ × 0</div></h3>
 <center>
 <video src="bgm/Ever Down.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>Bad Apple! - ☆ 4</h3>
+<h3><div id="Waves_18">☆ × 0</div></h3>
 <center>
 <video src="bgm/Bad Apple.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>ふわふわゆめいろサンドイッチ - ☆ 4</h3>
+<h3><div id="Waves_19">☆ × 0</div></h3>
 <center>
 <video src="bgm/ゆめいろサンドイッチ.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>華麗に舞う少女 - ☆ 4</h3>
+<h3><div id="Waves_20">☆ × 0</div></h3>
 <center>
 <video src="bgm/華麗に舞う少女.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -495,6 +499,12 @@ let th_wave = 0;
 let th_wave_t = 0;
 let th_wave_th = 0;
 let th_wave_f = 0;
+let f_wave = 0;
+let f_wave_t = 0;
+let f_wave_th = 0;
+let f_wave_f = 0;
+let f_wave_fi = 0;
+let f_wave_s = 0;
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
 o_wave_th = $.cookie('o_wave_th');
@@ -510,6 +520,10 @@ th_wave = $.cookie('th_wave');
 th_wave_t = $.cookie('th_wave_t');
 th_wave_th = $.cookie('th_wave_th');
 th_wave_f = $.cookie('th_wave_f');
+f_wave = $.cookie('f_wave');
+f_wave_t = $.cookie('f_wave_t');
+f_wave_th = $.cookie('f_wave_th');
+f_wave_f = $.cookie('f_wave_f');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -525,6 +539,10 @@ $('#Waves_13').html('☆ × ' + $.cookie('th_wave'));
 $('#Waves_14').html('☆ × ' + $.cookie('th_wave_t'));
 $('#Waves_15').html('☆ × ' + $.cookie('th_wave_th'));
 $('#Waves_16').html('☆ × ' + $.cookie('th_wave_f'));
+$('#Waves_17').html('☆ × ' + $.cookie('f_wave'));
+$('#Waves_18').html('☆ × ' + $.cookie('f_wave_t'));
+$('#Waves_19').html('☆ × ' + $.cookie('f_wave_th'));
+$('#Waves_20').html('☆ × ' + $.cookie('f_wave_f'));
 </script>
 </body>
 <footer>
