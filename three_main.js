@@ -58,19 +58,19 @@ function start(e) {
     $('#name').hide();
     if (typeof wave == 'undefined') {
         wave = 0;
-        $.cookie('th_wave', wave, { expires: 30 });
+        $.cookie('th_wave', wave, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
      if (typeof wave_t == 'undefined') {
         wave_t = 0;
-        $.cookie('th_wave_t', wave_t, { expires: 30 });
+        $.cookie('th_wave_t', wave_t, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
      if (typeof wave_th == 'undefined') {
         wave_th = 0;
-        $.cookie('th_wave_th', wave_th, { expires: 30 });
+        $.cookie('th_wave_th', wave_th, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
      if (typeof wave_f == 'undefined') {
         wave_f = 0;
-        $.cookie('th_wave_f', wave_f, { expires: 30 });
+        $.cookie('th_wave_f', wave_f, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
     if (level == 1) {
         $('#stadium').get(0).play();
@@ -344,10 +344,10 @@ function gameover() {
      wave_f = 0;
      }
   }
-  $.cookie('th_wave', wave, { expires: 252 });
-  $.cookie('th_wave_t', wave_t, { expires: 252 });
-  $.cookie('th_wave_th', wave_th, { expires: 252 });
-  $.cookie('th_wave_f', wave_f, { expires: 252 });
+  $.cookie('th_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('th_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('th_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('th_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
