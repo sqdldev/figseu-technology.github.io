@@ -67,7 +67,7 @@ hr {
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
 <br> </br>
 <h3>Rolling Sky - ☆ 1</h3>
-<h3>連続クリア - <div id="wave">☆ × 0</div></h3>
+<h3><div id="wave">☆ × 0</div></h3>
 <center>
 <video src="bgm/Congfei Wei.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -465,6 +465,20 @@ hr {
 <br> </br>
 <script src="System/jquery.js"></script>
 <script src="System/cookie.js"></script>
+<script>
+let o_wave = 0;
+let o_wave_t = 0;
+let o_wave_th = 0;
+let o_wave_f = 0;
+let o_wave_fi = 0;
+let o_wave_s = 0;
+o_wave = $.cookie('o_wave');
+o_wave_t = $.cookie('o_wave_t');
+o_wave_th = $.cookie('o_wave_th');
+o_wave_f = $.cookie('o_wave_f');
+o_wave_fi = $.cookie('o_wave_fi');
+o_wave_s = $.cookie('o_wave_s');
+</script>
 </body>
 <footer>
 <div align="center">
