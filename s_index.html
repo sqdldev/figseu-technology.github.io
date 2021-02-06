@@ -154,24 +154,28 @@ hr {
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
 <br> </br>
 <h3>スタジアム - ☆ 3</h3>
+<h3><div id="Waves_13">☆ × 0</div></h3>
 <center>
 <video src="bgm/スタジアム.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>戦国時代 - ☆ 3</h3>
+<h3><div id="Waves_14">☆ × 0</div></h3>
 <center>
 <video src="bgm/戦国時代.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>滅びた文明 - ☆ 3</h3>
+<h3><div id="Waves_15">☆ × 0</div></h3>
 <center>
 <video src="bgm/滅びた文明.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>梅雨 - ☆ 3</h3>
+<h3><div id="Waves_16">☆ × 0</div></h3>
 <center>
 <video src="bgm/梅雨.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -487,6 +491,10 @@ let t_wave_t = 0;
 let t_wave_th = 0;
 let t_wave_f = 0;
 let t_wave_fi = 0;
+let th_wave = 0;
+let th_wave_t = 0;
+let th_wave_th = 0;
+let th_wave_f = 0;
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
 o_wave_th = $.cookie('o_wave_th');
@@ -498,6 +506,10 @@ t_wave_t = $.cookie('t_wave_t');
 t_wave_th = $.cookie('t_wave_th');
 t_wave_f = $.cookie('t_wave_f');
 t_wave_fi = $.cookie('t_wave_fi');
+th_wave = $.cookie('th_wave');
+th_wave_t = $.cookie('th_wave_t');
+th_wave_th = $.cookie('th_wave_th');
+th_wave_f = $.cookie('th_wave_f');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -509,6 +521,10 @@ $('#Waves_8').html('☆ × ' + $.cookie('t_wave_t'));
 $('#Waves_9').html('☆ × ' + $.cookie('t_wave_th'));
 $('#Waves_10').html('☆ × ' + $.cookie('t_wave_f'));
 $('#Waves_11').html('☆ × ' + $.cookie('t_wave_fi'));
+$('#Waves_13').html('☆ × ' + $.cookie('th_wave'));
+$('#Waves_14').html('☆ × ' + $.cookie('th_wave_t'));
+$('#Waves_15').html('☆ × ' + $.cookie('th_wave_th'));
+$('#Waves_16').html('☆ × ' + $.cookie('th_wave_f'));
 </script>
 </body>
 <footer>
