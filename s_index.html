@@ -534,6 +534,26 @@ hr {
 <p>Rolling Sky をクリアする。</p>
 <hr>
 <br> </br>
+<h3><div id="Pf_3">始発の先へ - 未取得</div></h3>
+<p>Cloud をクリアする。</p>
+<hr>
+<br> </br>
+<h3><div id="Pf_4">甦る魂 - 未取得</div></h3>
+<p>滅びた文明 をクリアする。</p>
+<hr>
+<br> </br>
+<h3><div id="Pf_5">甦る文明 - 未取得</div></h3>
+<p>滅びた文明 を 100回 クリアする。</p>
+<hr>
+<br> </br>
+<h3><div id="Pf_6">梅雨の季節 - 未取得</div></h3>
+<p>梅雨 をクリアする。</p>
+<hr>
+<br> </br>
+<h3><div id="Pf_7">嵐の中へ - 未取得</div></h3>
+<p>梅雨 を 100回 クリアする。</p>
+<hr>
+<br> </br>
 <script src="System/jquery.js"></script>
 <script src="System/cookie.js"></script>
 <script>
@@ -679,11 +699,26 @@ $('#Waves_53').html('☆ × ' + $.cookie('te_wave_s'));
 $('#Waves_54').html('☆ × ' + $.cookie('z_wave'));
 if (o_wave_fi >= 1) {
    if (o_wave_s >= 1) {
-      $('#Pf_1').html('始発 - 取得済');
+      $('#Pf_1').html('始発 - ✾取得済✾');
    }
 }
 if (o_wave >= 1) {
-   $('#Pf_2').html('飛躍 - 取得済');
+   $('#Pf_2').html('飛躍 - ✾取得済✾');
+}
+if (t_wave_th >= 1) {
+   $('#Pf_3').html('始発の先へ - ✾取得済✾');
+}
+if (th_wave_th >= 1) {
+   $('#Pf_4').html('甦る魂 - ✾取得済✾');
+}
+if (th_wave_th >= 100) {
+   $('#Pf_5').html('甦る文明 - ✾取得済✾');
+}
+if (th_wave_f >= 1) {
+   $('#Pf_6').html('梅雨の季節 - ✾取得済✾');
+}
+if (th_wave_f >= 100) {
+   $('#Pf_7').html('嵐の中へ - ✾取得済✾');
 }
 function Top() {
    $('body, html').animate({ scrollTop: 0 }, 500);
