@@ -111,30 +111,35 @@ hr {
 <p align="center"><a align="center" href="index.html" class="back">ホームに戻る</a></p>
 <br> </br>
 <h3>霧の洞穴 - ☆ 2</h3>
+<h3><div id="Waves_7">☆ × 0</div></h3>
 <center>
 <video src="bgm/無限列車.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>幻想郷 - ☆ 2</h3>
+<h3><div id="Waves_8">☆ × 0</div></h3>
 <center>
 <video src="bgm/幻想郷.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>Cloud - ☆ 2</h3>
+<h3><div id="Waves_9">☆ × 0</div></h3>
 <center>
 <video src="bgm/Cloud.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>ピクニック - ☆ 2</h3>
+<h3><div id="Waves_10">☆ × 0</div></h3>
 <center>
 <video src="bgm/Piknik.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
 <hr>
 <br> </br>
 <h3>月下の舞 - ☆ 2</h3>
+<h3><div id="Waves_11">☆ × 0</div></h3>
 <center>
 <video src="bgm/月下の舞.mp3" controls loop preload="none" poster="img/45470902252844274267090914130269011921726211338300.cmr" controlsList="nodownload" oncontextmenu=”return false;”>
 </center>
@@ -477,18 +482,33 @@ let o_wave_th = 0;
 let o_wave_f = 0;
 let o_wave_fi = 0;
 let o_wave_s = 0;
+let t_wave = 0;
+let t_wave_t = 0;
+let t_wave_th = 0;
+let t_wave_f = 0;
+let t_wave_fi = 0;
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
 o_wave_th = $.cookie('o_wave_th');
 o_wave_f = $.cookie('o_wave_f');
 o_wave_fi = $.cookie('o_wave_fi');
 o_wave_s = $.cookie('o_wave_s');
+t_wave = $.cookie('t_wave');
+t_wave_t = $.cookie('t_wave_t');
+t_wave_th = $.cookie('t_wave_th');
+t_wave_f = $.cookie('t_wave_f');
+t_wave_fi = $.cookie('t_wave_fi');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
 $('#Waves_4').html('☆ × ' + $.cookie('o_wave_f'));
 $('#Waves_5').html('☆ × ' + $.cookie('o_wave_fi'));
 $('#Waves_6').html('☆ × ' + $.cookie('o_wave_s'));
+$('#Waves_7').html('☆ × ' + $.cookie('t_wave'));
+$('#Waves_8').html('☆ × ' + $.cookie('t_wave_t'));
+$('#Waves_9').html('☆ × ' + $.cookie('t_wave_th'));
+$('#Waves_10').html('☆ × ' + $.cookie('t_wave_f'));
+$('#Waves_11').html('☆ × ' + $.cookie('t_wave_fi'));
 </script>
 </body>
 <footer>
