@@ -115,7 +115,7 @@ function start(e) {
     } else if (level == 5) {
        if (fgnc == 66) {
                 $('#alive_g').get(0).play();
-                wave_fi++;
+                wave_se++;
             } else {
                 $('#alive').get(0).play();
                 wave_fi++;
