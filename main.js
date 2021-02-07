@@ -212,7 +212,6 @@ function nextLevel() {
 function prevLevel() {
   percent = 0;
   star = 0;
-  wave = 0;
   while (
     (selectedObject = scene.getObjectByName('level component')) != undefined
   ) {
