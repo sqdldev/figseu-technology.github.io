@@ -634,6 +634,22 @@ hr {
 <p>ゆっくりの森 を 666回 連続クリアする。</p>
 <hr>
 <br> </br>
+<h3><div id="Pf_27">？？？ - 未取得</div></h3>
+<p>幻想郷 をクリアする。</p>
+<hr>
+<br> </br>
+<h3><div id="Pf_28">？？？ - 未取得</div></h3>
+<p>幻想郷 を 100回 連続クリアする。</p>
+<hr>
+<br> </br>
+<h3><div id="Pf_29">？？？ - 未取得</div></h3>
+<p>Rolling Sky を 100回 連続クリアする。</p>
+<hr>
+<br> </br>
+<h3><div id="Pf_30">？？？ - 未取得</div></h3>
+<p>Cloud を 100回 連続クリアする。</p>
+<hr>
+<br> </br>
 <script src="System/jquery.js"></script>
 <script src="System/cookie.js"></script>
 <script>
@@ -903,6 +919,18 @@ if (s_wave_th >= 500) {
 }
 if (s_wave_th >= 666) {
    $('#Pf_26').html('ゆっくり虐待 - ✾取得済✾');
+}
+if (t_wave_t >= 1) {
+   $('#Pf_27').html('幻想入り - ✾取得済✾');
+}
+if (t_wave_t >= 100) {
+   $('#Pf_28').html('異変解決 - ✾取得済✾');
+}
+if (o_wave >= 100) {
+   $('#Pf_29').html('空より高く - ✾取得済✾');
+}
+if (t_wave_th >= 100) {
+   $('#Pf_30').html('雲を乗り越えて - ✾取得済✾');
 }
 function Top() {
    $('body, html').animate({ scrollTop: 0 }, 500);
