@@ -53,7 +53,7 @@ img {
 
 <h4>メモリが少ない端末ではラグが発生する可能性が極めて高いです。ご注意ください</h4>
 
-<h4>効果音が無いですが、IOSでのプレイが一番オススメです。(ラグが最も少ないため)</h4>
+<h4>効果音が無いですが、IOSでのプレイも可能です。</h4>
 
 <h2 align="center">---------------利用規約--------------</h2>
 
@@ -124,7 +124,10 @@ img {
 <br> </br>
 
 <script src="System/jquery.js"></script>
+<script src="System/cookie.js"></script>
 <script>
+let terms = 394082443474295;
+$.cookie('terms', terms, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 function BGM() {
 	$('#bgm').get(0).play();
 }
