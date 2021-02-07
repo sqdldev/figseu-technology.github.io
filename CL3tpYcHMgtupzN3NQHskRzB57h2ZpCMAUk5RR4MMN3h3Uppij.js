@@ -300,6 +300,9 @@ $('#Waves_51').html('☆ × ' + $.cookie('te_wave_f'));
 $('#Waves_52').html('☆ × ' + $.cookie('te_wave_fi'));
 $('#Waves_53').html('☆ × ' + $.cookie('te_wave_s'));
 $('#Waves_54').html('☆ × ' + $.cookie('z_wave'));
+
+// Save Data
+
 $.cookie('o_wave', o_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('o_wave_t', o_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('o_wave_th', o_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
@@ -347,6 +350,9 @@ $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.git
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $('#Data_Warn').html('⌥⌥データ更新中⌥⌥');
+
+// Terms
+
 if (terms >= 394082443474295) {
    $('#Pf_0').html('利用規約の確認 - ✾取得済✾');
 }
@@ -772,35 +778,38 @@ if (te_wave_fi >= 901) {
 } else if (Pfd_60 == 107558856528741996791037612619) {
    $('#Pf_60').html('彗星 - ✾取得済✾');
 }
-if (te_wave_fi >= 1) {
+
+// EF210
+
+if (te_wave_s >= 1) {
    $('#Pf_61').html('EF210 - ✾取得済✾');
    Pfd_61 = 107558856528741996791037612619;
    $.cookie('Pfd_61', Pfd_61, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 } else if (Pfd_61 == 107558856528741996791037612619) {
    $('#Pf_61').html('EF210 - ✾取得済✾');
 }
-if (te_wave_fi >= 3) {
+if (te_wave_s >= 3) {
    $('#Pf_62').html('桃太郎 - ✾取得済✾');
    Pfd_62 = 107558856528741996791037612619;
    $.cookie('Pfd_62', Pfd_62, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 } else if (Pfd_62 == 107558856528741996791037612619) {
    $('#Pf_62').html('桃太郎 - ✾取得済✾');
 }
-if (te_wave_fi >= 106) {
+if (te_wave_s >= 106) {
    $('#Pf_63').html('スーパーライナー - ✾取得済✾');
    Pfd_63 = 107558856528741996791037612619;
    $.cookie('Pfd_63', Pfd_63, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 } else if (Pfd_63 == 107558856528741996791037612619) {
    $('#Pf_63').html('スーパーライナー - ✾取得済✾');
 }
-if (te_wave_fi >= 300) {
+if (te_wave_s >= 300) {
    $('#Pf_64').html('ECO-POWER - ✾取得済✾');
    Pfd_64 = 107558856528741996791037612619;
    $.cookie('Pfd_64', Pfd_64, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 } else if (Pfd_64 == 107558856528741996791037612619) {
    $('#Pf_64').html('ECO-POWER - ✾取得済✾');
 }
-if (te_wave_fi >= 901) {
+if (te_wave_s >= 901) {
    $('#Pf_65').html('慈愛の光 - ✾取得済✾');
    Pfd_65 = 107558856528741996791037612619;
    $.cookie('Pfd_65', Pfd_65, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
