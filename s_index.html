@@ -530,6 +530,10 @@ hr {
 <br> </br>
 <hr>
 <br> </br>
+<h3><div id="Pf_0">利用規約の確認 - 未取得</div></h3>
+<p>利用規約を確認しよう。</p>
+<hr>
+<br> </br>
 <h3><div id="Pf_1">始発 - 未取得</div></h3>
 <p>孤島、夕方のピクニック をクリアする。</p>
 <hr>
@@ -653,6 +657,7 @@ hr {
 <script src="System/jquery.js"></script>
 <script src="System/cookie.js"></script>
 <script>
+let terms = 0;
 let o_wave = 0;
 let o_wave_t = 0;
 let o_wave_th = 0;
@@ -701,6 +706,7 @@ let te_wave_f = 0;
 let te_wave_fi = 0;
 let te_wave_s = 0;
 let z_wave = 0;
+terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
 o_wave_th = $.cookie('o_wave_th');
@@ -840,6 +846,9 @@ $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.git
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $('#Data_Warn').html(' ');
+if (terms >= 394082443474295) {
+   $('#Pf_0').html('利用規約の確認 - ✾取得済✾');
+}
 if (o_wave_fi >= 1) {
    if (o_wave_s >= 1) {
       $('#Pf_1').html('始発 - ✾取得済✾');
