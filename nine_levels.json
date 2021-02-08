@@ -5,7 +5,7 @@
     "ball": "0xFF6400",
     "mat": "0xFF0700",
     "bouncer": "0x000000",
-    "obstacle": "0x0081FF",
+    "obstacle": "0xA3A146",
     "data":
     [
       [0, 1, 1, 1, 0],
@@ -1996,8 +1996,8 @@
     "background": "0x4bedf8",
     "ball": "0xfc6c38",
     "mat": "0x0171bb",
-    "bouncer": "0xf9e46d",
-    "obstacle": "0xA3A146",
+    "bouncer": "0xF5B800",
+    "obstacle": "0xFF4A9A",
     "data":
     [
       [1, 1, 1, 1, 1],
