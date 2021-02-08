@@ -3,9 +3,9 @@
     "author": "Fell Gate",
     "background": "0x98FFEF",
     "ball": "0xFF6400",
-    "mat": "0xD11900",
+    "mat": "0xFF0700",
     "bouncer": "0x000000",
-    "obstacle": "0x581900",
+    "obstacle": "0x0081FF",
     "data":
     [
       [0, 1, 1, 1, 0],
@@ -755,9 +755,9 @@
     "author": "True Fell Gate",
     "background": "0x98FFEF",
     "ball": "0xFF6400",
-    "mat": "0x3CE8FF",
+    "mat": "0x006DFF",
     "bouncer": "0x00AEFF",
-    "obstacle": "0xABE8FF",
+    "obstacle": "0x00C067",
     "data":
     [
       [0, 1, 1, 1, 0],
