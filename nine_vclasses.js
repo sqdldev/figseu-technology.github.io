@@ -348,11 +348,11 @@ class Obstacle {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.x >= this.mesh.position.x - 0.3 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.3 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.3 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.3 &&
+      ball.mesh.position.z <= 0.3 &&
       ball.mesh.position.y < this.mesh.position.y + 0.4
     ) return true;
   }
@@ -725,11 +725,11 @@ class Highobstacle {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.x >= this.mesh.position.x - 0.3 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.3 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.3 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.3 &&
+      ball.mesh.position.z <= 0.3 &&
       ball.mesh.position.y < this.mesh.position.y + 2
     ) return true;
   }
@@ -752,11 +752,11 @@ class Tower {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.x >= this.mesh.position.x - 0.3 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.3 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.3 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.3 &&
+      ball.mesh.position.z <= 0.3 &&
       ball.mesh.position.y < this.mesh.position.y + 3
     ) return true;
   }
@@ -780,11 +780,11 @@ class Upobstacle {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.x >= this.mesh.position.x - 0.3 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.3 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.3 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.3 &&
+      ball.mesh.position.z <= 0.3 &&
       ball.mesh.position.y < this.mesh.position.y + 2
     ) return true;
   }
