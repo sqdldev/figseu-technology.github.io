@@ -1,7 +1,7 @@
 [
   {
     "author": "Fell Gate",
-    "background": "0x98FFEF",
+    "background": "0x291E1E",
     "ball": "0xFF6400",
     "mat": "0xFF0700",
     "bouncer": "0x000000",
@@ -755,7 +755,7 @@
     "author": "True Fell Gate",
     "background": "0x98FFEF",
     "ball": "0xFF6400",
-    "mat": "0x006DFF",
+    "mat": "0x6DACFF",
     "bouncer": "0x00AEFF",
     "obstacle": "0x00C067",
     "data":
@@ -1997,7 +1997,7 @@
     "ball": "0xfc6c38",
     "mat": "0x0171bb",
     "bouncer": "0xf9e46d",
-    "obstacle": "0xe0c8f8",
+    "obstacle": "0xA3A146",
     "data":
     [
       [1, 1, 1, 1, 1],
@@ -2683,9 +2683,9 @@
     "author": "True Days",
     "background": "0xb41207",
     "ball": "0x5095b6",
-    "mat": "0x8b2e29",
+    "mat": "0xDF5D00",
     "bouncer": "0x081a8f",
-    "obstacle": "0x64523f",
+    "obstacle": "0x8A893B",
     "data":
     [
       [4, 20, 1, 20, 4],
