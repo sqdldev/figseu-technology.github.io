@@ -127,6 +127,7 @@ let Pfd_77 = 0;
 let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
+function Performance_Data() {
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
@@ -966,6 +967,7 @@ if (z_wave >= 1000) {
 
 $('#Data_Warn').html(' ');
 return false;
+}
 
 function Top() {
    $('body, html').animate({ scrollTop: 0 }, 500);
