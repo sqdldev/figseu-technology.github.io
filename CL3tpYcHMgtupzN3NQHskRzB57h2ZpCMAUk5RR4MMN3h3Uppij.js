@@ -965,6 +965,8 @@ if (z_wave >= 1000) {
 }
 
 $('#Data_Warn').html(' ');
+return false;
+
 function Top() {
    $('body, html').animate({ scrollTop: 0 }, 500);
    return false;
