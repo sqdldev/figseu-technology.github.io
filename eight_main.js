@@ -74,8 +74,6 @@ function start(e) {
     $('#name').hide();
     $('#jump').get(0).play('muted', true);
     $('#gem').get(0).play('muted', true);
-    $('#jump').pause();
-    $('#gem').pause();
      if (typeof wave == 'undefined') {
         wave = 0;
         $.cookie('e_wave', wave, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
