@@ -56,6 +56,18 @@ function start(e) {
     $('#jump').get(0).play();
     $('#gem').get(0).play();
     $('#crown').get(0).play();
+    $('#jump').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
+    $('#gem').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
+    $('#crown').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
     if (typeof wave == 'undefined') {
         wave = 0;
         $.cookie('z_wave', wave, { expires: 40, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
