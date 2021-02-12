@@ -58,6 +58,8 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
+    $('#jump').get(0).play();
+    $('#gem').get(0).play();
     if (typeof wave == 'undefined') {
         wave = 0;
         $.cookie('t_wave', wave, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
