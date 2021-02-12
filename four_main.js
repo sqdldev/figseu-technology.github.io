@@ -60,6 +60,9 @@ function start(e) {
     camera.rotation.y = 0;
     $('#main').fadeOut(300);
     $('#name').hide();
+    $('#jump').get(0).play();
+    $('#gem').get(0).play();
+    $('#speedup').get(0).play();
     if (typeof wave == 'undefined') {
         wave = 0;
         $.cookie('f_wave', wave, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
