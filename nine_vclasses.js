@@ -141,7 +141,7 @@ class Ball {
                   this.pause(); // Stop playing
                   this.currentTime = 0; // Reset time
             });
-            $('#jump').get(0).play('muted', false);
+            $('#jump').get(0).play();
           }
         }
       });
@@ -156,7 +156,7 @@ class Ball {
                   this.pause(); // Stop playing
                   this.currentTime = 0; // Reset time
             });
-            $('#jump').get(0).play('muted', false);
+            $('#jump').get(0).play();
           }
         }
       });
@@ -169,7 +169,7 @@ class Ball {
                   this.pause(); // Stop playing
                   this.currentTime = 0; // Reset time
             });
-            $('#crown').get(0).play('muted', false);
+            $('#crown').get(0).play();
           }
         }
       });
@@ -182,7 +182,7 @@ class Ball {
                   this.pause(); // Stop playing
                   this.currentTime = 0; // Reset time
             });
-            $('#gem').get(0).play('muted', false);
+            $('#gem').get(0).play();
           }
         }
       });
