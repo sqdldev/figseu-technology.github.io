@@ -60,6 +60,14 @@ function start(e) {
     $('#name').hide();
     $('#jump').get(0).play();
     $('#gem').get(0).play();
+    $('#jump').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
+    $('#gem').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
     if (typeof wave == 'undefined') {
         wave = 0;
         $.cookie('t_wave', wave, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
