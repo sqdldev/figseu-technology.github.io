@@ -205,6 +205,11 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Speedup && this.landed) {
           if (v.detect() && started) {
+             $('#speedup').each(function(){
+                  this.pause(); // Stop playing
+                  this.currentTime = 0; // Reset time
+             });
+             $('#speedup').get(0).play();
           }
         }
       });
@@ -217,7 +222,11 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Hole && this.landed) {
           if (v.detect() && started) {
-             
+             $('#speedup').each(function(){
+                  this.pause(); // Stop playing
+                  this.currentTime = 0; // Reset time
+             });
+             $('#speedup').get(0).play();
           }
         }
       });
