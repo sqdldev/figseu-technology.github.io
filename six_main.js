@@ -59,6 +59,7 @@ function start(e) {
     $('#jump').get(0).play();
     $('#gem').get(0).play();
     $('#speedup').get(0).play();
+    $('#speeddown').get(0).play();
     $('#jump').each(function(){
        this.pause(); // Stop playing
        this.currentTime = 0; // Reset time
@@ -68,6 +69,10 @@ function start(e) {
        this.currentTime = 0; // Reset time
     });
     $('#speedup').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
+    $('#speeddown').each(function(){
        this.pause(); // Stop playing
        this.currentTime = 0; // Reset time
     });
