@@ -251,6 +251,11 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Back && this.landed) {
           if (v.detect() && started) {
+             $('#speeddown').each(function(){
+                  this.pause(); // Stop playing
+                  this.currentTime = 0; // Reset time
+             });
+             $('#speeddown').get(0).play();
           }
         }
       });
