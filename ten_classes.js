@@ -47,7 +47,7 @@ class Ball {
                   this.pause(); // Stop playing
                   this.currentTime = 0; // Reset time
             });
-            $('#jump').get(0).play();
+            $('#jump').get(0).play('muted', false);
           }
         }
       });
@@ -60,7 +60,7 @@ class Ball {
                   this.pause(); // Stop playing
                   this.currentTime = 0; // Reset time
             });
-            $('#crown').get(0).play();
+            $('#crown').get(0).play('muted', false);
           }
         }
       });
@@ -73,7 +73,7 @@ class Ball {
                   this.pause(); // Stop playing
                   this.currentTime = 0; // Reset time
             });
-            $('#gem').get(0).play();
+            $('#gem').get(0).play('muted', false);
           }
         }
       });
