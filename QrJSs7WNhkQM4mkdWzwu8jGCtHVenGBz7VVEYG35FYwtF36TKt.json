@@ -1823,11 +1823,11 @@
   },
    {
     "author": "Fell Empire",
-    "background": "0xAFAFAF",
+    "background": "0x291E1E",
     "ball": "0xFF6400",
-    "mat": "0xD11900",
+    "mat": "0xFF0700",
     "bouncer": "0x000000",
-    "obstacle": "0x581900",
+    "obstacle": "0xA3A146",
     "data":
     [
       [1, 1, 1, 1, 1],
