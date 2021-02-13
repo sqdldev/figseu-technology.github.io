@@ -756,7 +756,7 @@
     "background": "0x98FFEF",
     "ball": "0xFF6400",
     "mat": "0x6DACFF",
-    "bouncer": "0x00AEFF",
+    "bouncer": "0x008ACA",
     "obstacle": "0x00C067",
     "data":
     [
@@ -1997,7 +1997,7 @@
     "ball": "0xfc6c38",
     "mat": "0x0171bb",
     "bouncer": "0xF5B800",
-    "obstacle": "0xFF4A9A",
+    "obstacle": "0xFFCAE6",
     "data":
     [
       [1, 1, 1, 1, 1],
@@ -2685,7 +2685,7 @@
     "ball": "0x5095b6",
     "mat": "0xDF5D00",
     "bouncer": "0x081a8f",
-    "obstacle": "0x8A893B",
+    "obstacle": "0xFFDC62",
     "data":
     [
       [4, 20, 1, 20, 4],
