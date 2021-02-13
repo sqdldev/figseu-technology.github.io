@@ -99,6 +99,10 @@ img {
 
 <p>当運営は緊急時を除き、上記以外のお客様のデータを閲覧、開示 することは一切ありません。</p>
 
+<h2 align="center">-----------使用中のブラウザ-----------</h2>
+
+<p><div id="browsers">⌥⌥⌥データ取得中⌥⌥⌥</div></p>
+
 <h2 align="center">---------------操作方法--------------</h2>
 
 <div align="center"><img src="img/INFO.png"></img></div>
@@ -127,6 +131,23 @@ img {
 <script src="System/cookie.js"></script>
 <script>
 let terms = 394082443474295;
+let userAgent = window.navigator.userAgent.toLowerCase();
+if(userAgent.indexOf('msie') != -1 ||
+        userAgent.indexOf('trident') != -1) {
+    $('#browsers').html('標準搭載ブラウザ');
+} else if(userAgent.indexOf('edge') != -1) {
+    $('#browsers').html('Microsoft Edge (対応済)');
+} else if(userAgent.indexOf('chrome (対応済)') != -1) {
+    $('#browsers').html('Chrome');
+} else if(userAgent.indexOf('safari') != -1) {
+    $('#browsers').html('Safari');
+} else if(userAgent.indexOf('firefox') != -1) {
+    $('#browsers').html('FireFox');
+} else if(userAgent.indexOf('opera') != -1) {
+    $('#browsers').html('Opera');
+} else {
+    $('#browsers').html('不明なブラウザ');
+}
 $.cookie('terms', terms, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 function BGM() {
 	$('#bgm').get(0).play();
