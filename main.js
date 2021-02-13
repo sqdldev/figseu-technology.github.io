@@ -24,6 +24,7 @@ let wave_th = 0;
 let wave_f = 0;
 let wave_fi = 0;
 let wave_s = 0;
+let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('o_wave');
 wave_t = $.cookie('o_wave_t');
 wave_th = $.cookie('o_wave_th');
@@ -37,19 +38,22 @@ let reqId;
 $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
   data = d;
   loadLevel(level);
-  $('#play').show();
-  $('#play').click(start);
-  $('#next').show();
-  $('#score').hide();
-  $('#level-d').html('チュートリアルステージ');
-  $('#level').html('Rolling Sky');
-  $('#stars').html('☆');
-  $('#Waves').html('☆ × ' + $.cookie('o_wave'));
   if (userAgent.indexOf('safari') != -1) {
      $('#play').hide();
      $('#next').hide();
+     $('#score').hide();
      $('#level-d').html('E R R O R !');
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html(' ');
+  } else {
+     $('#play').show();
+     $('#play').click(start);
+     $('#next').show();
+     $('#score').hide();
+     $('#level-d').html('チュートリアルステージ');
+     $('#level').html('Rolling Sky');
+     $('#stars').html('☆');
+     $('#Waves').html('☆ × ' + $.cookie('o_wave'));
   }
   reqId = requestAnimationFrame(render);
   console.clear();
