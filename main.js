@@ -56,7 +56,7 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
      $('#score').hide();
      $('#level-d').html('E R R O R !');
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
-     $('#stars').html(' ');
+     $('#stars').html('ERROR 000');
   } else if (userAgent.indexOf('edge') != -1) {
      $('#level-d').html('⌥⌥データ取得中⌥⌥');
   } else if (userAgent.indexOf("ucbrowser") !== -1) {
@@ -65,38 +65,34 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
      $('#score').hide();
      $('#level-d').html('E R R O R !');
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
-     $('#stars').html(' ');
+     $('#stars').html('ERROR 404');
   } else if(userAgent.indexOf('chrome') != -1) {
      $('#level-d').html('⌥データ取得中⌥');
   } else if(userAgent.indexOf('safari') != -1) {
-     $('#play').hide();
-     $('#next').hide();
-     $('#score').hide();
-     $('#level-d').html('E R R O R !');
-     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
-     $('#stars').html(' ');
+     $('#level-d').html('⌥データ取得中⌥');
   } else if(userAgent.indexOf('firefox') != -1) {
      $('#play').hide();
      $('#next').hide();
      $('#score').hide();
      $('#level-d').html('E R R O R !');
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
-     $('#stars').html(' ');
+     $('#stars').html('ERROR 810');
   } else if(userAgent.indexOf('opera') != -1) {
      $('#play').hide();
      $('#next').hide();
      $('#score').hide();
      $('#level-d').html('E R R O R !');
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
-     $('#stars').html(' ');
+     $('#stars').html('ERROR 721');
   } else {
      $('#play').hide();
      $('#next').hide();
      $('#score').hide();
      $('#level-d').html('E R R O R !');
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
-     $('#stars').html(' ');
+     $('#stars').html('ERROR 666');
   }
+  
   $('#cloud').get(0);
   $('#sta').get(0);
   $('#cst').get(0);
@@ -119,10 +115,19 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
-    $('#jump').get(0).play();
-    $('#gem').get(0).play();
-    $('#speedup').get(0).play();
-    $('#speeddown').get(0).play();
+    if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
+       $('#jump').get(0).play();
+       $('#gem').get(0).play();
+       $('#speedup').get(0).play();
+       $('#speeddown').get(0).play();
+    } else if (userAgent.indexOf('chrome') != -1) {
+       $('#jump').get(0).play();
+       $('#gem').get(0).play();
+       $('#speedup').get(0).play();
+       $('#speeddown').get(0).play();
+    } else if(userAgent.indexOf('safari') != -1) {
+       
+    }
     $('#jump').each(function(){
        this.pause(); // Stop playing
        this.currentTime = 0; // Reset time
