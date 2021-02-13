@@ -99,7 +99,7 @@ img {
 
 <p>当運営は緊急時を除き、上記以外のお客様のデータを閲覧、開示 することは一切ありません。</p>
 
-<h2 align="center">-----------使用中のブラウザ-----------</h2>
+<h2 align="center">-----------使用中のアプリ-----------</h2>
 
 <p><div id="browsers">⌥⌥⌥データ取得中⌥⌥⌥</div></p>
 
@@ -135,6 +135,8 @@ let userAgent = window.navigator.userAgent.toLowerCase();
 if(userAgent.indexOf('msie') != -1 ||
         userAgent.indexOf('trident') != -1) {
     $('#browsers').html('標準搭載ブラウザ');
+} else if(userAgent.indexOf('rollingskyevolution') != -1) {
+    $('#browsers').html('Rolling Sky Evolution (対応済)');
 } else if(userAgent.indexOf('edge') != -1) {
     $('#browsers').html('Microsoft Edge (対応済)');
 } else if(userAgent.indexOf('chrome') != -1) {
