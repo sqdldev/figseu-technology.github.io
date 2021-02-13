@@ -99,7 +99,7 @@ img {
 
 <p>当運営は緊急時を除き、上記以外のお客様のデータを閲覧、開示 することは一切ありません。</p>
 
-<h2 align="center">-----------使用中のアプリ-----------</h2>
+<h2 align="center">-----------アプリの対応状況-----------</h2>
 
 <p align="center"><div id="browsers">⌥⌥⌥データ取得中⌥⌥⌥</div></p>
 
@@ -136,21 +136,21 @@ let terms = 394082443474295;
 let userAgent = window.navigator.userAgent.toLowerCase();
 if(userAgent.indexOf('msie') != -1 ||
         userAgent.indexOf('trident') != -1) {
-    $('#browsers').html('標準搭載ブラウザ');
+    $('#browsers').html('お使いのアプリは対応していません');
 } else if(userAgent.indexOf('rollingskyevolution') != -1) {
-    $('#browsers').html('Rolling Sky Evolution (対応済)');
+    $('#browsers').html('お使いのアプリは対応済です');
 } else if(userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
-    $('#browsers').html('Microsoft Edge (対応済)');
+    $('#browsers').html('お使いのアプリは対応済です');
 } else if(userAgent.indexOf('chrome') != -1) {
-    $('#browsers').html('Chrome (対応済)');
+    $('#browsers').html('お使いのアプリは対応済です');
 } else if(userAgent.indexOf('safari') != -1) {
-    $('#browsers').html('Safari (対応中)');
+    $('#browsers').html('お使いのアプリは対応していません');
 } else if(userAgent.indexOf('firefox') != -1) {
-    $('#browsers').html('FireFox');
+    $('#browsers').html('お使いのアプリは対応していません');
 } else if(userAgent.indexOf('opera') != -1) {
-    $('#browsers').html('Opera');
+    $('#browsers').html('お使いのアプリは対応していません');
 } else {
-    $('#browsers').html('不明なブラウザ');
+    $('#browsers').html('エラーが発生しました');
 }
 $.cookie('terms', terms, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 terms = $.cookie('terms');
