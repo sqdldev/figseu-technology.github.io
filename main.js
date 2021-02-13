@@ -59,6 +59,13 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
      $('#stars').html(' ');
   } else if (userAgent.indexOf('edge') != -1) {
      
+  } else if (ua.indexOf("ucbrowser") !== -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html(' ');
   } else if(userAgent.indexOf('chrome') != -1) {
      
   } else if(userAgent.indexOf('safari') != -1) {
@@ -69,6 +76,20 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html(' ');
   } else if(userAgent.indexOf('firefox') != -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html(' ');
+  } else if(userAgent.indexOf('opera') != -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html(' ');
+  } else {
      $('#play').hide();
      $('#next').hide();
      $('#score').hide();
