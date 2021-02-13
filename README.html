@@ -101,7 +101,9 @@ img {
 
 <h2 align="center">-----------使用中のアプリ-----------</h2>
 
-<p><div id="browsers">⌥⌥⌥データ取得中⌥⌥⌥</div></p>
+<p align="center"><div id="browsers">⌥⌥⌥データ取得中⌥⌥⌥</div></p>
+
+<p align="center"><div id="ck">⌥⌥⌥データ取得中⌥⌥⌥</div></p>
 
 <h2 align="center">---------------操作方法--------------</h2>
 
@@ -151,6 +153,12 @@ if(userAgent.indexOf('msie') != -1 ||
     $('#browsers').html('不明なブラウザ');
 }
 $.cookie('terms', terms, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+terms = $.cookie('terms');
+if (terms >= 394082443474295) {
+   $('#ck').html(' ');
+} else {
+   $('#ck').html('⚠️Cookieが無効になっています⚠️');
+}
 function BGM() {
 	$('#bgm').get(0).play();
 }
