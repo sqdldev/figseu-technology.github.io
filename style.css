@@ -32,7 +32,7 @@ h3 {
   text-decoration: none;
   position: fixed;
   background-color: rgba(0,0,0,0);
-  font-family: sans-serif,serif;
+  font-family: serif;
   font-weight: 700; 
   font-size: 240%;
   border-radius: 5px;
@@ -344,7 +344,7 @@ canvas {
   top: 35%;
   left: 0;
   width: 100%;
-  font-family: sans-serif,serif;
+  font-family: serif;
   font-weight: 700;
   font-size: 50px;
   text-align: center;
@@ -380,7 +380,7 @@ canvas {
   border-radius: 20px;
   text-align: right;
   display: inline-block;
-  font-family: sans-serif,serif;
+  font-family: serif;
   font-weight: 700;
   font-size: 20px;
   transform: 0.5em;
