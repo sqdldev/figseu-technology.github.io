@@ -3998,12 +3998,12 @@
     ]
   },
   {
-    "author": "Stay Alive",
-    "background": "0x000000",
-    "ball": "0x00eaff",
-    "mat": "0xbbaa85",
-    "bouncer": "0x282106ff",
-    "obstacle": "0xd6e95e",
+    "author": "YAMATO",
+    "background": "0x98FFEF",
+    "ball": "0xFF6400",
+    "mat": "0x6DACFF",
+    "bouncer": "0x008ACA",
+    "obstacle": "0x00C067",
     "data":
     [
       [0, 1, 1, 1, 0],
