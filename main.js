@@ -42,10 +42,13 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  $('#level-d').html('チュートリアルステージ');
+  $('#level-d').html('⌥⌥⌥データ取得中⌥⌥⌥');
   $('#level').html('Rolling Sky');
   $('#stars').html('☆');
   $('#Waves').html('☆ × ' + $.cookie('o_wave'));
+
+  // ブラウザ判定
+
   if(userAgent.indexOf('msie') != -1 ||
      userAgent.indexOf('trident') != -1) {
      $('#play').hide();
@@ -73,6 +76,13 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html(' ');
   }
+  $('#cloud').get(0);
+  $('#sta').get(0);
+  $('#cst').get(0);
+  $('#dtw').get(0);
+  $('#kt').get(0);
+  $('#pknk').get(0);
+  $('#level-d').html('チュートリアルステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
