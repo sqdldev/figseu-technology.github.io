@@ -45,6 +45,12 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
   $('#level').html('Rolling Sky');
   $('#stars').html('☆');
   $('#Waves').html('☆ × ' + $.cookie('o_wave'));
+  if (userAgent.indexOf('safari') != -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+  }
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
