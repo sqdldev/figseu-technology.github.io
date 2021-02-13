@@ -58,7 +58,7 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html(' ');
   } else if (userAgent.indexOf('edge') != -1) {
-     
+     $('#level-d').html('⌥⌥データ取得中⌥⌥');
   } else if (userAgent.indexOf("ucbrowser") !== -1) {
      $('#play').hide();
      $('#next').hide();
@@ -67,7 +67,7 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html(' ');
   } else if(userAgent.indexOf('chrome') != -1) {
-     
+     $('#level-d').html('⌥データ取得中⌥');
   } else if(userAgent.indexOf('safari') != -1) {
      $('#play').hide();
      $('#next').hide();
