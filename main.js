@@ -59,7 +59,7 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
      $('#stars').html(' ');
   } else if (userAgent.indexOf('edge') != -1) {
      
-  } else if (ua.indexOf("ucbrowser") !== -1) {
+  } else if (userAgent.indexOf("ucbrowser") !== -1) {
      $('#play').hide();
      $('#next').hide();
      $('#score').hide();
