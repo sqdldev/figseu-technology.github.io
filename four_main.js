@@ -24,6 +24,7 @@ let wave_th = 0;
 let wave_f = 0;
 let wave_fi = 0;
 let wave_s = 0;
+let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('f_wave');
 wave_t = $.cookie('f_wave_t');
 wave_th = $.cookie('f_wave_th');
