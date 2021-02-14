@@ -85,6 +85,7 @@ $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
      $('#stars').html('ERROR 666');
   }
 
+  $('#level-d').html('Extra ステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
