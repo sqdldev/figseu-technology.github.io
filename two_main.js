@@ -55,7 +55,7 @@ $.getJSON('two_levels.json', d => {
      $('#level-d').html('E R R O R !');
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html('ERROR 000');
-  } else if (userAgent.indexOf('edge') != -1) {
+  } else if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
      $('#level-d').html('⌥⌥データ取得中⌥⌥');
   } else if (userAgent.indexOf("ucbrowser") !== -1) {
      $('#play').hide();
