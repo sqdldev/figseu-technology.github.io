@@ -91,6 +91,7 @@ $.getJSON('two_levels.json', d => {
      $('#stars').html('ERROR 666');
   }
 
+  $('#level-d').html('ボーナス ステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
