@@ -85,12 +85,7 @@ $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCyb
   } else if(userAgent.indexOf('firefox') != -1) {
      $('#level-d').html('⌥データ取得中⌥');
   } else if(userAgent.indexOf('opera') != -1) {
-     $('#play').hide();
-     $('#next').hide();
-     $('#score').hide();
-     $('#level-d').html('E R R O R !');
-     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
-     $('#stars').html('ERROR 721');
+     $('#level-d').html('⌥データ取得中⌥');
   } else {
      $('#play').hide();
      $('#next').hide();
@@ -124,6 +119,9 @@ function start(e) {
     } else if (userAgent.indexOf('safari') != -1) {
 
     } else if(userAgent.indexOf('firefox') != -1) {
+    $('#jump').get(0).play();
+    $('#gem').get(0).play();
+    } else if(userAgent.indexOf('opera') != -1) {
     $('#jump').get(0).play();
     $('#gem').get(0).play();
     }
