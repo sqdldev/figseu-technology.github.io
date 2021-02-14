@@ -91,7 +91,9 @@ img {
 
 <p>1. 連続クリアの回数</p>
 
-<p>2. お客様の利用履歴</p>
+<p>2. お客様の本サービスにおける利用履歴</p>
+
+<p>3. 使用中のアプリと端末</p>
 
 <p>本サービスが更新された時、ブラウザ版をご使用のお客様のデータが一部破棄される可能性があります。</p>
 
@@ -132,7 +134,7 @@ img {
 <script src="System/jquery.js"></script>
 <script src="System/cookie.js"></script>
 <script>
-let terms = 394082443474295;
+let terms = 900464125724578;
 let userAgent = window.navigator.userAgent.toLowerCase();
 if(userAgent.indexOf('msie') != -1 ||
         userAgent.indexOf('trident') != -1) {
@@ -154,7 +156,7 @@ if(userAgent.indexOf('msie') != -1 ||
 }
 $.cookie('terms', terms, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 terms = $.cookie('terms');
-if (terms >= 394082443474295) {
+if (terms >= 900464125724578) {
    $('#ck').html(' ');
 } else {
    $('#ck').html('⚠️Cookieが無効になっています⚠️');
