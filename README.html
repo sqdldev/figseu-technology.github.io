@@ -138,21 +138,21 @@ let terms = 900464125724578;
 let userAgent = window.navigator.userAgent.toLowerCase();
 if(userAgent.indexOf('msie') != -1 ||
         userAgent.indexOf('trident') != -1) {
-    $('#browsers').html('お使いのアプリは対応していません');
+    $('#browsers').html('お使いのアプリは対応していません CODE 001');
 } else if(userAgent.indexOf('rollingskyevolution') != -1) {
-    $('#browsers').html('お使いのアプリは対応済です');
+    $('#browsers').html('お使いのアプリは対応済です - CODE 000');
 } else if(userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
-    $('#browsers').html('お使いのアプリは対応済です');
+    $('#browsers').html('お使いのアプリは対応済です - CODE 470');
 } else if(userAgent.indexOf('chrome') != -1) {
-    $('#browsers').html('お使いのアプリは対応済です');
+    $('#browsers').html('お使いのアプリは対応済です - CODE 321');
 } else if(userAgent.indexOf('safari') != -1) {
-    $('#browsers').html('機種によっては動作が不安定な可能性があります');
+    $('#browsers').html('機種によっては動作が不安定な可能性があります - CODE 221');
 } else if(userAgent.indexOf('firefox') != -1) {
-    $('#browsers').html('お使いのアプリは対応していません');
+    $('#browsers').html('お使いのアプリは一部のみ対応しています - CODE 810');
 } else if(userAgent.indexOf('opera') != -1) {
-    $('#browsers').html('お使いのアプリは対応していません');
+    $('#browsers').html('お使いのアプリは対応していません - CODE 721');
 } else {
-    $('#browsers').html('エラーが発生しました');
+    $('#browsers').html('エラーが発生しました - CODE 404');
 }
 $.cookie('terms', terms, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 terms = $.cookie('terms');
