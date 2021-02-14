@@ -95,6 +95,7 @@ $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCyb
      $('#stars').html('ERROR 666');
   }
 
+  $('#level-d').html('ボーナス ステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -312,22 +313,22 @@ function prevLevel() {
     $('#prev').hide();
   }
   if (level == 1) {
-      $('#level-d').html('ボーナスステージ');
+      $('#level-d').html('ボーナス ステージ');
       $('#level').html('Maison');
       $('#stars').html('☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('e_wave'));
      } else if (level == 2) {
-         $('#level-d').html('ボーナスステージ');
+         $('#level-d').html('ボーナス ステージ');
          $('#level').html('輪廻転生');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_t'));
         } else if (level == 3) {
-         $('#level-d').html('ボーナスステージ');
+         $('#level-d').html('ボーナス ステージ');
          $('#level').html('雷光の姫君');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_th'));
         } else if (level == 4) {
-         $('#level-d').html('ボーナスステージ');
+         $('#level-d').html('ボーナス ステージ');
          $('#level').html('The Eden');
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_f'));
