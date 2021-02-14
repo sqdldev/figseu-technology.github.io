@@ -43,6 +43,54 @@ $.getJSON('four_levels.json', d => {
   $('#level').html('Bluestone Alley');
   $('#stars').html('☆☆☆☆');
   $('#Waves').html('☆ × ' + $.cookie('f_wave'));
+
+  // ブラウザ判定
+
+  if(userAgent.indexOf('msie') != -1 ||
+     userAgent.indexOf('trident') != -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html('ERROR 000');
+  } else if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
+     $('#level-d').html('⌥⌥データ取得中⌥⌥');
+  } else if (userAgent.indexOf("ucbrowser") !== -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html('ERROR 404');
+  } else if(userAgent.indexOf('chrome') != -1) {
+     $('#level-d').html('⌥データ取得中⌥');
+  } else if(userAgent.indexOf('safari') != -1) {
+     $('#level-d').html('⌥データ取得中⌥');
+  } else if(userAgent.indexOf('firefox') != -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html('ERROR 810');
+  } else if(userAgent.indexOf('opera') != -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html('ERROR 721');
+  } else {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html('ERROR 666');
+  }
+  
+  $('#level-d').html('ボーナスステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -60,6 +108,28 @@ function start(e) {
     camera.rotation.y = 0;
     $('#main').fadeOut(300);
     $('#name').hide();
+    if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
+       $('#jump').get(0).play();
+       $('#gem').get(0).play();
+       $('#speedup').get(0).play();
+       $('#speeddown').get(0).play();
+       $('#jump').each(function(){
+          this.pause(); // Stop playing
+          this.currentTime = 0; // Reset time
+       });
+       $('#gem').each(function(){
+          this.pause(); // Stop playing
+          this.currentTime = 0; // Reset time
+       });
+       $('#speedup').each(function(){
+          this.pause(); // Stop playing
+          this.currentTime = 0; // Reset time
+       });
+       $('#speeddown').each(function(){
+          this.pause(); // Stop playing
+          this.currentTime = 0; // Reset time
+       });
+    } else if (userAgent.indexOf('chrome') != -1) {
     $('#jump').get(0).play();
     $('#gem').get(0).play();
     $('#speedup').get(0).play();
@@ -80,6 +150,9 @@ function start(e) {
        this.pause(); // Stop playing
        this.currentTime = 0; // Reset time
     });
+    } else if(userAgent.indexOf('safari') != -1) {
+       
+    }
     if (typeof wave == 'undefined') {
         wave = 0;
         $.cookie('f_wave', wave, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
