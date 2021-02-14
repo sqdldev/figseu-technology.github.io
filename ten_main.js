@@ -38,6 +38,7 @@ let gya = Math.floor( Math.random() * 11 );let url = location.href;let fgnc = ur
      $('#stars').html('ERROR 666');
   }
 
+$('#level-d').html('超難関');
 reqId = requestAnimationFrame(render);console.clear();console.log("超高難度 - The Ruby　血祭りの時間だ");});
 
 //start function
