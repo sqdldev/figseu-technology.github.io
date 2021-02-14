@@ -25,6 +25,7 @@ let wave_f = 0;
 let wave_fi = 0;
 let wave_s = 0;
 let wave_se = 0;
+let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('e_wave');
 wave_t = $.cookie('e_wave_t');
 wave_th = $.cookie('e_wave_th');
@@ -57,6 +58,48 @@ $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCyb
   $('#level').html('Maison');
   $('#stars').html('☆☆☆☆☆☆☆☆');
   $('#Waves').html('☆ × ' + $.cookie('e_wave'));
+
+  // ブラウザ判定
+
+  if(userAgent.indexOf('msie') != -1 ||
+     userAgent.indexOf('trident') != -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html('ERROR 000');
+  } else if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
+     $('#level-d').html('⌥⌥データ取得中⌥⌥');
+  } else if (userAgent.indexOf("ucbrowser") !== -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html('ERROR 404');
+  } else if(userAgent.indexOf('chrome') != -1) {
+     $('#level-d').html('⌥データ取得中⌥');
+  } else if(userAgent.indexOf('safari') != -1) {
+     $('#level-d').html('⌥データ取得中⌥');
+  } else if(userAgent.indexOf('firefox') != -1) {
+     $('#level-d').html('⌥データ取得中⌥');
+  } else if(userAgent.indexOf('opera') != -1) {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html('ERROR 721');
+  } else {
+     $('#play').hide();
+     $('#next').hide();
+     $('#score').hide();
+     $('#level-d').html('E R R O R !');
+     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
+     $('#stars').html('ERROR 666');
+  }
+
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -72,8 +115,18 @@ function start(e) {
     ball.speed.z = -0.15;
     $('#main').fadeOut(300);
     $('#name').hide();
+    if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
     $('#jump').get(0).play();
     $('#gem').get(0).play();
+    } else if (userAgent.indexOf('chrome') != -1) {
+    $('#jump').get(0).play();
+    $('#gem').get(0).play();
+    } else if (userAgent.indexOf('safari') != -1) {
+
+    } else if(userAgent.indexOf('firefox') != -1) {
+    $('#jump').get(0).play();
+    $('#gem').get(0).play();
+    }
     $('#jump').each(function(){
        this.pause(); // Stop playing
        this.currentTime = 0; // Reset time
