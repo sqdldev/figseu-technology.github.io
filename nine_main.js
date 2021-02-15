@@ -44,7 +44,6 @@ $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
   $('#play').click(start);
   $('#next').show();
   $('#score').hide();
-  $('#level-d').html('Extra ステージ');
   $('#level').html('Fell Gate');
   $('#stars').html('☆☆☆☆☆☆☆☆☆');
   $('#Waves').html('☆ × ' + $.cookie('n_wave'));
@@ -60,7 +59,7 @@ $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html('ERROR 000');
   } else if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
-     $('#level-d').html('⌥⌥データ取得中⌥⌥');
+     
   } else if (userAgent.indexOf("ucbrowser") !== -1) {
      $('#play').hide();
      $('#next').hide();
@@ -69,13 +68,13 @@ $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html('ERROR 404');
   } else if(userAgent.indexOf('chrome') != -1) {
-     $('#level-d').html('⌥データ取得中⌥');
+     
   } else if(userAgent.indexOf('safari') != -1) {
-     $('#level-d').html('⌥データ取得中⌥');
+     
   } else if(userAgent.indexOf('firefox') != -1) {
-     $('#level-d').html('⌥データ取得中⌥');
+     
   } else if(userAgent.indexOf('opera') != -1) {
-     $('#level-d').html('⌥データ取得中⌥');
+     
   } else {
      $('#play').hide();
      $('#next').hide();
@@ -85,7 +84,6 @@ $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
      $('#stars').html('ERROR 666');
   }
 
-  $('#level-d').html('Extra ステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
