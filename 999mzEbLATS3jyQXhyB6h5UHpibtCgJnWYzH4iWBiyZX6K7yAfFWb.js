@@ -133,7 +133,7 @@ let Pfd_80 = 0;
 if (fun == 'none') {
    $('#level-d').html('Extra ステージ');
 } else {
-   $('#level-d').html( fun );
+   $('#level-d').html('Extra');
 }
 
 if (fun == 'Data_Save') {
