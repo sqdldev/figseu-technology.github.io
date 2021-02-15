@@ -130,7 +130,7 @@ let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
 
-if (fun == 'none') {
+if (fun == 'nf') {
    $('#level-d').html('Extra ステージ');
 } else {
    $('#level-d').html('Extra');
