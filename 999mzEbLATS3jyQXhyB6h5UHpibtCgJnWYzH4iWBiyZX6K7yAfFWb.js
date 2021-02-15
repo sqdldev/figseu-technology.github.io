@@ -307,12 +307,14 @@ $.cookie('te_wave_f', te_wave_f, { expires: 400, domain:'figseu-technology.githu
 $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$('#level-d').html('FUNCTION 320');
 return false;
 
 }
 
 // 処理
 
-if (fun == 0) {
+if (fun == 000) {
 
+$('#level-d').html('FUNCTION 000');
 }
