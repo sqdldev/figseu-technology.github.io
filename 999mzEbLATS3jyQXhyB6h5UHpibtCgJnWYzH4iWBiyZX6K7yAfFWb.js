@@ -1,3 +1,4 @@
+let url = location.href;
 let fun = url.substr( 74 );
 let terms = 0;
 let o_wave = 0;
