@@ -314,7 +314,6 @@ $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.git
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $('#level-d').html('デバッグを正常に実行しました');
-return false;
 
 }
 
