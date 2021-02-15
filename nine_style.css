@@ -229,6 +229,11 @@ canvas {
   right: 10px;
   bottom: 20px;
   font-size: 50px;
+  transition: 1s;
+}
+#next:active{
+  color: #DF5D00;
+  padding-left: 1px;
 }
 #prev{
   color: #FFFFFF;
@@ -238,6 +243,11 @@ canvas {
   left: 10px;
   bottom: 20px;
   font-size: 50px;
+  transition: 1s;
+}
+#prev:active{
+  color: #DF5D00;
+  padding-right: 1px;
 }
 .button{
   border: solid #FFFFFF;
@@ -276,7 +286,7 @@ canvas {
   font-weight: 700;
   font-size: 40px;
   text-align: center;
-  color: #E9DD00;
+  color: #DF5D00;
 }
 
 #level{
