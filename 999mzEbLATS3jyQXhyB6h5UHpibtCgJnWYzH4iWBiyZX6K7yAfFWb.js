@@ -1,4 +1,4 @@
-let fun = 1;
+let fun = url.substr( 67 );
 let terms = 0;
 let o_wave = 0;
 let o_wave_t = 0;
@@ -307,6 +307,7 @@ $.cookie('te_wave_f', te_wave_f, { expires: 400, domain:'figseu-technology.githu
 $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+return false;
 
 }
 
