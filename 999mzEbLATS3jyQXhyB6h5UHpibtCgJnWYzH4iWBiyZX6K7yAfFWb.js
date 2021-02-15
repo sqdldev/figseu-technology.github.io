@@ -1,4 +1,4 @@
-let fun = url.substr( 67 );
+let fun = url.substr( 74 );
 let terms = 0;
 let o_wave = 0;
 let o_wave_t = 0;
