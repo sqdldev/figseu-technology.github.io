@@ -129,7 +129,7 @@ let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
 
-if (fun == ('0')) {
+if (fun == 1) {
    $('#level-d').html( fun );
 }
 
