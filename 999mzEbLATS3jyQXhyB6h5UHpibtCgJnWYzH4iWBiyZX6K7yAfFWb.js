@@ -129,8 +129,8 @@ let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
 
-if (fun == 0) {
-   $('#level-d').html(fun);
+if (fun == '0') {
+   $('#level-d').html( fun );
 }
 
 if (fun == 'none') {
