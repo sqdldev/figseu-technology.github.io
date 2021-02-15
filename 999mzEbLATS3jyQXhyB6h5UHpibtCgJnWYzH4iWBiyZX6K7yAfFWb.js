@@ -1,3 +1,4 @@
+let url = location.href;
 let fun = url.substr( 74 );
 let terms = 0;
 let o_wave = 0;
@@ -129,15 +130,13 @@ let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
 
-if (fun == 0) {
+if (fun == 'none') {
+   $('#level-d').html('Extra ステージ');
+} else {
    $('#level-d').html( fun );
 }
 
-if (fun == 9) {
-   $('#level-d').html('Extra ステージ');
-}
-
-if (fun == 3) {
+if (fun == 'Data_Save') {
 
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -322,7 +321,7 @@ return false;
 
 // 処理
 
-if (fun == 6) {
+if (fun == 'Clear_Wave') {
 terms = 0;
 o_wave = 0;
 o_wave_t = 0;
