@@ -129,6 +129,10 @@ let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
 
+if (fun == 50) {
+   $('#level-d').html('Extra ステージ');
+}
+
 if (fun == 330) {
 
 terms = $.cookie('terms');
