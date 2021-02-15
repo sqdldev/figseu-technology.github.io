@@ -1,5 +1,5 @@
-let du = location.href;
-let fun = du.substr( 74 );
+let Durl = location.href;
+let fun = Durl.substr( 74 );
 let terms = 0;
 let o_wave = 0;
 let o_wave_t = 0;
