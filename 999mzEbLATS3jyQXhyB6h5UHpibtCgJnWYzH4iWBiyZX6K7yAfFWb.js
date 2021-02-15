@@ -130,13 +130,13 @@ let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
 
-if (fun == 'nf') {
+if (fun == 3) {
    $('#level-d').html('Extra ステージ');
 } else {
    $('#level-d').html('Extra');
 }
 
-if (fun == 'Data_Save') {
+if (fun == 6) {
 
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -314,14 +314,14 @@ $.cookie('te_wave_f', te_wave_f, { expires: 400, domain:'figseu-technology.githu
 $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-$('#level-d').html('FUNCTION を正常に実行しました。');
+$('#level-d').html('デバッグを正常に実行しました');
 return false;
 
 }
 
 // 処理
 
-if (fun == 'Clear_Wave') {
+if (fun == 9) {
 terms = 0;
 o_wave = 0;
 o_wave_t = 0;
@@ -417,5 +417,5 @@ $.cookie('te_wave_f', te_wave_f, { expires: 400, domain:'figseu-technology.githu
 $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-$('#level-d').html('FUNCTION を正常に実行しました');
+$('#level-d').html('デバッグを正常に実行しました');
 }
