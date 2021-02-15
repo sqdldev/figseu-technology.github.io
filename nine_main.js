@@ -29,7 +29,7 @@ wave_th = $.cookie('n_wave_th');
 wave_f = $.cookie('n_wave_f');
 let girls = Math.floor( Math.random() * 11 );
 let url = location.href;
-let fgnc = url.substr( 67 );
+let fgnc = url.substr( 74 );
 $('#FELL').get(0);
 $('#TFE').get(0);
 $('#DAYS').get(0);
@@ -82,6 +82,12 @@ $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
      $('#level-d').html('E R R O R !');
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html('ERROR 666');
+  }
+
+  // デバッグ
+
+  if (fgnc == 'nof') {
+     $('#level-d').html('Extra ステージ');
   }
 
   reqId = requestAnimationFrame(render);
