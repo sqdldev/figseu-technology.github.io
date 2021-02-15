@@ -129,15 +129,15 @@ let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
 
-if (fun == '0') {
+if (fun == ('0')) {
    $('#level-d').html( fun );
 }
 
-if (fun == 'none') {
+if (fun == ('none')) {
    $('#level-d').html('Extra ステージ');
 }
 
-if (fun == 'Data_save') {
+if (fun == ('Data_save')) {
 
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
