@@ -129,15 +129,15 @@ let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
 
-if (fun == 1) {
+if (fun == 0) {
    $('#level-d').html( fun );
 }
 
-if (fun == ('none')) {
+if (fun == 9) {
    $('#level-d').html('Extra ステージ');
 }
 
-if (fun == ('Data_save')) {
+if (fun == 3) {
 
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -322,7 +322,7 @@ return false;
 
 // 処理
 
-if (fun == 'Clear_Wave') {
+if (fun == 6) {
 terms = 0;
 o_wave = 0;
 o_wave_t = 0;
