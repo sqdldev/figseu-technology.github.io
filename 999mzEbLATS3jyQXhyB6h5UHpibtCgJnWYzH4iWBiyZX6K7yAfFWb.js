@@ -129,11 +129,11 @@ let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
 
-if (fun == 50) {
+if (fun == 'none') {
    $('#level-d').html('Extra ステージ');
 }
 
-if (fun == 330) {
+if (fun == 'Data_save') {
 
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -311,14 +311,108 @@ $.cookie('te_wave_f', te_wave_f, { expires: 400, domain:'figseu-technology.githu
 $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-$('#level-d').html('FUNCTION 320');
+$('#level-d').html('FUNCTION を正常に実行しました。');
 return false;
 
 }
 
 // 処理
 
-if (fun == 000) {
-
-$('#level-d').html('FUNCTION 000');
+if (fun == 'Clear_Wave') {
+terms = 0;
+o_wave = 0;
+o_wave_t = 0;
+o_wave_th = 0;
+o_wave_f = 0;
+o_wave_fi = 0;
+o_wave_s = 0;
+t_wave = 0;
+t_wave_t = 0;
+t_wave_th = 0;
+t_wave_f = 0;
+t_wave_fi = 0;
+th_wave = 0;
+th_wave_t = 0;
+th_wave_th = 0;
+th_wave_f = 0;
+f_wave = 0;
+f_wave_t = 0;
+f_wave_th = 0;
+f_wave_f = 0;
+f_wave_fi = 0;
+f_wave_s = 0;
+fi_wave = 0;
+fi_wave_t = 0;
+fi_wave_f = 0;
+s_wave = 0;
+s_wave_t = 0;
+s_wave_th = 0;
+se_wave = 0;
+se_wave_t = 0;
+se_wave_th = 0;
+e_wave = 0;
+e_wave_t = 0;
+e_wave_th = 0;
+e_wave_f = 0;
+e_wave_fi = 0;
+e_wave_s = 0;
+e_wave_se = 0;
+n_wave = 0;
+n_wave_t = 0;
+n_wave_th = 0;
+n_wave_f = 0;
+te_wave = 0;
+te_wave_t = 0;
+te_wave_th = 0;
+te_wave_f = 0;
+te_wave_fi = 0;
+te_wave_s = 0;
+z_wave = 0;
+$.cookie('o_wave', o_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('o_wave_t', o_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('o_wave_th', o_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('o_wave_f', o_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('o_wave_fi', o_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('o_wave_s', o_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('t_wave', t_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('t_wave_t', t_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('t_wave_th', t_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('t_wave_f', t_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('t_wave_fi', t_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('th_wave', th_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('th_wave_t', th_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('th_wave_th', th_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('th_wave_f', th_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('f_wave_t', f_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('f_wave_th', f_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('f_wave_f', f_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('fi_wave', fi_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('fi_wave_t', fi_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('fi_wave_f', fi_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('s_wave', s_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('s_wave_t', s_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('s_wave_th', s_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('se_wave', se_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('se_wave_t', se_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('se_wave_th', se_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('e_wave', e_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('e_wave_t', e_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('e_wave_th', e_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('e_wave_f', e_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('e_wave_fi', e_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('e_wave_s', e_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('e_wave_se', e_wave_se, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('n_wave', n_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('n_wave_t', n_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('n_wave_th', n_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('n_wave_f', n_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('te_wave', te_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('te_wave_t', te_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('te_wave_th', te_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('te_wave_f', te_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$('#level-d').html('FUNCTION を正常に実行しました');
 }
