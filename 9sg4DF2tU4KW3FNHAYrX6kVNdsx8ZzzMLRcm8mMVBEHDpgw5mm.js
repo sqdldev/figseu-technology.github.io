@@ -237,7 +237,7 @@ class Ball {
         }
       });
       world.forEach(v => {
-        if (v instanceof Deltemat && this.landed) {
+        if (v instanceof Deltemat && this.landed || v instanceof Bouncer) {
           if (v.detect() && started) {
             if (fgnc == 'Function_---Eshell---_-Deltemat-_Landing-True-') {
                if (v.detect()) {
