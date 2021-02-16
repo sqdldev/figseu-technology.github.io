@@ -237,6 +237,8 @@ class Ball {
         }
       });
    if (fgnc == 'Function_---Eshell---_-Deltemat-_Landing-True-') {
+   
+   } else {
       world.forEach(v => {
         if (v instanceof Deltemat && this.landed) {
           if (v.detect() && started) {
