@@ -237,24 +237,25 @@ class Ball {
         }
       });
       world.forEach(v => {
-        if (v instanceof Deltemat && this.landed || v instanceof Bouncer) {
-          if (v.detect() && started) {
-            if (fgnc == 'Function_---Eshell---_-Deltemat-_Landing-True-') {
-               if (v.detect()) {
-                  this.landed = true;
-                  this.speed.y = 0;
-                  this.mesh.position.y = 0.6;
-                  if (this.tmpZ) {
-                     this.mesh.position.z = this.tmpZ - 4;
-                     camera.position.z = this.tmpZ - 4 + distance;
-                     this.tmpZ = 0;
-                  }
-               }
-            } else {
-               v.mesh.position.y = -100;
-               v.line.position.y = -100;
-            }
-          }
+        if (v instanceof Deltemat && this.landed) {
+           if (fgnc == 'Function_---Eshell---_-Deltemat-_Landing-True-') {
+              if (v.detect()) {
+                 this.landed = true;
+                 this.speed.y = 0;
+                 this.mesh.position.y = 0.6;
+                 if (this.tmpZ) {
+                    this.mesh.position.z = this.tmpZ - 4;
+                    camera.position.z = this.tmpZ - 4 + distance;
+                    this.tmpZ = 0;
+                 }
+              }
+           }
+           if (v.detect() && started) {
+              else {
+                 v.mesh.position.y = -100;
+                 v.line.position.y = -100;
+              }
+           }
         }
       });
       star = 1;
