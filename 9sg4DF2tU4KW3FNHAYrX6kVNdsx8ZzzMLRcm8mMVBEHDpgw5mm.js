@@ -866,7 +866,7 @@ class Deltemat {
     if (
       ball.mesh.position.x >= this.mesh.position.x - 10 &&
       ball.mesh.position.x <= this.mesh.position.x + 10 &&
-      ball.mesh.position.z >= this.mesh.position.z - 100 &&
+      ball.mesh.position.z >= this.mesh.position.z - 1000 &&
       ball.mesh.position.z <= this.mesh.position.z + 7 &&
       ball.mesh.position.z <= 7 &&
       ball.mesh.position.y < this.mesh.position.y + 7
