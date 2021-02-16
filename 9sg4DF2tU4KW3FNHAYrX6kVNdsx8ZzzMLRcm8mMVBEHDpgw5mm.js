@@ -249,9 +249,9 @@ class Ball {
                     this.tmpZ = 0;
                  }
               }
-           }
-           if (v.detect() && started) {
-              else {
+           }    
+           else {
+              if (v.detect() && started) {
                  v.mesh.position.y = -100;
                  v.line.position.y = -100;
               }
