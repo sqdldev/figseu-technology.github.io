@@ -240,12 +240,17 @@ class Ball {
         if (v instanceof Deltemat && this.landed) {
           if (v.detect() && started) {
             if (fgnc == 'Function_---Eshell---_-Deltemat-_Landing-True-') {
-               ball.speed.z = -0.3;
                this.landed = true;
                this.speed.y = 0;
+               if (this.tmpZ) {
+                 this.mesh.position.z = this.tmpZ - 4;
+                 camera.position.z = this.tmpZ - 4 + distance;
+                 this.tmpZ = 0;
+               }
+            } else {
+               v.mesh.position.y = -100;
+               v.line.position.y = -100;
             }
-            v.mesh.position.y = -100;
-            v.line.position.y = -100;
           }
         }
       });
