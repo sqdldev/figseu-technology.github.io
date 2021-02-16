@@ -47,7 +47,7 @@ function start(e) {
   if (!started) {
     started = true;
     ball.speed.z = -0.15;
-    $('#main').fadeOut(300);
+    $('#main').hide();
     $('#name').hide();
     $('#play').hide();
     if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
