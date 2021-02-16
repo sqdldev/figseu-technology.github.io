@@ -239,6 +239,11 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Deltemat && this.landed) {
           if (v.detect() && started) {
+            if (fgnc == 'Function_---Eshell---_-Deltemat-_Landing-True-') {
+               ball.speed.z = -0.3;
+               this.landed = true;
+               this.speed.y = 0;
+            }
             v.mesh.position.y = -100;
             v.line.position.y = -100;
           }
