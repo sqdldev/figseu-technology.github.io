@@ -109,6 +109,7 @@ function start(e) {
   if (!started) {
     started = true;
     ball.speed.z = -0.15;
+    $('#play').hide();
     $('#main').fadeOut(300);
     $('#name').hide();
     if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
@@ -488,7 +489,7 @@ function gameover() {
   $.cookie('e_wave_se', wave_se, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   started = false;
   ball.speed.z = 0;
-  $('#main').fadeIn(500);
+  $('#main').fadeIn(100);
   $('#retry').hide();
   $('#play').show();
   $('#play').click(start);
