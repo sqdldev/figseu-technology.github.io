@@ -116,7 +116,7 @@ class Ball {
           if (v.detect()) {
             this.landed = true;
             this.speed.y = 0;
-            this.mesh.position.y = 0;
+            this.mesh.position.y = 1;
             if (this.tmpZ) {
               this.mesh.position.z = this.tmpZ - 4;
               camera.position.z = this.tmpZ - 4 + distance;
@@ -127,7 +127,7 @@ class Ball {
           if (v.detect()) {
             this.landed = true;
             this.speed.y = 0;
-            this.mesh.position.y = 2.6;
+            this.mesh.position.y = 0.6;
             if (this.tmpZ) {
               this.mesh.position.z = this.tmpZ - 4;
               camera.position.z = this.tmpZ - 4 + distance;
@@ -866,10 +866,10 @@ class Deltemat {
     if (
       ball.mesh.position.x >= this.mesh.position.x - 10 &&
       ball.mesh.position.x <= this.mesh.position.x + 10 &&
-      ball.mesh.position.z >= this.mesh.position.z - 1000 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
       ball.mesh.position.z <= this.mesh.position.z + 7 &&
       ball.mesh.position.z <= 7 &&
-      ball.mesh.position.y < this.mesh.position.y + 7
+      ball.mesh.position.y < this.mesh.position.y + 0.8
     ) return true;
   }
 }
