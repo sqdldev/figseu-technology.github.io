@@ -442,6 +442,10 @@ function loadLevel(level) {
         case 39:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 94:
+          world.push(new FellGate(j - 2, -i, data[index].obstacle));
+          world.push(new FellGateMat(j - 2, -i, data[index].mat));
+          break;
         case 98:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
           break;
