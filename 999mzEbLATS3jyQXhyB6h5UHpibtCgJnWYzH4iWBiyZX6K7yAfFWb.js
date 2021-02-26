@@ -443,16 +443,22 @@ function loadLevel(level) {
         case 31:
           if (girls == 0) {
              world.push(new Random_1(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Deltemat(j - 2, -i, data[index].mat));
           }
           break;
         case 32:
           if (girls == 1) {
              world.push(new Random_2(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Deltemat(j - 2, -i, data[index].mat));
           }
           break;
         case 33:
           if (girls == 2) {
              world.push(new Random_3(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Deltemat(j - 2, -i, data[index].mat));
           }
           break;
         case 39:
