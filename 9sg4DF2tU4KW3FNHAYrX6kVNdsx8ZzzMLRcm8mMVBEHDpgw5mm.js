@@ -1035,7 +1035,7 @@ class FellGateMat {
 class RandomMat {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.CylinderGeometry(0.5, 0.5, 3);
+    this.geometry = new THREE.CylinderGeometry(1, 1, 3);
     this.material = new THREE.MeshPhongMaterial({ color: color });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
