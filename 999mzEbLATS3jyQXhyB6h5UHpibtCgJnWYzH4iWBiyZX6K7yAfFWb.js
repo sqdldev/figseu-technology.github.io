@@ -383,7 +383,7 @@ function loadLevel(level) {
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
         } else if (i = 60 && j = 60) {
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-        } else if (i = 7… && j = 7…) {
+        } else if (i = 7… && j = 7) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Mysterybox(j - 2, -i, data[index].bouncer));
         } else if (i = 8 && j = 8) {
