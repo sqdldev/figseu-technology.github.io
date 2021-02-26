@@ -134,29 +134,7 @@ class Ball {
               this.tmpZ = 0;
             }
           }
-        } else if (v instanceof Random_1 || v instanceof Bouncer) {
-          if (v.detect()) {
-            this.landed = true;
-            this.speed.y = 0;
-            this.mesh.position.y = 0.6;
-            if (this.tmpZ) {
-              this.mesh.position.z = this.tmpZ - 4;
-              camera.position.z = this.tmpZ - 4 + distance;
-              this.tmpZ = 0;
-            }
-          }
-        } else if (v instanceof Random_2 || v instanceof Bouncer) {
-          if (v.detect()) {
-            this.landed = true;
-            this.speed.y = 0;
-            this.mesh.position.y = 0.6;
-            if (this.tmpZ) {
-              this.mesh.position.z = this.tmpZ - 4;
-              camera.position.z = this.tmpZ - 4 + distance;
-              this.tmpZ = 0;
-            }
-          }
-        } else if (v instanceof Random_3 || v instanceof Bouncer) {
+        } else if (v instanceof RandomMat || v instanceof Bouncer) {
           if (v.detect()) {
             this.landed = true;
             this.speed.y = 0;
@@ -1054,7 +1032,7 @@ class FellGateMat {
   }
 }
 
-class Random_1 {
+class RandomMat {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
     this.geometry = new THREE.CylinderGeometry(0.5, 0.5, 3);
