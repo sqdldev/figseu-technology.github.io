@@ -490,6 +490,12 @@ function gameover() {
      wave_f = 0;
      }
   }
+  if (fgnc == 'Function_Landing-True-') {
+     wave = 0;
+     wave_t = 0;
+     wave_th = 0;
+     wave_f = 0;
+  }
   $.cookie('n_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('n_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('n_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
