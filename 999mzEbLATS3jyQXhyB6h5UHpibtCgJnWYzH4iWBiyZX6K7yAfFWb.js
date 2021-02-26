@@ -449,7 +449,7 @@ function loadLevel(level) {
           break;
         case 32:
           if (girls == 1) {
-             world.push(new Random_2(j - 2, -i, data[index].mat));
+             world.push(new Random_1(j - 2, -i, data[index].mat));
           } else {
              world.push(new Deltemat(j - 2, -i, data[index].mat));
           }
