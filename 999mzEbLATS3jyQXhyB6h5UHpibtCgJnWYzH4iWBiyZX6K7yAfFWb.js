@@ -449,6 +449,11 @@ function loadLevel(level) {
         case 98:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 0:
+          if (fgnc == 'Function_Landing-True-')
+             world.push(new Mat(j - 2, -i, data[index].mat));
+          }
+          break;
       }
     }
   }
