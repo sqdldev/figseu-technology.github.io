@@ -440,12 +440,18 @@ function loadLevel(level) {
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
           break;
-        case 33:
+        case 31:
           if (girls == 0) {
              world.push(new Random_1(j - 2, -i, data[index].mat));
-          } else if (girls == 1) {
+          }
+          break;
+        case 32:
+          if (girls == 1) {
              world.push(new Random_2(j - 2, -i, data[index].mat));
-          } else if (girls == 2) {
+          }
+          break;
+        case 33:
+          if (girls == 2) {
              world.push(new Random_3(j - 2, -i, data[index].mat));
           }
           break;
