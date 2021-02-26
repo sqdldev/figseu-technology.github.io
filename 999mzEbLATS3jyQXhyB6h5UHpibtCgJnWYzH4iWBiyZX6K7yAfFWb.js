@@ -363,92 +363,67 @@ function loadLevel(level) {
   scene.fog = new THREE.Fog(parseInt(data[index].background), 10, 30);
   for (var i in data[index].data) {
     for (var j in data[index].data[i]) {
-      switch (data[index].data[i][j]) {
-        case 1:
+      if (data[index].data[i][j] = 1) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           break;
-        case 2:
+        } else if (data[index].data[i][j] = 2) {
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
-          break;
-        case 3:
+        } else if (data[index].data[i][j] = 3) {
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 4:
+        } else if (data[index].data[i][j] = 4) {
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           world.push(new Dreamcube(j - 2, -i, data[index].obstacle));
-          break;
-        case 5:
+        } else if (data[index].data[i][j] = 5) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 50:
+        } else if (data[index].data[i][j] = 50) {
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 6:
+        } else if (data[index].data[i][j] = 6) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 60:
+        } else if (data[index].data[i][j] = 60) {
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 7:
+        } else if (data[index].data[i][j] = 7) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Mysterybox(j - 2, -i, data[index].bouncer));
-          break;
-        case 8:
+        } else if (data[index].data[i][j] = 8) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Gem(j - 2, -i, data[index].bouncer));
-          break;
-        case 9:
+        } else if (data[index].data[i][j] = 9) {
           world.push(new Goal(j - 2, -i, data[index].obstacle));
-          break;
-        case 10:
+        } else if (data[index].data[i][j] = 10) {
           world.push(new Speedup(j - 2, -i, data[index].mat));
-          break;
-        case 11:
+        } else if (data[index].data[i][j] = 11) {
           world.push(new Speednormal(j - 2, -i, data[index].mat));
-          break;
-        case 12:
+        } else if (data[index].data[i][j] = 12) {
           world.push(new Speeddown(j - 2, -i, data[index].mat));
-          break;
-        case 13:
+        } else if (data[index].data[i][j] = 13) {
           world.push(new Back(j - 2, -i, data[index].mat));
-          break;
-        case 14:
+        } else if (data[index].data[i][j] = 14) {
           world.push(new Holemat(j - 2, -i, data[index].mat));
           world.push(new Hole(j - 2, -i, data[index].bouncer));
-          break;
-        case 15:
+        } else if (data[index].data[i][j] = 15) {
           world.push(new Fastbouncer(j - 2, -i, data[index].bouncer));
-          break;
-        case 16:
+        } else if (data[index].data[i][j] = 16) {
           world.push(new Highobstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 17:
+        } else if (data[index].data[i][j] = 17) {
           world.push(new Tower(j - 2, -i, data[index].obstacle));
-          break;
-        case 18:
+        } else if (data[index].data[i][j] = 18) {
           world.push(new Upobstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 19:
+        } else if (data[index].data[i][j] = 19) {
           world.push(new Downobstacle(j - 2, -i, data[index].mat));
-          break;
-        case 20:
+        } else if (data[index].data[i][j] = 20) {
           world.push(new Deltemat(j - 2, -i, data[index].mat));
-          break;
-        case 21:
+        } else if (data[index].data[i][j] = 21) {
           world.push(new Worpmat(j - 2, -i, data[index].mat));
-          break;
-        case 39:
+        } else if (data[index].data[i][j] = 39) {
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 94:
+        } else if (data[index].data[i][j] = 94) {
           world.push(new FellGate(j - 2, -i, data[index].obstacle));
           world.push(new FellGateMat(j - 2, -i, data[index].mat));
-          break;
-        case 98:
+        } else if (data[index].data[i][j] = 98) {
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-          break;
+        }
       }
     }
   }
