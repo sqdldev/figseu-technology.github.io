@@ -1035,7 +1035,7 @@ class FellGateMat {
 class RandomMat {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.CylinderGeometry(1, 1, 3);
+    this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
     this.material = new THREE.MeshPhongMaterial({ color: color });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
@@ -1054,8 +1054,7 @@ class RandomMat {
       ball.mesh.position.x <= this.mesh.position.x + 0.8 &&
       ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
       ball.mesh.position.z <= this.mesh.position.z + 0.8 &&
-      ball.mesh.position.z <= 0.8 &&
-      ball.mesh.position.y < this.mesh.position.y + 0.8
+      ball.mesh.position.z <= 1
     ) return true;
   }
 }
