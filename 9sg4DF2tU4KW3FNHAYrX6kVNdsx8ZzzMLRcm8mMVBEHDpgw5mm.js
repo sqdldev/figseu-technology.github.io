@@ -1057,68 +1057,14 @@ class FellGateMat {
 class Random_1 {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
+    this.geometry = new THREE.CylinderGeometry(0.5, 0.5, 3);
     this.material = new THREE.MeshPhongMaterial({ color: color });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: color });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 0, zpos);
-    this.line.position.set(xpos, 0, zpos);
-    this.mesh.name = 'level component';
-    this.line.name = 'level component';
-    scene.add(this.line);
-
-  }
-  detect() {
-    if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.8 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.8 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.8 &&
-      ball.mesh.position.z <= 0.8 &&
-      ball.mesh.position.y < this.mesh.position.y + 0.8
-    ) return true;
-  }
-}
-class Random_2 {
-  constructor(xpos, zpos, color) {
-    color = parseInt(color);
-    this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
-    this.material = new THREE.MeshPhongMaterial({ color: color });
-    this.mesh = new THREE.Mesh(this.geometry, this.material);
-    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
-    this.edgesMaterial = new THREE.LineBasicMaterial({ color: color });
-    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 0, zpos);
-    this.line.position.set(xpos, 0, zpos);
-    this.mesh.name = 'level component';
-    this.line.name = 'level component';
-    scene.add(this.line);
-
-  }
-  detect() {
-    if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.8 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.8 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.8 &&
-      ball.mesh.position.z <= 0.8 &&
-      ball.mesh.position.y < this.mesh.position.y + 0.8
-    ) return true;
-  }
-}
-class Random_3 {
-  constructor(xpos, zpos, color) {
-    color = parseInt(color);
-    this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
-    this.material = new THREE.MeshPhongMaterial({ color: color });
-    this.mesh = new THREE.Mesh(this.geometry, this.material);
-    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
-    this.edgesMaterial = new THREE.LineBasicMaterial({ color: color });
-    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 0, zpos);
-    this.line.position.set(xpos, 0, zpos);
+    this.mesh.position.set(xpos, -2, zpos);
+    this.line.position.set(xpos, -2, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.line);
