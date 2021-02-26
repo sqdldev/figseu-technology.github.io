@@ -13,6 +13,8 @@ let wave = 0;
 let wave_t = 0;
 let wave_th = 0;
 let wave_f = 0;
+let wave_fi = 0;
+let wave_s = 0;
 let o_wave = 0;
 let o_wave_t = 0;
 let o_wave_th = 0;
@@ -63,7 +65,7 @@ let te_wave_s = 0;
 let z_wave = 0;
 let d_m_l = 0;
 let userAgent = window.navigator.userAgent.toLowerCase();
-wave = $.cookie('n_wave');wave_t = $.cookie('n_wave_t');wave_th = $.cookie('n_wave_th');wave_f = $.cookie('n_wave_f');o_wave = $.cookie('o_wave');o_wave_t = $.cookie('o_wave_t');o_wave_th = $.cookie('o_wave_th');o_wave_f = $.cookie('o_wave_f');o_wave_fi = $.cookie('o_wave_fi');o_wave_s = $.cookie('o_wave_s');t_wave = $.cookie('t_wave');t_wave_t = $.cookie('t_wave_t');t_wave_th = $.cookie('t_wave_th');t_wave_f = $.cookie('t_wave_f');t_wave_fi = $.cookie('t_wave_fi');th_wave = $.cookie('th_wave');th_wave_t = $.cookie('th_wave_t');th_wave_th = $.cookie('th_wave_th');th_wave_f = $.cookie('th_wave_f');f_wave = $.cookie('f_wave');f_wave_t = $.cookie('f_wave_t');f_wave_th = $.cookie('f_wave_th');f_wave_f = $.cookie('f_wave_f');fi_wave = $.cookie('fi_wave');fi_wave_t = $.cookie('fi_wave_t');fi_wave_f = $.cookie('fi_wave_f');s_wave = $.cookie('s_wave');s_wave_t = $.cookie('s_wave_t');s_wave_th = $.cookie('s_wave_th');se_wave = $.cookie('se_wave');se_wave_t = $.cookie('se_wave_t');se_wave_th = $.cookie('se_wave_th');e_wave = $.cookie('e_wave');e_wave_t = $.cookie('e_wave_t');e_wave_th = $.cookie('e_wave_th');e_wave_f = $.cookie('e_wave_f');e_wave_fi = $.cookie('e_wave_fi');e_wave_s = $.cookie('e_wave_s');e_wave_se = $.cookie('e_wave_se');n_wave = $.cookie('n_wave');n_wave_t = $.cookie('n_wave_t');n_wave_th = $.cookie('n_wave_th');n_wave_f = $.cookie('n_wave_f');te_wave = $.cookie('te_wave');te_wave_t = $.cookie('te_wave_t');te_wave_th = $.cookie('te_wave_th');te_wave_f = $.cookie('te_wave_f');te_wave_fi = $.cookie('te_wave_fi');te_wave_s = $.cookie('te_wave_s');z_wave = $.cookie('z_wave');
+wave = $.cookie('n_wave');wave_t = $.cookie('n_wave_t');wave_th = $.cookie('n_wave_th');wave_f = $.cookie('n_wave_f');wave_fi = $.cookie('n_wave_fi');wave_s = $.cookie('n_wave_s');o_wave = $.cookie('o_wave');o_wave_t = $.cookie('o_wave_t');o_wave_th = $.cookie('o_wave_th');o_wave_f = $.cookie('o_wave_f');o_wave_fi = $.cookie('o_wave_fi');o_wave_s = $.cookie('o_wave_s');t_wave = $.cookie('t_wave');t_wave_t = $.cookie('t_wave_t');t_wave_th = $.cookie('t_wave_th');t_wave_f = $.cookie('t_wave_f');t_wave_fi = $.cookie('t_wave_fi');th_wave = $.cookie('th_wave');th_wave_t = $.cookie('th_wave_t');th_wave_th = $.cookie('th_wave_th');th_wave_f = $.cookie('th_wave_f');f_wave = $.cookie('f_wave');f_wave_t = $.cookie('f_wave_t');f_wave_th = $.cookie('f_wave_th');f_wave_f = $.cookie('f_wave_f');fi_wave = $.cookie('fi_wave');fi_wave_t = $.cookie('fi_wave_t');fi_wave_f = $.cookie('fi_wave_f');s_wave = $.cookie('s_wave');s_wave_t = $.cookie('s_wave_t');s_wave_th = $.cookie('s_wave_th');se_wave = $.cookie('se_wave');se_wave_t = $.cookie('se_wave_t');se_wave_th = $.cookie('se_wave_th');e_wave = $.cookie('e_wave');e_wave_t = $.cookie('e_wave_t');e_wave_th = $.cookie('e_wave_th');e_wave_f = $.cookie('e_wave_f');e_wave_fi = $.cookie('e_wave_fi');e_wave_s = $.cookie('e_wave_s');e_wave_se = $.cookie('e_wave_se');n_wave = $.cookie('n_wave');n_wave_t = $.cookie('n_wave_t');n_wave_th = $.cookie('n_wave_th');n_wave_f = $.cookie('n_wave_f');te_wave = $.cookie('te_wave');te_wave_t = $.cookie('te_wave_t');te_wave_th = $.cookie('te_wave_th');te_wave_f = $.cookie('te_wave_f');te_wave_fi = $.cookie('te_wave_fi');te_wave_s = $.cookie('te_wave_s');z_wave = $.cookie('z_wave');
 let girls = Math.floor( Math.random() * 2 );
 let url = location.href;
 let fgnc = url.substr( 97 );
@@ -71,6 +73,7 @@ $('#FELL').get(0);
 $('#TFE').get(0);
 $('#DAYS').get(0);
 $('#TDAYS').get(0);
+$('#SINGULARITY').get(0).play();
 let data;
 let reqId;
 $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
@@ -121,7 +124,7 @@ $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
      $('#stars').html('ERROR 666');
   }
 
-  // E-Shell
+  // SINGULARITY
 
 if (fgnc == 'nof') {$('#level-d').html('Extra ステージ');} 
 else if (fgnc == 'Function_Save_Wave') {$.cookie('o_wave', o_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('o_wave_t', o_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('o_wave_th', o_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('o_wave_f', o_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('o_wave_fi', o_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('o_wave_s', o_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('t_wave', t_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('t_wave_t', t_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('t_wave_th', t_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('t_wave_f', t_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('t_wave_fi', t_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('th_wave', th_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('th_wave_t', th_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('th_wave_th', th_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('th_wave_f', th_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('f_wave_t', f_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('f_wave_th', f_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('f_wave_f', f_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('fi_wave', fi_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('fi_wave_t', fi_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('fi_wave_f', fi_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('s_wave', s_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('s_wave_t', s_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('s_wave_th', s_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('se_wave', se_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('se_wave_t', se_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('se_wave_th', se_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('e_wave', e_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('e_wave_t', e_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('e_wave_th', e_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('e_wave_f', e_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('e_wave_fi', e_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('e_wave_s', e_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('e_wave_se', e_wave_se, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('n_wave', n_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('n_wave_t', n_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('n_wave_th', n_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('n_wave_f', n_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('te_wave', te_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('te_wave_t', te_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('te_wave_th', te_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('te_wave_f', te_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});$('#level-d').html('⌥⌥ Function_Save_Wave ⌥⌥');  } 
@@ -141,7 +144,8 @@ $('#level-d').html('⌥⌥ Unknown Function ⌥⌥');  }
   );
 });
 
-//start function
+  // start
+
 function start(e) {
   e.preventDefault();
   if (!started) {
@@ -197,6 +201,14 @@ function start(e) {
         wave_f = 0;
         $.cookie('n_wave_f', wave_f, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
+     if (typeof wave_fi == 'undefined') {
+        wave_fi = 0;
+        $.cookie('n_wave_fi', wave_fi, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+     }
+     if (typeof wave_s == 'undefined') {
+        wave_s = 0;
+        $.cookie('n_wave_s', wave_s, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+     }
     if (level == 1) {
         $('#FELL').get(0).play();
         wave++;
@@ -209,6 +221,9 @@ function start(e) {
         } else if (level == 4) {
         $('#TDAYS').get(0).play();
         wave_f++;
+        } else if (level == 5) {
+        $('#SINGULARITY').get(0).play();
+        wave_fi++;
         } else {
             $('#FELL').get(0).play();
             }
@@ -276,7 +291,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 5) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -299,10 +314,15 @@ function nextLevel() {
       $('#level').html('True Days');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('n_wave_f'));
+      } else if (level == 5) {
+      $('#level-d').html('開発中');
+      $('#level').html('？？？');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
       } else {
             $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
+            $('#level').html('？？？');
+            $('#stars').html('☆☆☆☆☆☆☆☆☆');
            }
 }
 
@@ -347,6 +367,11 @@ function prevLevel() {
       $('#level').html('True Days');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('n_wave_f'));
+      } else if (level == 5) {
+      $('#level-d').html('開発中');
+      $('#level').html('？？？');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -503,6 +528,10 @@ function gameover() {
      wave_th = 0;
      } else if (level == 4) {
      wave_f = 0;
+     } else if (level == 5) {
+     wave_fi = 0;
+     } else if (level == 6) {
+     wave_s = 0;
      }
   }
   if (fgnc == 'Function_Landing-True-') {
@@ -510,11 +539,15 @@ function gameover() {
      wave_t = 0;
      wave_th = 0;
      wave_f = 0;
+     wave_fi = 0;
+     wave_s = 0;
   }
   $.cookie('n_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('n_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('n_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('n_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('n_wave_fi', wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('n_wave_s', wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(100);
@@ -559,6 +592,24 @@ function gameover() {
       $('#level-d').html('私は運命を動かし、あなたは運命に抗う');
       }
       $('#TDAYS').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) { 
+      $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
+     if (star == 2) {
+      $('#level-d').html('捻れた遺伝子');
+      }
+      $('#SINGULARITY').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 6) { 
+      $('#Waves').html('☆ × ' + $.cookie('n_wave_s'));
+     if (star == 2) {
+      $('#level-d').html('捻れた遺伝子を止める者');
+      }
+      $('#SINGULARITY').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
