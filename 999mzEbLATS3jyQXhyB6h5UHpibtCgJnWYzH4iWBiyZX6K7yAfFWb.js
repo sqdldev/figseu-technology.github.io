@@ -363,67 +363,92 @@ function loadLevel(level) {
   scene.fog = new THREE.Fog(parseInt(data[index].background), 10, 30);
   for (var i in data[index].data) {
     for (var j in data[index].data[i]) {
-      if (data[index].data = 1) {
+      switch (data[index].data[i][j]) {
+        case 1:
           world.push(new Mat(j - 2, -i, data[index].mat));
           break;
-        } else if (data[index].data = 2) {
+        case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
-        } else if (data[index].data = 3) {
+          break;
+        case 3:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 4) {
+          break;
+        case 4:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           world.push(new Dreamcube(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 5) {
+          break;
+        case 5:
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 50) {
+          break;
+        case 50:
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 6) {
+          break;
+        case 6:
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 60) {
+          break;
+        case 60:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 7) {
+          break;
+        case 7:
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Mysterybox(j - 2, -i, data[index].bouncer));
-        } else if (data[index].data = 8) {
+          break;
+        case 8:
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Gem(j - 2, -i, data[index].bouncer));
-        } else if (data[index].data = 9) {
+          break;
+        case 9:
           world.push(new Goal(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 10) {
+          break;
+        case 10:
           world.push(new Speedup(j - 2, -i, data[index].mat));
-        } else if (data[index].data = 11) {
+          break;
+        case 11:
           world.push(new Speednormal(j - 2, -i, data[index].mat));
-        } else if (data[index].data = 12) {
+          break;
+        case 12:
           world.push(new Speeddown(j - 2, -i, data[index].mat));
-        } else if (data[index].data = 13) {
+          break;
+        case 13:
           world.push(new Back(j - 2, -i, data[index].mat));
-        } else if (data[index].data = 14) {
+          break;
+        case 14:
           world.push(new Holemat(j - 2, -i, data[index].mat));
           world.push(new Hole(j - 2, -i, data[index].bouncer));
-        } else if (data[index].data = 15) {
+          break;
+        case 15:
           world.push(new Fastbouncer(j - 2, -i, data[index].bouncer));
-        } else if (data[index].data = 16) {
+          break;
+        case 16:
           world.push(new Highobstacle(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 17) {
+          break;
+        case 17:
           world.push(new Tower(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 18) {
+          break;
+        case 18:
           world.push(new Upobstacle(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 19) {
+          break;
+        case 19:
           world.push(new Downobstacle(j - 2, -i, data[index].mat));
-        } else if (data[index].data = 20) {
+          break;
+        case 20:
           world.push(new Deltemat(j - 2, -i, data[index].mat));
-        } else if (data[index].data = 21) {
+          break;
+        case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
-        } else if (data[index].data = 39) {
+          break;
+        case 39:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
-        } else if (data[index].data = 94) {
+          break;
+        case 94:
           world.push(new FellGate(j - 2, -i, data[index].obstacle));
           world.push(new FellGateMat(j - 2, -i, data[index].mat));
-        } else if (data[index].data = 98) {
+          break;
+        case 98:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-        }
+          break;
       }
     }
   }
