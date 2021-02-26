@@ -450,13 +450,17 @@ function loadLevel(level) {
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
           break;
         case 0:
-          if (fgnc == 'Function_Landing-True-')
-             world.push(new Mat(j - 2, -i, data[index].mat));
-          }
+          FLT()
           break;
       }
     }
   }
+}
+
+Function FLT() {
+   if (fgnc == 'Function_Landing-True-')
+      world.push(new Mat(j - 2, -i, data[index].mat));
+   }
 }
 
 var ball = new Ball();
