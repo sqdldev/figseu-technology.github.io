@@ -495,7 +495,6 @@ function loadLevel(level) {
           break;
         case 210:
           world.push(new Dreamtower(j - 2, -i, data[index].obstacle));
-          world.push(new Crystal(j - 2, -i, data[index].obstacle));
           break;
       }
     }
