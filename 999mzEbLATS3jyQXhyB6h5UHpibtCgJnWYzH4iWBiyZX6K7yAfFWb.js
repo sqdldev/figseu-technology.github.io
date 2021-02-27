@@ -537,12 +537,19 @@ function gameover() {
      }
   }
   if (fgnc == 'Function_Landing-True-') {
-     wave = 0;
-     wave_t = 0;
-     wave_th = 0;
-     wave_f = 0;
-     wave_fi = 0;
-     wave_s = 0;
+     if (level == 1) {
+     wave = $.cookie('n_wave');
+     } else if (level == 2) {
+     wave_t = $.cookie('n_wave_t');
+     } else if (level == 3) {
+     wave_th = $.cookie('n_wave_th');
+     } else if (level == 4) {
+     wave_f = $.cookie('n_wave_f');
+     } else if (level == 5) {
+     wave_fi = $.cookie('n_wave_fi');
+     } else if (level == 6) {
+     wave_s = $.cookie('n_wave_s');
+     }
   }
   $.cookie('n_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('n_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
