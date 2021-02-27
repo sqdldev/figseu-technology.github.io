@@ -391,7 +391,11 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          world.push(new Mat(j - 2, -i, data[index].mat));
+          if (fgnc == 'Function_Landing-True-') {
+             world.push(new Holemat(j - 2, -i, data[index].background));
+          } else {
+             world.push(new Mat(j - 2, -i, data[index].mat));
+          }
           break;
         case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
@@ -488,11 +492,6 @@ function loadLevel(level) {
           break;
         case 98:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 0:
-          if (fgnc == 'Function_Landing-True-') {
-             world.push(new Holemat(j - 2, -i, data[index].background));
-          }
           break;
       }
     }
