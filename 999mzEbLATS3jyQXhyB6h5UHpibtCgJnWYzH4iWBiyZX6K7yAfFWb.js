@@ -392,7 +392,7 @@ function loadLevel(level) {
       switch (data[index].data[i][j]) {
         case 1:
           if (fgnc == 'Function_Landing-True-') {
-             world.push(new Holemat(j - 2, -i, data[index].background));
+             world.push(new Holemat(j - 2, -i, data[index].mat));
           } else {
              world.push(new Mat(j - 2, -i, data[index].mat));
           }
