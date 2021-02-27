@@ -3917,8 +3917,8 @@
     "background": "0x00FFD2",
     "ball": "0xFF9FC5",
     "mat": "0xFF57CE",
-    "bouncer": "0x000A8D",
-    "obstacle": "0x007350",
+    "bouncer": "0x008ACA",
+    "obstacle": "0x00C067",
     "data":
     [
       [1, 1, 1, 1, 1],
