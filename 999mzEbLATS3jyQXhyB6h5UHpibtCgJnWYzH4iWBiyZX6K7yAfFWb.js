@@ -315,8 +315,8 @@ function nextLevel() {
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('n_wave_f'));
       } else if (level == 5) {
-      $('#level-d').html('開発中');
-      $('#level').html('？？？');
+      $('#level-d').html('1周年記念ステージ');
+      $('#level').html('Singularity');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
       } else {
@@ -368,8 +368,8 @@ function prevLevel() {
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('n_wave_f'));
       } else if (level == 5) {
-      $('#level-d').html('開発中');
-      $('#level').html('？？？');
+      $('#level-d').html('1周年記念ステージ');
+      $('#level').html('Singularity');
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
       } else {
