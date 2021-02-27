@@ -491,7 +491,7 @@ function loadLevel(level) {
           break;
         case 0:
           if (fgnc == 'Function_Landing-True-') {
-             world.push(new Mat(j - 2, -i, data[index].background));
+             world.push(new Holemat(j - 2, -i, data[index].background));
           }
           break;
       }
