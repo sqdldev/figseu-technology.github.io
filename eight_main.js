@@ -95,7 +95,11 @@ $.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCyb
      $('#stars').html('ERROR 666');
   }
 
-  $('#level-d').html('ボーナス ステージ');
+  // SINGULARITY
+
+  if (fgnc == 'Function_Landing-True-') {$('#level-d').html('練習モード 起動中');}
+  else {$('#level-d').html('ボーナス ステージ');}
+
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -367,7 +371,11 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          world.push(new Mat(j - 2, -i, data[index].mat));
+          if (fgnc == 'Function_Landing-True-') {
+             world.push(new DebugMat(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Mat(j - 2, -i, data[index].mat));
+          }
           break;
         case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
@@ -478,6 +486,23 @@ function gameover() {
      wave_s = 0;
      } else if (level == 7) {
      wave_se = 0;
+     }
+  }
+  if (fgnc == 'Function_Landing-True-') {
+     if (level == 1) {
+     wave = $.cookie('e_wave');
+     } else if (level == 2) {
+     wave_t = $.cookie('e_wave_t');
+     } else if (level == 3) {
+     wave_th = $.cookie('e_wave_th');
+     } else if (level == 4) {
+     wave_f = $.cookie('e_wave_f');
+     } else if (level == 5) {
+     wave_fi = $.cookie('e_wave_fi');
+     } else if (level == 6) {
+     wave_s = $.cookie('e_wave_s');
+     } else if (level == 7) {
+     wave_se = $.cookie('e_wave_se');
      }
   }
   $.cookie('e_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
