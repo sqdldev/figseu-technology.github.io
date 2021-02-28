@@ -40,6 +40,8 @@ let n_wave = 0;
 let n_wave_t = 0;
 let n_wave_th = 0;
 let n_wave_f = 0;
+let n_wave_fi = 0;
+let n_wave_s = 0;
 let te_wave = 0;
 let te_wave_t = 0;
 let te_wave_th = 0;
@@ -127,6 +129,11 @@ let Pfd_77 = 0;
 let Pfd_78 = 0;
 let Pfd_79 = 0;
 let Pfd_80 = 0;
+let Pfd_81 = 0;
+let Pfd_82 = 0;
+let Pfd_83 = 0;
+let Pfd_84 = 0;
+let Pfd_85 = 0;
 function Performance_Data() {
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -168,6 +175,8 @@ n_wave = $.cookie('n_wave');
 n_wave_t = $.cookie('n_wave_t');
 n_wave_th = $.cookie('n_wave_th');
 n_wave_f = $.cookie('n_wave_f');
+n_wave_fi = $.cookie('n_wave_fi');
+n_wave_s = $.cookie('n_wave_s');
 te_wave = $.cookie('te_wave');
 te_wave_t = $.cookie('te_wave_t');
 te_wave_th = $.cookie('te_wave_th');
@@ -255,6 +264,11 @@ Pfd_77 = $.cookie('Pfd_77');
 Pfd_78 = $.cookie('Pfd_78');
 Pfd_79 = $.cookie('Pfd_79');
 Pfd_80 = $.cookie('Pfd_80');
+Pfd_81 = $.cookie('Pfd_81');
+Pfd_82 = $.cookie('Pfd_82');
+Pfd_83 = $.cookie('Pfd_83');
+Pfd_84 = $.cookie('Pfd_84');
+Pfd_85 = $.cookie('Pfd_85');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -294,6 +308,8 @@ $('#Waves_44').html('☆ × ' + $.cookie('n_wave'));
 $('#Waves_45').html('☆ × ' + $.cookie('n_wave_t'));
 $('#Waves_46').html('☆ × ' + $.cookie('n_wave_th'));
 $('#Waves_47').html('☆ × ' + $.cookie('n_wave_f'));
+$('#Waves_55').html('☆ × ' + $.cookie('n_wave_fi'));
+$('#Waves_56').html('☆ × ' + $.cookie('n_wave_s'));
 $('#Waves_48').html('☆ × ' + $.cookie('te_wave'));
 $('#Waves_49').html('☆ × ' + $.cookie('te_wave_t'));
 $('#Waves_50').html('☆ × ' + $.cookie('te_wave_th'));
@@ -343,6 +359,8 @@ $.cookie('n_wave', n_wave, { expires: 400, domain:'figseu-technology.github.io',
 $.cookie('n_wave_t', n_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('n_wave_th', n_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('n_wave_f', n_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('n_wave_fi', n_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('n_wave_s', n_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('te_wave', te_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('te_wave_t', te_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('te_wave_th', te_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
@@ -964,7 +982,37 @@ if (z_wave >= 1000) {
 } else if (Pfd_80 == 107558856528741996791037612619) {
    $('#Pf_80').html('０ - ✾取得済✾');
 }
-
+if (n_wave_fi >= 1) {
+   $('#Pf_81').html('一周年 - ✾取得済✾');
+   Pfd_81 = 107558856528741996791037612619;
+   $.cookie('Pfd_81', Pfd_81, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else if (Pfd_81 == 107558856528741996791037612619) {
+   $('#Pf_81').html('一周年 - ✾取得済✾');
+}
+if (Pfd_82 == 107558856528741996791037612619) {
+   $('#Pf_82').html('捻れる空間 - ✾取得済✾');
+}
+if (n_wave_fi >= 50) {
+   $('#Pf_83').html('再来 - ✾取得済✾');
+   Pfd_83 = 107558856528741996791037612619;
+   $.cookie('Pfd_83', Pfd_83, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else if (Pfd_83 == 107558856528741996791037612619) {
+   $('#Pf_83').html('再来 - ✾取得済✾');
+}
+if (n_wave_fi >= 100) {
+   $('#Pf_84').html('儚き遺伝子 - ✾取得済✾');
+   Pfd_84 = 107558856528741996791037612619;
+   $.cookie('Pfd_84', Pfd_84, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else if (Pfd_84 == 107558856528741996791037612619) {
+   $('#Pf_84').html('儚き遺伝子 - ✾取得済✾');
+}
+if (n_wave_fi >= 300) {
+   $('#Pf_85').html('開放の遺伝子 - ✾取得済✾');
+   Pfd_85 = 107558856528741996791037612619;
+   $.cookie('Pfd_85', Pfd_85, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else if (Pfd_85 == 107558856528741996791037612619) {
+   $('#Pf_85').html('開放の遺伝子 - ✾取得済✾');
+}
 $('#Data_Warn').html(' ');
 return false;
 }
