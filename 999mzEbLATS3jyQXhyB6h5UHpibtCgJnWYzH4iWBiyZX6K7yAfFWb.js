@@ -607,6 +607,7 @@ function gameover() {
             $('#play').hide();
             $('#next').hide();
             $('#prev').hide();
+            $('#PresentCode').hide();
             $('#days_key').show();
             $('#level-d').html('私は運命を動かし、あなたは運命に抗う');
          }
