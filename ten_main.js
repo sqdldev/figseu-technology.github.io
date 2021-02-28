@@ -464,6 +464,7 @@ function gameover() {
   $('#level').show();
   $('#stars').show();
   $('#score').show();
+  $('#end_key').hide();
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
