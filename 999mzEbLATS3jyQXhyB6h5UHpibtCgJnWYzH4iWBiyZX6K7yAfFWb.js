@@ -63,7 +63,7 @@ let te_wave_f = 0;
 let te_wave_fi = 0;
 let te_wave_s = 0;
 let z_wave = 0;
-let d_m_l = 0;
+let Pfd_82 = 0;
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('n_wave');wave_t = $.cookie('n_wave_t');wave_th = $.cookie('n_wave_th');wave_f = $.cookie('n_wave_f');wave_fi = $.cookie('n_wave_fi');wave_s = $.cookie('n_wave_s');o_wave = $.cookie('o_wave');o_wave_t = $.cookie('o_wave_t');o_wave_th = $.cookie('o_wave_th');o_wave_f = $.cookie('o_wave_f');o_wave_fi = $.cookie('o_wave_fi');o_wave_s = $.cookie('o_wave_s');t_wave = $.cookie('t_wave');t_wave_t = $.cookie('t_wave_t');t_wave_th = $.cookie('t_wave_th');t_wave_f = $.cookie('t_wave_f');t_wave_fi = $.cookie('t_wave_fi');th_wave = $.cookie('th_wave');th_wave_t = $.cookie('th_wave_t');th_wave_th = $.cookie('th_wave_th');th_wave_f = $.cookie('th_wave_f');f_wave = $.cookie('f_wave');f_wave_t = $.cookie('f_wave_t');f_wave_th = $.cookie('f_wave_th');f_wave_f = $.cookie('f_wave_f');fi_wave = $.cookie('fi_wave');fi_wave_t = $.cookie('fi_wave_t');fi_wave_f = $.cookie('fi_wave_f');s_wave = $.cookie('s_wave');s_wave_t = $.cookie('s_wave_t');s_wave_th = $.cookie('s_wave_th');se_wave = $.cookie('se_wave');se_wave_t = $.cookie('se_wave_t');se_wave_th = $.cookie('se_wave_th');e_wave = $.cookie('e_wave');e_wave_t = $.cookie('e_wave_t');e_wave_th = $.cookie('e_wave_th');e_wave_f = $.cookie('e_wave_f');e_wave_fi = $.cookie('e_wave_fi');e_wave_s = $.cookie('e_wave_s');e_wave_se = $.cookie('e_wave_se');n_wave = $.cookie('n_wave');n_wave_t = $.cookie('n_wave_t');n_wave_th = $.cookie('n_wave_th');n_wave_f = $.cookie('n_wave_f');te_wave = $.cookie('te_wave');te_wave_t = $.cookie('te_wave_t');te_wave_th = $.cookie('te_wave_th');te_wave_f = $.cookie('te_wave_f');te_wave_fi = $.cookie('te_wave_fi');te_wave_s = $.cookie('te_wave_s');z_wave = $.cookie('z_wave');
 let girls = Math.floor( Math.random() * 2 );
@@ -566,6 +566,9 @@ function gameover() {
   $('#level').show();
   $('#stars').show();
   $('#score').show();
+  $('#fell_key').hide();
+  $('#days_key').hide();
+  $('#singularity_key').hide();
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) { 
@@ -597,8 +600,16 @@ function gameover() {
 });
      } else if (level == 4) { 
       $('#Waves').html('☆ × ' + $.cookie('n_wave_f'));
-     if (star == 2) {
-      $('#level-d').html('私は運命を動かし、あなたは運命に抗う');
+      if (star == 2) {
+         if (fgnc == 'Function_Landing-True-') {
+            $('#level-d').html('破壊された力');
+         } else if (fgnc == 'nof') {
+            $('#play').hide();
+            $('#next').hide();
+            $('#prev').hide();
+            $('#days_key').show();
+            $('#level-d').html('私は運命を動かし、あなたは運命に抗う');
+         }
       }
       $('#TDAYS').each(function(){
     this.pause(); // Stop playing
@@ -606,7 +617,11 @@ function gameover() {
 });
      } else if (level == 5) { 
       $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
-     if (star == 2) {
+      if (star == 2) {
+         if (girls == 1) {
+            Pfd_82 = 107558856528741996791037612619;
+            $.cookie('Pfd_82', Pfd_82, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+         }
       $('#level-d').html('捻れた遺伝子');
       }
       $('#SINGULARITY').each(function(){
