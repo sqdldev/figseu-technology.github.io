@@ -496,15 +496,15 @@ function gameover() {
      } else if (level == 4) {
       $('#Waves').html('☆ × ' + $.cookie('te_wave_f'));
          if (star == 2) {
-            $('#level-d').html('天から差し込む光をただ、眺めていた');
-            if (star == 1) {
-               $('#level-d').html('天から差し込む赤い光');
-            } else if (fgnc == 'nof' && star == 2) {
+            if (fgnc == 'Function_Landing-True-') {
+               $('#level-d').html('破壊された光');
+            } else if (fgnc == 'nof') {
                $('#play').hide();
-               $('#prev').hide();
-               $('#end_key').show();
-               $('#PresentCode').hide();
                $('#next').hide();
+               $('#prev').hide();
+               $('#PresentCode').hide();
+               $('#end_key').show();
+               $('#level-d').html('天から差し込む光をただ、眺めていた');
             }
          }
       if (fgnc == 113) {
