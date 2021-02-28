@@ -73,7 +73,7 @@ $('#FELL').get(0);
 $('#TFE').get(0);
 $('#DAYS').get(0);
 $('#TDAYS').get(0);
-$('#SINGULARITY').get(0).play();
+$('#SINGULARITY').get(0);
 let data;
 let reqId;
 $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
