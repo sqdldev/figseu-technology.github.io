@@ -495,14 +495,16 @@ function gameover() {
 });
      } else if (level == 4) {
       $('#Waves').html('☆ × ' + $.cookie('te_wave_f'));
-       if (star == 2) {
-      $('#level-d').html('天から差し込む光をただ、眺めていた');
-      $('#play').hide();
-      $('#prev').hide();
-      $('#end_key').show();
-      $('#PresentCode').hide();
-      $('#next').hide();
-      }
+         if (star == 2) {
+         $('#level-d').html('天から差し込む光をただ、眺めていた');
+            if (fgnc == 'nof') {
+               $('#play').hide();
+               $('#prev').hide();
+               $('#end_key').show();
+               $('#PresentCode').hide();
+               $('#next').hide();
+            }
+         }
       if (fgnc == 113) {
         $('#kya_e').each(function(){
     this.pause(); // Stop playing
