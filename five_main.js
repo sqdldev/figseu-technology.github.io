@@ -310,7 +310,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 5) {
+  if (level == 7) {
     $('#next').hide();
   }
 }
