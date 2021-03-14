@@ -288,8 +288,8 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('Music by サカナクション');
-         $('#level').html('新 宝 島');
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('？？？');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
@@ -310,7 +310,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 7) {
+  if (level == 5) {
     $('#next').hide();
   }
 }
