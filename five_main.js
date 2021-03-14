@@ -195,13 +195,13 @@ function start(e) {
             $('#the_end').get(0).play();
             wave_f++;
             } else if (level == 5) {
-            $('#sintakarajima').get(0).play();
+            $('#loki').get(0).play();
             wave_fi++;
             } else if (level == 6) {
-            $('#moonpride').get(0).play();
+            $('#aloud').get(0).play();
             wave_s++;
             } else if (level == 7) {
-            $('#kimetu').get(0).play();
+            $('#cloud').get(0).play();
             wave_se++;
             } else {
             $('#cloud').get(0).play();
@@ -556,9 +556,9 @@ function gameover() {
      } else if (level == 5) {
       $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
       if (star == 2) {
-             $('#level-d').html('君の歌を歌う');
+             $('#level-d').html('暗闇に灯る光');
       }
-      $('#sintakarajima').each(function(){
+      $('#loki').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
