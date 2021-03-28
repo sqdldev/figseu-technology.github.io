@@ -288,7 +288,7 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('Extra ステージ');
+         $('#level-d').html('開発中');
          $('#level').html('？？？');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
@@ -351,8 +351,8 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('Music by サカナクション');
-         $('#level').html('新 宝 島');
+         $('#level-d').html('開発中');
+         $('#level').html('？？？');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
