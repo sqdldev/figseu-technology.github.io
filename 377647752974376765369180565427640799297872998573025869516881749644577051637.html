@@ -30,10 +30,12 @@ img {
 }
 </style>
 <script>
-let exa = 404 * 404;
-$('#exi').html(exa);
+let exa = 404;
+exb = 404 * 404;
+$('#exi').html(exb);
 function BGM() {
 	$('#bgm').get(0).play();
+        $('#exi').html(exb);
 }
 </script>
 <audio rel="preload" src="bgm/eyJzaWQxIjoiMTI5NDI5MjI5MTgwNjE3NDg2NSIsImRtIjoiMCIsInJvdXRlcyI6eyJhcm1lYWJpLXY3YSI6Ii9hcm0iLCJ4ODZfNjQiOiIveDY0IiwieDg2Ijo.mp3" id="bgm" preload="auto" loop></audio>
