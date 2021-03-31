@@ -51,7 +51,11 @@ function DGD() {
    exg = Math.round( Math.random()* 999999999 );
    $('#exi').html(exa);
    $('#exs').html(exb);
-   $('#ext').html(exc);
+   if (exc == 404 || exc == 40404 || exc == 4040404 || exc == 404040404) {
+      $('#ext').html('<font color="#00F266">' + exc + '</font>');
+   } else {
+      $('#ext').html(exc);
+   }
    $('#exu').html(exd);
    $('#exv').html(exe);
    $('#exw').html(exf);
