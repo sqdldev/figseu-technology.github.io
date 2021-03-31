@@ -10,6 +10,7 @@ body {
     background: #000B3F;
     transition: 1s;
     font-size: 200%;
+    font-family: serif;
 }
 body:active {
     color: #FFFFFF;
@@ -28,6 +29,27 @@ img {
 	color: #FFFFFF;
 	padding: 20px;
 	text-decoration: none;
+}
+.cp_iptxt {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #000B3F;
+	border: 1px solid #000B3F;
+	border-radius: 2px;
+}
+.ef input[type='text']:focus {
+	border: 1px solid #da3c41;
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
 }
 </style>
 <script>
@@ -73,7 +95,12 @@ setInterval("DGD()",10);
 <br> </br>
 <p align="center"><a align="center" href="index.html" class="button">BACK</a></p>
 <br> </br>
-<h2 align="center">------------------------</h2>
+<div class="cp_iptxt">
+<label class="ef">
+<input type="text" placeholder="D G D R" name="f">
+</label>
+</div>
+<h2 align="center">--------------------</h2>
 <div align="center" id="exi"> </div>
 <div align="center" id="exs"> </div>
 <div align="center" id="ext"> </div>
