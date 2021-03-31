@@ -49,7 +49,11 @@ function DGD() {
    exe = Math.round( Math.random()* 999999999 );
    exf = Math.round( Math.random()* 999999999 );
    exg = Math.round( Math.random()* 999999999 );
-   $('#exi').html(exa);
+   if (exa == 0 || exa == 10000 || exa == 1000000 || exa == 100000000) {
+      $('#ext').html('<font color="#00F266">' + exc + '</font>');
+   } else {
+      $('#ext').html(exc);
+   }
    $('#exs').html(exb);
    if (exc == 404 || exc == 40404 || exc == 4040404 || exc == 404040404) {
       $('#ext').html('<font color="#00F266">' + exc + '</font>');
