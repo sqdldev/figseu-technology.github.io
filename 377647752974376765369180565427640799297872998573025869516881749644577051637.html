@@ -72,22 +72,47 @@ function DGD() {
    exf = Math.round( Math.random()* 999999999 );
    exg = Math.round( Math.random()* 999999999 );
    if (exa == fgnc) {
-      $('#ext').html('<font color="#00F266">' + exc + '</font>');
+      $('#exi').html('<font color="#00F266">' + exa + '</font>');
    } else {
       exa = Math.round( Math.random()* 999999999 );
-      $('#ext').html(exc);
+      $('#exi').html(exa);
    }
-   $('#exs').html(exb);
+   if (exb == fgnc) {
+      $('#exs').html('<font color="#00F266">' + exb + '</font>');
+   } else {
+      exb = Math.round( Math.random()* 999999999 );
+      $('#exs').html(exb);
+   }
    if (exc == fgnc) {
       $('#ext').html('<font color="#00F266">' + exc + '</font>');
    } else {
       exc = Math.round( Math.random()* 999999999 );
       $('#ext').html(exc);
    }
-   $('#exu').html(exd);
-   $('#exv').html(exe);
-   $('#exw').html(exf);
-   $('#exx').html(exg);
+   if (exd == fgnc) {
+      $('#exu').html('<font color="#00F266">' + exd + '</font>');
+   } else {
+      exd = Math.round( Math.random()* 999999999 );
+      $('#exu').html(exd);
+   }
+   if (exe == fgnc) {
+      $('#exv').html('<font color="#00F266">' + exe + '</font>');
+   } else {
+      exe = Math.round( Math.random()* 999999999 );
+      $('#exv').html(exe);
+   }
+   if (exf == fgnc) {
+      $('#exw').html('<font color="#00F266">' + exf + '</font>');
+   } else {
+      exf = Math.round( Math.random()* 999999999 );
+      $('#exw').html(exf);
+   }
+   if (exg == fgnc) {
+      $('#exx').html('<font color="#00F266">' + exg + '</font>');
+   } else {
+      exg = Math.round( Math.random()* 999999999 );
+      $('#exx').html(exg);
+   }
 }
 setInterval("DGD()",10);
 </script>
