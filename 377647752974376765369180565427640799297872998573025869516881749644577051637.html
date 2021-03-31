@@ -65,7 +65,9 @@ let fgnc = url.substr( 142 );
 function BGM() {
    $('#DDDD').html('000000000');
    $('#bgm').get(0).play();
-   $('#DDDD').html(fgnc);
+   setTimeout(function(){
+      $('#DDDD').html(fgnc);
+   },10);
 }
 function DGD() {
    if (exa == fgnc) {
