@@ -72,11 +72,12 @@ let exf = 404;
 let exg = 404;
 let url = location.href;
 let fgnc = url.substr( 142 );
+let fgnci = decode.URI(fgnc);
 function BGM() {
    $('#DDDD').html('000000000');
    $('#bgm').get(0).play();
    setTimeout(function(){
-      $('#DDDD').html(fgnc);
+      $('#DDDD').html(fgnci);
    },10);
 }
 function DGD() {
