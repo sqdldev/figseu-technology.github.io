@@ -30,13 +30,12 @@ img {
 }
 </style>
 <script>
-let exa = 404040404;
+let exa = Math.round( Math.random()* 999999999 );
 function BGM() {
    $('#bgm').get(0).play();
 }
 function DGD() {
-   exa = exa * 2.1;
-   exa = exa / 2.1;
+   exa = Math.round( Math.random()* 999999999 );
    $('#exi').html(exa);
 }
 setInterval("DGD()",10);
@@ -47,7 +46,7 @@ setInterval("DGD()",10);
 <p align="center"><a align="center" href="index.html" class="button">戻る</a></p>
 <br> </br>
 <h2 align="center">----------------------------</h2>
-<div id="exi">
+<div align="center" id="exi">
 404
 </div>
 </body>
