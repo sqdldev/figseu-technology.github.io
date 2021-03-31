@@ -32,7 +32,7 @@ img {
 }
 .cp_iptxt {
 	position: relative;
-	width: 80%;
+	width: 85%;
 	margin: 40px 3%;
 }
 .cp_iptxt input[type='text'] {
@@ -60,26 +60,28 @@ let exd = 404;
 let exe = 404;
 let exf = 404;
 let exg = 404;
+let url = location.href;
+let fgnc = url.substr( 142 );
 function BGM() {
    $('#bgm').get(0).play();
 }
 function DGD() {
-   exa = Math.round( Math.random()* 999999999 );
    exb = Math.round( Math.random()* 999999999 );
-   exc = Math.round( Math.random()* 999999999 );
    exd = Math.round( Math.random()* 999999999 );
    exe = Math.round( Math.random()* 999999999 );
    exf = Math.round( Math.random()* 999999999 );
    exg = Math.round( Math.random()* 999999999 );
-   if (exa == 0 || exa == 10000 || exa == 1000000 || exa == 100000000) {
+   if (exa == fgnc) {
       $('#ext').html('<font color="#00F266">' + exc + '</font>');
    } else {
+      exa = Math.round( Math.random()* 999999999 );
       $('#ext').html(exc);
    }
    $('#exs').html(exb);
-   if (exc == 404 || exc == 40404 || exc == 4040404 || exc == 404040404) {
+   if (exc == fgnc) {
       $('#ext').html('<font color="#00F266">' + exc + '</font>');
    } else {
+      exc = Math.round( Math.random()* 999999999 );
       $('#ext').html(exc);
    }
    $('#exu').html(exd);
@@ -98,7 +100,7 @@ setInterval("DGD()",10);
 <div class="cp_iptxt">
 <form action="https://figseu-technology.github.io/RollingSkyEvolution/377647752974376765369180565427640799297872998573025869516881749644577051637.html">
 <label class="ef">
-<input type="text" placeholder="D G D R" name=f>
+<input type="text" placeholder="D G D R" name=DGDR>
 </label>
 </form>
 </div>
