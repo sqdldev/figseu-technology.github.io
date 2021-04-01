@@ -77,8 +77,10 @@ function BGM() {
    $('#DDDD').html('000000000');
    if (fgnc == 'EF66') {
       $('#cd_2').get(0).play();
+      $('#ef').get(0).play();
    } else if (fgnc == 'EF210') {
       $('#cd_3').get(0).play();
+      $('#eft').get(0).play();
    } else if (fgnc == '%E5%A4%A7%E5%92%8C%E9%BA%BB%E5%BC%A5') {
       $('#cd_4').get(0).play();
    } else if (fgnc == '%E6%B0%B7%E5%B7%9D%E6%97%A5%E8%8F%9C') {
@@ -136,12 +138,14 @@ function DGD() {
 }
 setInterval("DGD()",10);
 </script>
-<audio rel="preload" src="bgm/Prent Rodgers.mp3" id="bgm" preload="auto" loop></audio>
-<audio rel="preload" src="se_A/clickdown.mp3" id="cd_1" preload="auto"></audio>
-<audio rel="preload" src="se_A/EF66_cd.mp3" id="cd_2" preload="auto"></audio>
-<audio rel="preload" src="se_A/EF210_cd.mp3" id="cd_3" preload="auto"></audio>
-<audio rel="preload" src="se_A/Maya_cd.mp3" id="cd_4" preload="auto"></audio>
-<audio rel="preload" src="se_A/Hina_cd.mp3" id="cd_5" preload="auto"></audio>
+<audio src="bgm/Prent Rodgers.mp3" id="bgm" preload="none" loop></audio>
+<audio src="bgm/EF66.mp3" id="ef" preload="none"></audio>
+<audio src="bgm/EF210.mp3" id="eft" preload="none"></audio>
+<audio src="se_A/clickdown.mp3" id="cd_1" preload="none"></audio>
+<audio src="se_A/EF66_cd.mp3" id="cd_2" preload="none"></audio>
+<audio src="se_A/EF210_cd.mp3" id="cd_3" preload="none"></audio>
+<audio src="se_A/Maya_cd.mp3" id="cd_4" preload="none"></audio>
+<audio src="se_A/Hina_cd.mp3" id="cd_5" preload="none"></audio>
 </head>
 <body onclick="BGM()" oncontextmenu="return false;">
 <br> </br>
