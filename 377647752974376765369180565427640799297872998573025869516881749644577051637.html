@@ -75,22 +75,58 @@ let fgnc = url.substr( 142 );
 let fgnci = decodeURI(fgnc);
 function BGM() {
    $('#DDDD').html('000000000');
-   if (fgnc == 'EF66') {
-      $('#cd_2').get(0).play();
-      $('#ef').get(0).play();
-   } else if (fgnc == 'EF210') {
-      $('#cd_3').get(0).play();
-      $('#eft').get(0).play();
-   } else if (fgnc == '%E5%A4%A7%E5%92%8C%E9%BA%BB%E5%BC%A5') {
-      $('#cd_4').get(0).play();
-   } else if (fgnc == '%E6%B0%B7%E5%B7%9D%E6%97%A5%E8%8F%9C') {
-      $('#cd_5').get(0).play();
-   } else if (fgnc == '621890381' || fgnc == 'Fell+Gate') {
-      fgnc = 621890381;
-      fgnci = 621890381;
-   } else if (fgnc == '789979507' || fgnc == 'Singularity') {
+   if (fgnc == 0 || fgnc == 382383) {
+      $('#0').get(0).play();
+      fgnc = 382383;
+      fgnci = 0;
+   } else if (fgnc == 'A' || fgnc == 997585893) {
+      $('#A').get(0).play();
+      fgnc = 997585893;
+      fgnci = A;
+   } else if (fgnc == 'B' || fgnc == 382382438) {
+      $('#B').get(0).play();
+      fgnc = 382382438;
+      fgnci = B;
+   } else if (fgnc == 'Ǝ' || fgnc == 6975588) {
+      $('#Ǝ').get(0).play();
+      fgnc = 6975588;
+      fgnci = Ǝ;
+   } else if (fgnc == 'ʞ' || fgnc == 98149590) {
+      $('#ʞ').get(0).play();
+      fgnc = 98149590;
+      fgnci = ʞ;
+   } else if (fgnc == 'Ƨ' || fgnc == 789979507) {
+      $('#Ƨ').get(0).play();
       fgnc = 789979507;
-      fgnci = 789979507;
+      fgnci = Ƨ;
+   } else if (fgnc == 'Г' || fgnc == 599580782) {
+      $('#Г').get(0).play();
+      fgnc = 599580782;
+      fgnci = Г;
+   } else if (fgnc == 'И' || fgnc == 489679583) {
+      $('#И').get(0).play();
+      fgnc = 489679583;
+      fgnci = И;
+   } else if (fgnc == 'Х' || fgnc == 383963833) {
+      $('#Х').get(0).play();
+      fgnc = 383963833;
+      fgnci = Х;
+   } else if (fgnc == 'Я' || fgnc == 383993833) {
+      $('#Я').get(0).play();
+      fgnc = 383993833;
+      fgnci = Я;
+   } else if (fgnc == 'ᐴ' || fgnc == 382863813) {
+      $('#ᐴ').get(0).play();
+      fgnc = 382863813;
+      fgnci = ᐴ;
+   } else if (fgnc == 'ᖷ' || fgnc == 621890381) {
+      $('#ᖷ').get(0).play();
+      fgnc = 621890381;
+      fgnci = ᖷ;
+   } else if (fgnc == 'ᙠ' || fgnc == 383383933) {
+      $('#ᙠ').get(0).play();
+      fgnc = 383383933;
+      fgnci = ᙠ;
    } else {
       $('#bgm').get(0).play();
    }
@@ -145,13 +181,20 @@ function DGD() {
 setInterval("DGD()",10);
 </script>
 <audio src="bgm/Prent Rodgers.mp3" id="bgm" preload="none" loop></audio>
-<audio src="bgm/EF66.mp3" id="ef" preload="none"></audio>
-<audio src="bgm/EF210.mp3" id="eft" preload="none"></audio>
-<audio src="se_A/clickdown.mp3" id="cd_1" preload="none"></audio>
-<audio src="se_A/EF66_cd.mp3" id="cd_2" preload="none"></audio>
-<audio src="se_A/EF210_cd.mp3" id="cd_3" preload="none"></audio>
-<audio src="se_A/Maya_cd.mp3" id="cd_4" preload="none"></audio>
-<audio src="se_A/Hina_cd.mp3" id="cd_5" preload="none"></audio>
+<audio src="DGDR/Zero_0.mp3" id="0" preload="none"></audio>
+<audio src="DGDR/雷光の姫君_A.mp3" id="A" preload="none"></audio>
+<audio src="DGDR/The Kyanite_B.mp3" id="B" preload="none"></audio>
+<audio src="DGDR/Days_Ǝ.mp3" id="Ǝ" preload="none"></audio>
+<audio src="DGDR/True Singularity_ʞ.mp3" id="ʞ" preload="none"></audio>
+<audio src="DGDR/Singularity_Ƨ.mp3" id="Ƨ" preload="none"></audio>
+<audio src="DGDR/True Days_Г.mp3" id="Г" preload="none"></audio>
+<audio src="DGDR/True Fell Gate_И.mp3" id="И" preload="none"></audio>
+<audio src="DGDR/EF66_Х.mp3" id="Х" preload="none"></audio>
+<audio src="DGDR/The Beryl_Я.mp3" id="Я" preload="none"></audio>
+<audio src="DGDR/ゆっくりの森_ᐴ.mp3" id="ᐴ" preload="none"></audio>
+<audio src="DGDR/Fell Gate_ᖷ.mp3" id="ᖷ" preload="none"></audio>
+<audio src="DGDR/The Ruby_ᙠ.mp3" id="ᙠ" preload="none"></audio>
+<audio src="DGDR/The Kyanite_B.mp3" id="B" preload="none"></audio>
 </head>
 <body onclick="BGM()" oncontextmenu="return false;">
 <br> </br>
