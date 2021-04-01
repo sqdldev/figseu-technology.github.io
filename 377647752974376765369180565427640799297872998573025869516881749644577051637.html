@@ -75,13 +75,23 @@ let fgnc = url.substr( 142 );
 let fgnci = decodeURI(fgnc);
 function BGM() {
    $('#DDDD').html('000000000');
-   $('#bgm').get(0).play();
+   if (fgnc == 'EF66') {
+      $('#cd_2').get(0).play();
+   } else if (fgnc == 'EF210') {
+      $('#cd_3').get(0).play();
+   } else if (fgnc == '大和麻弥') {
+      $('#cd_4').get(0).play();
+   } else if (fgnc == '氷川日菜') {
+      $('#cd_5').get(0).play();
+   } else {
+      $('#bgm').get(0).play();
+   }
    setTimeout(function(){
       $('#DDDD').html(fgnci);
    },10);
 }
 function DGD() {
-   if (exa == fgnc || exa <= 400) {
+   if (exa == fgnc) {
       $('#exi').html('<font color="#00F266">' + exa + '</font>');
    } else {
       exa = Math.round( Math.random()* 999999999 );
@@ -127,6 +137,11 @@ function DGD() {
 setInterval("DGD()",10);
 </script>
 <audio rel="preload" src="bgm/Prent Rodgers.mp3" id="bgm" preload="auto" loop></audio>
+<audio rel="preload" src="se_A/clickdown.mp3" id="cd_1" preload="auto"></audio>
+<audio rel="preload" src="se_A/EF66_cd.mp3" id="cd_2" preload="auto"></audio>
+<audio rel="preload" src="se_A/EF210_cd.mp3" id="cd_3" preload="auto"></audio>
+<audio rel="preload" src="se_A/Maya_cd.mp3" id="cd_4" preload="auto"></audio>
+<audio rel="preload" src="se_A/Hina_cd.mp3" id="cd_5" preload="auto"></audio>
 </head>
 <body onclick="BGM()" oncontextmenu="return false;">
 <br> </br>
