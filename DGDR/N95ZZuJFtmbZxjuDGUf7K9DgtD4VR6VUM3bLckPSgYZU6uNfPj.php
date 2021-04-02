@@ -13,8 +13,8 @@
         <meta property="description" content="...">
         <meta property="og:image" content="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
         <meta name="keywords" content="ゲーム,難しい,ローリングスカイ,rolling sky,楽しい,無料,スマホ,アクション,世界一難しいゲーム,人間卒業">
-	<link rel="stylesheet" href="eight_style.css">
-	<link href="css.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://figseu-technology.github.io/RollingSkyEvolution/eight_style.css">
+	<link href="https://figseu-technology.github.io/RollingSkyEvolution/css.css" rel="stylesheet">
 	<link rel="icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
         <link rel="shortcut icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
         <link rel="apple-touch-icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
