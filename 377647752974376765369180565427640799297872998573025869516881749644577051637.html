@@ -63,13 +63,13 @@ img {
 }
 </style>
 <script>
-let exa = 404;
-let exb = 404;
-let exc = 404;
-let exd = 404;
-let exe = 404;
-let exf = 404;
-let exg = 404;
+let d_exa = 404;
+let d_exb = 404;
+let d_exc = 404;
+let d_d_exd = 404;
+let d_exe = 404;
+let d_exf = 404;
+let d_exg = 404;
 let url = location.href;
 let fgnc = url.substr( 142 );
 let fgnci = decodeURI(fgnc);
@@ -96,39 +96,39 @@ function BGM() {
       fgnc = 382383;
       fgnci = 0;
       if (z_wave >= 999) {
-         exa = 382383;
-         exb = 382383;
-         exc = 382383;
-         exd = 382383;
-         exe = 382383;
-         exf = 382383;
-         exg = 382383;
+         d_exa = 382383;
+         d_exb = 382383;
+         d_exc = 382383;
+         d_exd = 382383;
+         d_exe = 382383;
+         d_exf = 382383;
+         d_exg = 382383;
       }
    } else if (fgnci == 'A' || fgnc == 997585893) {
       $('#A').get(0).play();
       fgnc = 997585893;
       fgnci = 'A';
       if (e_wave_th >= 999) {
-         exa = 997585893;
-         exb = 997585893;
-         exc = 997585893;
-         exd = 997585893;
-         exe = 997585893;
-         exf = 997585893;
-         exg = 997585893;
+         d_exa = 997585893;
+         d_exb = 997585893;
+         d_exc = 997585893;
+         d_exd = 997585893;
+         d_exe = 997585893;
+         d_exf = 997585893;
+         d_exg = 997585893;
       }
    } else if (fgnci == 'B' || fgnc == 382382438) {
       $('#B').get(0).play();
       fgnc = 382382438;
       fgnci = 'B';
       if (te_wave_f >= 999) {
-         exa = 382382438;
-         exb = 382382438;
-         exc = 382382438;
-         exd = 382382438;
-         exe = 382382438;
-         exf = 382382438;
-         exg = 382382438;
+         d_exa = 382382438;
+         d_exb = 382382438;
+         d_exc = 382382438;
+         d_exd = 382382438;
+         d_exe = 382382438;
+         d_exf = 382382438;
+         d_exg = 382382438;
       }
    } else if (fgnci == 'Ǝ' || fgnc == 6975588) {
       $('#Ǝ').get(0).play();
@@ -178,54 +178,54 @@ function BGM() {
    },10);
 }
 function DGD() {
-   if (exa == fgnc) {
-      exa = fgnc;
-      $('#exi').html('<font color="#00F266">' + exa + '</font>');
+   if (d_exa == fgnc) {
+      d_exa = fgnc;
+      $('#exi').html('<font color="#00F266">' + d_exa + '</font>');
    } else {
-      exa = Math.round( Math.random()* 999999999 );
-      $('#exi').html(exa);
+      d_exa = Math.round( Math.random()* 999999999 );
+      $('#exi').html(d_exa);
    }
-   if (exb == fgnc) {
-      exb = fgnc;
-      $('#exs').html('<font color="#00F266">' + exb + '</font>');
+   if (d_exb == fgnc) {
+      d_exb = fgnc;
+      $('#exs').html('<font color="#00F266">' + d_exb + '</font>');
    } else {
-      exb = Math.round( Math.random()* 999999999 );
-      $('#exs').html(exb);
+      d_exb = Math.round( Math.random()* 999999999 );
+      $('#exs').html(d_exb);
    }
-   if (exc == fgnc) {
-      exc = fgnc;
-      $('#ext').html('<font color="#00F266">' + exc + '</font>');
+   if (d_exc == fgnc) {
+      d_exc = fgnc;
+      $('#ext').html('<font color="#00F266">' + d_exc + '</font>');
    } else {
-      exc = Math.round( Math.random()* 999999999 );
-      $('#ext').html(exc);
+      d_exc = Math.round( Math.random()* 999999999 );
+      $('#ext').html(d_exc);
    }
-   if (exd == fgnc) {
-      exd = fgnc;
-      $('#exu').html('<font color="#00F266">' + exd + '</font>');
+   if (d_exd == fgnc) {
+      d_exd = fgnc;
+      $('#exu').html('<font color="#00F266">' + d_exd + '</font>');
    } else {
-      exd = Math.round( Math.random()* 999999999 );
-      $('#exu').html(exd);
+      d_exd = Math.round( Math.random()* 999999999 );
+      $('#exu').html(d_exd);
    }
-   if (exe == fgnc) {
-      exe = fgnc;
-      $('#exv').html('<font color="#00F266">' + exe + '</font>');
+   if (d_exe == fgnc) {
+      d_exe = fgnc;
+      $('#exv').html('<font color="#00F266">' + d_exe + '</font>');
    } else {
-      exe = Math.round( Math.random()* 999999999 );
-      $('#exv').html(exe);
+      d_exe = Math.round( Math.random()* 999999999 );
+      $('#exv').html(d_exe);
    }
-   if (exf == fgnc) {
-      exf = fgnc;
-      $('#exw').html('<font color="#00F266">' + exf + '</font>');
+   if (d_exf == fgnc) {
+      d_exf = fgnc;
+      $('#exw').html('<font color="#00F266">' + d_exf + '</font>');
    } else {
-      exf = Math.round( Math.random()* 999999999 );
-      $('#exw').html(exf);
+      d_exf = Math.round( Math.random()* 999999999 );
+      $('#exw').html(d_exf);
    }
-   if (exg == fgnc) {
-      exg = fgnc;
-      $('#exx').html('<font color="#00F266">' + exg + '</font>');
+   if (d_exg == fgnc) {
+      d_exg = fgnc;
+      $('#exx').html('<font color="#00F266">' + d_exg + '</font>');
    } else {
-      exg = Math.round( Math.random()* 999999999 );
-      $('#exx').html(exg);
+      d_exg = Math.round( Math.random()* 999999999 );
+      $('#exx').html(d_exg);
    }
 }
 setInterval("DGD()",10);
