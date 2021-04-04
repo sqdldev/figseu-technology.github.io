@@ -86,7 +86,19 @@ let te_wave_t = 0;
 let te_wave_f = 0;
 let te_wave_fi = 0;
 let z_wave = 0;
-
+s_wave_th = $.cookie('s_wave_th');
+e_wave_th = $.cookie('e_wave_th');
+n_wave = $.cookie('n_wave');
+n_wave_t = $.cookie('n_wave_t');
+n_wave_th = $.cookie('n_wave_th');
+n_wave_f = $.cookie('n_wave_f');
+n_wave_fi = $.cookie('n_wave_fi');
+n_wave_s = $.cookie('n_wave_s');
+te_wave = $.cookie('te_wave');
+te_wave_t = $.cookie('te_wave_t');
+te_wave_f = $.cookie('te_wave_f');
+te_wave_fi = $.cookie('te_wave_fi');
+z_wave = $.cookie('z_wave');
 function BGM() {
    $('#DDDD').html('000000000');
    if (fgnci == 0 || fgnc == 382383) {
@@ -153,42 +165,49 @@ function BGM() {
 }
 function DGD() {
    if (exa == fgnc) {
+      exa = fgnc;
       $('#exi').html('<font color="#00F266">' + exa + '</font>');
    } else {
       exa = Math.round( Math.random()* 999999999 );
       $('#exi').html(exa);
    }
    if (exb == fgnc) {
+      exb = fgnc;
       $('#exs').html('<font color="#00F266">' + exb + '</font>');
    } else {
       exb = Math.round( Math.random()* 999999999 );
       $('#exs').html(exb);
    }
    if (exc == fgnc) {
+      exc = fgnc;
       $('#ext').html('<font color="#00F266">' + exc + '</font>');
    } else {
       exc = Math.round( Math.random()* 999999999 );
       $('#ext').html(exc);
    }
    if (exd == fgnc) {
+      exd = fgnc;
       $('#exu').html('<font color="#00F266">' + exd + '</font>');
    } else {
       exd = Math.round( Math.random()* 999999999 );
       $('#exu').html(exd);
    }
    if (exe == fgnc) {
+      exe = fgnc;
       $('#exv').html('<font color="#00F266">' + exe + '</font>');
    } else {
       exe = Math.round( Math.random()* 999999999 );
       $('#exv').html(exe);
    }
    if (exf == fgnc) {
+      exf = fgnc;
       $('#exw').html('<font color="#00F266">' + exf + '</font>');
    } else {
       exf = Math.round( Math.random()* 999999999 );
       $('#exw').html(exf);
    }
    if (exg == fgnc) {
+      exg = fgnc;
       $('#exx').html('<font color="#00F266">' + exg + '</font>');
    } else {
       exg = Math.round( Math.random()* 999999999 );
