@@ -79,42 +79,138 @@ function BGM() {
       $('#Ǝ').get(0).play();
       fgnc = 6975588;
       fgnci = 'Ǝ';
+      if (n_wave_th >= 999) {
+         d_exa = 6975588;
+         d_exb = 6975588;
+         d_exc = 6975588;
+         d_exd = 6975588;
+         d_exe = 6975588;
+         d_exf = 6975588;
+         d_exg = 6975588;
+      }
    } else if (fgnci == 'ʞ' || fgnc == 98149590) {
       $('#ʞ').get(0).play();
       fgnc = 98149590;
       fgnci = 'ʞ';
+      if (n_wave_s >= 999) {
+         d_exa = 98149590;
+         d_exb = 98149590;
+         d_exc = 98149590;
+         d_exd = 98149590;
+         d_exe = 98149590;
+         d_exf = 98149590;
+         d_exg = 98149590;
+      }
    } else if (fgnci == 'Ƨ' || fgnc == 789979507) {
       $('#Ƨ').get(0).play();
       fgnc = 789979507;
       fgnci = 'Ƨ';
+      if (n_wave_fi >= 999) {
+         d_exa = 789979507;
+         d_exb = 789979507;
+         d_exc = 789979507;
+         d_exd = 789979507;
+         d_exe = 789979507;
+         d_exf = 789979507;
+         d_exg = 789979507;
+      }
    } else if (fgnci == 'Г' || fgnc == 599580782) {
       $('#Г').get(0).play();
       fgnc = 599580782;
       fgnci = 'Г';
+      if (n_wave_f >= 999) {
+         d_exa = 599580782;
+         d_exb = 599580782;
+         d_exc = 599580782;
+         d_exd = 599580782;
+         d_exe = 599580782;
+         d_exf = 599580782;
+         d_exg = 599580782;
+      }
    } else if (fgnci == 'И' || fgnc == 489679583) {
       $('#И').get(0).play();
       fgnc = 489679583;
       fgnci = 'И';
+      if (n_wave_t >= 999) {
+         d_exa = 489679583;
+         d_exb = 489679583;
+         d_exc = 489679583;
+         d_exd = 489679583;
+         d_exe = 489679583;
+         d_exf = 489679583;
+         d_exg = 489679583;
+      }
    } else if (fgnci == 'Х' || fgnc == 383963833) {
       $('#Х').get(0).play();
       fgnc = 383963833;
       fgnci = 'Х';
+      if (te_wave_fi >= 999) {
+         d_exa = 383963833;
+         d_exb = 383963833;
+         d_exc = 383963833;
+         d_exd = 383963833;
+         d_exe = 383963833;
+         d_exf = 383963833;
+         d_exg = 383963833;
+      }
    } else if (fgnci == 'Я' || fgnc == 383993833) {
       $('#Я').get(0).play();
       fgnc = 383993833;
       fgnci = 'Я';
+      if (te_wave_t >= 999) {
+         d_exa = 383993833;
+         d_exb = 383993833;
+         d_exc = 383993833;
+         d_exd = 383993833;
+         d_exe = 383993833;
+         d_exf = 383993833;
+         d_exg = 383993833;
+      }
    } else if (fgnci == 'ᐴ' || fgnc == 382863813) {
       $('#ᐴ').get(0).play();
       fgnc = 382863813;
       fgnci = 'ᐴ';
+      if (s_wave_th >= 999) {
+         d_exa = 382863813;
+         d_exb = 382863813;
+         d_exc = 382863813;
+         d_exd = 382863813;
+         d_exe = 382863813;
+         d_exf = 382863813;
+         d_exg = 382863813;
+         s_wave_th = 'ᐴ';
+         $.cookie('s_wave_th', s_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+      }
    } else if (fgnci == 'ᖷ' || fgnc == 621890381) {
       $('#ᖷ').get(0).play();
       fgnc = 621890381;
       fgnci = 'ᖷ';
+      if (n_wave >= 999) {
+         d_exa = 621890381;
+         d_exb = 621890381;
+         d_exc = 621890381;
+         d_exd = 621890381;
+         d_exe = 621890381;
+         d_exf = 621890381;
+         d_exg = 621890381;
+         n_wave = 'ᖷ';
+         $.cookie('n_wave', n_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+      }
    } else if (fgnci == 'ᙠ' || fgnc == 383383933) {
       $('#ᙠ').get(0).play();
       fgnc = 383383933;
       fgnci = 'ᙠ';
+      if (te_wave >= 999) {
+         d_exa = 383383933;
+         d_exb = 383383933;
+         d_exc = 383383933;
+         d_exd = 383383933;
+         d_exe = 383383933;
+         d_exf = 383383933;
+         d_exg = 383383933;
+         te_wave = 'ᙠ';
+         $.cookie('te_wave', te_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+      }
    } else {
       $('#bgm').get(0).play();
    }
