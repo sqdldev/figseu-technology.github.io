@@ -76,7 +76,7 @@ $('#TDAYS').get(0);
 $('#SINGULARITY').get(0);
 let data;
 let reqId;
-$.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.json', d => {
+$.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.rse', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
