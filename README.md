@@ -3,9 +3,13 @@
 
 このゲームはあくまで二次創作です。
 
-↓ Play Now ↓
+◇◇ Play Now ◇◇
 https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
 
 # 利用規約とプライバシーポリシー
 
 https://figseu-technology.github.io/RollingSkyEvolution/README.html
+
+# 公式サーバー (Discord)
+
+https://discord.gg/duBXgTRKZE
