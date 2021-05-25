@@ -24,7 +24,7 @@ let url = location.href;
 let fgnc = url.substr( 67 );
 let data;
 let reqId;
-$.getJSON('nine_levels.json', d => {
+$.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.rse', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
@@ -34,7 +34,7 @@ $.getJSON('nine_levels.json', d => {
   $('#score').hide();
   $('#level-d').html('Extra ステージ');
   $('#level').html('Fell Gate');
-  $('#stars').html('☆☆☆☆☆☆☆☆☆');
+  $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -129,19 +129,19 @@ function nextLevel() {
   if (level == 1) {
       $('#level-d').html('Extra ステージ');
       $('#level').html('Fell Gate');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
       $('#level-d').html('創造の地');
       $('#level').html('True Fell Gate');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 3) {
       $('#level-d').html('Extra ステージ');
       $('#level').html('Days');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
       $('#level-d').html('真実への道');
       $('#level').html('True Days');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -173,19 +173,19 @@ function prevLevel() {
   if (level == 1) {
       $('#level-d').html('Extra ステージ');
       $('#level').html('Fell Gate');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 2) {
       $('#level-d').html('創造の地');
       $('#level').html('True Fell Gate');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 3) {
       $('#level-d').html('Extra ステージ');
       $('#level').html('Days');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
      } else if (level == 4) {
       $('#level-d').html('真実への道');
       $('#level').html('True Days');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -205,7 +205,11 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          world.push(new Mat(j - 2, -i, data[index].mat));
+          if (fgnc == 'Function_Landing-True-') {
+             world.push(new DebugMat(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Mat(j - 2, -i, data[index].mat));
+          }
           break;
         case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
@@ -221,8 +225,14 @@ function loadLevel(level) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 50:
+          world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
+          break;
         case 6:
           world.push(new Mat(j - 2, -i, data[index].mat));
+          world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 60:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
           break;
         case 7:
@@ -273,12 +283,32 @@ function loadLevel(level) {
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
           break;
+        case 31:
+          if (girls == 0) {
+             world.push(new RandomMat(j - 2, -i, data[index].obstacle));
+          } else {
+             world.push(new Deltemat(j - 2, -i, data[index].obstacle));
+          }
+          break;
+        case 32:
+          if (girls == 1) {
+             world.push(new RandomMat(j - 2, -i, data[index].obstacle));
+          } else {
+             world.push(new Deltemat(j - 2, -i, data[index].obstacle));
+          }
+          break;
         case 39:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 94:
+          world.push(new FellGate(j - 2, -i, data[index].obstacle));
+          world.push(new FellGateMat(j - 2, -i, data[index].mat));
+          break;
         case 98:
-          world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 210:
+          world.push(new Dreamtower(j - 2, -i, data[index].obstacle));
           break;
       }
     }
@@ -321,7 +351,7 @@ function gameover() {
   $('#main').css('pointer-events', 'auto');
   if (level == 1) { 
      if (star == 2) {
-      $('#level-d').html('滅びる世界');
+      $('#level-d').html('新たな世界を築く');
       }
       $('#FELL').each(function(){
     this.pause(); // Stop playing
@@ -329,7 +359,7 @@ function gameover() {
 });
      } else if (level == 2) { 
      if (star == 2) {
-      $('#level-d').html('世界は新たに創造される');
+      $('#level-d').html('かすかに声が聞こえる');
       }
       $('#TFE').each(function(){
     this.pause(); // Stop playing
@@ -337,7 +367,7 @@ function gameover() {
 });
      } else if (level == 3) { 
      if (star == 2) {
-      $('#level-d').html('運命が蠢く日');
+      $('#level-d').html('運命は変えられた');
       }
       $('#DAYS').each(function(){
     this.pause(); // Stop playing
@@ -345,7 +375,7 @@ function gameover() {
 });
      } else if (level == 4) { 
      if (star == 2) {
-      $('#level-d').html('私は運命を動かし、あなたは運命に抗う');
+      $('#level-d').html('私は運命を動かし、あなたは運命に抗った');
       }
       $('#TDAYS').each(function(){
     this.pause(); // Stop playing
