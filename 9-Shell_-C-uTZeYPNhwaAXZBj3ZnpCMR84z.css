@@ -361,13 +361,13 @@ canvas {
   position: fixed;
   text-decoration: none;
   top: 9%;
-  left: 87%;
+  left: 60%;
   border: double #FFFFFF;
   padding: 5px;
   border-radius: 1px;
   text-align: right;
   display: inline-block;
-  font-family: serif;
+  font-family: 'dgdr',serif;
   font-weight: 700;
   font-size: 20px;
   transform: 0.5em;
