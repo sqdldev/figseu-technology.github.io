@@ -16,7 +16,7 @@ body {
   border: solid #969696;
   position: fixed;
   background-color: rgba(0,0,0,0);
-  font-family: serif;
+  font-family: 'dgdr', serif;
   font-weight: 700; 
   font-size: 70px;
   border-radius: 5px;
@@ -34,7 +34,7 @@ body {
   text-decoration: none;
   position: fixed;
   background-color: rgba(0,0,0,0);
-  font-family: sans-serif,serif;
+  font-family: 'dgdr',sans-serif,serif;
   font-weight: 700; 
   font-size: 240%;
   border-radius: 5px;
@@ -56,7 +56,7 @@ body {
   border-radius: 1px;
   text-align: right;
   display: inline-block;
-  font-family: serif;
+  font-family: 'dgdr',serif;
   font-weight: 700;
   font-size: 20px;
   transform: 0.5em;
@@ -95,7 +95,7 @@ canvas {
   color: white;
   text-shadow: 1px 2px 3px #808080;
   font-size: 40px;
-  font-family: serif;
+  font-family: 'dgdr',serif;
   font-weight: 700;
 }
 #play{
@@ -135,7 +135,7 @@ canvas {
   border: solid #FFFFFF;
   position: fixed;
   background-color: rgba(0,0,0,0.2);
-  font-family: serif;
+  font-family: 'dgdr',serif;
   font-weight: 700; 
   font-size: 70px;
   border-radius: 5px;
@@ -152,7 +152,7 @@ canvas {
   top: 10%;
   left: 0;
   width: 100%;
-  font-family: serif;
+  font-family: 'dgdr',serif;
   font-weight: 700;
   font-size: 50px;
   text-align: center;
@@ -164,7 +164,7 @@ canvas {
   top: 50%;
   left: 0;
   width: 100%;
-  font-family: serif;
+  font-family: 'dgdr',serif;
   font-weight: 700;
   font-size: 38px;
   text-align: center;
@@ -176,7 +176,7 @@ canvas {
   top: 35%;
   left: 0;
   width: 100%;
-  font-family: sans-serif,serif;
+  font-family: 'dgdr',sans-serif,serif;
   font-weight: 700;
   font-size: 50px;
   text-align: center;
@@ -212,7 +212,7 @@ canvas {
   border-radius: 20px;
   text-align: right;
   display: inline-block;
-  font-family: sans-serif,serif;
+  font-family: 'dgdr',sans-serif,serif;
   font-weight: 700;
   font-size: 20px;
   transform: 0.5em;
@@ -228,7 +228,7 @@ canvas {
   border-radius: 1px;
   text-align: right;
   display: inline-block;
-  font-family: serif;
+  font-family: 'dgdr',serif;
   font-weight: 700;
   font-size: 20px;
   transform: 0.5em;
@@ -244,7 +244,7 @@ canvas {
   border-radius: 1px;
   text-align: right;
   display: inline-block;
-  font-family: serif;
+  font-family: 'dgdr',serif;
   font-weight: 700;
   font-size: 20px;
   transform: 0.5em;
@@ -372,7 +372,7 @@ canvas {
   border-radius: 1px;
   text-align: right;
   display: inline-block;
-  font-family: serif;
+  font-family: 'dgdr',serif;
   font-weight: 700;
   font-size: 20px;
   transform: 0.5em;
