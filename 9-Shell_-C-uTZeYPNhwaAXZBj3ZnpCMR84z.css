@@ -16,7 +16,7 @@ body {
   border: solid #969696;
   position: fixed;
   background-color: rgba(0,0,0,0);
-  font-family: 'dgdr',serif;
+  font-family: serif;
   font-weight: 700; 
   font-size: 70px;
   border-radius: 5px;
@@ -258,7 +258,7 @@ canvas {
   border: solid #FFFFFF;
   position: fixed;
   background-color: rgba(0,0,0,0);
-  font-family: 'dgdr',serif;
+  font-family: serif;
   font-weight: 700; 
   font-size: 70px;
   border-radius: 5px;
@@ -351,7 +351,7 @@ canvas {
   border-radius: 1px;
   text-align: right;
   display: inline-block;
-  font-family: 'dgdr',serif;
+  font-family: serif;
   font-weight: 700;
   font-size: 20px;
   transform: 0.5em;
