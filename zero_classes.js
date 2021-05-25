@@ -44,7 +44,7 @@ class Ball {
       });
 
       if (!this.landed) {
-        this.speed.y -= 0.02;
+        this.speed.y -= 0.04;
         if (!this.count2Lose) this.count2Lose = 1;
       }
       world.forEach(v => {
