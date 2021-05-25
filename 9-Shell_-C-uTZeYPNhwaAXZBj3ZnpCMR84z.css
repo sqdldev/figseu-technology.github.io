@@ -357,12 +357,12 @@ canvas {
   transform: 0.5em;
 }
 #two_level {
-  color: #FFFFFF;
+  color: #00A55D;
   position: fixed;
   text-decoration: none;
   top: 9%;
   left: 60%;
-  border: double #FFFFFF;
+  border: double #00A55D;
   padding: 5px;
   border-radius: 1px;
   text-align: right;
