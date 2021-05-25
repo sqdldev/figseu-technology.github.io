@@ -27,7 +27,7 @@ let fgnc = url.substr( 75 );
 $('#zero').get(0);
 let data;
 let reqId;
-$.getJSON('RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhjnTQurtXT5ApBMebE.json', d => {
+$.getJSON('RShy8KJ5MpxpiFELfSRSUjeAmLpsGgatFdE2DMkgQMSHyfgtR2rkZJGsr2G7XVYe8nkhjnTQurtXT5ApBMebE.rse', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
