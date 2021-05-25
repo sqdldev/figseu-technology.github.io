@@ -23,7 +23,7 @@ let url = location.href;
 let fgnc = url.substr( 66 );
 let data;
 let reqId;
-$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.json', d => {
+$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.rse', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
