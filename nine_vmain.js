@@ -21,7 +21,7 @@ let star = 0;
 let wave = 0;
 let girls = Math.floor( Math.random() * 11 );
 let url = location.href;
-let fgnc = url.substr( 67 );
+let fgnc = url.substr( 98 );
 let data;
 let reqId;
 $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.rse', d => {
