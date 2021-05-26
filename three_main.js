@@ -28,7 +28,7 @@ wave_t = $.cookie('th_wave_t');
 wave_th = $.cookie('th_wave_th');
 wave_f = $.cookie('th_wave_f');
 let url = location.href;
-let fgnc = url.substr( 68 );
+let fgnc = url.substr( 75 );
 let data;
 let reqId;
 $.getJSON('QrJSs7WNhkQM4mkdWzwu8jGCtHVenGBz7VVEYG35FYwtF36TKt.json', d => {
@@ -325,7 +325,11 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          world.push(new Mat(j - 2, -i, data[index].mat));
+          if (fgnc == 'Function_Landing-True-') {
+             world.push(new DebugMat(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Mat(j - 2, -i, data[index].mat));
+          }
           break;
         case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
