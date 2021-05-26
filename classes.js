@@ -1212,12 +1212,13 @@ class DebugMat {
     this.material = new THREE.MeshPhongMaterial({ color: color });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
-    this.edgesMaterial = new THREE.LineBasicMaterial({ color: color });
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
     this.mesh.position.set(xpos, 0, zpos);
     this.line.position.set(xpos, 0, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
+    scene.add(this.mesh);
     scene.add(this.line);
 
   }
