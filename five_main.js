@@ -35,7 +35,7 @@ wave_s = $.cookie('fi_wave_s');
 wave_se = $.cookie('fi_wave_se');
 let data;
 let reqId;
-$.getJSON('five_levels.json', d => {
+$.getJSON('5DU_SbJYuLsQ48h5zrxzTT3bQL64apD9WjnU8R6rGbdtMZTjN7gA.rse', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
@@ -78,12 +78,7 @@ $.getJSON('five_levels.json', d => {
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html('ERROR 810');
   } else if(userAgent.indexOf('opera') != -1) {
-     $('#play').hide();
-     $('#next').hide();
-     $('#score').hide();
-     $('#level-d').html('E R R O R !');
-     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
-     $('#stars').html('ERROR 721');
+     $('#level-d').html('⌥データ取得中⌥');
   } else {
      $('#play').hide();
      $('#next').hide();
@@ -195,7 +190,7 @@ function start(e) {
             $('#the_end').get(0).play();
             wave_f++;
             } else if (level == 5) {
-            $('#loki').get(0).play();
+            $('#shrine').get(0).play();
             wave_fi++;
             } else if (level == 6) {
             $('#aloud').get(0).play();
@@ -288,8 +283,8 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('開発中');
-         $('#level').html('？？？');
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('Shrine Ⅱ');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
@@ -310,7 +305,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 5) {
     $('#next').hide();
   }
 }
@@ -351,8 +346,8 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('開発中');
-         $('#level').html('？？？');
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('Shrine Ⅱ');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
@@ -556,9 +551,9 @@ function gameover() {
      } else if (level == 5) {
       $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
       if (star == 2) {
-             $('#level-d').html('暗闇に灯る光');
+             $('#level-d').html('夢は終わらない');
       }
-      $('#loki').each(function(){
+      $('#shrine').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
