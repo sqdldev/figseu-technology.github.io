@@ -432,6 +432,17 @@ function gameover() {
      wave_f = 0;
      }
   }
+  if (fgnc == 'Function_Landing-True-') {
+     if (level == 1) {
+     wave = $.cookie('th_wave');
+     } else if (level == 2) {
+     wave_t = $.cookie('th_wave_t');
+     } else if (level == 3) {
+     wave_th = $.cookie('th_wave_th');
+     } else if (level == 4) {
+     wave_f = $.cookie('th_wave_f');
+     }
+  }
   $.cookie('th_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('th_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('th_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
