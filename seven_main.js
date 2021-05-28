@@ -32,7 +32,7 @@ $('#ts').get(0);
 $('#tmp').get(0);
 let data;
 let reqId;
-$.getJSON('seven_levels.json', d => {
+$.getJSON('7DA_ZIP6mD6WwBr4bLnbwyHb3t8976MVW8YAuy7Yp5fAXd5MxFbnJyy.rsr', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
