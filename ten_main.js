@@ -335,7 +335,11 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          world.push(new Mat(j - 2, -i, data[index].mat));
+          if (fgnc == 'Function_Landing-True-') {
+             world.push(new DebugMat(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Mat(j - 2, -i, data[index].mat));
+          }
           break;
         case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
@@ -448,6 +452,23 @@ function gameover() {
      wave_se = 0;
      }
   }
+  if (fgnc == 'Function_Landing-True-') {
+     if (level == 1) {
+     wave = $.cookie('te_wave');
+     } else if (level == 2) {
+     wave_t = $.cookie('te_wave_t');
+     } else if (level == 3) {
+     wave_th = $.cookie('te_wave_th');
+     } else if (level == 4) {
+     wave_f = $.cookie('te_wave_f');
+     } else if (level == 5) {
+     wave_fi = $.cookie('te_wave_fi');
+     } else if (level == 6) {
+     wave_s = $.cookie('te_wave_s');
+     } else if (level == 7) {
+     wave_se = $.cookie('te_wave_se');
+     }
+  }
   $.cookie('te_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('te_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('te_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
@@ -506,6 +527,8 @@ function gameover() {
                $('#PresentCode').hide();
                $('#end_key').show();
                $('#level-d').html('天から差し込む光をただ、眺めていた');
+            } else {
+               $('#level-d').html('天から差し込む光');
             }
          }
       if (fgnc == 113) {
