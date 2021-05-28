@@ -28,10 +28,10 @@ wave_t = $.cookie('s_wave_t');
 wave_th = $.cookie('s_wave_th');
 wave_f = $.cookie('s_wave_f');
 let url = location.href;
-let fgnc = url.substr( 66 );
+let fgnc = url.substr( 73 );
 let data;
 let reqId;
-$.getJSON('six_levels.json', d => {
+$.getJSON('6DE_GSYgzp54UpyS6mEenh6DWmipMsw5wgYy6cJabwxbEeZR9WANPU.rse', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
@@ -320,7 +320,11 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          world.push(new Mat(j - 2, -i, data[index].mat));
+          if (fgnc == 'Function_Landing-True-') {
+             world.push(new DebugMat(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Mat(j - 2, -i, data[index].mat));
+          }
           break;
         case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
@@ -425,6 +429,17 @@ function gameover() {
      wave_th = 0;
      } else if (level == 4) {
      wave_f = 0;
+     }
+  }
+  if (fgnc == 'Function_Landing-True-') {
+     if (level == 1) {
+     wave = $.cookie('s_wave');
+     } else if (level == 2) {
+     wave_t = $.cookie('s_wave_t');
+     } else if (level == 3) {
+     wave_th = $.cookie('s_wave_th');
+     } else if (level == 4) {
+     wave_f = $.cookie('s_wave_f');
      }
   }
   $.cookie('s_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
