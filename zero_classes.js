@@ -91,14 +91,14 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Deltemat && this.landed) {
           if (v.detect() && started) {
-            v.line.position.y -= 0.1;
+            v.line.position.y -= 0.5;
           }
         }
       });
       world.forEach(v => {
         if (v instanceof Delteobstacle && this.landed) {
           if (v.detect() && started) {
-            v.line.position.y -= 0.1;
+            v.line.position.y -= 0.5;
           }
         }
       });
