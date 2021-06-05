@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Rolling Sky Evolution
 ローリングスカイの二次創作ゲームがWEBとAndroidアプリで登場！超難易度の鬼畜ステージのクリアを目指せ！
 
