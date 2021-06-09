@@ -48,6 +48,11 @@ img {
 	padding: 20px;
 	text-decoration: none;
 }
+hr {
+   background: #FFFFFF;
+   border: #FFFFFF;
+   border-radius: 5px;
+}
 </style>
 <audio rel="preload" src="bgm/comingsoon.mp3" id="bgm" preload="auto" loop></audio>
 </head>
@@ -61,7 +66,9 @@ img {
 
 <h4>効果音が無いですが、IOSでのプレイも可能です。</h4>
 
-<h2 align="center">--------------利用規約-------------</h2>
+<hr size="3"/>
+
+<h2 align="center">利用規約</h2>
 
 <p>本利用規約（以下「本規約」といいます。）は、Figseu™️ Technology（以下「当運営」といいます。）のゲーム、ウェブサイト及びモバイルアプリケーションその他の関連サービス（以下「本サービス」といいます。）に関して、本サービスを利用するお客様（以下「お客様」といいます。）と当運営との間で締結するものです。また、本サービスに関して、本規約とは別に個別のガイドラインや規則等が規定されている場合には、お客様は、本規約の他、当該個別のガイドラインや規則等にも従い、本サービスを利用しなければなりません。</p>
 
@@ -73,7 +80,7 @@ img {
 
 <p>当サービスの一部に使用されている音楽等の権利は、音楽の原作者に帰属します。</p>
 
-<p>当サービスの許可されたデータ以外のデータをダウンロードすることや、閲覧することを禁止します。(ステージデータ、javascriptのデータ、音源データ等)</p>
+<p>当サービスの許可されたデータ以外のデータをダウンロードすることや、閲覧することはしないでください。</p>
 
 <p>お客様からの要望や不具合の報告については受付いたしますが、当運営が悪質であると判断したクレームに関しては一切対応いたしません。</p>
 
@@ -91,7 +98,9 @@ img {
 
 <p>更新 : 2021年2月7日</p>
 
-<h2 align="center">--------プライバシーポリシー------</h2>
+<hr size="3"/>
+
+<h2 align="center">プライバシーポリシー</h2>
 
 <p>当運営は、本サービスを使用されるお客様から以下のデータを取得する場合があります。</p>
 
@@ -107,13 +116,17 @@ img {
 
 <p>当運営は緊急時を除き、上記以外のお客様のデータを閲覧、開示 することは一切ありません。</p>
 
-<h2 align="center">-------アプリの対応状況-------</h2>
+<hr size="3"/>
+
+<h2 align="center">アプリの対応状況</h2>
 
 <p align="center"><div id="browsers">⌥⌥⌥データ取得中⌥⌥⌥</div></p>
 
 <p align="center"><div id="ck">⌥⌥⌥データ取得中⌥⌥⌥</div></p>
 
-<h2 align="center">--------------操作方法-------------</h2>
+<hr size="3"/>
+
+<h2 align="center">操作方法</h2>
 
 <div align="center"><img src="img/INFO.png"></img></div>
 
@@ -156,7 +169,7 @@ if(userAgent.indexOf('msie') != -1 ||
 } else if(userAgent.indexOf('firefox') != -1) {
     $('#browsers').html('お使いのアプリは一部のみ対応しています - CODE 810');
 } else if(userAgent.indexOf('opera') != -1) {
-    $('#browsers').html('お使いのアプリは対応していません - CODE 721');
+    $('#browsers').html('お使いのアプリは一部対応しています - CODE 721');
 } else {
     $('#browsers').html('エラーが発生しました - CODE 404');
 }
