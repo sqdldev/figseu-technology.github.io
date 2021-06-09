@@ -46,7 +46,7 @@ $('#hina').get(0);
 $('#hina_g').get(0);
 let data;
 let reqId;
-$.getJSON('GWbmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCybmrxwpB.json', d => {
+$.getJSON('8GW_bmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTCybmrxwpB.rse', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
