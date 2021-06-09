@@ -1,6 +1,10 @@
+@font-face {
+   font-family: 'dgdr';
+   src: url('https://figseu-technology.github.io/RollingSkyEvolution/DGDR/JKG-L_3.ttf') format('truetype');
+}
 body {
 background: #000000;
-font-family: sans-serif;
+font-family: 'dgdr',sans-serif;
 }
 
 a {
