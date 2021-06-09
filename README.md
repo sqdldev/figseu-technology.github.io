@@ -4,11 +4,11 @@
 <meta name="robots" content="noindex,nofollow">
 
 # Rolling Sky Evolution
-ローリングスカイの二次創作ゲームがWEBとAndroidアプリで登場！超難易度の鬼畜ステージのクリアを目指せ！
+<p>ローリングスカイの二次創作ゲームがWEBとAndroidアプリで登場！超難易度の鬼畜ステージのクリアを目指せ！</p>
 
-このゲームはあくまで二次創作です。
+<p>このゲームはあくまで二次創作です。</p>
 
-◇◇ Play Now ◇◇
+<br>◇◇ Play Now ◇◇</br>
 https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
 
 # 利用規約とプライバシーポリシー
