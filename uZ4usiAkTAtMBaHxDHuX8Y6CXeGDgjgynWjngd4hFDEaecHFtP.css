@@ -12,11 +12,11 @@ a {
 }
 
 h2 {
-	font-family: serif;
+	font-family: 'dgdr',serif;
 }
 
 h3 {
-   font-family: sans-serif;
+   font-family: 'dgdr',sans-serif;
    padding: 20px;
    width: 90%;
    position: absolute;
