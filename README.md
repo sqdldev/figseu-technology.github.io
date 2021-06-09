@@ -1,7 +1,7 @@
 <link rel="icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
 <link rel="shortcut icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
 <link rel="apple-touch-icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
-<meta name="robots" content="noindex,nofollow">
+<meta name="robots" content="noindex">
 
 # Rolling Sky Evolution
 <p>ローリングスカイの二次創作ゲームがWEBとAndroidアプリで登場！超難易度の鬼畜ステージのクリアを目指せ！</p>
