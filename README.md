@@ -1,6 +1,4 @@
-<link rel="icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
-<link rel="shortcut icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
-<link rel="apple-touch-icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
+<meta http-equiv="content-language" content="ja">
 <meta name="robots" content="noindex">
 
 # Rolling Sky Evolution
