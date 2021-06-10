@@ -1,5 +1,18 @@
 
 #DGDR CORE
+img/
+System/
+DGDR/
+apk/
+bgm/
+bgm_A/
+MARU/
+se/
+se_A/
+textures/
+
+
+
 *.mp3
 *.wav
 
