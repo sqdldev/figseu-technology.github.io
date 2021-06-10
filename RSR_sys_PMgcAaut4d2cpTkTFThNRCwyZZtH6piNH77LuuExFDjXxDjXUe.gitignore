@@ -2,6 +2,10 @@
 #DGDR CORE
 *.mp3
 *.wav
+
+*.cmr
+
+
 *.jar
 *.war
 *.nar
@@ -9,5 +13,12 @@
 *.zip
 *.tar.gz
 *.rar
+
 *.rse
 *.rsr
+*.agte
+
+*.css
+*.html
+*.php
+*.js
