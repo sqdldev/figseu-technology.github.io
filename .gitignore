@@ -1,17 +1,16 @@
 
 #DGDR CORE
-img/
-System/
-DGDR/
-apk/
-bgm/
-bgm_A/
-MARU/
-se/
-se_A/
-textures/
-
-
+/img/
+/System/
+/DGDR/
+/apk/
+/bgm/
+/bgm_A/
+/MARU/
+/se/
+/se_A/
+/textures/
+/RSR/
 
 *.mp3
 *.wav
@@ -35,3 +34,4 @@ textures/
 *.html
 *.php
 *.js
+*.json
