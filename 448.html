@@ -1,0 +1,37 @@
+<!doctype html>
+<head>
+<title>Rolling Sky Evolution</title>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+body {
+  background-image: url('Backgrounds/505_RS_Background_20210615022512.cmr');
+  background-position : center;
+   background-size: contain;background-attachment: fixed;background-repeat: no-repeat;}
+}
+.button {
+	color: #FFFFFF;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  border: double #FFFFFF;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: right;
+  display: inline-block;
+  font-family: 'dgdr',serif;
+  font-weight: 700;
+}
+</style>
+<script>
+function BGM() {
+	$('#bgm').get(0).play();
+}
+</script>
+<audio rel="preload" src="bgm/comingsoon.mp3" id="bgm" preload="auto" loop></audio>
+</head>
+<body onload="BGM()" oncontextmenu="return false;">
+
+</body>
+<script src="System/jquery.js"></script>
