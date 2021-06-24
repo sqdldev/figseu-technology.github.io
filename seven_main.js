@@ -21,10 +21,12 @@ let star = 0;
 let wave = 0;
 let wave_t = 0;
 let wave_th = 0;
+let wave_f = 0;
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('se_wave');
 wave_t = $.cookie('se_wave_t');
 wave_th = $.cookie('se_wave_th');
+wave_f = $.cookie('se_wave_f');
 let url = location.href;
 let fgnc = url.substr( 75 );
 $('#shrine').get(0);
@@ -149,6 +151,10 @@ function start(e) {
         wave_th = 0;
         $.cookie('se_wave_th', wave_th, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
+     if (typeof wave_f == 'undefined') {
+        wave_f = 0;
+        $.cookie('se_wave_f', wave_f, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+     }
     if (level == 1) {
             $('#shrine').get(0).play();
             wave++;
@@ -158,7 +164,10 @@ function start(e) {
             } else if (level == 3) {
             $('#tmp').get(0).play();
             wave_th++;
-           } else {
+            } else if (level == 4) {
+            $('#tkb').get(0).play();
+            wave_f++;
+            } else {
             $('#cloud').get(0).play();
             }
     reset();
@@ -238,6 +247,11 @@ function nextLevel() {
          $('#level').html('True Moon Pride');
          $('#stars').html('☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('se_wave_th'));
+        } else if (level == 4) {
+         $('#level-d').html('Designed by あわけー');
+         $('#level').html('in the 冷凍庫');
+         $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -245,7 +259,7 @@ function nextLevel() {
            }
   $('#prev').show();
   $('#retry').hide();
-  if (level == 3) {
+  if (level == 4) {
     $('#next').hide();
   }
 }
@@ -281,6 +295,11 @@ function prevLevel() {
          $('#level').html('True Moon Pride');
          $('#stars').html('☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('se_wave_th'));
+        } else if (level == 4) {
+         $('#level-d').html('Designed by あわけー');
+         $('#level').html('in the 冷凍庫');
+         $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -408,6 +427,8 @@ function gameover() {
      wave_t = 0;
      } else if (level == 3) {
      wave_th = 0;
+     } else if (level == 4) {
+     wave_f = 0;
      }
   }
   if (fgnc == 'Function_Landing-True-') {
@@ -417,11 +438,14 @@ function gameover() {
      wave_t = $.cookie('se_wave_t');
      } else if (level == 3) {
      wave_th = $.cookie('se_wave_th');
+     } else if (level == 4) {
+     wave_f = $.cookie('se_wave_f');
      }
   }
   $.cookie('se_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('se_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('se_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('se_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(100);
@@ -457,6 +481,15 @@ function gameover() {
       $('#level-d').html('伝説は虚しく滅び去っていった');
       }
       $('#tmp').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 4) { 
+      $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
+     if (star == 2) {
+      $('#level-d').html('凍える大地');
+      }
+      $('#tkb').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
