@@ -30,6 +30,7 @@ let s_wave_th = 0;
 let se_wave = 0;
 let se_wave_t = 0;
 let se_wave_th = 0;
+let se_wave_f = 0;
 let e_wave = 0;
 let e_wave_t = 0;
 let e_wave_th = 0;
@@ -135,6 +136,8 @@ let Pfd_82 = 0;
 let Pfd_83 = 0;
 let Pfd_84 = 0;
 let Pfd_85 = 0;
+let Pfd_86 = 0;
+let Pfd_87 = 0;
 function Performance_Data() {
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -166,6 +169,7 @@ s_wave_th = $.cookie('s_wave_th');
 se_wave = $.cookie('se_wave');
 se_wave_t = $.cookie('se_wave_t');
 se_wave_th = $.cookie('se_wave_th');
+se_wave_f = $.cookie('se_wave_f');
 e_wave = $.cookie('e_wave');
 e_wave_t = $.cookie('e_wave_t');
 e_wave_th = $.cookie('e_wave_th');
@@ -271,6 +275,8 @@ Pfd_82 = $.cookie('Pfd_82');
 Pfd_83 = $.cookie('Pfd_83');
 Pfd_84 = $.cookie('Pfd_84');
 Pfd_85 = $.cookie('Pfd_85');
+Pfd_86 = $.cookie('Pfd_86');
+Pfd_87 = $.cookie('Pfd_87');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -352,6 +358,7 @@ $.cookie('s_wave_th', s_wave_th, { expires: 400, domain:'figseu-technology.githu
 $.cookie('se_wave', se_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('se_wave_t', se_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('se_wave_th', se_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('se_wave_f', se_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('e_wave', e_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('e_wave_t', e_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('e_wave_th', e_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
@@ -1017,6 +1024,22 @@ if (n_wave_fi >= 300) {
 } else if (Pfd_85 == 107558856528741996791037612619) {
    $('#Pf_85').html('開放の遺伝子 - ✾取得済✾');
 }
+
+if (se_wave_f >= 1) {
+   $('#Pf_86').html('寒さを耐えたプレイヤー - ✾取得済✾');
+   Pfd_86 = 107558856528741996791037612619;
+   $.cookie('Pfd_86', Pfd_86, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else if (Pfd_86 == 107558856528741996791037612619) {
+   $('#Pf_86').html('寒さを耐えたプレイヤー - ✾取得済✾');
+}
+if (se_wave_f >= 30) {
+   $('#Pf_87').html('南極住み - ✾取得済✾');
+   Pfd_87 = 107558856528741996791037612619;
+   $.cookie('Pfd_87', Pfd_87, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else if (Pfd_87 == 107558856528741996791037612619) {
+   $('#Pf_87').html('寒さを耐えたプレイヤー - ✾取得済✾');
+}
+
 $('#Data_Warn').html(' ');
 return false;
 }
