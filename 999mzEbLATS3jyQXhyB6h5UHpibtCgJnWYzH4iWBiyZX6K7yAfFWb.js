@@ -588,8 +588,6 @@ function gameover() {
       $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
       if (star == 2) {
          if (girls == 1) {
-            Pfd_82 = 107558856528741996791037612619;
-            $.cookie('Pfd_82', Pfd_82, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
             $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
             $('#Waves').html('☆ × ' + $.cookie('n_wave_s'));
             if (fgnc == 'Function_Landing-True-') {
