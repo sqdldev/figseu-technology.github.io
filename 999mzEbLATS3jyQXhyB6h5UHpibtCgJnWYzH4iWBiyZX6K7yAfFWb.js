@@ -590,9 +590,18 @@ function gameover() {
          if (girls == 1) {
             Pfd_82 = 107558856528741996791037612619;
             $.cookie('Pfd_82', Pfd_82, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-            $('#level-d').html('捻れた遺伝子を止める者');
             $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
             $('#Waves').html('☆ × ' + $.cookie('n_wave_s'));
+            if (fgnc == 'Function_Landing-True-') {
+               $('#level-d').html('破壊された遺伝子');
+            } else if (fgnc == 'nof') {
+               $('#play').hide();
+               $('#next').hide();
+               $('#prev').hide();
+               $('#PresentCode').hide();
+               $('#singularity_key').show();
+               $('#level-d').html('捻れた遺伝子を止める者');
+            }
          } else {
             $('#level-d').html('捻れた遺伝子');
          }
