@@ -50,6 +50,8 @@ hr {
 }
 </style>
 <audio rel="preload" src="bgm/uZ4usiAkTAtMBaHxDHuX8Y6CXeGDgjgynWjngd4hFDEaecHFtP.mp3" id="bgm" preload="auto" loop></audio>
+<audio rel="preload" src="bgm/comingsoon.mp3" id="bgm_000" preload="auto" loop></audio>
+<audio rel="preload" src="bgm/RSE_080.mp3" id="bgm_080" preload="auto" loop></audio>
 </head>
 <header>
 <div id="ag">
@@ -133,6 +135,8 @@ hr {
 <input type="text" autocomplete="on" list="command_cmd" placeholder="Command line" name=f>
 <datalist id="command_cmd">
 <option value="Function_MainMenu">
+<option value="Function_000-Load-">
+<option value="Function_080-Load-">
 <option value="Function_Save_Wave">
 <option value="Function_Delte_Wave">
 <option value="Function_Waves_Write">
@@ -186,5 +190,13 @@ if (fgnc == 'Function_Waves-All-_Write-1000-_E_Shell_Key-03283390459150525401273
 if (fgnc == 'DGDR_CORE-7DA_8m5x24SkYeV4E8bbKuUdXktHK7fNFp3LQzRpTVMdK4yGrgbaNc5LZUySyzARXnMyU3SxPP4J3QC-') {
    location.href = "https://figseu-technology.github.io/RollingSkyEvolution/seven_index.html?f=7DA_8m5x24SkYeV4E8bbKuUdXktHK7fNFp3LQzRpTVMdK4yGrgbaNc5LZUySyzARXnMyU3SxPP4J3QC";
 }
-function BGM() {$('#bgm').get(0).play();}
+function BGM() {
+if (fgnc == 'Function_080-Load-') {
+   $('#bgm_080').get(0).play();
+} else if (fgnc == 'Function_000-Load-') {
+   $('#bgm_000').get(0).play();
+} else
+   $('#bgm').get(0).play();
+}
+}
 </script>
