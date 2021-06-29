@@ -107,7 +107,7 @@ class Ball {
           if (v.detect() && started) {
             this.landed = false;
             v.line.position.y += 0.01;
-            v.line.rotation.y += 0.1;
+            v.line.rotation.y += 0.5;
           }
         }
       });
