@@ -169,8 +169,13 @@ function start(e) {
         $('#TDAYS').get(0).play();
         wave_f++;
         } else if (level == 5) {
-        $('#SINGULARITY').get(0).play();
-        wave_fi++;
+        if (girls == 1) {
+           $('#TRUESINGULARITY').get(0).play();
+           wave_s++;
+        } else {
+           $('#SINGULARITY').get(0).play();
+           wave_fi++;
+        }
         } else {
             $('#FELL').get(0).play();
             }
@@ -262,10 +267,17 @@ function nextLevel() {
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('n_wave_f'));
       } else if (level == 5) {
-      $('#level-d').html('1周年記念ステージ');
-      $('#level').html('Singularity');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
+      if (girls == 1) {
+         $('#level-d').html('最終ステージ');
+         $('#level').html('True Singularity');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('n_wave_s'));
+      } else {
+         $('#level-d').html('1周年記念ステージ');
+         $('#level').html('Singularity');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
+      }
       } else {
             $('#level-d').html('開発中');
             $('#level').html('？？？');
@@ -315,10 +327,17 @@ function prevLevel() {
       $('#stars').html('☆☆☆☆☆☆☆☆☆');
       $('#Waves').html('☆ × ' + $.cookie('n_wave_f'));
       } else if (level == 5) {
-      $('#level-d').html('1周年記念ステージ');
-      $('#level').html('Singularity');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆');
-      $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
+      if (girls == 1) {
+         $('#level-d').html('最終ステージ');
+         $('#level').html('True Singularity');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('n_wave_s'));
+      } else {
+         $('#level-d').html('1周年記念ステージ');
+         $('#level').html('Singularity');
+         $('#stars').html('☆☆☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('n_wave_fi'));
+      }
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -479,6 +498,7 @@ function gameover() {
      wave_f = 0;
      } else if (level == 5) {
      wave_fi = 0;
+     wave_s = 0;
      } else if (level == 6) {
      wave_s = 0;
      }
@@ -494,6 +514,7 @@ function gameover() {
      wave_f = $.cookie('n_wave_f');
      } else if (level == 5) {
      wave_fi = $.cookie('n_wave_fi');
+     wave_s = $.cookie('n_wave_s');
      } else if (level == 6) {
      wave_s = $.cookie('n_wave_s');
      }
@@ -569,10 +590,18 @@ function gameover() {
          if (girls == 1) {
             Pfd_82 = 107558856528741996791037612619;
             $.cookie('Pfd_82', Pfd_82, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+            $('#level-d').html('捻れた遺伝子を止める者');
+            $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+            $('#Waves').html('☆ × ' + $.cookie('n_wave_s'));
+         } else {
+            $('#level-d').html('捻れた遺伝子');
          }
-      $('#level-d').html('捻れた遺伝子');
       }
       $('#SINGULARITY').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     $('#TRUESINGULARITY').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
