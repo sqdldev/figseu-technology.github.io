@@ -357,7 +357,7 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          if (fgnc == 'Function_Landing-True-') {
+          if (fgnc == 'Function_Landing-True-' || fgnc == '9MZ_RsYg22xBCSeZPyTK5GsC2EQ3J7Ku2BKJjs4w3RWd5gSrGPjQbiP9p4SUPb5Q2MrxLNUETEfCVLc') {
              world.push(new DebugMat(j - 2, -i, data[index].mat));
           } else {
              world.push(new Mat(j - 2, -i, data[index].mat));
@@ -571,7 +571,7 @@ function gameover() {
       if (star == 2) {
          if (fgnc == 'Function_Landing-True-') {
             $('#level-d').html('破壊された力');
-         } else if (fgnc == 'nof') {
+         } else if (fgnc == 'nof' || fgnc == '9MZ_RsYg22xBCSeZPyTK5GsC2EQ3J7Ku2BKJjs4w3RWd5gSrGPjQbiP9p4SUPb5Q2MrxLNUETEfCVLc') {
             $('#play').hide();
             $('#next').hide();
             $('#prev').hide();
@@ -592,7 +592,7 @@ function gameover() {
             $('#Waves').html('☆ × ' + $.cookie('n_wave_s'));
             if (fgnc == 'Function_Landing-True-') {
                $('#level-d').html('破壊された遺伝子');
-            } else if (fgnc == 'nof') {
+            } else if (fgnc == 'nof' || fgnc == '9MZ_RsYg22xBCSeZPyTK5GsC2EQ3J7Ku2BKJjs4w3RWd5gSrGPjQbiP9p4SUPb5Q2MrxLNUETEfCVLc') {
                $('#play').hide();
                $('#next').hide();
                $('#prev').hide();
