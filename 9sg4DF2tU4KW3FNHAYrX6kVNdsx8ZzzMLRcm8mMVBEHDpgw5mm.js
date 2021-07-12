@@ -1095,3 +1095,31 @@ class DebugMat {
     ) return true;
   }
 }
+
+class UNObstacle {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.BoxGeometry(1, 1, 1);
+    this.material = new THREE.MeshPhongMaterial({ color: color });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: color });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0.4, zpos);
+    this.line.position.set(xpos, 0.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0 &&
+      ball.mesh.position.z <= 0 &&
+      ball.mesh.position.y < this.mesh.position.y + 0
+    ) return true;
+  }
+}
