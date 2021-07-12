@@ -593,12 +593,14 @@ function gameover() {
             if (fgnc == 'Function_Landing-True-') {
                $('#level-d').html('破壊された遺伝子');
             } else if (fgnc == 'nof' || fgnc == '9MZ_RsYg22xBCSeZPyTK5GsC2EQ3J7Ku2BKJjs4w3RWd5gSrGPjQbiP9p4SUPb5Q2MrxLNUETEfCVLc') {
+               if (star == 2 && level == 5) {
                $('#play').hide();
                $('#next').hide();
                $('#prev').hide();
                $('#PresentCode').hide();
                $('#singularity_key').show();
                $('#level-d').html('捻れた遺伝子を止める者');
+               }
             }
          } else {
             $('#level-d').html('捻れた遺伝子');
