@@ -185,7 +185,7 @@ function start(e) {
     } else if (level == 6) {
         if (fgnc == 210) {
                 $('#hina_g').get(0).play();
-                wave_se++;
+                wave_s++;
               } else {
                 $('#hina').get(0).play();
                 wave_s++;
@@ -498,7 +498,7 @@ function gameover() {
      } else if (level == 4) {
      wave_f = $.cookie('e_wave_f');
      } else if (level == 5) {
-     wave_fi = $.cookie('e_wave_fi');
+     wave_se = $.cookie('e_wave_se');
      } else if (level == 6) {
      wave_s = $.cookie('e_wave_s');
      } else if (level == 7) {
