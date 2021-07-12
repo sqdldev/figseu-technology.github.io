@@ -369,6 +369,9 @@ function loadLevel(level) {
         case 3:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 3000:
+          world.push(new UNObstacle(j - 2, -i, data[index].obstacle));
+          break;
         case 4:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           world.push(new Dreamcube(j - 2, -i, data[index].obstacle));
