@@ -499,8 +499,6 @@ function gameover() {
      } else if (level == 5) {
      wave_fi = 0;
      wave_s = 0;
-     } else if (level == 6) {
-     wave_s = 0;
      }
   }
   if (fgnc == 'Function_Landing-True-') {
@@ -514,8 +512,6 @@ function gameover() {
      wave_f = $.cookie('n_wave_f');
      } else if (level == 5) {
      wave_fi = $.cookie('n_wave_fi');
-     wave_s = $.cookie('n_wave_s');
-     } else if (level == 6) {
      wave_s = $.cookie('n_wave_s');
      }
   }
@@ -593,7 +589,7 @@ function gameover() {
             if (fgnc == 'Function_Landing-True-') {
                $('#level-d').html('破壊された遺伝子');
             } else if (fgnc == 'nof' || fgnc == '9MZ_RsYg22xBCSeZPyTK5GsC2EQ3J7Ku2BKJjs4w3RWd5gSrGPjQbiP9p4SUPb5Q2MrxLNUETEfCVLc') {
-               if (star == 2 && level == 5) {
+               if (girls == 1 && level == 5 && star == 2) {
                $('#play').hide();
                $('#next').hide();
                $('#prev').hide();
