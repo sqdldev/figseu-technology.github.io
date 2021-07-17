@@ -305,7 +305,9 @@ class Ball {
       world.forEach(v => {
         if (v instanceof Bluestoneobstacle && this.landed) {
           if (v.detect() && started) {
-            
+            v.line.position.y += 0.5;
+            v.line.rotation.y += 0.1;
+            v.line.rotation.x += 0.1;
           }
         }
       });
@@ -1197,10 +1199,10 @@ class Bluestoneobstacle {
     if (
       ball.mesh.position.x >= this.mesh.position.x - 10 &&
       ball.mesh.position.x <= this.mesh.position.x + 10 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
-      ball.mesh.position.z <= 0.4 &&
-      ball.mesh.position.y < this.mesh.position.y + 0.4
+      ball.mesh.position.z >= this.mesh.position.z - 7 &&
+      ball.mesh.position.z <= this.mesh.position.z + 7 &&
+      ball.mesh.position.z <= 7 &&
+      ball.mesh.position.y < this.mesh.position.y + 7
     ) return true;
   }
 }
