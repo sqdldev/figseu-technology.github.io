@@ -306,11 +306,11 @@ class Ball {
         if (v instanceof Bluestoneobstacle && this.landed) {
           if (v.detect() && started) {
             v.line.position.y += 0.01;
-            v.line.rotation.y += 0.1;
-            v.line.rotation.x += 0.1;
+            v.line.rotation.y += 0.01;
+            v.line.rotation.x += 0.01;
             v.mesh.position.y += 0.01;
-            v.mesh.rotation.y += 0.1;
-            v.mesh.rotation.x += 0.1;
+            v.mesh.rotation.y += 0.01;
+            v.mesh.rotation.x += 0.01;
           }
         }
       });
