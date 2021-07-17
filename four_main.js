@@ -35,7 +35,7 @@ wave_fi = $.cookie('f_wave_fi');
 wave_s = $.cookie('f_wave_s');
 let data;
 let reqId;
-$.getJSON('four_levels.json', d => {
+$.getJSON('4RW_yu8b9CCRmnEgMAg8m7bXTrbSchLYtj92Nd4xVbjyc6MQKzCF.rse', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
