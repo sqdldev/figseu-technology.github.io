@@ -281,7 +281,7 @@ function nextLevel() {
            }
   $('#prev').show();
   $('#retry').hide();
-  if (level == 4) {
+  if (level == 5) {
     $('#next').hide();
   }
 }
@@ -532,11 +532,11 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 5) { 
-      $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
+      $('#Waves').html('☆ × ' + $.cookie('se_wave_fi'));
      if (star == 2) {
-      $('#level-d').html('凍える大地');
+      $('#level-d').html('多種多様な夢');
       }
-      $('#tkb').each(function(){
+      $('#TMD').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
