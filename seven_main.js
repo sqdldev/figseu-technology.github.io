@@ -22,11 +22,17 @@ let wave = 0;
 let wave_t = 0;
 let wave_th = 0;
 let wave_f = 0;
+let wave_fi = 0;
+let wave_s = 0;
+let wave_se = 0;
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('se_wave');
 wave_t = $.cookie('se_wave_t');
 wave_th = $.cookie('se_wave_th');
 wave_f = $.cookie('se_wave_f');
+wave_fi = $.cookie('se_wave_fi');
+wave_s = $.cookie('se_wave_s');
+wave_se = $.cookie('se_wave_se');
 let url = location.href;
 let fgnc = url.substr( 75 );
 $('#shrine').get(0);
@@ -155,6 +161,14 @@ function start(e) {
         wave_f = 0;
         $.cookie('se_wave_f', wave_f, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
+     if (typeof wave_fi == 'undefined') {
+        wave_fi = 0;
+        $.cookie('se_wave_fi', wave_fi, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+     }
+     if (typeof wave_s == 'undefined') {
+        wave_s = 0;
+        $.cookie('se_wave_s', wave_s, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+     }
     if (level == 1) {
             $('#shrine').get(0).play();
             wave++;
@@ -167,6 +181,9 @@ function start(e) {
             } else if (level == 4) {
             $('#tkb').get(0).play();
             wave_f++;
+            } else if (level == 5) {
+            $('#TMD').get(0).play();
+            wave_fi++;
             } else {
             $('#cloud').get(0).play();
             }
@@ -252,6 +269,11 @@ function nextLevel() {
          $('#level').html('in the 冷凍庫');
          $('#stars').html('☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
+        } else if (level == 5) {
+         $('#level-d').html('Designed by あわけー');
+         $('#level').html('magic dream');
+         $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -300,6 +322,11 @@ function prevLevel() {
          $('#level').html('in the 冷凍庫');
          $('#stars').html('☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
+        } else if (level == 5) {
+         $('#level-d').html('Designed by あわけー');
+         $('#level').html('magic dream');
+         $('#stars').html('☆☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('se_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -429,6 +456,10 @@ function gameover() {
      wave_th = 0;
      } else if (level == 4) {
      wave_f = 0;
+     } else if (level == 5) {
+     wave_fi = 0;
+     } else if (level == 6) {
+     wave_s = 0;
      }
   }
   if (fgnc == 'Function_Landing-True-') {
@@ -440,12 +471,19 @@ function gameover() {
      wave_th = $.cookie('se_wave_th');
      } else if (level == 4) {
      wave_f = $.cookie('se_wave_f');
+     } else if (level == 5) {
+     wave_fi = $.cookie('se_wave_fi');
+     } else if (level == 6) {
+     wave_s = $.cookie('se_wave_s');
      }
   }
   $.cookie('se_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('se_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('se_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('se_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('se_wave_fi', wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('se_wave_s', wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('se_wave_se', wave_se, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(100);
@@ -485,6 +523,15 @@ function gameover() {
     this.currentTime = 0; // Reset time
 });
      } else if (level == 4) { 
+      $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
+     if (star == 2) {
+      $('#level-d').html('凍える大地');
+      }
+      $('#tkb').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) { 
       $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
      if (star == 2) {
       $('#level-d').html('凍える大地');
