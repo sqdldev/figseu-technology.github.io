@@ -31,6 +31,9 @@ let se_wave = 0;
 let se_wave_t = 0;
 let se_wave_th = 0;
 let se_wave_f = 0;
+let se_wave_fi = 0;
+let se_wave_s = 0;
+let se_wave_se = 0;
 let e_wave = 0;
 let e_wave_t = 0;
 let e_wave_th = 0;
@@ -142,6 +145,8 @@ let Pfd_88 = 0;
 let Pfd_89 = 0;
 let Pfd_90 = 0;
 let Pfd_91 = 0;
+let Pfd_92 = 0;
+let Pfd_93 = 0;
 function Performance_Data() {
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -174,6 +179,9 @@ se_wave = $.cookie('se_wave');
 se_wave_t = $.cookie('se_wave_t');
 se_wave_th = $.cookie('se_wave_th');
 se_wave_f = $.cookie('se_wave_f');
+se_wave_fi = $.cookie('se_wave_fi');
+se_wave_s = $.cookie('se_wave_s');
+se_wave_se = $.cookie('se_wave_se');
 e_wave = $.cookie('e_wave');
 e_wave_t = $.cookie('e_wave_t');
 e_wave_th = $.cookie('e_wave_th');
@@ -285,6 +293,8 @@ Pfd_88 = $.cookie('Pfd_88');
 Pfd_89 = $.cookie('Pfd_89');
 Pfd_90 = $.cookie('Pfd_90');
 Pfd_91 = $.cookie('Pfd_91');
+Pfd_92 = $.cookie('Pfd_92');
+Pfd_93 = $.cookie('Pfd_93');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -367,6 +377,9 @@ $.cookie('se_wave', se_wave, { expires: 400, domain:'figseu-technology.github.io
 $.cookie('se_wave_t', se_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('se_wave_th', se_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('se_wave_f', se_wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('se_wave_fi', se_wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('se_wave_s', se_wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+$.cookie('se_wave_se', se_wave_se, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('e_wave', e_wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('e_wave_t', e_wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 $.cookie('e_wave_th', e_wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
@@ -1088,6 +1101,23 @@ if (n_wave_s >= 1000) {
    $.cookie('Pfd_91', Pfd_91, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 } else if (Pfd_91 == 107558856528741996791037612619) {
    $('#Pf_91').html('True Singularity - ✾取得済✾');
+}
+
+// magic dream
+
+if (se_wave_fi >= 1) {
+   $('#Pf_92').html('魔法使いプレイヤー - ✾取得済✾');
+   Pfd_92 = 107558856528741996791037612619;
+   $.cookie('Pfd_92', Pfd_92, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else if (Pfd_92 == 107558856528741996791037612619) {
+   $('#Pf_92').html('魔法使いプレイヤー - ✾取得済✾');
+}
+if (se_wave_fi >= 10) {
+   $('#Pf_93').html('夢オチ - ✾取得済✾');
+   Pfd_93 = 107558856528741996791037612619;
+   $.cookie('Pfd_93', Pfd_93, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else if (Pfd_93 == 107558856528741996791037612619) {
+   $('#Pf_93').html('夢オチ - ✾取得済✾');
 }
 
 $('#Data_Warn').html(' ');
