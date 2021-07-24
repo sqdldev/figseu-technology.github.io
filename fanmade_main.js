@@ -47,7 +47,7 @@ $.getJSON('Entry-level.rse', d => {
   $('#level-d').html('エントリーステージ');
   $('#level').html('folklore');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-  $('#Waves').html('☆ × ？');
+  $('#Waves').html('☆ × ');
 
   // ブラウザ判定
 
@@ -307,7 +307,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 5) {
+  if (level == 1) {
     $('#next').hide();
   }
 }
@@ -529,7 +529,7 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
-      $('#Waves').html('☆ × ？');
+      $('#Waves').html('☆ × ');
       if (star == 2) {
              $('#level-d').html('テスト完了');
       }
