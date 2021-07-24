@@ -45,7 +45,7 @@ $.getJSON('Entry-level.rse', d => {
   $('#next').hide();
   $('#score').hide();
   $('#level-d').html('エントリーステージ');
-  $('#level').html('folklore');
+  $('#level').html('magic dream');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
   $('#Waves').html('☆ × ');
 
