@@ -531,7 +531,7 @@ function gameover() {
   if (level == 1) {
       $('#Waves').html('☆ × ');
       if (star == 2) {
-             $('#level-d').html('テスト完了');
+             $('#level-d').html('テスト完了 ID : Q2QB-44SR-EH5E-B3P4-6APP');
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              }
