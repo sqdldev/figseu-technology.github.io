@@ -532,6 +532,9 @@ function gameover() {
       $('#Waves').html('☆ × ');
       if (star == 2) {
              $('#level-d').html('テスト完了');
+             if (fgnc == 'Function_Landing-True-') {
+                $('#level-d').html('テストは未完了です');
+             }
       }
       $('#sakura').each(function(){
     this.pause(); // Stop playing
