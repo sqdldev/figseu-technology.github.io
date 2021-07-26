@@ -19,7 +19,7 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
-let girls = Math.floor( Math.random() * 11 );
+let girls = Math.floor( Math.random() * 2 );
 let url = location.href;
 let fgnc = url.substr( 98 );
 let data;
@@ -141,6 +141,10 @@ function nextLevel() {
      } else if (level == 4) {
       $('#level-d').html('真実への道');
       $('#level').html('True Days');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      } else if (level == 5) {
+      $('#level-d').html('ラストステージ');
+      $('#level').html('True Singularity');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       } else {
             $('#level-d').html('開発中');
