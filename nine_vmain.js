@@ -19,7 +19,7 @@ let scoreSubmitted = false;
 let level = 1;
 let star = 0;
 let wave = 0;
-let girls = Math.floor( Math.random() * 2 );
+let girls = 1;
 let url = location.href;
 let fgnc = url.substr( 98 );
 let data;
@@ -58,6 +58,8 @@ function start(e) {
         $('#DAYS').get(0).play();
         } else if (level == 4) {
         $('#TDAYS').get(0).play();
+        } else if (level == 5) {
+        $('#TRUESINGULARITY').get(0).play();
         } else {
             $('#FELL').get(0).play();
             }
@@ -123,7 +125,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 5) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -143,7 +145,7 @@ function nextLevel() {
       $('#level').html('True Days');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       } else if (level == 5) {
-      $('#level-d').html('ラストステージ');
+      $('#level-d').html('最終ステージ');
       $('#level').html('True Singularity');
       $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
       } else {
@@ -189,7 +191,11 @@ function prevLevel() {
      } else if (level == 4) {
       $('#level-d').html('真実への道');
       $('#level').html('True Days');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
+      } else if (level == 5) {
+      $('#level-d').html('最終ステージ');
+      $('#level').html('True Singularity');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -382,6 +388,14 @@ function gameover() {
       $('#level-d').html('私は運命を動かし、あなたは運命に抗った');
       }
       $('#TDAYS').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) { 
+     if (star == 2) {
+      $('#level-d').html('今、私は解き放たれた');
+      }
+      $('#TRUESINGULARITY').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
