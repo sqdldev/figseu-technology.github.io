@@ -143,11 +143,11 @@ function nextLevel() {
      } else if (level == 4) {
       $('#level-d').html('真実への道');
       $('#level').html('True Days');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
       } else if (level == 5) {
       $('#level-d').html('最終ステージ');
       $('#level').html('True Singularity');
-      $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+      $('#stars').html('☆☆☆☆☆☆☆☆☆☆☆');
       } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
