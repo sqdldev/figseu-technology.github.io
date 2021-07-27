@@ -335,7 +335,7 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          if (fgnc == 'Function_Landing-True-') {
+          if (fgnc == 'Function_Landing-True-' || fgnc == 'BLYK10_AgKeBiptdNeeWjr3MTmMhuDHYwjUEfNGmB47UuXs3bR55cXYPWDY6WtBnhUywY5GZXf9kDWVCh4pNAXiHNUjiZgLn8npS8Mg4cFh') {
              world.push(new DebugMat(j - 2, -i, data[index].mat));
           } else {
              world.push(new Mat(j - 2, -i, data[index].mat));
@@ -523,7 +523,7 @@ function gameover() {
          if (star == 2) {
             if (fgnc == 'Function_Landing-True-') {
                $('#level-d').html('破壊された光');
-            } else if (fgnc == 'nof') {
+            } else if (fgnc == 'nof' || fgnc == 'BLYK10_AgKeBiptdNeeWjr3MTmMhuDHYwjUEfNGmB47UuXs3bR55cXYPWDY6WtBnhUywY5GZXf9kDWVCh4pNAXiHNUjiZgLn8npS8Mg4cFh') {
                $('#play').hide();
                $('#next').hide();
                $('#prev').hide();
