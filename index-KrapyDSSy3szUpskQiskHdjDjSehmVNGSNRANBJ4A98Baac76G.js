@@ -30,6 +30,9 @@ if (fgnc == 'DGDR_CORE-7DA_8m5x24SkYeV4E8bbKuUdXktHK7fNFp3LQzRpTVMdK4yGrgbaNc5LZ
 if (fgnc == 'DGDR_CORE-9MZ_RsYg22xBCSeZPyTK5GsC2EQ3J7Ku2BKJjs4w3RWd5gSrGPjQbiP9p4SUPb5Q2MrxLNUETEfCVLc-') {
    location.href = "https://figseu-technology.github.io/RollingSkyEvolution/9-Shell_uTZeYPNhwaAXZBj3ZnpCMR84z.html?f=9MZ_RsYg22xBCSeZPyTK5GsC2EQ3J7Ku2BKJjs4w3RWd5gSrGPjQbiP9p4SUPb5Q2MrxLNUETEfCVLc";
 }
+if (fgnc == 'DGDR_CORE-BLYK10_AgKeBiptdNeeWjr3MTmMhuDHYwjUEfNGmB47UuXs3bR55cXYPWDY6WtBnhUywY5GZXf9kDWVCh4pNAXiHNUjiZgLn8npS8Mg4cFh-') {
+   location.href = "https://figseu-technology.github.io/RollingSkyEvolution/ten_index.html?f=BLYK10_AgKeBiptdNeeWjr3MTmMhuDHYwjUEfNGmB47UuXs3bR55cXYPWDY6WtBnhUywY5GZXf9kDWVCh4pNAXiHNUjiZgLn8npS8Mg4cFh";
+}
 function BGM() {
 if (fgnc == 'Function_080-Load-') {
    $('#bgm_080').get(0).play();
