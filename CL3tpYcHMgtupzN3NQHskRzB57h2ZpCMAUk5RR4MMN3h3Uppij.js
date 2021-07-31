@@ -54,6 +54,7 @@ let te_wave_f = 0;
 let te_wave_fi = 0;
 let te_wave_s = 0;
 let z_wave = 0;
+let Pfd_0 = 0;
 let Pfd_1 = 0;
 let Pfd_2 = 0;
 let Pfd_3 = 0;
@@ -202,6 +203,7 @@ te_wave_f = $.cookie('te_wave_f');
 te_wave_fi = $.cookie('te_wave_fi');
 te_wave_s = $.cookie('te_wave_s');
 z_wave = $.cookie('z_wave');
+Pfd_0 = $.cookie('Pfd_0');
 Pfd_1 = $.cookie('Pfd_1');
 Pfd_2 = $.cookie('Pfd_2');
 Pfd_3 = $.cookie('Pfd_3');
@@ -1013,6 +1015,10 @@ if (z_wave >= 1000) {
    $.cookie('Pfd_80', Pfd_80, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 } else if (Pfd_80 == 107558856528741996791037612619) {
    $('#Pf_80').html('０ - ✾取得済✾');
+}
+
+if (Pfd_0 >= 107558856528741996791037612619) {
+   $('#Pf_0e').html('はじまり　そして　おわり - ✾取得済✾');
 }
 
 // Singularity
