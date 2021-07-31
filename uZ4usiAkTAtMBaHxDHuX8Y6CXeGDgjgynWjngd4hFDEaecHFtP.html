@@ -21,6 +21,8 @@ Pfd_0 = $.cookie('Pfd_0');
 if (z_wave >= 1) {
    Pfd_0 = 107558856528741996791037612619;
    $.cookie('Pfd_0', Pfd_0, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else {
+   location.href = "https://figseu-technology.github.io/RollingSkyEvolution/index.html";
 }
 $(function(){
 	$('#staffRoll').staffRoll({type: 2});
