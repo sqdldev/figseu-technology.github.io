@@ -148,6 +148,7 @@ let Pfd_90 = 0;
 let Pfd_91 = 0;
 let Pfd_92 = 0;
 let Pfd_93 = 0;
+let Pfd_94 = 0;
 function Performance_Data() {
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -297,6 +298,7 @@ Pfd_90 = $.cookie('Pfd_90');
 Pfd_91 = $.cookie('Pfd_91');
 Pfd_92 = $.cookie('Pfd_92');
 Pfd_93 = $.cookie('Pfd_93');
+Pfd_94 = $.cookie('Pfd_94');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -979,6 +981,10 @@ if (n_wave_f >= 100) {
    $('#Pf_75').html('Lost World - ✾取得済✾');
 }
 
+if (Pfd_94 >= 107558856528741996791037612619) {
+   $('#Pf_94').html('あたしだけの物語 - ✾取得済✾');
+}
+
 // Zero
 
 if (z_wave >= 1) {
@@ -1018,7 +1024,7 @@ if (z_wave >= 1000) {
 }
 
 if (Pfd_0 >= 107558856528741996791037612619) {
-   $('#Pf_0e').html('はじまり　そして　おわり - ✾取得済✾');
+   $('#Pf_0e').html('おわり　そして　はじまり - ✾取得済✾');
 }
 
 // Singularity
