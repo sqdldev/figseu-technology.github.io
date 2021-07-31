@@ -10,6 +10,16 @@
 <script type="text/javascript" src="System/jquery.js"></script>
 <script type="text/javascript" src="CcfuVSF3edFYg6zWdHa6C6KGBBVJLrp5fu2e4BCW7khjUGFJLK.js"></script>
 <script type="text/javascript">
+let n_wave_f = 0;
+n_wave_f = $.cookie('n_wave_f');
+let Pfd_94 = 0;
+Pfd_94 = $.cookie('Pfd_94');
+if (n_wave_f >= 1) {
+   Pfd_94 = 107558856528741996791037612619;
+   $.cookie('Pfd_94', Pfd_94, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+} else {
+   location.href = "https://figseu-technology.github.io/RollingSkyEvolution/index.html";
+}
 $(function(){
 	$('#staffRoll').staffRoll();
 });
