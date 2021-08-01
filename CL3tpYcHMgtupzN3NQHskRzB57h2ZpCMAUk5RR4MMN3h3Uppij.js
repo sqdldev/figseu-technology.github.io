@@ -149,6 +149,7 @@ let Pfd_91 = 0;
 let Pfd_92 = 0;
 let Pfd_93 = 0;
 let Pfd_94 = 0;
+let Pfd_95 = 0;
 function Performance_Data() {
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -299,6 +300,7 @@ Pfd_91 = $.cookie('Pfd_91');
 Pfd_92 = $.cookie('Pfd_92');
 Pfd_93 = $.cookie('Pfd_93');
 Pfd_94 = $.cookie('Pfd_94');
+Pfd_95 = $.cookie('Pfd_95');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -1113,6 +1115,10 @@ if (n_wave_s >= 1000) {
    $.cookie('Pfd_91', Pfd_91, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 } else if (Pfd_91 == 107558856528741996791037612619) {
    $('#Pf_91').html('True Singularity - ✾取得済✾');
+}
+
+if (Pfd_95 >= 107558856528741996791037612619) {
+   $('#Pf_95').html('破滅の鼓動 - ✾取得済✾');
 }
 
 // magic dream
