@@ -195,6 +195,9 @@ function start(e) {
             } else if (level == 6) {
             $('#pknk').get(0).play();
             wave_s++;
+            } else if (level == 7) {
+            $('#holiday').get(0).play();
+            wave_se++;
             } else {
             $('#cloud').get(0).play();
             }
@@ -289,6 +292,11 @@ function nextLevel() {
          $('#level').html('夕方のピクニック');
          $('#stars').html('☆');
          $('#Waves').html('☆ × ' + $.cookie('o_wave_s'));
+        } else if (level == 7) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('休日');
+         $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('o_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -297,7 +305,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 6) {
+  if (level == 7) {
     $('#next').hide();
   }
 }
@@ -347,6 +355,11 @@ function prevLevel() {
          $('#level').html('夕方のピクニック');
          $('#stars').html('☆');
          $('#Waves').html('☆ × ' + $.cookie('o_wave_s'));
+        } else if (level == 7) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('休日');
+         $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('o_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -536,6 +549,15 @@ function gameover() {
      } else if (level == 6) {
       $('#Waves').html('☆ × ' + $.cookie('o_wave_s'));
       $('#pknk').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 7) {
+      if (star == 2) {
+      $('#level-d').html('至福の時間');
+      }
+      $('#Waves').html('☆ × ' + $.cookie('o_wave_se'));
+      $('#holiday').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
