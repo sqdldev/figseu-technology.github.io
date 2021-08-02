@@ -45,8 +45,8 @@ $.getJSON('Entry-level.rse', d => {
   $('#next').hide();
   $('#score').hide();
   $('#level-d').html('エントリーステージ');
-  $('#level').html('magic dream');
-  $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+  $('#level').html('休日');
+  $('#stars').html('☆');
   $('#Waves').html('☆ × ');
 
   // ブラウザ判定
@@ -534,7 +534,7 @@ function gameover() {
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              } else {
-                $('#level-d').html('✮ テスト完了 ✮ ID : Q2QB-44SR-EH5E-B3P4-6APP');
+                $('#level-d').html('✮ テスト完了 ✮ ID : TCST-75BD-5LXA-TZYB-3BQG');
              }
       }
       $('#sakura').each(function(){
