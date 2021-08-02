@@ -215,7 +215,7 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          if (fgnc == 'Function_Landing-True-') {
+          if (fgnc == '9MZ_RsYg22xBCSeZPyTK5GsC2EQ3J7Ku2BKJjs4w3RWd5gSrGPjQbiP9p4SUPb5Q2MrxLNUETEfCVLc') {
              world.push(new DebugMat(j - 2, -i, data[index].mat));
           } else {
              world.push(new Mat(j - 2, -i, data[index].mat));
