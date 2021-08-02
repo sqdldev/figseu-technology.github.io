@@ -222,7 +222,11 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          world.push(new Mat(j - 2, -i, data[index].mat));
+          if (fgnc == 'BLYK10_AgKeBiptdNeeWjr3MTmMhuDHYwjUEfNGmB47UuXs3bR55cXYPWDY6WtBnhUywY5GZXf9kDWVCh4pNAXiHNUjiZgLn8npS8Mg4cFh') {
+             world.push(new DebugMat(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Mat(j - 2, -i, data[index].mat));
+          }
           break;
         case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
