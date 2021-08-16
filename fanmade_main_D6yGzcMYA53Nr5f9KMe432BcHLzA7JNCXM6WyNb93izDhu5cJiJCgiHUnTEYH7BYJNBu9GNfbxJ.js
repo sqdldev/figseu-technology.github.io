@@ -534,7 +534,7 @@ function gameover() {
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              } else {
-                $('#level-d').html('✮ テスト完了 ✮ ID : TCST-75BD-5LXA-TZYB-3BQG');
+                $('#level-d').html('✮ テスト完了 ✮ ID : 72KS-ELL7-Z3CB-TG2L-LAN7');
              }
       }
       $('#sakura').each(function(){
