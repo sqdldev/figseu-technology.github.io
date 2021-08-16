@@ -12,6 +12,9 @@ if (fgnc == 'Function_Delte_Wave') {
 if (fgnc == 'DGDR_CORE-v15.1.0-') {
    location.href = "https://github.com/Figseu-Technology/RollingSkyEvolution/releases/download/RSE_v15.1.0/Rolling.Sky.Evolution_Ver15.1.0.apk";
 }
+if (fgnc == 'RSE_Editor') {
+   location.href = "https://github.com/Figseu-Technology/RollingSkyEvolution/releases/download/RSE_v15.1.0/RSE.Editor_Ver3.0.0.apk";
+}
 if (fgnc == 'Function_LeaderBoard') {
    location.href = "https://mee6.xyz/leaderboard/846657424890658846";
 }
