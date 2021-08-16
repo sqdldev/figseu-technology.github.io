@@ -176,6 +176,9 @@ function start(e) {
             } else if (level == 4) {
             $('#redo').get(0).play();
             wave_f++;
+            } else if (level == 5) {
+            $('#crystal').get(0).play();
+            wave_fi++;
             } else {
             $('#cloud').get(0).play();
             }
@@ -243,7 +246,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 5) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -266,6 +269,11 @@ function nextLevel() {
          $('#level').html('Redo');
          $('#stars').html('☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('s_wave_f'));
+        } else if (level == 5) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('Crystal');
+         $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -314,6 +322,11 @@ function prevLevel() {
          $('#level').html('Redo');
          $('#stars').html('☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('s_wave_f'));
+        } else if (level == 5) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('Crystal');
+         $('#stars').html('☆☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('s_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -521,6 +534,15 @@ function gameover() {
       $('#level-d').html('未来を解き放つ');
       }
       $('#redo').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) {
+      $('#Waves').html('☆ × ' + $.cookie('s_wave_fi'));
+      if (star == 2) {
+      $('#level-d').html('神秘なる宝石');
+      }
+      $('#crystal').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
