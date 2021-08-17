@@ -1,7 +1,7 @@
 [
   {
     "author": "あわけー",
-    "background": "0x800000,
+    "background": "0x800000",
     "ball": "0xffa07a",
     "mat": "0x800080",
     "bouncer": "0xdda0dd",
