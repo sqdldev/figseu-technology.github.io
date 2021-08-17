@@ -216,6 +216,16 @@ function start(e) {
         v.line.position.y = 0;
       }
     });
+    world.forEach(v => {
+      if (v instanceof Bluestoneobstacle) {
+        v.line.position.y = 0.4;
+        v.line.rotation.y = 0;
+        v.line.rotation.x = 0;
+        v.mesh.position.y = 0.4;
+        v.mesh.rotation.y = 0;
+        v.mesh.rotation.x = 0;
+      }
+    });
     $('#main').css('pointer-events', 'none');
   }
 }
