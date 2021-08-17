@@ -46,7 +46,7 @@ $.getJSON('Entry-level.rse', d => {
   $('#score').hide();
   $('#level-d').html('エントリーステージ');
   $('#level').html('The Obsidian');
-  $('#stars').html('？？？');
+  $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
   $('#Waves').html('☆ × ');
 
   // ブラウザ判定
