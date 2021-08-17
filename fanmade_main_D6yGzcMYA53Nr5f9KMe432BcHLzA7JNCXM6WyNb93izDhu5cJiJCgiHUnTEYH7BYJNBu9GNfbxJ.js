@@ -207,6 +207,7 @@ function start(e) {
     world.forEach(v => {
       if (v instanceof Bouncer) {
         v.mesh.position.y = 0;
+        v.line.position.y = 0;
       }
     });
     world.forEach(v => {
@@ -534,7 +535,7 @@ function gameover() {
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              } else {
-                $('#level-d').html('✮ テスト完了 ✮ ID : 取得できませんでした');
+                $('#level-d').html('✮ テスト完了 ✮ ID : VSP3-6Z9U-JSZH-MZE3-3RGK-AZ');
              }
       }
       $('#sakura').each(function(){
