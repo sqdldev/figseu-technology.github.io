@@ -27,6 +27,7 @@ let wave_s = 0;
 let wave_se = 0;
 let url = location.href;
 let fgnc = url.substr( 77 );
+let girls = Math.floor( Math.random() * 2 );
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('fi_wave');
 wave_t = $.cookie('fi_wave_t');
