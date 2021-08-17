@@ -27,7 +27,6 @@ let wave_s = 0;
 let wave_se = 0;
 let url = location.href;
 let fgnc = url.substr( 77 );
-let girls = Math.floor( Math.random() * 2 );
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('fi_wave');
 wave_t = $.cookie('fi_wave_t');
@@ -400,9 +399,6 @@ function loadLevel(level) {
         case 3:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           break;
-        case 3000:
-          world.push(new UNObstacle(j - 2, -i, data[index].obstacle));
-          break;
         case 4:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           world.push(new Dreamcube(j - 2, -i, data[index].obstacle));
@@ -411,14 +407,8 @@ function loadLevel(level) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
           break;
-        case 50:
-          world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
-          break;
         case 6:
           world.push(new Mat(j - 2, -i, data[index].mat));
-          world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 60:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
           break;
         case 7:
@@ -468,34 +458,6 @@ function loadLevel(level) {
           break;
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
-          break;
-        case 31:
-          if (girls == 0) {
-             world.push(new RandomMat(j - 2, -i, data[index].obstacle));
-          } else {
-             world.push(new Deltemat(j - 2, -i, data[index].obstacle));
-          }
-          break;
-        case 32:
-          if (girls == 1) {
-             world.push(new RandomMat(j - 2, -i, data[index].obstacle));
-          } else {
-             world.push(new Deltemat(j - 2, -i, data[index].obstacle));
-          }
-          break;
-        case 39:
-          world.push(new Obstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 94:
-          world.push(new FellGate(j - 2, -i, data[index].obstacle));
-          world.push(new FellGateMat(j - 2, -i, data[index].mat));
-          break;
-        case 98:
-          world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
-          break;
-        case 210:
-          world.push(new Dreamtower(j - 2, -i, data[index].obstacle));
-          break;
       }
     }
   }
@@ -572,7 +534,7 @@ function gameover() {
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              } else {
-                $('#level-d').html('✮ テスト完了 ✮ ID : E8B8-RML9-F75S-3R7R-VEYQ');
+                $('#level-d').html('✮ テスト完了 ✮ ID : 取得できませんでした');
              }
       }
       $('#sakura').each(function(){
