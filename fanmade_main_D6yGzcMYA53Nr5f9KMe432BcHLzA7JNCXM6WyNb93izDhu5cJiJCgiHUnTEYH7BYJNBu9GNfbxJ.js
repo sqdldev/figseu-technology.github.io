@@ -573,7 +573,7 @@ function gameover() {
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              } else {
-                $('#level-d').html('✮ テスト完了 ✮ ID : VSP3-6Z9U-JSZH-MZE3-3RGK-AZ');
+                $('#level-d').html('✮ テスト完了 ✮ ID : 37GED-RD6LV-B2RZ4-FX62U-3AVAE');
              }
       }
       $('#sakura').each(function(){
