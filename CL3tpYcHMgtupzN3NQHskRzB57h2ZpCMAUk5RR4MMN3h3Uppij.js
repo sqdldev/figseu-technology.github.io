@@ -15,6 +15,7 @@ let th_wave = 0;
 let th_wave_t = 0;
 let th_wave_th = 0;
 let th_wave_f = 0;
+let th_wave_fi = 0;
 let f_wave = 0;
 let f_wave_t = 0;
 let f_wave_th = 0;
@@ -173,6 +174,7 @@ th_wave = $.cookie('th_wave');
 th_wave_t = $.cookie('th_wave_t');
 th_wave_th = $.cookie('th_wave_th');
 th_wave_f = $.cookie('th_wave_f');
+th_wave_fi = $.cookie('th_wave_fi');
 f_wave = $.cookie('f_wave');
 f_wave_t = $.cookie('f_wave_t');
 f_wave_th = $.cookie('f_wave_th');
@@ -361,6 +363,7 @@ $('#Waves_52').html('☆ × ' + $.cookie('te_wave_fi'));
 $('#Waves_53').html('☆ × ' + $.cookie('te_wave_s'));
 $('#Waves_54').html('☆ × ' + $.cookie('z_wave'));
 $('#Waves_55').html('☆ × ' + $.cookie('o_wave_se'));
+$('#Waves_56').html('☆ × ' + $.cookie('th_wave_fi'));
 
 // Save Data
 
