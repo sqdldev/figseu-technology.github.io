@@ -362,8 +362,8 @@ $('#Waves_51').html('☆ × ' + $.cookie('te_wave_f'));
 $('#Waves_52').html('☆ × ' + $.cookie('te_wave_fi'));
 $('#Waves_53').html('☆ × ' + $.cookie('te_wave_s'));
 $('#Waves_54').html('☆ × ' + $.cookie('z_wave'));
-$('#Waves_55').html('☆ × ' + $.cookie('o_wave_se'));
-$('#Waves_56').html('☆ × ' + $.cookie('th_wave_fi'));
+$('#Waves_57').html('☆ × ' + $.cookie('o_wave_se'));
+$('#Waves_58').html('☆ × ' + $.cookie('th_wave_fi'));
 
 // Save Data
 
