@@ -186,6 +186,9 @@ function start(e) {
             } else if (level == 4) {
             $('#rain').get(0).play();
             wave_f++;
+            } else if (level == 5) {
+            $('#midori').get(0).play();
+            wave_fi++;
             } else {
             $('#cloud').get(0).play();
             }
@@ -253,7 +256,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 4) {
+  if (level == 5) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -276,6 +279,11 @@ function nextLevel() {
          $('#level').html('梅雨');
          $('#stars').html('☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('th_wave_f'));
+        } else if (level == 5) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('Green Fairy');
+         $('#stars').html('☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('th_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -324,6 +332,11 @@ function prevLevel() {
          $('#level').html('梅雨');
          $('#stars').html('☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('th_wave_f'));
+        } else if (level == 5) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('Green Fairy');
+         $('#stars').html('☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('th_wave_fi'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -477,6 +490,7 @@ function gameover() {
   $.cookie('th_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('th_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('th_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('th_wave_fi', wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -518,6 +532,15 @@ function gameover() {
              $('#level-d').html('空に舞う雨のダンス');
       }
       $('#rain').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 5) {
+      $('#Waves').html('☆ × ' + $.cookie('th_wave_fi'));
+       if (star == 2) {
+             $('#level-d').html('いやしの空間');
+      }
+      $('#midori').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
