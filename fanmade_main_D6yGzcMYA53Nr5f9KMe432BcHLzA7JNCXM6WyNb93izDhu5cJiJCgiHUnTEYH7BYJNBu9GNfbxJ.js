@@ -46,8 +46,8 @@ $.getJSON('Entry-level.rse', d => {
   $('#next').hide();
   $('#score').hide();
   $('#level-d').html('エントリーステージ');
-  $('#level').html('The Obsidian');
-  $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
+  $('#level').html('Green Fairy');
+  $('#stars').html('☆☆☆');
   $('#Waves').html('☆ × ');
 
   // ブラウザ判定
@@ -573,7 +573,7 @@ function gameover() {
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              } else {
-                $('#level-d').html('✮ テスト完了 ✮ ID : エラーが発生しました　');
+                $('#level-d').html('✮ テスト完了 ✮ ID : VYE7-XRNE-T33K-5R65-LU9G　');
              }
       }
       $('#sakura').each(function(){
