@@ -11,7 +11,7 @@ https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
 
 # 利用規約とプライバシーポリシー
 
-https://figseu-technology.github.io/RollingSkyEvolution/README.html
+https://figseu-technology.github.io/RollingSkyEvolution/RCN_6N7eGCtczZLUxhJAud24RSH4D6QCdbTJpM9nYpFtQetriKYnka.html
 
 # 公式サーバー (Discord)
 
