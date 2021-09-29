@@ -177,6 +177,9 @@ function start(e) {
             } else if (level == 5) {
             $('#moon').get(0).play();
             wave_fi++;
+            } else if (level == 6) {
+            $('#last_battle').get(0).play();
+            wave_fi++;
             } else {
             $('#cloud').get(0).play();
             }
@@ -245,7 +248,7 @@ function nextLevel() {
   $('#retry').hide();
   $('#play').show();
   $('#PresentCode').hide();
-  if (level == 5) {
+  if (level == 6) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -273,6 +276,11 @@ function nextLevel() {
          $('#level').html('月下の舞');
          $('#stars').html('☆☆');
          $('#Waves').html('☆ × ' + $.cookie('t_wave_fi'));
+        } else if (level == 6) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('Last Battle');
+         $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_s'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -327,6 +335,11 @@ function prevLevel() {
          $('#level').html('月下の舞');
          $('#stars').html('☆☆');
          $('#Waves').html('☆ × ' + $.cookie('t_wave_fi'));
+        } else if (level == 6) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('Last Battle');
+         $('#stars').html('☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_s'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -515,6 +528,15 @@ function gameover() {
              $('#level-d').html('月の光に掲げる');
       }
       $('#moon').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 6) {
+         $('#Waves').html('☆ × ' + $.cookie('t_wave_s'));
+         if (star == 2) {
+             $('#level-d').html('正しき者に勝利あり');
+      }
+      $('#last_battle').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
