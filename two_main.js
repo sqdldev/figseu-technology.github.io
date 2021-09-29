@@ -179,7 +179,7 @@ function start(e) {
             wave_fi++;
             } else if (level == 6) {
             $('#last_battle').get(0).play();
-            wave_fi++;
+            wave_s++;
             } else {
             $('#cloud').get(0).play();
             }
