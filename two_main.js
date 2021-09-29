@@ -23,12 +23,16 @@ let wave_t = 0;
 let wave_th = 0;
 let wave_f = 0;
 let wave_fi = 0;
+let wave_s = 0;
+let wave_se = 0;
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('t_wave');
 wave_t = $.cookie('t_wave_t');
 wave_th = $.cookie('t_wave_th');
 wave_f = $.cookie('t_wave_f');
 wave_fi = $.cookie('t_wave_fi');
+wave_s = $.cookie('t_wave_s');
+wave_se = $.cookie('t_wave_se');
 let url = location.href;
 let fgnc = url.substr( 66 );
 let data;
@@ -149,6 +153,14 @@ function start(e) {
      if (typeof wave_fi == 'undefined') {
         wave_fi = 0;
         $.cookie('t_wave_fi', wave_fi, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+     }
+     if (typeof wave_s == 'undefined') {
+        wave_s = 0;
+        $.cookie('t_wave_s', wave_s, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+     }
+     if (typeof wave_se == 'undefined') {
+        wave_se = 0;
+        $.cookie('t_wave_se', wave_se, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
     if (level == 1) {
         $('#kimetu').get(0).play();
@@ -437,6 +449,10 @@ function gameover() {
      wave_f = 0;
      } else if (level == 5) {
      wave_fi = 0;
+     } else if (level == 6) {
+     wave_s = 0;
+     } else if (level == 7) {
+     wave_se = 0;
      }
   }
   $.cookie('t_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
@@ -444,6 +460,8 @@ function gameover() {
   $.cookie('t_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('t_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   $.cookie('t_wave_fi', wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('t_wave_s', wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('t_wave_se', wave_se, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
