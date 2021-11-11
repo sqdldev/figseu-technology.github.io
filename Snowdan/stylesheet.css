@@ -65,18 +65,28 @@ a, a:visited {
 
 #btn {
     border: double #CA9500;
+        width: 70%;
 	text-align: center;
 	color: #CA9500;
 	padding: 20px;
 	text-decoration: none;
 }
 
+#btn:hover { 
+    background-color: #00D0FF;
+}
+
 #lost-btn {
     border: double #CA9500;
+        width: 70%;
 	text-align: center;
 	color: #CA9500;
 	padding: 20px;
 	text-decoration: none;
+}
+
+#lost-btn:hover { 
+    background-color: #FF0000;
 }
 
 #stop-btn {
