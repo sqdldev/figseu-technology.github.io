@@ -31,11 +31,11 @@ $(function(){
             $.post(link, { "content": content, "username": username, "avatar_url": avatar, });
 
         i++
-        if(i > 900){　
+        if(i > 300){　
            clearInterval(inteval);
         }
       
-        }, 100)
+        }, 1500)
 
     });
     $('#stop-btn').click(function(){
