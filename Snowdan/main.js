@@ -1,7 +1,7 @@
-/*   
-  Project by Zua 
-  https://github.com/thatziv/webhook 
-*/
+function BGM() {
+   $('#bgm_000').get(0).play();
+}
+
 $(function(){
     $('#btn').click(function(){
         var link = $('#link').val();
