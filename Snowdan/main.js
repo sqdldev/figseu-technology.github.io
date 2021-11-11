@@ -31,7 +31,7 @@ $(function(){
             $.post(link, { "content": content, "username": username, "avatar_url": avatar, });
 
         i++
-        if(i > 70){　
+        if(i > 300){　
            clearInterval(inteval);
         }
       
