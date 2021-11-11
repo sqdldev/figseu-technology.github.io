@@ -14,6 +14,14 @@ h1 {
     padding: 5px;
 }
 
+.button {
+	border: double #CA9500;
+	text-align: center;
+	color: #CA9500;
+	padding: 20px;
+	text-decoration: none;
+}
+
 #container {
     margin-top: 80px;
     margin: auto;
