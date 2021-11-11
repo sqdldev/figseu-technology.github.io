@@ -71,6 +71,14 @@ a, a:visited {
 	text-decoration: none;
 }
 
+#lost-btn {
+    border: double #CA9500;
+	text-align: center;
+	color: #CA9500;
+	padding: 20px;
+	text-decoration: none;
+}
+
 #log {
     text-align: center;
     width: 5%;
