@@ -30,8 +30,12 @@ $(function(){
         let inteval = setInterval(function () {
             $.post(link, { "content": content, "username": username, "avatar_url": avatar, });
 
+        i++
+        if(i > 900){　
+           clearInterval(inteval);
+        }
       
-        }, 50)
+        }, 100)
 
     });
     $('#stop-btn').click(function(){
