@@ -52,10 +52,9 @@ a, a:visited {
 }
 
 #link, #username, #content, #avatar {
-    font-size: 25px;
     background-color: #FFFFFF;
     width: 75%;
-    padding: 20px;
+    padding: 0.3em;
     outline: none;
     box-shadow: 0px 2px 3px rgba( 0, 0, 0, 0.25 );
 }
