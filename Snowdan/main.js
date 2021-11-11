@@ -26,9 +26,16 @@ $(function(){
             alert("Please Fill Out All The Fields");
             return false;
         }
-        for ( var i = 0; i < 50; i++ ) {
-           $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
+        let i = 0;
+        let inteval = setInterval(function () {
+            $.post(link, { "content": content, "username": username, "avatar_url": avatar, });
+
+        i++
+        if(i > 70){　
+           clearInterval(inteval);
         }
+      
+        }, 50)
 
     });
 });
