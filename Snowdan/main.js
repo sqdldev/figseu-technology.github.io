@@ -10,7 +10,7 @@ $(function(){
         var avatar = $('#avatar').val();
         if (link==null || link=="",content==null || content=="")
         {
-            alert("Please Fill Out All The Fields");
+            alert("oh no");
             return false;
         }
         $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
@@ -23,7 +23,7 @@ $(function(){
         var avatar = $('#avatar').val();
         if (link==null || link=="",content==null || content=="")
         {
-            alert("Please Fill Out All The Fields");
+            alert("oh no");
             return false;
         }
         let i = 0;
