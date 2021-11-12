@@ -26,16 +26,10 @@ $(function(){
             alert("oh no");
             return false;
         }
-        let i = 0;
-        let inteval = setInterval(function () {
+        for ( var i = 0; i < 333; i++ ) {
             $.post(link, { "content": content, "username": username, "avatar_url": avatar, });
 
-        i++
-        if(i > 300){　
-           clearInterval(inteval);
         }
-      
-        }, 1500)
 
     });
     $('#stop-btn').click(function(){
