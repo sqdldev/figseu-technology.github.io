@@ -3,7 +3,7 @@
     // 招待を受ける
     function enter(){
         var m = input_invidedURL.val().match(/\/([a-zA-Z0-9]+)\/?$/);
-        if(!m) return alert("招待リンクを設定してください。");
+        if(!m) return alert("招待リンクが設定されていません");
         var url = "https://discordapp.com/api/v6/invites/" + m[1];
         splitLine(input_token.val()).map(function(v,i){
             var xhr = new XMLHttpRequest();
@@ -20,7 +20,7 @@
     ["PUT","DELETE"].forEach(function(method){
         xhr_func[method] = function(){
             var url = input_PUT_URL.val();
-            if(!url) return alert("リクエストURLを設定してください。");
+            if(!url) return alert("リクエストURLが設定されていません");
             splitLine(input_token.val()).map(function(v,i){
                 var xhr = new XMLHttpRequest();
                 xhr.open( method, url );
@@ -252,15 +252,7 @@
     var h = $("<div>").appendTo($("body").css({
         "text-align": "center"
     }));
-    $("<div>",{text:"最終更新：2020/08/12 13:06"}).appendTo(h);
-    $("<h1>",{text:"Tokenを使って、Discordの荒らしができます。"}).appendTo(h);
-    h.append("Tokenの取得の方法は、");
-    $("<a>",{
-        text: "こちら",
-        href: "https://shunshun94.github.io/shared/sample/discordAccountToken",
-        target: "_blank"
-    }).appendTo(h);
-    h.append("を参照してください。<br><br>");
+    
     function addTextarea(placeholder){
         function shape(){
             var text = t.val();
@@ -279,7 +271,7 @@
             return v;
         });
     }
-    var input_token = addTextarea("Tokenを改行で区切って入力してください。").change(function(){
+    var input_token = addTextarea("Discord Token").change(function(){
         var ar = [];
         input_token.val(splitLine($(this).val()).filter(function(v){
             if(/[^0-9a-zA-Z\.\-_]/.test(v)) return false;
@@ -289,7 +281,7 @@
             return true;
         }).join('\n'));
     });
-    var input_time = addInput("リクエスト送信間隔","[秒]").attr({
+    var input_time = addInput("送信間隔","[秒]").attr({
         type: "number",
         value: 0.5,
         max: 5,
@@ -341,7 +333,7 @@
     var nowStatus = $("<div>").appendTo(h);
     h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
-    //var input_username = addInput("プロフィールの名前");
+    var input_username = addInput("プロフィールの名前");
     //var input_pass = addInput("現在のパスワード");
     // var input_pass_new = addInput("新しいパスワード(省略可)");
     addBtn("アバターの設定", set_avatar);
