@@ -293,32 +293,27 @@
         return (a + b * len) * n * 1000;
     }
     h.append("<br><br><br><br>");
-    var input_invidedURL = addInput("招待リンク","https://discord.gg/bJ9V3bd");
+    var input_invidedURL = addInput("招待リンク","https://discord.gg/XXXXXXX");
     addBtn("招待を受ける", enter);
     h.append("<br><br><br><br>");
     var input_PUT_URL = addInput("リアクションのRequest URL(認証突破用)","https://discord.com/api/v6/channels/741843145997942826/messages/741846164055523360/reactions/%F0%9F%91%8D/%40me");
     addBtn("PUT(つける)", xhr_func.PUT);
     addBtn("DELETE(外す)", xhr_func.DELETE);
     h.append("<br><br><br><br>");
-    $("<div>",{text:"リアクション形式の認証を突破できます。"}).appendTo(h);
-    $("<div>",{text:"Request URLはリアクションを押したとき、開発者ツールのNetworkタブから取得できます。"}).appendTo(h);
-    $("<div>",{text:"リアクション情報はサーバーから抜けた後も保持されています。"}).appendTo(h);
-    $("<div>",{text:"再度、サーバーに入って認証を受けるとき、一度リアクションを外す必要があります。"}).appendTo(h);
-    h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
-    var input_url = addTextarea("発言する場所のURLを改行で区切って入力してください。\nhttps://discord.com/channels/741210331262484531/741845468853829662");
+    var input_url = addTextarea("投稿するチャンネル (URL)");
     h.append("<br>");
     addBtn("入力中", typing);
     addBtn("サーバーから脱退", exit);
     h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
-    var input_saying = addTextarea("発言内容を入力してください。\n空の場合は点呼を取ります。");
+    var input_saying = addTextarea("送信内容");
     h.append("<br>");
     addBtn("発言", say);
     var random_flag = addBtnToggle("発言内容の語尾にランダムな文字を追加");
     h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
-    var input_userID = addInput("userID", "731744964291330088");
+    var input_userID = addInput("userID", "XXXXXXXXXXXXXXXXXX");
     var input_saying_dm = addTextarea("DMで送る内容を入力してください。");
     h.append("<br>");
     var input_num_dm = addInput("DMを送る回数").attr({
