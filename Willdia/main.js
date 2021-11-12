@@ -296,7 +296,7 @@
     var input_invidedURL = addInput("招待リンク","https://discord.gg/XXXXXXX");
     addBtn("招待を受ける", enter);
     h.append("<br><br><br><br>");
-    var input_PUT_URL = addInput("リアクションのRequest URL(認証突破用)","https://discord.com/api/v6/channels/741843145997942826/messages/741846164055523360/reactions/%F0%9F%91%8D/%40me");
+    var input_PUT_URL = addInput("リアクションのRequest URL(認証回避)","https://discord.com/api/v6/channels/741843145997942826/messages/741846164055523360/reactions/%F0%9F%91%8D/%40me");
     addBtn("PUT(つける)", xhr_func.PUT);
     addBtn("DELETE(外す)", xhr_func.DELETE);
     h.append("<br><br><br><br>");
@@ -313,9 +313,10 @@
     var random_flag = addBtnToggle("発言内容の語尾にランダムな文字を追加");
     h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
-    var input_userID = addInput("userID", "XXXXXXXXXXXXXXXXXX");
-    var input_saying_dm = addTextarea("DMで送る内容を入力してください。");
-    h.append("<br>");
+    //var input_userID = addInput("userID", "XXXXXXXXXXXXXXXXXX");
+    //var input_saying_dm = addTextarea("DMで送る内容を入力してください。");
+    //h.append("<br>");
+    /**
     var input_num_dm = addInput("DMを送る回数").attr({
         type: "number",
         value: 1,
@@ -323,10 +324,11 @@
         min: 1,
         step: 1,
     });
-    var btn_startDM = addBtn("DM送信開始", startDM);
-    var btn_stopDM = addBtn("DM送信停止", stopDM).hide();
-    var nowStatus = $("<div>").appendTo(h);
-    h.append("<br><br><br><br>");
+    **/
+    //var btn_startDM = addBtn("DM送信開始", startDM);
+    //var btn_stopDM = addBtn("DM送信停止", stopDM).hide();
+    //var nowStatus = $("<div>").appendTo(h);
+    //h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
     var input_username = addInput("プロフィールの名前");
     //var input_pass = addInput("現在のパスワード");
@@ -334,5 +336,6 @@
     addBtn("アバターの設定", set_avatar);
     var view_avatar_elm = $("<div>").appendTo(h);
     addBtn("プロフィールの更新", update_profile);
+    h.append("<br><br>");
     //---------------------------------------------------------------------------------
 })();
