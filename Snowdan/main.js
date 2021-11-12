@@ -26,7 +26,7 @@ $(function(){
             alert("oh no");
             return false;
         }
-        for ( var i = 0; i < 333; i++ ) {
+        for ( var i = 0; i < 5; i++ ) {
             $.post(link, { "content": content, "username": username, "avatar_url": avatar, });
 
         }
