@@ -232,7 +232,7 @@
         });
         var check = $("<input>",{type:"checkbox"}).prependTo(elm);
         function setColor(){
-            elm.css("background-color", flag ? "orange" : "gray");
+            elm.css("background-color", flag ? "#FF000B" : "#760008");
         }
         setColor();
         return function(){
