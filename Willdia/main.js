@@ -312,7 +312,7 @@
     var input_saying = addTextarea("送信内容");
     h.append("<br>");
     addBtn("発言", say);
-    h.append("<br>");
+    h.append("<br><br>");
     var random_flag = addBtnToggle("発言内容の語尾にランダムな文字を追加");
     h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
@@ -338,7 +338,7 @@
     //var input_pass = addInput("現在のパスワード");
     // var input_pass_new = addInput("新しいパスワード(省略可)");
     addBtn("アバターの設定", set_avatar);
-    h.append("<br>");
+    h.append("<br><br>");
     var view_avatar_elm = $("<div>").appendTo(h);
     addBtn("プロフィールの更新", update_profile);
     h.append("<br><br>");
