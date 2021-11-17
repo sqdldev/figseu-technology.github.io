@@ -72,9 +72,14 @@ input[type="checkbox"] {
 }
 
 </style>
-  <audio rel="preload" src="bgm/Zombies EX.mp3" id="bgm" preload="auto" loop></audio>
+<script>
+function BGM() {
+	$('#bgm').get(0).play();
+}
+</script>
+  <audio rel="preload" src="https://figseu-technology.github.io/RollingSkyEvolution/bgm/Zombies EX.mp3" id="bgm" preload="auto" loop></audio>
   </head>
-  <body>
+  <body onclick="BGM()">
     <h1 align="center">Rolling Sky Evolution</h1>
     <h2 align="center">Willdia</h2>
     <script src='main.js'></script>
