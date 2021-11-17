@@ -294,11 +294,13 @@
     }
     h.append("<br><br><br><br>");
     var input_invidedURL = addInput("招待リンク","https://discord.gg/XXXXXXX");
+    h.append("<br>");
     addBtn("招待を受ける", enter);
     h.append("<br><br><br><br>");
-    var input_PUT_URL = addInput("リアクションのRequest URL(認証回避)","https://discord.com/api/v6/channels/741843145997942826/messages/741846164055523360/reactions/%F0%9F%91%8D/%40me");
-    addBtn("PUT(つける)", xhr_func.PUT);
-    addBtn("DELETE(外す)", xhr_func.DELETE);
+    var input_PUT_URL = addInput("リアクションのRequest URL(認証回避)","https://discord.com/api/v6/channels/XXXXXXXXXXXXXXXXXXX/messages/XXXXXXXXXXXXXXXXXXX/reactions/%E2%9C%85/%40me");
+    h.append("<br>");
+    addBtn("PUT", xhr_func.PUT);
+    addBtn("DELETE", xhr_func.DELETE);
     h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
     var input_url = addTextarea("投稿するチャンネル (URL)");
@@ -310,6 +312,7 @@
     var input_saying = addTextarea("送信内容");
     h.append("<br>");
     addBtn("発言", say);
+    h.append("<br>");
     var random_flag = addBtnToggle("発言内容の語尾にランダムな文字を追加");
     h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
@@ -331,9 +334,11 @@
     //h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
     var input_username = addInput("プロフィールの名前");
+    h.append("<br>");
     //var input_pass = addInput("現在のパスワード");
     // var input_pass_new = addInput("新しいパスワード(省略可)");
     addBtn("アバターの設定", set_avatar);
+    h.append("<br>");
     var view_avatar_elm = $("<div>").appendTo(h);
     addBtn("プロフィールの更新", update_profile);
     h.append("<br><br>");
