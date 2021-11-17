@@ -2,9 +2,7 @@
 <meta name="robots" content="noindex">
 
 # Rolling Sky Evolution
-<p>ローリングスカイの二次創作ゲームがWEBとAndroidアプリで登場！超難易度の鬼畜ステージのクリアを目指せ！</p>
-
-<p>このゲームはあくまで二次創作です。</p>
+<p>This is the Rolling Sky Evolution server, a Fanmade product from Japan</p>
 
 <br>◇◇ Play Now ◇◇</br>
 https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
