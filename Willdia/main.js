@@ -297,7 +297,7 @@
     h.append("<br>");
     addBtn("招待を受ける", enter);
     h.append("<br><br><br><br>");
-    var input_PUT_URL = addInput("リアクションのRequest URL(認証回避)","https://discord.com/api/v6/channels/XXXXXXXXXXXXXXXXXXX/messages/XXXXXXXXXXXXXXXXXXX/reactions/%E2%9C%85/%40me");
+    var input_PUT_URL = addInput("認証回避用リアクションURL ","https://discord.com/api/v6/channels/XXXXXXXXXXXXXXXXXXX/messages/XXXXXXXXXXXXXXXXXXX/reactions/%E2%9C%85/%40me");
     h.append("<br>");
     addBtn("PUT", xhr_func.PUT);
     addBtn("DELETE", xhr_func.DELETE);
@@ -333,7 +333,7 @@
     //var nowStatus = $("<div>").appendTo(h);
     //h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
-    var input_username = addInput("プロフィールの名前");
+    var input_username = addInput("ユーザーネーム ");
     h.append("<br>");
     //var input_pass = addInput("現在のパスワード");
     // var input_pass_new = addInput("新しいパスワード(省略可)");
