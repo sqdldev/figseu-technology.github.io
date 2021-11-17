@@ -311,7 +311,7 @@
     //---------------------------------------------------------------------------------
     var input_saying = addTextarea("送信内容");
     h.append("<br>");
-    addBtn("発言", say);
+    addBtn("Submit", say);
     h.append("<br><br>");
     var random_flag = addBtnToggle("発言内容の語尾にランダムな文字を追加");
     h.append("<br><br><br><br>");
