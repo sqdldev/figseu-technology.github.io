@@ -218,7 +218,7 @@
     function addInput(title, placeholder){
         return $("<input>",{
             placeholder: placeholder
-        }).appendTo($("<div>",{text: title + ':'}).appendTo(h));
+        }).appendTo($("<div>",{text: title + ' '}).appendTo(h));
     }
     function addBtn(title, func){
         return $("<button>",{text:title}).click(func).appendTo(h);
