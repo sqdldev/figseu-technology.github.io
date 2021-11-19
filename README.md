@@ -13,4 +13,4 @@ https://figseu-technology.github.io/RollingSkyEvolution/RCN_6N7eGCtczZLUxhJAud24
 
 # 公式サーバー (Discord)
 
-https://discord.gg/duBXgTRKZE
+https://discord.gg/MYJTPMXjvT
