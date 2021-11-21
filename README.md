@@ -11,6 +11,10 @@ https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
 
 https://figseu-technology.github.io/RollingSkyEvolution/RCN_6N7eGCtczZLUxhJAud24RSH4D6QCdbTJpM9nYpFtQetriKYnka.html
 
+# Rolling Sky Evolution - Forum
+
+https://jp804087034.wordpress.com/
+
 # 公式サーバー (Discord)
 
 https://discord.gg/MYJTPMXjvT
