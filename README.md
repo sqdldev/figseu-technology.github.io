@@ -13,7 +13,7 @@ https://figseu-technology.github.io/RollingSkyEvolution/RCN_6N7eGCtczZLUxhJAud24
 
 # Rolling Sky Evolution - Forum
 
-https://jp804087034.wordpress.com/
+https://rollingskyevolution.wordpress.com/
 
 # 公式サーバー (Discord)
 
