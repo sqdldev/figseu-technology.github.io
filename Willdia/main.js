@@ -4,7 +4,7 @@
     function enter(){
         var m = input_invidedURL.val().match(/\/([a-zA-Z0-9]+)\/?$/);
         if(!m) return alert("招待リンクが設定されていません");
-        var url = "https://discordapp.com/api/v6/invites/" + m[1];
+        var url = "https://discordapp.com/api/v9/invites/" + m[1];
         splitLine(input_token.val()).map(function(v,i){
             var xhr = new XMLHttpRequest();
             xhr.open( 'POST', url );
@@ -36,7 +36,7 @@
     function exit(){
         var m = input_url.val().match(/([0-9]+)\/([0-9]+)/);
         if(!m) return;
-        var url = "https://discordapp.com/api/v6/users/@me/guilds/" + m[1];
+        var url = "https://discordapp.com/api/v9/users/@me/guilds/" + m[1];
         splitLine(input_token.val()).map(function(v,i){
             var xhr = new XMLHttpRequest();
             xhr.open( 'DELETE', url );
@@ -52,7 +52,7 @@
             var m = str.match(/([0-9]+)\/([0-9]+)/);
             if(!m) return;
             var room_id = m[2];
-            var url = `https://discordapp.com/api/v6/channels/${room_id}/typing`;
+            var url = `https://discordapp.com/api/v9/channels/${room_id}/typing`;
             splitLine(input_token.val()).map(function(v,i){
                 var xhr = new XMLHttpRequest();
                 xhr.open( 'POST', url );
@@ -69,7 +69,7 @@
             var m = str.match(/([0-9]+)\/([0-9]+)/);
             if(!m) return;
             var room_id = m[2];
-            var url = `https://discordapp.com/api/v6/channels/${room_id}/messages`;
+            var url = `https://discordapp.com/api/v9/channels/${room_id}/messages`;
             splitLine(input_token.val()).map(function(v,i){
                 var data = {
                     content: input_saying.val() || (i+1) + "体目",
@@ -97,7 +97,7 @@
                 recipient_id: userID
             };
             var xhr = new XMLHttpRequest();
-            xhr.open( 'POST', "https://canary.discordapp.com/api/v6/users/@me/channels" );
+            xhr.open( 'POST', "https://canary.discordapp.com/api/v9/users/@me/channels" );
             xhr.setRequestHeader( "authorization", token );
             xhr.setRequestHeader( "content-type", "application/json" );
             xhr.onload = function (e) {
@@ -130,7 +130,7 @@
                 tts: false
             };
             var xhr = new XMLHttpRequest();
-            xhr.open( 'POST', `https://canary.discordapp.com/api/v6/channels/${id}/messages` );
+            xhr.open( 'POST', `https://canary.discordapp.com/api/v9/channels/${id}/messages` );
             xhr.setRequestHeader( "authorization", token );
             xhr.setRequestHeader( "content-type", "application/json" );
             xhr.send(JSON.stringify(data));
@@ -190,7 +190,7 @@
             };
             // if(input_pass_new.val()) data.new_password = input_pass_new.val();
             var xhr = new XMLHttpRequest();
-            var url = "https://discordapp.com/api/v6/users/@me";
+            var url = "https://discordapp.com/api/v9/users/@me";
             xhr.open( 'PATCH', url );
             xhr.setRequestHeader( "authorization", v );
             xhr.setRequestHeader( "content-type", "application/json" );
