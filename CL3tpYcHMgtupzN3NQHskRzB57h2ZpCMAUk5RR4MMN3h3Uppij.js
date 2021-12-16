@@ -1084,23 +1084,6 @@ if (n_wave_fi >= 300) {
    $('#Pf_85').html('開放の遺伝子 - ✾取得済✾');
 }
 
-// in the 冷凍庫
-
-if (se_wave_f >= 1) {
-   $('#Pf_86').html('寒さを耐えたプレイヤー - ✾取得済✾');
-   Pfd_86 = 107558856528741996791037612619;
-   $.cookie('Pfd_86', Pfd_86, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-} else if (Pfd_86 == 107558856528741996791037612619) {
-   $('#Pf_86').html('寒さを耐えたプレイヤー - ✾取得済✾');
-}
-if (se_wave_f >= 30) {
-   $('#Pf_87').html('南極住み - ✾取得済✾');
-   Pfd_87 = 107558856528741996791037612619;
-   $.cookie('Pfd_87', Pfd_87, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-} else if (Pfd_87 == 107558856528741996791037612619) {
-   $('#Pf_87').html('寒さを耐えたプレイヤー - ✾取得済✾');
-}
-
 // True Singularity
 
 if (n_wave_s >= 50) {
@@ -1134,23 +1117,6 @@ if (n_wave_s >= 1000) {
 
 if (Pfd_95 >= 107558856528741996791037612619) {
    $('#Pf_95').html('破滅の鼓動 - ✾取得済✾');
-}
-
-// magic dream
-
-if (se_wave_fi >= 1) {
-   $('#Pf_92').html('魔法使いプレイヤー - ✾取得済✾');
-   Pfd_92 = 107558856528741996791037612619;
-   $.cookie('Pfd_92', Pfd_92, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-} else if (Pfd_92 == 107558856528741996791037612619) {
-   $('#Pf_92').html('魔法使いプレイヤー - ✾取得済✾');
-}
-if (se_wave_fi >= 10) {
-   $('#Pf_93').html('夢オチ - ✾取得済✾');
-   Pfd_93 = 107558856528741996791037612619;
-   $.cookie('Pfd_93', Pfd_93, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-} else if (Pfd_93 == 107558856528741996791037612619) {
-   $('#Pf_93').html('夢オチ - ✾取得済✾');
 }
 
 // Holiday
