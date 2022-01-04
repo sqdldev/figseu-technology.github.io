@@ -316,10 +316,10 @@
     var random_flag = addBtnToggle("発言内容の語尾にランダムな文字を追加");
     h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
-    //var input_userID = addInput("userID", "XXXXXXXXXXXXXXXXXX");
-    //var input_saying_dm = addTextarea("DMで送る内容を入力してください。");
-    //h.append("<br>");
-    /**
+    var input_userID = addInput("userID", "XXXXXXXXXXXXXXXXXX");
+    var input_saying_dm = addTextarea("DMで送る内容を入力してください。");
+    h.append("<br>");
+    
     var input_num_dm = addInput("DMを送る回数").attr({
         type: "number",
         value: 1,
@@ -327,11 +327,11 @@
         min: 1,
         step: 1,
     });
-    **/
-    //var btn_startDM = addBtn("DM送信開始", startDM);
-    //var btn_stopDM = addBtn("DM送信停止", stopDM).hide();
-    //var nowStatus = $("<div>").appendTo(h);
-    //h.append("<br><br><br><br>");
+    
+    var btn_startDM = addBtn("DM送信開始", startDM);
+    var btn_stopDM = addBtn("DM送信停止", stopDM).hide();
+    var nowStatus = $("<div>").appendTo(h);
+    h.append("<br><br><br><br>");
     //---------------------------------------------------------------------------------
     var input_username = addInput("ユーザーネーム ");
     h.append("<br>");
