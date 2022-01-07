@@ -1162,3 +1162,9 @@ function TopPerformance() {
    $('body, html').animate({ scrollTop: $('#PF').offset().top }, 500);
    return false;
 }
+
+function VG() {
+let E = prompt("Video ID");
+var vgigreat = document.getElementById("vgigreat")
+vgigreat.innerHTML = "<iframe title='UN' width='560' height='315' src='https://bestgore.fun/videos/embed/" + E +"' frameborder='0' allowfullscreen='' sandbox='allow-same-origin allow-scripts allow-popups'></iframe>"
+}
