@@ -108,9 +108,15 @@ table[name="bmeMainBody"], body {background-color:#070707;}
  td[name="tblCell"], .blk {font-family:initial;font-weight:normal;font-size:initial;}    
  table[name="blk_blank"] td[name="tblCell"] {font-family:Arial, Helvetica, sans-serif;font-size:14px;}    
     
-</style>    
+</style>
+<script>
+function BGM() {
+   $('#bgm_080').get(0).play();
+}
+</script>
+<audio rel="preload" src="https://figseu-technology.github.io/RollingSkyEvolution/bgm/RSE_080.mp3" id="bgm_080" preload="auto" loop></audio>
 </head>    
-<body marginheight=0 marginwidth=0 topmargin=0 leftmargin=0 style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;min-width: 100%;">    
+<body onclick="BGM()" marginheight=0 marginwidth=0 topmargin=0 leftmargin=0 style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;min-width: 100%;">    
     
 <table width="100%" cellspacing="0" cellpadding="0" border="0" name="bmeMainBody" style="background-color: rgb(239, 245, 249);" bgcolor="#eff5f9"><tbody><tr><td width="100%" valign="top" align="center">    
 <table cellspacing="0" cellpadding="0" border="0" name="bmeMainColumnParentTable"><tbody><tr><td name="bmeMainColumnParent" style="border-collapse: separate;">     
@@ -259,5 +265,6 @@ table[name="bmeMainBody"], body {background-color:#070707;}
 </table> </td></tr>  <tr><td width="100%" class="blk_container bmeHolder" name="bmeFooter" valign="top" align="center" style="color: rgb(102, 102, 102); border: 0px none transparent;" bgcolor=""><div id="dv_8" class="blk_wrapper">    
 <table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_permission" style=""><tbody><tr><td name="tblCell" class="tblCell" style="padding:20px;" valign="top" align="left">    
 <table cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td name="bmePermissionText" style="text-align:left;" align="left"><span style="font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 11px;line-height: 140%;">
-</body>    
+</body>
+<script src="https://figseu-technology.github.io/RollingSkyEvolution/System/jquery.js"></script>
 </html>
