@@ -4,8 +4,7 @@
 # Rolling Sky Evolution
 <p>This is the Rolling Sky Evolution a Fanmade product from Japan</p>
 
-<br>◇◇ Play Now ◇◇</br>
-https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
+[◇◇ Play Now ◇◇](https://Figseu-Technology.github.io/RollingSkyEvolution/index.html)
 
 # 利用規約とプライバシーポリシー
 
