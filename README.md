@@ -10,9 +10,9 @@
 
 [確認する](https://figseu-technology.github.io/RollingSkyEvolution/RCN_6N7eGCtczZLUxhJAud24RSH4D6QCdbTJpM9nYpFtQetriKYnka.html)
 
-# Rolling Sky Evolution - Forum
+# Dancing Line Evolution
 
-https://rollingskyevolution.wordpress.com/
+[◇◇ Play Now ◇◇](https://figseu-technology.github.io/RollingSkyEvolution/Dancing%20Line/)
 
 # 公式サーバー (Discord)
 
