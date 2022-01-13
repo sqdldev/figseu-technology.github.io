@@ -9,7 +9,7 @@ https://Figseu-Technology.github.io/RollingSkyEvolution/index.html
 
 # 利用規約とプライバシーポリシー
 
-<a href="https://figseu-technology.github.io/RollingSkyEvolution/RCN_6N7eGCtczZLUxhJAud24RSH4D6QCdbTJpM9nYpFtQetriKYnka.html>確認する</a>
+https://figseu-technology.github.io/RollingSkyEvolution/RCN_6N7eGCtczZLUxhJAud24RSH4D6QCdbTJpM9nYpFtQetriKYnka.html
 
 # Rolling Sky Evolution - Forum
 
