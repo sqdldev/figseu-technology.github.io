@@ -46,8 +46,8 @@ $.getJSON('Entry-level.rse', d => {
   $('#next').hide();
   $('#score').hide();
   $('#level-d').html('エントリーステージ');
-  $('#level').html('Last Battle');
-  $('#stars').html('☆☆');
+  $('#level').html('砂漠');
+  $('#stars').html('☆☆☆☆');
   $('#Waves').html('☆ × ');
 
   // ブラウザ判定
@@ -573,7 +573,7 @@ function gameover() {
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              } else {
-                $('#level-d').html('✮ テスト完了 ✮ ID : 4DAF-56E8-RY9G-XS9J-R7P3　');
+                $('#level-d').html('休眠中の為、プレイのみ可能です。　詳しくは公式DISCORDサーバーまでお問い合わせください');
              }
       }
       $('#sakura').each(function(){
