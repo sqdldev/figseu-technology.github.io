@@ -573,7 +573,7 @@ function gameover() {
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              } else {
-                $('#level-d').html('休眠中の為、プレイのみ可能です。　詳しくは公式DISCORDサーバーまでお問い合わせください');
+                $('#level-d').html('休眠中の為、プレイのみ可能です。詳しくは公式DISCORDサーバーまでお問い合わせください');
              }
       }
       $('#sakura').each(function(){
