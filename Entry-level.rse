@@ -3,7 +3,7 @@
     "author": "はぐれメタル",
     "background": "0xFFCC00",
     "ball": "0xFF820A",
-    "mat": 0x"FFEA84",
+    "mat": "0xFFEA84",
     "bouncer": "0xEFA300",
     "obstacle": "0x158F06",
     "data":
