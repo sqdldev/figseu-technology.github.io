@@ -23,7 +23,7 @@ let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('z_wave');
 let gya = Math.floor( Math.random() * 11 );
 let url = location.href;
-let fgnc = url.substr( 75 );
+let fgnc = url.substr( 55 );
 $('#zero').get(0);
 let data;
 let reqId;
