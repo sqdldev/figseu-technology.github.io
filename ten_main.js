@@ -1,6 +1,6 @@
 const scene = new THREE.Scene();const camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,10000);const renderer = new THREE.WebGLRenderer({ antialias: true });renderer.setSize(window.innerWidth, window.innerHeight);renderer.setClearColor(0xaaaaaa, 1);const canvas = $('#canvascontainer').append(renderer.domElement);
 let distance = 4;let started = false;let percent = 0;camera.position.set(0, 5, distance);camera.rotation.x -= 0.75;let scoreSubmitted = false;let level = 1;let star = 0;let wave = 0;let wave_t = 0;let wave_th = 0;let wave_f = 0;let wave_fi = 0;let wave_s = 0;let wave_se = 0;let userAgent = window.navigator.userAgent.toLowerCase();wave = $.cookie('te_wave');wave_t = $.cookie('te_wave_t');wave_th = $.cookie('te_wave_th');wave_f = $.cookie('te_wave_f');wave_fi = $.cookie('te_wave_fi');wave_s = $.cookie('te_wave_s');wave_se = $.cookie('te_wave_se');
-let gya = Math.floor( Math.random() * 11 );let url = location.href;let fgnc = url.substr( 73 );$('#ruby').get(0);$('#rgw').get(0);$('#dia').get(0);$('#kya').get(0);$('#ef').get(0);$('#eft').get(0);$('#kya_e').get(0);$('#kya_g').get(0);$('#eft_g ').get(0);let data;let reqId;$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.rse', d => {data = d;loadLevel(level);$('#play').show();$('#PresentCode').hide();$('#play').click(start);$('#next').show();$('#score').hide();$('#level-d').html('超難関');$('#level').html('The Ruby');$('#stars').html('☆☆☆☆☆☆☆☆☆☆');$('#Waves').html('☆ × ' + $.cookie('te_wave'));
+let gya = Math.floor( Math.random() * 11 );let url = location.href;let fgnc = url.substr( 53 );$('#ruby').get(0);$('#rgw').get(0);$('#dia').get(0);$('#kya').get(0);$('#ef').get(0);$('#eft').get(0);$('#kya_e').get(0);$('#kya_g').get(0);$('#eft_g ').get(0);let data;let reqId;$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.rse', d => {data = d;loadLevel(level);$('#play').show();$('#PresentCode').hide();$('#play').click(start);$('#next').show();$('#score').hide();$('#level-d').html('超難関');$('#level').html('The Ruby');$('#stars').html('☆☆☆☆☆☆☆☆☆☆');$('#Waves').html('☆ × ' + $.cookie('te_wave'));
 
 // ブラウザ判定
 
@@ -75,31 +75,31 @@ function start(e) {
     });
     if (typeof wave == 'undefined') {
         wave = 0;
-        $.cookie('te_wave', wave, { expires: 40, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('te_wave', wave, { expires: 40, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_t == 'undefined') {
         wave_t = 0;
-        $.cookie('te_wave_t', wave_t, { expires: 40, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('te_wave_t', wave_t, { expires: 40, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_th == 'undefined') {
         wave_th = 0;
-        $.cookie('te_wave_th', wave_th, { expires: 40, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('te_wave_th', wave_th, { expires: 40, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_f == 'undefined') {
         wave_f = 0;
-        $.cookie('te_wave_f', wave_f, { expires: 40, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('te_wave_f', wave_f, { expires: 40, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_fi == 'undefined') {
         wave_fi = 0;
-        $.cookie('te_wave_fi', wave_fi, { expires: 40, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('te_wave_fi', wave_fi, { expires: 40, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_s == 'undefined') {
         wave_s = 0;
-        $.cookie('te_wave_s', wave_s, { expires: 40, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('te_wave_s', wave_s, { expires: 40, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_se == 'undefined') {
         wave_se = 0;
-        $.cookie('te_wave_se', wave_se, { expires: 40, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('te_wave_se', wave_se, { expires: 40, domain:'figseu-technology.github.io'});
      }
     if (level == 1) {
         $('#ruby').get(0).play();
@@ -464,13 +464,13 @@ function gameover() {
      wave_se = $.cookie('te_wave_se');
      }
   }
-  $.cookie('te_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('te_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('te_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('te_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('te_wave_fi', wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('te_wave_s', wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('te_wave_se', wave_se, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('te_wave', wave, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('te_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('te_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('te_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('te_wave_fi', wave_fi, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('te_wave_s', wave_s, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('te_wave_se', wave_se, { expires: 400, domain:'figseu-technology.github.io'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(100);
