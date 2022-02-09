@@ -34,7 +34,7 @@ wave_fi = $.cookie('se_wave_fi');
 wave_s = $.cookie('se_wave_s');
 wave_se = $.cookie('se_wave_se');
 let url = location.href;
-let fgnc = url.substr( 75 );
+let fgnc = url.substr( 55 );
 $('#shrine').get(0);
 $('#ts').get(0);
 $('#tmp').get(0);
@@ -147,27 +147,27 @@ function start(e) {
     });
     if (typeof wave == 'undefined') {
         wave = 0;
-        $.cookie('se_wave', wave, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('se_wave', wave, { expires: 30, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_t == 'undefined') {
         wave_t = 0;
-        $.cookie('se_wave_t', wave_t, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('se_wave_t', wave_t, { expires: 30, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_th == 'undefined') {
         wave_th = 0;
-        $.cookie('se_wave_th', wave_th, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('se_wave_th', wave_th, { expires: 30, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_f == 'undefined') {
         wave_f = 0;
-        $.cookie('se_wave_f', wave_f, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('se_wave_f', wave_f, { expires: 30, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_fi == 'undefined') {
         wave_fi = 0;
-        $.cookie('se_wave_fi', wave_fi, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('se_wave_fi', wave_fi, { expires: 30, domain:'figseu-technology.github.io'});
      }
      if (typeof wave_s == 'undefined') {
         wave_s = 0;
-        $.cookie('se_wave_s', wave_s, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+        $.cookie('se_wave_s', wave_s, { expires: 30, domain:'figseu-technology.github.io'});
      }
     if (level == 1) {
             $('#shrine').get(0).play();
@@ -477,13 +477,13 @@ function gameover() {
      wave_s = $.cookie('se_wave_s');
      }
   }
-  $.cookie('se_wave', wave, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('se_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('se_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('se_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('se_wave_fi', wave_fi, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('se_wave_s', wave_s, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
-  $.cookie('se_wave_se', wave_se, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+  $.cookie('se_wave', wave, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('se_wave_t', wave_t, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('se_wave_th', wave_th, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('se_wave_f', wave_f, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('se_wave_fi', wave_fi, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('se_wave_s', wave_s, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('se_wave_se', wave_se, { expires: 400, domain:'figseu-technology.github.io'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(100);
