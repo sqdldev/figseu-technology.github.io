@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/azurLane.css">
+    
+        <link rel="icon" href="/media/imgs/icon.png">
+        <title>Rolling Sky Evolution - Gacha</title>
+      </head>
+
+      <body>
+
+        <section class="container-fluid seccion">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 align-self-center d-flex justify-content-center">
+                    <div class="card my-3 shadow" style="width: 50rem;">
+                        <img src="media/imgs/eventBanner.png" id="banner" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title dark">Azur Lane Gacha Simulator v1.1</h5>
+                            <div class="h6 fw-light ">
+                                <p class="card-text">
+                                    ガチャを回す際に連続クリア回数を消費します。
+                                    イベント - Singularity
+                                    ノーマルガチャ - 桜
+                                    上級ガチャ - Summer
+                                    紋様ガチャ - The Eden
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="btn-group col-12 col-sm-6 px-1" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="btnradio1">2周年記念ガチャ</label>
+                                
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio2">☆1 ～ ☆5</label>
+                                
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio3">☆6 ～ ☆7</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                    <label class="btn btn-outline-primary px-2" for="btnradio4">☆8以上(恒常ガチャ)</label>
+                                </div>
+                                <div class="col-sm-2 col-1"></div>
+                                <div class="col-sm-1 col-3 p-sm-0 p-3 d-flex justify-content-sm-end justify-content-left">
+                                    <button class="btn btn-primary" id="buildBtn">Build</button>
+                                </div>
+                                <div class="col-sm-3 col-6 p-sm-0 p-3">
+                                    <select class="form-select" id="shipsNum">
+                                        <!--   <option selected>Cantidad</option>     -->
+                                        <option value="1">1回</option>
+                                        <option value="10">10回</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pb-1">
+                            <div class="col-1"></div>
+                            <div class="col-2"><button class="btn btn-secondary btn-sm" id="resetCounters">Reset</button></div>
+                            <div class="col-1"><img src="media/imgs/ships/25px-Coreicon2.png" id="wisdomCubes" alt="..."></div>
+                            <dir class="col-2"><label id="cubesAmount">0</label></dir>
+                            <div class="col-1"><img src="media/imgs/ships/25px-Coinicon.png" id="coins" alt="..."></div>
+                            <dir class="col-2"><label id="coinsAmount">0</label></dir>
+                            <div class="col-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid pb-5">
+            <div class="row">
+                <div class="col-1 col-md-2 col-lg-3"></div>
+                <div class="col-sm-10 col-md-8 col-lg-6 col-10 d-flex align-self-center d-flex justify-content-center  m-0 py-2 rounded-3">
+            
+                    <span id="orders"></span>
+                </div>
+                <div class="col-1"></div>
+        
+            </div>
+        </section>
+
+
+        <section class="container-fluid pb-5">
+            <div class="row">
+                <div class="col-1 col-md-2 col-lg-3"></div>
+                <div class="col-sm-10 col-md-8 col-lg-6 col-10 d-flex align-self-center d-flex justify-content-center border border-secondary m-0 py-1 rounded-3 bg-white shadow-lg">
+                    <div class="row">
+                        <div>
+                        <p>
+                            <ul>
+                                <li>7% レアキャラクター・アイテム (金色)</li>
+                                <li>12% 限定キャラクター・アイテム (紫色)</li>
+                                <li>51% レアアイテム (青色)</li>
+                                <li>30% 通常アイテム (通常色)</li>
+                            </ul>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </section>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="js/build.js"></script>
+
+      </body>
+</html>
