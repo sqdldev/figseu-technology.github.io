@@ -4,6 +4,8 @@ body{
     font-family: "Nunito", sans-serif;
 }
 
+h1 {border: double;padding: 5px;}
+
 #mainNavbar {
     font-size: 1.2rem;
     font-weight: 100;
