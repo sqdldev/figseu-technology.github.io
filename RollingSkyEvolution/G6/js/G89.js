@@ -438,7 +438,7 @@ document.querySelector('#buildBtn').addEventListener('click', function(){
         }else if(pool[3].checked === true){
             building(i, SPECIALPOOLN, SPECIALPOOLR, SPECIALPOOLE, SPECIALPOOLSR, false);
         }else{
-            building(i, SPECIALPOOLN, HEAVYPOOLR.concat(SPECIALPOOLR), NONEVENTPOOLE, NONEVENTPOOLSR, true);
+            building(i, SPECIALPOOLN, true);
         }
     }
 })
