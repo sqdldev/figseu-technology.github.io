@@ -1,7 +1,8 @@
+@font-face {font-family: 'dgdr';src: url('https://figseu-technology.github.io/DGDR/JKG-L_3.ttf') format('truetype');}
 body{
     background-color: #000B3F;
     color: #FFFFFF;
-    font-family: "Nunito", sans-serif;
+    font-family: 'dgdr', sans-serif, serif;
 }
 
 h1 {border: double;padding: 5px;}
