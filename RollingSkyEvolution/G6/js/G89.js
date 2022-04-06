@@ -211,7 +211,7 @@ const HEAVYPOOLSR = [
 ]
 
 const SPECIALPOOLN = [
-    [192,'赤い欠片,'Normal'],
+    [192,'赤い欠片','Normal'],
     [71,'藍色の箱','Normal'],
     [140,'黄色の箱','Normal'],
     [240,'黄色の欠片','Normal'],
