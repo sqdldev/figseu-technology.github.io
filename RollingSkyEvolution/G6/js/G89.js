@@ -211,19 +211,19 @@ const HEAVYPOOLSR = [
 ]
 
 const SPECIALPOOLN = [
-    [192,'Aoba','Normal'],
-    [71,'Bogue','Normal'],
-    [140,'Hermes','Normal'],
-    [240,'Kln','Normal'],
-    [238,'Knigsberg','Normal'],
-    [239,'Karlsruhe','Normal'],
-    [193,'Kinugasa','Normal'],
-    [72,'Langley','Normal'],
-    [104,'Leander','Normal'],
-    [29,'Omaha','Normal'],
-    [39,'Pensacola','Normal'],
-    [30,'Raleigh','Normal'],
-    [75,'Ranger','Normal']
+    [192,'赤い欠片,'Normal'],
+    [71,'藍色の箱','Normal'],
+    [140,'黄色の箱','Normal'],
+    [240,'黄色の欠片','Normal'],
+    [238,'青い欠片','Normal'],
+    [239,'白い欠片','Normal'],
+    [193,'赤い箱','Normal'],
+    [72,'青い箱','Normal'],
+    [104,'緑の欠片','Normal'],
+    [29,'藍色の欠片','Normal'],
+    [39,'白い箱','Normal'],
+    [30,'緑の箱','Normal'],
+    [75,'黒い欠片','Normal']
 ]
 
 const SPECIALPOOLR = [
