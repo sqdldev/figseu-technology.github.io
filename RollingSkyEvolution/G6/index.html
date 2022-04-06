@@ -43,18 +43,18 @@
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
                                     <label class="btn btn-outline-primary" for="btnradio1">2周年記念ガチャ</label>
                                 
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" disabled>
                                     <label class="btn btn-outline-primary" for="btnradio2">☆1 ～ ☆5</label>
                                 
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" disabled>
                                     <label class="btn btn-outline-primary" for="btnradio3">☆6 ～ ☆7</label>
 
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" disabled>
                                     <label class="btn btn-outline-primary px-2" for="btnradio4">☆8以上(恒常ガチャ)</label>
                                 </div>
                                 <div class="col-sm-2 col-1"></div>
                                 <div class="col-sm-1 col-3 p-sm-0 p-3 d-flex justify-content-sm-end justify-content-left">
-                                    <button class="btn btn-primary" id="buildBtn">Build</button>
+                                    <button class="btn btn-primary" id="buildBtn">回す</button>
                                 </div>
                                 <div class="col-sm-3 col-6 p-sm-0 p-3">
                                     <select class="form-select" id="shipsNum">
@@ -67,10 +67,9 @@
                         </div>
                         <div class="row pb-1">
                             <div class="col-1"></div>
-                            <div class="col-2"><button class="btn btn-secondary btn-sm" id="resetCounters">Reset</button></div>
-                            <div class="col-1"><img src="media/imgs/ships/25px-Coreicon2.png" id="wisdomCubes" alt="..."></div>
+                            <div class="col-1"><label id="wisdomCubes">◇ × </label></div>
                             <dir class="col-2"><label id="cubesAmount">0</label></dir>
-                            <div class="col-1"><img src="media/imgs/ships/25px-Coinicon.png" id="coins" alt="..."></div>
+                            <div class="col-1"><label id="coins">☆ × </label></div>
                             <dir class="col-2"><label id="coinsAmount">0</label></dir>
                             <div class="col-3"></div>
                         </div>
