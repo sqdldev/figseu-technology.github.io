@@ -452,7 +452,7 @@ function building(i, poolN, poolR, poolE, poolSR, isEvent){
     let shipName = shipData[1];
     let shipRarity = shipData[2];
 
-    ship.src = `media/imgs/ships/70px-${shipName}Icon.png`;
+    ship.src = `media/imgs/G69/${shipName}.png`;
     division.className = shipRarity
     division.id = shipName + i;
     division2.id = shipName + i + 'd';
