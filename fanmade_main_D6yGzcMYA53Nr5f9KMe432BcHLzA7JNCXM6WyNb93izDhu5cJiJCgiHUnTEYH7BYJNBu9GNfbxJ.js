@@ -46,8 +46,8 @@ $.getJSON('Entry-level.rse', d => {
   $('#next').hide();
   $('#score').hide();
   $('#level-d').html('エントリーステージ');
-  $('#level').html('砂漠');
-  $('#stars').html('☆☆☆☆');
+  $('#level').html('D.23');
+  $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
   $('#Waves').html('☆ × ');
 
   // ブラウザ判定
