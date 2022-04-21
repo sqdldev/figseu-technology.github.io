@@ -185,7 +185,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 6) {
+  if (level == 7) {
     $('#next').hide();
   }
   if (level == 1) {
@@ -570,7 +570,7 @@ function gameover() {
      } else if (level == 7) {
       $('#Waves').html('☆ × ' + $.cookie('te_wave_se'));
       if (star == 2) {
-      $('#level-d').html('テスト');
+      $('#level-d').html('解き放たれし禁忌の兵器');
       }
       $('#d23_ssd').each(function(){
     this.pause(); // Stop playing
