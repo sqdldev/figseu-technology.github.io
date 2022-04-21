@@ -125,7 +125,7 @@ function start(e) {
             wave_s++;
           }
         } else if (level == 7) {
-        $('#kiha').get(0).play();
+        $('#d23_ssd').get(0).play();
         wave_se++;
         } else {
             $('#cloud').get(0).play();
@@ -234,8 +234,8 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('te_wave_s'));
      } else if (level == 7) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('K i h a');
+         $('#level-d').html('Designed by はぐれメタル');
+         $('#level').html('D.23');
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('te_wave_se'));
         } else {
@@ -304,8 +304,8 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('te_wave_s'));
      } else if (level == 7) {
-         $('#level-d').html('Extra ステージ');
-         $('#level').html('K i h a');
+         $('#level-d').html('Designed by はぐれメタル');
+         $('#level').html('D.23');
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('te_wave_se'));
         } else {
@@ -570,9 +570,9 @@ function gameover() {
      } else if (level == 7) {
       $('#Waves').html('☆ × ' + $.cookie('te_wave_se'));
       if (star == 2) {
-      $('#level-d').html('追憶のローカル線');
+      $('#level-d').html('テスト');
       }
-      $('#kiha').each(function(){
+      $('#d23_ssd').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
