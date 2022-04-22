@@ -25,16 +25,17 @@ let wave_f = 0;
 let wave_fi = 0;
 let wave_s = 0;
 let wave_se = 0;
-let userAgent = window.navigator.userAgent.toLowerCase();
-wave = $.cookie('o_wave');
-wave_t = $.cookie('o_wave_t');
-wave_th = $.cookie('o_wave_th');
-wave_f = $.cookie('o_wave_f');
-wave_fi = $.cookie('o_wave_fi');
-wave_s = $.cookie('o_wave_s');
-wave_se = $.cookie('o_wave_se');
+let girls = Math.floor( Math.random() * 2 );
 let url = location.href;
-let fgnc = url.substr( 42 );
+let fgnc = url.substr( 57 );
+let userAgent = window.navigator.userAgent.toLowerCase();
+wave = $.cookie('fi_wave');
+wave_t = $.cookie('fi_wave_t');
+wave_th = $.cookie('fi_wave_th');
+wave_f = $.cookie('fi_wave_f');
+wave_fi = $.cookie('fi_wave_fi');
+wave_s = $.cookie('fi_wave_s');
+wave_se = $.cookie('fi_wave_se');
 let data;
 let reqId;
 $.getJSON('end_levels.json', d => {
@@ -44,10 +45,10 @@ $.getJSON('end_levels.json', d => {
   $('#play').click(start);
   $('#next').hide();
   $('#score').hide();
-  $('#level-d').html('⌥⌥⌥データ取得中⌥⌥⌥');
-  $('#level').html('Rolling Sky');
-  $('#stars').html('☆');
-  $('#Waves').html('☆ × ' + $.cookie('o_wave'));
+  $('#level-d').html('テストステージ');
+  $('#level').html('未知の紋様');
+  $('#stars').html('☆☆☆☆☆');
+  $('#Waves').html('☆ × ');
 
   // ブラウザ判定
 
@@ -61,7 +62,6 @@ $.getJSON('end_levels.json', d => {
      $('#stars').html('ERROR 000');
   } else if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
      $('#level-d').html('⌥⌥データ取得中⌥⌥');
-     $('#level-d').html('⌥チュートリアルステージ⌥');
   } else if (userAgent.indexOf("ucbrowser") !== -1) {
      $('#play').hide();
      $('#next').hide();
@@ -71,10 +71,8 @@ $.getJSON('end_levels.json', d => {
      $('#stars').html('ERROR 404');
   } else if(userAgent.indexOf('chrome') != -1) {
      $('#level-d').html('⌥データ取得中⌥');
-     $('#level-d').html('チュートリアルステージ');
   } else if(userAgent.indexOf('safari') != -1) {
      $('#level-d').html('⌥データ取得中⌥');
-     $('#level-d').html('⌥⌥チュートリアルステージ⌥⌥');
   } else if(userAgent.indexOf('firefox') != -1) {
      $('#play').hide();
      $('#next').hide();
@@ -83,12 +81,7 @@ $.getJSON('end_levels.json', d => {
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html('ERROR 810');
   } else if(userAgent.indexOf('opera') != -1) {
-     $('#play').hide();
-     $('#next').hide();
-     $('#score').hide();
-     $('#level-d').html('E R R O R !');
-     $('#level').html('お使いの ブラウザ または アプリ は対応していません');
-     $('#stars').html('ERROR 721');
+     $('#level-d').html('⌥データ取得中⌥');
   } else {
      $('#play').hide();
      $('#next').hide();
@@ -97,14 +90,8 @@ $.getJSON('end_levels.json', d => {
      $('#level').html('お使いの ブラウザ または アプリ は対応していません');
      $('#stars').html('ERROR 666');
   }
-  
-  $('#cloud').get(0);
-  $('#sta').get(0);
-  $('#cst').get(0);
-  $('#dtw').get(0);
-  $('#kt').get(0);
-  $('#pknk').get(0);
-  $('#level-d').html('チュートリアルステージ');
+
+  $('#level-d').html('エントリーステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
@@ -121,18 +108,10 @@ function start(e) {
     $('#main').fadeOut(300);
     $('#name').hide();
     if (userAgent.indexOf('edge') != -1 || userAgent.indexOf("edga") !== -1 || userAgent.indexOf("edgios") !== -1) {
-       $('#jump').get(0).play();
-       $('#gem').get(0).play();
-       $('#speedup').get(0).play();
-       $('#speeddown').get(0).play();
-    } else if (userAgent.indexOf('chrome') != -1) {
-       $('#jump').get(0).play();
-       $('#gem').get(0).play();
-       $('#speedup').get(0).play();
-       $('#speeddown').get(0).play();
-    } else if(userAgent.indexOf('safari') != -1) {
-       
-    }
+    $('#jump').get(0).play();
+    $('#gem').get(0).play();
+    $('#speedup').get(0).play();
+    $('#speeddown').get(0).play();
     $('#jump').each(function(){
        this.pause(); // Stop playing
        this.currentTime = 0; // Reset time
@@ -149,54 +128,78 @@ function start(e) {
        this.pause(); // Stop playing
        this.currentTime = 0; // Reset time
     });
+    } else if (userAgent.indexOf('chrome') != -1) {
+    $('#jump').get(0).play();
+    $('#gem').get(0).play();
+    $('#speedup').get(0).play();
+    $('#speeddown').get(0).play();
+    $('#jump').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
+    $('#gem').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
+    $('#speedup').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
+    $('#speeddown').each(function(){
+       this.pause(); // Stop playing
+       this.currentTime = 0; // Reset time
+    });
+    } else if(userAgent.indexOf('safari') != -1) {
+       
+    }
     if (typeof wave == 'undefined') {
         wave = 0;
-        $.cookie('o_wave', wave, { expires: 1, domain:'figseu-technology.github.io'});
+        $.cookie('fi_wave', wave, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
      if (typeof wave_t == 'undefined') {
         wave_t = 0;
-        $.cookie('o_wave_t', wave_t, { expires: 1, domain:'figseu-technology.github.io'});
+        $.cookie('fi_wave_t', wave_t, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
      if (typeof wave_th == 'undefined') {
         wave_th = 0;
-        $.cookie('o_wave_th', wave_th, { expires: 1, domain:'figseu-technology.github.io'});
+        $.cookie('fi_wave_th', wave_th, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
      if (typeof wave_f == 'undefined') {
         wave_f = 0;
-        $.cookie('o_wave_f', wave_f, { expires: 1, domain:'figseu-technology.github.io'});
+        $.cookie('fi_wave_f', wave_f, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
      if (typeof wave_fi == 'undefined') {
         wave_fi = 0;
-        $.cookie('o_wave_fi', wave_fi, { expires: 1, domain:'figseu-technology.github.io'});
+        $.cookie('fi_wave_fi', wave_fi, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
      if (typeof wave_s == 'undefined') {
         wave_s = 0;
-        $.cookie('o_wave_s', wave_s, { expires: 1, domain:'figseu-technology.github.io'});
+        $.cookie('fi_wave_s', wave_s, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
      if (typeof wave_se == 'undefined') {
         wave_se = 0;
-        $.cookie('o_wave_se', wave_se, { expires: 1, domain:'figseu-technology.github.io'});
+        $.cookie('fi_wave_se', wave_se, { expires: 30, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
      }
     if (level == 1) {
-        $('#cloud').get(0).play();
-        wave++;
-        } else if (level == 2) {
-            $('#sta').get(0).play();
+            $('#sakura').get(0).play();
+            wave++;
+            } else if (level == 2) {
+            $('#fifty').get(0).play();
             wave_t++;
             } else if (level == 3) {
-            $('#cst').get(0).play();
+            $('#ay').get(0).play();
             wave_th++;
             } else if (level == 4) {
-            $('#dtw').get(0).play();
+            $('#the_end').get(0).play();
             wave_f++;
             } else if (level == 5) {
-            $('#kt').get(0).play();
+            $('#shrine').get(0).play();
             wave_fi++;
             } else if (level == 6) {
-            $('#pknk').get(0).play();
+            $('#aloud').get(0).play();
             wave_s++;
             } else if (level == 7) {
-            $('#holiday').get(0).play();
+            $('#cloud').get(0).play();
             wave_se++;
             } else {
             $('#cloud').get(0).play();
@@ -205,6 +208,7 @@ function start(e) {
     world.forEach(v => {
       if (v instanceof Bouncer) {
         v.mesh.position.y = 0;
+        v.line.position.y = 0;
       }
     });
     world.forEach(v => {
@@ -263,40 +267,40 @@ function nextLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-      $('#level-d').html('チュートリアルステージ');
-      $('#level').html('Rolling Sky');
-      $('#stars').html('☆');
-      $('#Waves').html('☆ × ' + $.cookie('o_wave'));
-     } else if (level == 2) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('夜道');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_t'));
+         $('#level-d').html('Designed by フリースタイル');
+         $('#level').html('桜');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave'));
+        } else if (level == 2) {
+         $('#level-d').html('Designed by フリースタイル');
+         $('#level').html('Fifty Fifty');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_t'));
         } else if (level == 3) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('決勝戦');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_th'));
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('アスノヨゾラ哨戒班');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
-         $('#level').html('デジタルの世界');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_f'));
+         $('#level').html('The END');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('チュートリアルステージ');
-         $('#level').html('孤島');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_fi'));
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('Shrine Ⅱ');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
-         $('#level-d').html('チュートリアルステージ');
-         $('#level').html('夕方のピクニック');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_s'));
+         $('#level-d').html('Request by R');
+         $('#level').html('MOON PRIDE');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
         } else if (level == 7) {
-         $('#level-d').html('Designed by 星空めたる');
-         $('#level').html('休日');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_se'));
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('紅蓮華');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -305,7 +309,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 7) {
+  if (level == 1) {
     $('#next').hide();
   }
 }
@@ -326,40 +330,40 @@ function prevLevel() {
   $('#level').show();
   $('#stars').show();
   if (level == 1) {
-      $('#level-d').html('チュートリアルステージ');
-      $('#level').html('Rolling Sky');
-      $('#stars').html('☆');
-      $('#Waves').html('☆ × ' + $.cookie('o_wave'));
-     } else if (level == 2) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('夜道');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_t'));
+         $('#level-d').html('Designed by フリースタイル');
+         $('#level').html('桜');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave'));
+        } else if (level == 2) {
+         $('#level-d').html('Designed by フリースタイル');
+         $('#level').html('Fifty Fifty');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_t'));
         } else if (level == 3) {
-         $('#level-d').html('ボーナスステージ');
-         $('#level').html('決勝戦');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_th'));
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('アスノヨゾラ哨戒班');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('ボーナスステージ');
-         $('#level').html('デジタルの世界');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_f'));
+         $('#level').html('The END');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('チュートリアルステージ');
-         $('#level').html('孤島');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_fi'));
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('Shrine Ⅱ');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
-         $('#level-d').html('チュートリアルステージ');
-         $('#level').html('夕方のピクニック');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_s'));
+         $('#level-d').html('Request by R');
+         $('#level').html('MOON PRIDE');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
         } else if (level == 7) {
-         $('#level-d').html('Designed by 星空めたる');
-         $('#level').html('休日');
-         $('#stars').html('☆');
-         $('#Waves').html('☆ × ' + $.cookie('o_wave_se'));
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('紅蓮華');
+         $('#stars').html('☆☆☆☆☆');
+         $('#Waves').html('☆ × ' + $.cookie('fi_wave_se'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -385,13 +389,20 @@ function loadLevel(level) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          world.push(new Mat(j - 2, -i, data[index].mat));
+          if (fgnc == 'Function_Landing-True-') {
+             world.push(new DebugMat(j - 2, -i, data[index].mat));
+          } else {
+             world.push(new Mat(j - 2, -i, data[index].mat));
+          }
           break;
         case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
           break;
         case 3:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 3000:
+          world.push(new UNObstacle(j - 2, -i, data[index].obstacle));
           break;
         case 4:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
@@ -401,8 +412,14 @@ function loadLevel(level) {
           world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 50:
+          world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
+          break;
         case 6:
           world.push(new Mat(j - 2, -i, data[index].mat));
+          world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 60:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
           break;
         case 7:
@@ -452,6 +469,34 @@ function loadLevel(level) {
           break;
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
+          break;
+        case 31:
+          if (girls == 0) {
+             world.push(new RandomMat(j - 2, -i, data[index].obstacle));
+          } else {
+             world.push(new Deltemat(j - 2, -i, data[index].obstacle));
+          }
+          break;
+        case 32:
+          if (girls == 1) {
+             world.push(new RandomMat(j - 2, -i, data[index].obstacle));
+          } else {
+             world.push(new Deltemat(j - 2, -i, data[index].obstacle));
+          }
+          break;
+        case 39:
+          world.push(new Obstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 94:
+          world.push(new FellGate(j - 2, -i, data[index].obstacle));
+          world.push(new FellGateMat(j - 2, -i, data[index].mat));
+          break;
+        case 98:
+          world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 210:
+          world.push(new Dreamtower(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
@@ -494,13 +539,23 @@ function gameover() {
      wave_se = 0;
      }
   }
-  $.cookie('o_wave', wave, { expires: 252, domain:'figseu-technology.github.io'});
-  $.cookie('o_wave_t', wave_t, { expires: 252, domain:'figseu-technology.github.io'});
-  $.cookie('o_wave_th', wave_th, { expires: 252, domain:'figseu-technology.github.io'});
-  $.cookie('o_wave_f', wave_f, { expires: 252, domain:'figseu-technology.github.io'});
-  $.cookie('o_wave_fi', wave_fi, { expires: 252, domain:'figseu-technology.github.io'});
-  $.cookie('o_wave_s', wave_s, { expires: 252, domain:'figseu-technology.github.io'});
-  $.cookie('o_wave_se', wave_se, { expires: 252, domain:'figseu-technology.github.io'});
+  if (fgnc == 'Function_Landing-True-') {
+     if (level == 1) {
+     wave = $.cookie('fi_wave');
+     } else if (level == 2) {
+     wave_t = $.cookie('fi_wave_t');
+     } else if (level == 3) {
+     wave_th = $.cookie('fi_wave_th');
+     } else if (level == 4) {
+     wave_f = $.cookie('fi_wave_f');
+     } else if (level == 5) {
+     wave_fi = $.cookie('fi_wave_fi');
+     } else if (level == 6) {
+     wave_s = $.cookie('fi_wave_s');
+     } else if (level == 7) {
+     wave_se = $.cookie('fi_wave_se');
+     }
+  }
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -513,51 +568,15 @@ function gameover() {
   $('#score').html($('#percent').html());
   $('#main').css('pointer-events', 'auto');
   if (level == 1) {
-      $('#Waves').html('☆ × ' + $.cookie('o_wave'));
+      $('#Waves').html('☆ × ');
       if (star == 2) {
-      $('#level-d').html('Lets go Rolling Sky World !!');
-      $('#stars').html('☆☆☆☆☆☆');
+             if (fgnc == 'Function_Landing-True-') {
+                $('#level-d').html('テストは未完了です');
+             } else {
+                $('#level-d').html('✮ テスト完了 ✮ ID : エラーが発生しました');
+             }
       }
-      $('#cloud').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 2) {
-      $('#Waves').html('☆ × ' + $.cookie('o_wave_t'));
-      $('#sta').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 3) {
-      $('#Waves').html('☆ × ' + $.cookie('o_wave_th'));
-      $('#cst').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 4) {
-      $('#Waves').html('☆ × ' + $.cookie('o_wave_f'));
-      $('#dtw').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 5) {
-      $('#Waves').html('☆ × ' + $.cookie('o_wave_fi'));
-      $('#kt').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 6) {
-      $('#Waves').html('☆ × ' + $.cookie('o_wave_s'));
-      $('#pknk').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-});
-     } else if (level == 7) {
-      if (star == 2) {
-      $('#level-d').html('至福の時間');
-      }
-      $('#Waves').html('☆ × ' + $.cookie('o_wave_se'));
-      $('#holiday').each(function(){
+      $('#sakura').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
