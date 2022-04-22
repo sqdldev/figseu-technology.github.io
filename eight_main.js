@@ -180,7 +180,7 @@ function start(e) {
             $('#los').get(0).play();
             wave_f++;
     } else if (level == 5) {
-            $('#alive_g').get(0).play();
+            $('#alive').get(0).play();
             wave_se++;
     } else if (level == 6) {
         if (fgnc == 210) {
@@ -276,7 +276,7 @@ function nextLevel() {
          $('#Waves').html('☆ × ' + $.cookie('e_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('ボーナス ステージ');
-         $('#level').html('MAYA');
+         $('#level').html('Stay Alive');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 6) {
@@ -338,8 +338,8 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_f'));
         } else if (level == 5) {
-         $('#level-d').html('特殊 ステージ');
-         $('#level').html('MAYA');
+         $('#level-d').html('ボーナスステージ');
+         $('#level').html('Stay Alive');
          $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
          $('#stars').html('☆☆☆☆☆☆☆☆');
         } else if (level == 6) {
@@ -564,7 +564,7 @@ function gameover() {
       $('#level-d').html('我等の希望を託して');
       }
       $('#Waves').html('☆ × ' + $.cookie('e_wave_se'));
-      $('#alive_g').each(function(){
+      $('#alive').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
