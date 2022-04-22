@@ -37,7 +37,7 @@ let url = location.href;
 let fgnc = url.substr( 42 );
 let data;
 let reqId;
-$.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
+$.getJSON('end_levels.json', d => {
   data = d;
   loadLevel(level);
   $('#play').show();
