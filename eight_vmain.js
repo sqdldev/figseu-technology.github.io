@@ -131,7 +131,7 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
          $('#level-d').html('ボーナス ステージ');
-         $('#level').html('マヤ文明');
+         $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
@@ -183,7 +183,7 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 5) {
          $('#level-d').html('ボーナス ステージ');
-         $('#level').html('マヤ文明');
+         $('#level').html('Stay Alive');
          $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
         } else if (level == 6) {
          $('#level-d').html('ボーナス ステージ');
