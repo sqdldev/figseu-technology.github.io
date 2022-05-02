@@ -1,23 +1,16 @@
+# Compiled class file
+*.class
 
-#DGDR CORE
-/img/
-/System/
-/DGDR/
-/apk/
-/bgm/
-/bgm_A/
-/MARU/
-/se/
-/se_A/
-/textures/
-/RSR/
+# Log file
+*.log
 
-*.mp3
-*.wav
+# BlueJ files
+*.ctxt
 
-*.cmr
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-
+# Package Files #
 *.jar
 *.war
 *.nar
@@ -25,13 +18,16 @@
 *.zip
 *.tar.gz
 *.rar
-
-*.rse
-*.rsr
-*.agte
-
-*.css
 *.html
-*.php
+*.png
+*.html
 *.js
+*.cmr
+*.css
 *.json
+*.mp3
+*.rse
+*.dgdr
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
