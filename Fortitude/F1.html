@@ -100,6 +100,16 @@ table[name="bmeMainBody"], body {background-color:#070707;}
     
 </style>
 <script>
+let wave = 0;
+let v_level = 0;
+let power = 0;
+wave = $.cookie('f_wave');
+v_level = wave * 147;
+power = wave * 28;
+
+$('#level').html('紋章力 : ' + v_level);
+$('#ptv').html('PT : ' + power);
+
 function BGM() {
    $('#bgm_080').get(0).play();
 }
@@ -138,7 +148,8 @@ function BGM() {
 <table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_text"><tbody><tr><td>    
 <table cellpadding="0" cellspacing="0" border="0" width="100%" class="bmeContainerRow"><tbody><tr><td class="tdPart" valign="top" align="center">    
 <table cellspacing="0" cellpadding="0" border="0" width="600" name="tblText" style="float:left; background-color:transparent;" align="left" class="tblText"><tbody><tr><td valign="top" align="left" name="tblCell" style="padding: 10px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; color: rgb(56, 56, 56); text-align: left;" class="tblCell"><div style="line-height: 125%; text-align: center;"><span style="font-size: 36px; font-family: Georgia, Palatino; color: #bb392f; line-height: 125%;">    
-<em>創造　(紋章力 : 0)</em></span>    
+<em>創造</em>
+<em><div id="level">紋章力 : 0</div></em></span>    
 <br><span style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #cbd0d4; line-height: 125%;">　</span></div></td></tr></tbody>    
 </table></td></tr></tbody>    
 </table></td></tr></tbody>    
@@ -167,7 +178,8 @@ function BGM() {
 <table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_text"><tbody><tr><td>    
 <table cellpadding="0" cellspacing="0" border="0" width="100%" class="bmeContainerRow"><tbody><tr><td class="tdPart" valign="top" align="center">    
 <table cellspacing="0" cellpadding="0" border="0" width="600" name="tblText" style="float:left; background-color: rgb(0, 0, 0);" align="left" class="tblText"><tbody><tr><td valign="top" align="left" name="tblCell" style="padding: 10px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; color: rgb(56, 56, 56); text-align: left;" class="tblCell"><div style="line-height: 125%; text-align: center;"><span style="font-size: 36px; font-family: Georgia, Palatino; color: #FF6E67; line-height: 125%;">    
-<em>捻れた紅い紋章 (PT : 0)</em></span>    
+<em>捻れた紅い紋章</em>
+<em><div id="ptv">PT : 0</div></em></span>    
 <br><span style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #cbd0d4; line-height: 125%;">　</span></div></td></tr></tbody>    
 </table></td></tr></tbody>    
 </table></td></tr></tbody>    
@@ -252,4 +264,5 @@ function BGM() {
 <table cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td name="bmePermissionText" style="text-align:left;" align="left"><span style="font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 11px;line-height: 140%;">
 </body>
 <script src="https://figseu-technology.github.io/System/jquery.js"></script>
+<script src="https://figseu-technology.github.io/System/cookie.js"></script>
 </html>
