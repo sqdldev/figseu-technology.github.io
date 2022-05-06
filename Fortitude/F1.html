@@ -101,11 +101,8 @@ table[name="bmeMainBody"], body {background-color:#070707;}
 </style>
 <script>
 let wave = 0;
-let v_level = 0;
-let power = 0;
-wave = $.cookie('f_wave');
-v_level = wave * 147;
-power = wave * 28;
+let v_level = $.cookie('f_wave') * 147;
+let power = $.cookie('f_wave') * 28;
 
 $('#level').html('紋章力 : ' + v_level);
 $('#ptv').html('PT : ' + power);
