@@ -1240,23 +1240,19 @@ class DebugMat {
 
 class OBJ_01 {
   constructor(xpos, zpos, color) {
-    var mesh;
-    var model_load="System/OBJ_01.stl";
-
-    var loader = new THREE.STLLoader();
-    loader.addEventListener( 'load', function ( event ) {
-    var geometry = event.content;
-    var material = new THREE.MeshLambertMaterial( { ambient: 0xFFF5CE, color: 0xFFF5CE} );
-    mesh = new THREE.Mesh( geometry, material );
-
-//位置変更                  
-    mesh.position.set(xpos, 2, zpos);
-//大きさ変更
-//  mesh.scale.set( 15,15,15);                   
-
-scene.add( mesh );              
-} );
-loader.load( model_load );
+    color = parseInt(color);
+    this.geometry = new THREE.TorusGeometry(1, 1, 1);
+    this.material = new THREE.MeshPhongMaterial({ color: color });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0.4, zpos);
+    this.line.position.set(xpos, 0.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
+    scene.add(this.mesh);
 
   }
   detect() {
