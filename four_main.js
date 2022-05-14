@@ -463,7 +463,7 @@ function loadLevel(level) {
           world.push(new Bluestoneobstacle(j - 2, -i, data[index].obstacle));
           break;
         case 101:
-          world.push(new OBJ_01(j - 2, -i, data[index].obstacle));
+          world.push(new Obj_AA(j - 2, -i, data[index].obstacle));
           break;
       }
     }
