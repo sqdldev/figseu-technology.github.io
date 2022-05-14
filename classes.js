@@ -1270,11 +1270,11 @@ class Obj_AB {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
     this.loader = new THREE.STLLoader();
-    this.loader.load( 'textures/OBJ_01.stl', function ( geometry ) {
+    loader.load( 'textures/OBJ_01.stl', function ( geometry ) {
        this.material = new THREE.MeshPhongMaterial({ color: color });
-       this.mesh = new THREE.Mesh(this.geometry, this.material);
+       this.mesh = new THREE.Mesh(geometry, this.material);
     });
-    this.mesh.position.set(xpos, -10, zpos);
+    this.mesh.position.set(xpos, 2, zpos);
     this.mesh.name = 'level component';
     scene.add(this.mesh);
 
