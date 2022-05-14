@@ -1269,13 +1269,17 @@ class Obj_AA {
 class Obj_AB {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.loader = new THREE.STLLoader();
-    loader.load( 'textures/OBJ_01.stl', function ( geometry ) {
-       this.material = new THREE.MeshPhongMaterial({ color: color });
-       this.mesh = new THREE.Mesh(geometry, this.material);
-    });
-    this.mesh.position.set(xpos, 2, zpos);
+    this.geometry = new THREE.PlaneGeometry(1, 1, 1);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/OBJ_AA.cmr'), transparent: true});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, -10, zpos);
+    this.line.position.set(xpos, -10, zpos);
     this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
     scene.add(this.mesh);
 
   }
