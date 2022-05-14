@@ -469,6 +469,14 @@ function loadLevel(level) {
         case 120:
           world.push(new Obj_AB(j - 2, -i, data[index].obstacle));
           break;
+        case 223:
+          world.push(new SkyCastle_B(j - 2, -i, data[index].obstacle));
+          world.push(new Upobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 229:
+          world.push(new SkyCastle_Y(j - 2, -i, data[index].obstacle));
+          world.push(new Upobstacle(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
