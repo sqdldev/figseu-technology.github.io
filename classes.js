@@ -1241,7 +1241,7 @@ class DebugMat {
 class Obj_AA {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.ConeGeometry(1, 4, 17.9);
+    this.geometry = new THREE.ConeGeometry(1, 17.9, 6);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/OBJ_AA.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
