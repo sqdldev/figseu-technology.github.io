@@ -1279,7 +1279,6 @@ class Obj_AB {
     this.line.position.set(xpos, -10, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
-    scene.add(this.line);
     scene.add(this.mesh);
 
   }
