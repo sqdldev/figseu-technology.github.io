@@ -1275,7 +1275,7 @@ class Obj_AB {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -10, zpos);
+    this.mesh.position.set(xpos, 2, zpos);
     this.line.position.set(xpos, -10, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
