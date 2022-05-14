@@ -1269,7 +1269,7 @@ class Obj_AA {
 class Obj_AB {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.STLLoader().load('textures/OBJ_01.stl');
+    this.geometry = geometry.computeBoundingBox({ map: new THREE.STLLoader().load('textures/OBJ_01.stl') });
     this.material = new THREE.MeshPhongMaterial({ color: color });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
