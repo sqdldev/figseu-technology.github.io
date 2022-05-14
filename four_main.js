@@ -465,6 +465,9 @@ function loadLevel(level) {
         case 101:
           world.push(new Obj_AA(j - 2, -i, data[index].obstacle));
           break;
+        case 120:
+          world.push(new Obj_AB(j - 2, -i, data[index].obstacle));
+          break;
       }
     }
   }
