@@ -297,9 +297,10 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('f_wave_fi'));
         } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
+            $('#level-d').html('UNKNOWN');
+            $('#level').html('DDDDDDDDD');
+            $('#stars').html('☆☆☆☆☆☆☆☆☆');
+            $('#next').hide();
            }
   $('#prev').show();
   $('#retry').hide();
@@ -352,9 +353,9 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('f_wave_fi'));
         } else {
-            $('#level-d').html('開発中');
-            $('#level').html('Level ' + level);
-            $('#stars').html('');
+            $('#level-d').html('UNKNOWN');
+            $('#level').html('DDDDDDDDD');
+            $('#stars').html('☆☆☆☆☆☆☆☆☆');
            }
   $('#next').show();
   $('#retry').hide();
