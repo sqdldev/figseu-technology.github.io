@@ -1297,13 +1297,13 @@ class Obj_AB {
 class SkyCastle_B {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.PlaneGeometry(2, 2, 2);
+    this.geometry = new THREE.PlaneGeometry(2.5, 2.5, 5);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/SkyCastle_B.cmr'), transparent: true});
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 2, zpos);
+    this.mesh.position.set(xpos, 1.7, zpos);
     this.line.position.set(xpos, -10, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
@@ -1324,13 +1324,13 @@ class SkyCastle_B {
 class SkyCastle_Y {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.PlaneGeometry(2, 2, 2);
+    this.geometry = new THREE.PlaneGeometry(2.5, 2.5, 2.5);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/SkyCastle_Y.cmr'), transparent: true});
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 2, zpos);
+    this.mesh.position.set(xpos, 1.7, zpos);
     this.line.position.set(xpos, -10, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
