@@ -1304,7 +1304,7 @@ class SkyCastle_B {
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
     this.mesh.position.set(xpos, 1.7, zpos);
-    this.mesh.rotation.set(-0.2, 0, 0);
+    this.mesh.rotation.set(-0.5, 0, 0);
     this.line.position.set(xpos, -10, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
@@ -1332,7 +1332,7 @@ class SkyCastle_Y {
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
     this.mesh.position.set(xpos, 1.7, zpos);
-    this.mesh.rotation.set(-0.2, 0, 0);
+    this.mesh.rotation.set(-0.5, 0, 0);
     this.line.position.set(xpos, -10, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
