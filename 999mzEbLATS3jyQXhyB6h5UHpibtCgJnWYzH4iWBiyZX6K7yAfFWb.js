@@ -153,7 +153,11 @@ function start(e) {
         $.cookie('n_wave_s', wave_s, { expires: 30, domain:'figseu-technology.github.io'});
      }
     if (level == 1) {
-        $('#FELL').get(0).play();
+           if (n_wave >= 50) {
+              $('#FELLEXE').get(0).play();
+           } else {
+              $('#FELL').get(0).play();
+           }
         wave++;
         } else if (level == 2) {
         $('#TFE').get(0).play();
