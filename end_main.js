@@ -487,12 +487,20 @@ function loadLevel(level) {
         case 39:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 80:
+          world.push(new Mat(j - 2, -i, data[index].bouncer));
+          world.push(new AlmandineGate(j - 2, -i, data[index].obstacle));
+          break;
         case 94:
           world.push(new FellGate(j - 2, -i, data[index].obstacle));
           world.push(new FellGateMat(j - 2, -i, data[index].mat));
           break;
         case 98:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
+          break;
+        case 116:
+          world.push(new Upobstacle(j - 2, -i, data[index].obstacle));
+          world.push(new Riser(j - 2, -i, data[index].obstacle));
           break;
         case 210:
           world.push(new Dreamtower(j - 2, -i, data[index].obstacle));
