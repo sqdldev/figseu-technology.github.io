@@ -1361,9 +1361,9 @@ class Riser {
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x00CAFF });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
     this.mesh.position.set(xpos, 0.4, zpos);
-    this.mesh.rotation.set(0, 1, 0);
+    this.mesh.rotation.set(0, 0.8, 0);
     this.line.position.set(xpos, 0.4, zpos);
-    this.line.rotation.set(0, 1, 0);
+    this.line.rotation.set(0, 0.8, 0);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.line);
