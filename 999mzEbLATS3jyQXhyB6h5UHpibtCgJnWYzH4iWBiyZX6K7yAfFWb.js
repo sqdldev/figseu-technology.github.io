@@ -547,6 +547,10 @@ function gameover() {
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
+     $('#FELLEXE').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
      } else if (level == 2) { 
       $('#Waves').html('☆ × ' + $.cookie('n_wave_t'));
      if (star == 2) {
