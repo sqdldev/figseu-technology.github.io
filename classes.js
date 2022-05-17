@@ -1385,7 +1385,7 @@ class AlmandineGate {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
     this.geometry = new THREE.PlaneGeometry(5, 5, 5);
-    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/FellGate_2.cmr'), transparent: true});
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/FellGate_2A.cmr'), transparent: true});
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
