@@ -369,6 +369,11 @@ class Ball {
       if (v.detect()) gameover();
       star = 1;
     });
+    world.forEach(v => {
+      if (v instanceof EXCube)
+      if (v.detect()) gameover();
+      star = 1;
+    });
   }
 }
 
@@ -1392,6 +1397,35 @@ class AlmandineGate {
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
     this.mesh.position.set(xpos, 2.4, zpos);
     this.line.position.set(xpos, 2.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
+      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
+    ) return true;
+  }
+}
+class EXCube {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.BoxGeometry(0.7, 0.7, 0.7);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/EX_Cube.cmr'), transparent: true});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x00CAFF });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 3, zpos);
+    this.mesh.rotation.set(0.3, 0.3, 0.3);
+    this.line.position.set(xpos, 3, zpos);
+    this.line.rotation.set(0.3, 0.3, 0.3);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
