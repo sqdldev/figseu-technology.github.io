@@ -498,6 +498,9 @@ function loadLevel(level) {
         case 98:
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
           break;
+        case 102:
+          world.push(new EXCube(j - 2, -i, data[index].obstacle));
+          break;
         case 116:
           world.push(new Upobstacle(j - 2, -i, data[index].obstacle));
           world.push(new Riser(j - 2, -i, data[index].obstacle));
