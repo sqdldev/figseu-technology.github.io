@@ -153,7 +153,7 @@ function start(e) {
         $.cookie('n_wave_s', wave_s, { expires: 30, domain:'figseu-technology.github.io'});
      }
     if (level == 1) {
-           if (n_wave >= 50) {
+           if (n_wave >= 50 || fgnc == '%E5%A4%A9%E3%82%92%E6%8D%A8%E3%81%A6%E3%80%81%E5%9C%B0%E7%8D%84%E3%81%AE%E5%A5%B3%E7%A5%9E%E3%81%A8%E6%9D%AF%E3%82%92%E4%BA%A4%E3%82%8F%E3%81%99%E3%80%82%E7%A7%81%E3%81%AF%E5%9C%B0%E7%8D%84%E3%81%AE%E9%96%80%E3%81%AE%E5%85%88%E3%82%92%E6%9C%9B%E3%82%80') {
               $('#FELLEXE').get(0).play();
            } else {
               $('#FELL').get(0).play();
