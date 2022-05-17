@@ -631,7 +631,7 @@ class Speedup {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
     this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
-    this.material = new THREE.MeshPhongMaterial({ color: 0xFF0D00 });
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/Speedup.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
@@ -683,7 +683,7 @@ class Speeddown {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
     this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
-    this.material = new THREE.MeshPhongMaterial({ color: 0x006DFF });
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/Speeddown.cmr') });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x909000 });
@@ -1334,6 +1334,62 @@ class SkyCastle_Y {
     this.mesh.position.set(xpos, 1.7, zpos - 0.2);
     this.mesh.rotation.set(-0.5, 0, 0);
     this.line.position.set(xpos, -10, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
+      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
+    ) return true;
+  }
+}
+
+class Riser {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.ConeGeometry(1, 1, 4);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/Riser.cmr'), transparent: true});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0x00CAFF });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0.4, zpos);
+    this.line.position.set(xpos, 0.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.4 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.4 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.4 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.4 &&
+      ball.mesh.position.z <= 0.4 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
+    ) return true;
+  }
+}
+class AlmandineGate {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.PlaneGeometry(5, 5, 5);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/FellGate_2.cmr'), transparent: true});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0.4, zpos);
+    this.line.position.set(xpos, 0.4, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
