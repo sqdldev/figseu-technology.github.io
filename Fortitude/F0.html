@@ -260,8 +260,8 @@ function BGM() {
 <script src="https://figseu-technology.github.io/System/cookie.js"></script>
 <script>
 let wave = 0;
-wave = $.cookie('f_wave');
-let level-a = wave;
+wave = $.cookie('f_wave', { domain:'figseu-technology.github.io'});
+let level-a = wave * 73;
 $('#level').html('Level : ' + wave);
 $('#power').html('紋章力 : ' + level-a);
 </script>
