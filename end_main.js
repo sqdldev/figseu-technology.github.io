@@ -484,6 +484,10 @@ function loadLevel(level) {
              world.push(new Deltemat(j - 2, -i, data[index].obstacle));
           }
           break;
+        case 33:
+          world.push(new RiserMat(j - 2, -i, data[index].mat));
+          world.push(new DummyMat(j - 2, -i, data[index].mat));
+          break;
         case 39:
           world.push(new Obstacle(j - 2, -i, data[index].obstacle));
           break;
