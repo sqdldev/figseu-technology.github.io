@@ -1190,7 +1190,7 @@ class Bluestoneobstacle {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
     this.geometry = new THREE.BoxGeometry(1, 1, 1);
-    this.material = new THREE.MeshPhongMaterial({ color: color });
+    this.material = new THREE.MeshPhongMaterial({ color: color, roughness: 0.3 });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
