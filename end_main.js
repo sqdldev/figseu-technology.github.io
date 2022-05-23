@@ -239,6 +239,12 @@ function start(e) {
         v.line.position.y = 0;
       }
     });
+    world.forEach(v => {
+      if (v instanceof RiserMat) {
+        v.mesh.position.y = 10;
+        v.line.position.y = 10;
+      }
+    });
     $('#main').css('pointer-events', 'none');
   }
 }
