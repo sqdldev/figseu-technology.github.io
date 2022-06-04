@@ -10,7 +10,7 @@ $(function(){
         var avatar = $('#avatar').val();
         if (link==null || link=="",content==null || content=="")
         {
-            alert("oh no");
+            alert("posted");
             return false;
         }
         $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
@@ -26,13 +26,9 @@ $(function(){
             alert("oh no");
             return false;
         }
-        for ( var i = 0; i < 30; i++ ) {
+        let i = 0;
+        let inteval = setInterval(function () {
             $.post(link, { "content": content, "username": username, "avatar_url": avatar, });
-
-        }
-
-    });
-    $('#stop-btn').click(function(){
-       clearInterval(inteval);
+        }, 66)
     });
 });
