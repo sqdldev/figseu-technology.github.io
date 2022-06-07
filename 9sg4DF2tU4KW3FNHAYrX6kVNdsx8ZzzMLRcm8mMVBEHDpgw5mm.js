@@ -1178,7 +1178,7 @@ class RiserMat {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: color });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 10, zpos);
+    this.mesh.position.set(xpos, 1.5, zpos);
     this.line.position.set(xpos, 10, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
@@ -1190,7 +1190,7 @@ class RiserMat {
       ball.mesh.position.x <= this.mesh.position.x + 10 &&
       ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
       ball.mesh.position.z <= this.mesh.position.z + 7 &&
-      ball.mesh.position.z <= -10
+      ball.mesh.position.z <= 1
     ) return true;
   }
 }
