@@ -31,7 +31,6 @@ if (fgnc == 'DGDR_CORE-BLYK10_AgKeBiptdNeeWjr3MTmMhuDHYwjUEfNGmB47UuXs3bR55cXYPW
    location.href = "https://figseu-technology.github.io/RollingSkyEvolution/ten_index.html?f=BLYK10_AgKeBiptdNeeWjr3MTmMhuDHYwjUEfNGmB47UuXs3bR55cXYPWDY6WtBnhUywY5GZXf9kDWVCh4pNAXiHNUjiZgLn8npS8Mg4cFh";
 }
 
-<script>
 if( window.canRunAds === undefined ){
 $('#ExtendedStage').hide();
 $('#CharactersContents').hide();
@@ -39,7 +38,6 @@ $('#ZeroLevel').hide();
 $('#DemoPlayLevels').hide();
 $('#SnowdanTools').hide();
 }
-</script>
 
 function BGM() {
 if (fgnc == 'Function_080-Load-') {
