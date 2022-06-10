@@ -195,7 +195,7 @@ function start(e) {
             $('#shrine').get(0).play();
             wave_fi++;
             } else if (level == 6) {
-            $('#aloud').get(0).play();
+            $('#pinsir').get(0).play();
             wave_s++;
             } else if (level == 7) {
             $('#cloud').get(0).play();
@@ -290,8 +290,8 @@ function nextLevel() {
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
-         $('#level-d').html('Request by R');
-         $('#level').html('MOON PRIDE');
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
         } else if (level == 7) {
@@ -307,7 +307,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 5) {
+  if (level == 6) {
     $('#next').hide();
   }
 }
@@ -353,8 +353,8 @@ function prevLevel() {
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_fi'));
         } else if (level == 6) {
-         $('#level-d').html('Request by R');
-         $('#level').html('MOON PRIDE');
+         $('#level-d').html('Extra ステージ');
+         $('#level').html('Pinsir');
          $('#stars').html('☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
         } else if (level == 7) {
@@ -583,9 +583,9 @@ function gameover() {
      } else if (level == 6) {
       $('#Waves').html('☆ × ' + $.cookie('fi_wave_s'));
       if (star == 2) {
-             $('#level-d').html('新しい伝説が今ここから始まる');
+             $('#level-d').html('砂地獄の底');
       }
-      $('#moonpride').each(function(){
+      $('#pinsir').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
