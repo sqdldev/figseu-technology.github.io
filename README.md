@@ -18,4 +18,4 @@
 
 # 公式サーバー (Discord)
 
-https://discord.gg/MYJTPMXjvT
+https://discord.gg/TaJ9f9PAsW
