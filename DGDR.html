@@ -15,7 +15,7 @@ body {
     font-family: 'dgdr', sans-serif, serif;
     color: #FFFFFF;
     background-color: #000B3F;
-    background-image: url('texture/Mirror1.png');
+    background-image: url('textures/Mirror1.png');
    background-position: center;
    background-size: contain;
    background-attachment: fixed;
@@ -45,6 +45,8 @@ hr {
 <script>
 function BGM() {
 	$('#bgm').get(0).play();
+n_wave_s = $.cookie('n_wave_s');
+$('#Pf_29').html('立線エネルギー : ' + n_wave_s);
 }
 </script>
 <audio rel="preload" src="bgm/comingsoon.mp3" id="bgm" preload="auto" loop></audio>
@@ -54,7 +56,7 @@ function BGM() {
 <br> </br>
 <br> </br>
 <br> </br>
-<img src="texture/StandEC.png"></img>
+<img src="textures/StandEC.png"></img>
 <br> </br>
 </body>
 <script src="System/jquery.js"></script>
