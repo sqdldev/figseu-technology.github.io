@@ -50,7 +50,7 @@ function BGM() {
 <audio rel="preload" src="bgm/comingsoon.mp3" id="bgm" preload="auto" loop></audio>
 </head>
 <body onload="BGM()" onclick="BGM()" oncontextmenu="return false;">
-<br><div id="c-power">立線エネルギー : 0</div></br>
+<br><div id="c-power">？？？ : 0</div></br>
 <br> </br>
 <br> </br>
 <br> </br>
@@ -62,7 +62,5 @@ function BGM() {
 <script>
 let n_wave_s = 0;
 n_wave_s = $.cookie('n_wave_s');
-if (n_wave_s >= 1) {
-   $('#Pf_29').html('立線エネルギー : ' + n_wave_s);
-}
+$('#Pf_29').html('立線エネルギー : ' + n_wave_s);
 </script>
