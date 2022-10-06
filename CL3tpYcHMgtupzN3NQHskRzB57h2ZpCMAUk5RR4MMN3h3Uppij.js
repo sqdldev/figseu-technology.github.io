@@ -156,6 +156,7 @@ let Pfd_96 = 0;
 let Pfd_97 = 0;
 let Pfd_98 = 0;
 let Pfd_99 = 0;
+let Pfd_100 = 0;
 function Performance_Data() {
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -313,6 +314,7 @@ Pfd_96 = $.cookie('Pfd_96');
 Pfd_97 = $.cookie('Pfd_97');
 Pfd_98 = $.cookie('Pfd_98');
 Pfd_99 = $.cookie('Pfd_99');
+Pfd_100 = $.cookie('Pfd_100');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -1148,6 +1150,10 @@ if (o_wave_se >= 365) {
    $.cookie('Pfd_99', Pfd_99, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
 } else if (Pfd_99 == 107558856528741996791037612619) {
    $('#Pf_99').html('ニート - ✾取得済✾');
+}
+
+if (Pfd_100 == 999) {
+   $('#Pf_100').html('これが・・・ 私？ - ✾取得済✾');
 }
 
 $('#Data_Warn').html(' ');
