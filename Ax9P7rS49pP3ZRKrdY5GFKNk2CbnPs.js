@@ -8,5 +8,5 @@ if (n_wave_s >= 1) {
    n_wave_s--
    Pfd_100 = 999;
    $.cookie('n_wave_s', n_wave_s, { expires: 400, domain:'figseu-technology.github.io'});
-   $.cookie('Pfd_100', Pfd_100, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+   $.cookie('Pfd_100', Pfd_100, { expires: 400, domain:'figseu-technology.github.io'});
 }
