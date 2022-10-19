@@ -157,6 +157,16 @@ let Pfd_97 = 0;
 let Pfd_98 = 0;
 let Pfd_99 = 0;
 let Pfd_100 = 0;
+let Pfd_101 = 0;
+let Pfd_102 = 0;
+let Pfd_103 = 0;
+let Pfd_104 = 0;
+let Pfd_105 = 0;
+let Pfd_106 = 0;
+let Pfd_107 = 0;
+let Pfd_108 = 0;
+let Pfd_109 = 0;
+let Pfd_110 = 0;
 function Performance_Data() {
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -315,6 +325,16 @@ Pfd_97 = $.cookie('Pfd_97');
 Pfd_98 = $.cookie('Pfd_98');
 Pfd_99 = $.cookie('Pfd_99');
 Pfd_100 = $.cookie('Pfd_100');
+Pfd_101 = $.cookie('Pfd_101');
+Pfd_102 = $.cookie('Pfd_102');
+Pfd_103 = $.cookie('Pfd_103');
+Pfd_104 = $.cookie('Pfd_104');
+Pfd_105 = $.cookie('Pfd_105');
+Pfd_106 = $.cookie('Pfd_106');
+Pfd_107 = $.cookie('Pfd_107');
+Pfd_108 = $.cookie('Pfd_108');
+Pfd_109 = $.cookie('Pfd_109');
+Pfd_110 = $.cookie('Pfd_110');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -1152,8 +1172,40 @@ if (o_wave_se >= 365) {
    $('#Pf_99').html('ニート - ✾取得済✾');
 }
 
+// Green Fortress
+
 if (Pfd_100 == 999) {
    $('#Pf_100').html('これが・・・ 私？ - ✾取得済✾');
+}
+if (Pfd_101 == 999) {
+   $('#Pf_101').html('約束は必ず果たすからね - ✾取得済✾');
+}
+if (Pfd_102 == 999) {
+   $('#Pf_102').html('災いを呼ぶ双子 - ✾取得済✾');
+}
+if (Pfd_103 == 999) {
+   $('#Pf_103').html('氷に閉ざされた者 - ✾取得済✾');
+}
+if (Pfd_104 == 999) {
+   $('#Pf_104').html('ステップ！ステップ！ぴょーんっ！ - ✾取得済✾');
+}
+if (Pfd_105 == 999) {
+   $('#Pf_105').html('核心を睨む蛇 - ✾取得済✾');
+}
+if (Pfd_106 == 999) {
+   $('#Pf_106').html('ようこそ！捻れた世界へ！ - ✾取得済✾');
+}
+if (Pfd_107 == 999) {
+   $('#Pf_107').html('枯れた土地が緑で染まる時 - ✾取得済✾');
+}
+if (Pfd_108 == 999) {
+   $('#Pf_108').html('永遠に続く暗闇の中で - ✾取得済✾');
+}
+if (Pfd_109 == 999) {
+   $('#Pf_109').html('忘れないで、その気持ちを - ✾取得済✾');
+}
+if (Pfd_110 == 999) {
+   $('#Pf_110').html('セルディニアは再び降臨する - ✾取得済✾');
 }
 
 $('#Data_Warn').html(' ');
