@@ -46,7 +46,7 @@ $.getJSON('Entry-level.rse', d => {
   $('#next').hide();
   $('#score').hide();
   $('#level-d').html('エントリーステージ');
-  $('#level').html('D.23');
+  $('#level').html('The Leukocyte');
   $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
   $('#Waves').html('☆ × ');
 
@@ -573,7 +573,7 @@ function gameover() {
              if (fgnc == 'Function_Landing-True-') {
                 $('#level-d').html('テストは未完了です');
              } else {
-                $('#level-d').html('✮ テスト完了 ✮ ID : エラーが発生しました');
+                $('#level-d').html('✮ テスト完了 ✮ ID : エラーが発生しました　現在、このステージを創造することはできません');
              }
       }
       $('#sakura').each(function(){
