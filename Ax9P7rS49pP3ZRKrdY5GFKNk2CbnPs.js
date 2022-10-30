@@ -14,7 +14,7 @@ let gds = Math.floor( Math.random() * (10000-99999)+99999 );
 n_wave_s = $.cookie('n_wave_s');
 $('#c-power').html('立線エネルギー : ' + n_wave_s);
 if (n_wave_s >= 1) {
-   $('#mirror').html('<a href="https://thisanimedoesnotexist.ai/results/psi-1.0/seed' + gds + '.png" download="Erosion.jpeg"><img src="https://thisanimedoesnotexist.ai/results/psi-1.0/seed' + gds + '.png"></img></a>');
+   $('#mirror').html('<img src="https://thisanimedoesnotexist.ai/results/psi-1.0/seed' + gds + '.png"></img>');
    n_wave_s--
    Pfd_100 = 999;
    $.cookie('n_wave_s', n_wave_s, { expires: 400, domain:'figseu-technology.github.io'});
