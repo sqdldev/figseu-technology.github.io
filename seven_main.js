@@ -281,7 +281,7 @@ function nextLevel() {
            }
   $('#prev').show();
   $('#retry').hide();
-  if (level == 3) {
+  if (level == 5) {
     $('#next').hide();
   }
 }
