@@ -1,6 +1,6 @@
 let f_wave = 0;
 let alter = 0;
-let gds = Math.floor( Math.random() * 36901 );
+let gds = Math.floor( Math.random() * 36901 ) + 213000;
 f_wave = $.cookie('f_wave');
 $('#c-power').html('立線エネルギー : ' + f_wave);
 
