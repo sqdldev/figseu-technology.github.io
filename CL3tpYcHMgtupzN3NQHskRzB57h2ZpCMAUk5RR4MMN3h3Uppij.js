@@ -386,6 +386,7 @@ $('#Waves_53').html('☆ × ' + $.cookie('te_wave_s'));
 $('#Waves_54').html('☆ × ' + $.cookie('z_wave'));
 $('#Waves_57').html('☆ × ' + $.cookie('o_wave_se'));
 $('#Waves_58').html('☆ × ' + $.cookie('th_wave_fi'));
+$('#Waves_59').html('☆ × ' + $.cookie('se_wave_fi'));
 
 // Save Data
 
