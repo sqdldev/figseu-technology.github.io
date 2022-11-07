@@ -271,7 +271,7 @@ function nextLevel() {
          $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Designed by あわけー');
-         $('#level').html('magic dream');
+         $('#level').html('Magician Dream');
          $('#stars').html('☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('se_wave_fi'));
         } else {
@@ -324,7 +324,7 @@ function prevLevel() {
          $('#Waves').html('☆ × ' + $.cookie('se_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Designed by あわけー');
-         $('#level').html('magic dream');
+         $('#level').html('Magician Dream');
          $('#stars').html('☆☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('se_wave_fi'));
         } else {
