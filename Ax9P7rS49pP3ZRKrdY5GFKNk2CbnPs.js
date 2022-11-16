@@ -1,4 +1,5 @@
 let f_wave = 0;
+let se_wave_fi = 0;
 let Pfd_100 = 0;
 let Pfd_101 = 0;
 let Pfd_102 = 0;
@@ -12,8 +13,9 @@ let Pfd_109 = 0;
 let Pfd_110 = 0;
 let gds = Math.floor( Math.random() * (10000-99999)+99999 );
 f_wave = $.cookie('f_wave');
+se_wave_fi = $.cookie('se_wave_fi');
 $('#c-power').html('立線エネルギー : ' + f_wave);
-if (f_wave >= 1) {
+if (f_wave >= 1 || se_wave_fi >= 5) {
    $('#mirror').html('<img src="https://thisanimedoesnotexist.ai/results/psi-1.0/seed' + gds + '.png"></img>');
    f_wave--
    Pfd_100 = 999;
