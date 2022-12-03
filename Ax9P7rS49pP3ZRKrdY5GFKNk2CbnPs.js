@@ -165,5 +165,7 @@ if (f_wave >= 1 || se_wave_fi >= 5) {
    } else if (gds == 91559) {
       $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde90239x.jpg"></img>');
       $('#c-power').html('終土値 : -39LP -【レア生成 X (©SEON Processor)】');
-   } 
+   } else {
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【通常生成】');
+   }
 }
