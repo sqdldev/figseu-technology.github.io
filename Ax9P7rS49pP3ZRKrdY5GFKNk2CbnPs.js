@@ -1,5 +1,6 @@
 let f_wave = 0;
 let se_wave_fi = 0;
+let lock_key_1 = 0;
 let Pfd_100 = 0;
 let Pfd_101 = 0;
 let Pfd_102 = 0;
@@ -36,6 +37,7 @@ let Item_8 = 0;
 let gds = Math.floor( Math.random() * (10000-99999)+99999 );
 f_wave = $.cookie('f_wave');
 Item_1 = $.cookie('Item_1');
+lock_key_1 = $.cookie('lock_key_1');
 if (typeof f_wave == 'undefined') {
         f_wave = 0;
         $.cookie('f_wave', f_wave, { expires: 30, domain:'figseu-technology.github.io'});
@@ -44,7 +46,17 @@ if (typeof Item_1 == 'undefined') {
         Item_1 = 0;
         $.cookie('Item_1', Item_1, { expires: 30, domain:'figseu-technology.github.io'});
 }
+if (typeof lock_key_1 == 'undefined') {
+        lock_key_1 = 0;
+        $.cookie('lock_key_1', lock_key_1, { expires: 1, domain:'figseu-technology.github.io'});
+}
 se_wave_fi = $.cookie('se_wave_fi');
+
+if (lock_key_1 == 0) {
+   Item_1 = 5;
+   lock_key_1 = 27;
+   $.cookie('lock_key_1', lock_key_1, { expires: 1, domain:'figseu-technology.github.io'});
+}
 
 Item_1 = Item_1 + f_wave;
 f_wave = 0;
