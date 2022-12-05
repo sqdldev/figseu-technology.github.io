@@ -22,9 +22,18 @@ let Item_8 = 0;
 
 let gds = Math.floor( Math.random() * (10000-99999)+99999 );
 f_wave = $.cookie('f_wave');
+Item_1 = $.cookie('Item_1');
+if (typeof f_wave == 'undefined') {
+        f_wave = 0;
+        $.cookie('f_wave', f_wave, { expires: 30, domain:'figseu-technology.github.io'});
+}
+if (typeof Item_1 == 'undefined') {
+        Item_1 = 0;
+        $.cookie('Item_1', Item_1, { expires: 30, domain:'figseu-technology.github.io'});
+}
 se_wave_fi = $.cookie('se_wave_fi');
 
-Item_1 = f_wave;
+Item_1 = Item_1 + f_wave;
 f_wave = 0;
 $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
