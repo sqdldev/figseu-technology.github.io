@@ -201,7 +201,7 @@ window.onload = function(){
 }
  
 function showNowDate(){
-  Item_1--
+  Item_1++
   $.cookie('Item_1', Item_1, { expires: 400, domain:'figseu-technology.github.io'});
   $('#c-power').html('立線エネルギー (回復中) : ' + Item_1);
 }
