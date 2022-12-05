@@ -1,6 +1,5 @@
 let f_wave = 0;
 let se_wave_fi = 0;
-let fgnc = url.substr( 51 );
 let Pfd_100 = 0;
 let Pfd_101 = 0;
 let Pfd_102 = 0;
@@ -30,7 +29,7 @@ f_wave = 0;
 $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
 if (se_wave_fi >= 5) {
-   $('#b-power').html('空虚の鍵 : 解放済);
+   $('#b-power').html('空虚の鍵 : 解放済');
 }
 
 $('#c-power').html('立線エネルギー : ' + Item_1);
