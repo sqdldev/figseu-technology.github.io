@@ -29,7 +29,7 @@ Item_1 = f_wave;
 f_wave = 0;
 $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
-if (Item_1 >= 1 || se_wave_fi >= 5) {
+if (se_wave_fi >= 5) {
    $('#b-power').html('空虚の鍵 : 解放済);
 }
 
