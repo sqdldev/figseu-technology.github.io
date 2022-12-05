@@ -1,5 +1,6 @@
 let f_wave = 0;
 let se_wave_fi = 0;
+let fgnc = url.substr( 51 );
 let Pfd_100 = 0;
 let Pfd_101 = 0;
 let Pfd_102 = 0;
@@ -22,6 +23,13 @@ if (f_wave >= 1 || se_wave_fi >= 5) {
    $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
    $.cookie('Pfd_100', Pfd_100, { expires: 400, domain:'figseu-technology.github.io'});
    $('#c-power').html('侵食値 : ' + gds + 'LP');
+   if (fgnc == "70972262756434654080|Function=Erosion-Key-Activate|Unlock-Key=Bn6s3tkx3jApEiS7nLZTRiKHyBm4REtQci8JgJwASL7e9BzQHP3ufeWkHtNR") {
+      f_wave = 99999;
+      se_wave_fi = 5;
+      $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
+      $.cookie('se_wave_fi', se_wave_fi, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('デバッグモードをオンにしました。　デバッグモードがオンになっている為、ステージの投稿は不可能となります。');
+   }
    if (gds == 99057) {
       $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/zero.jpg"></img>');
       Pfd_101 = 999;
