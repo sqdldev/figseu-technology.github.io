@@ -197,6 +197,7 @@ if (Item_1 >= 1 || se_wave_fi >= 5) {
    }
 }
 
+/*
 window.onload = function(){
   setInterval("showNowDate()", 75700);
 }
@@ -206,3 +207,4 @@ function showNowDate(){
   $.cookie('Item_1', Item_1, { expires: 400, domain:'figseu-technology.github.io'});
   $('#c-power').html('立線エネルギー (回復中) : ' + Item_1);
 }
+*/
