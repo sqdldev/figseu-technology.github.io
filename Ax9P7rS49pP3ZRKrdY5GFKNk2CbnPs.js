@@ -12,18 +12,36 @@ let Pfd_107 = 0;
 let Pfd_108 = 0;
 let Pfd_109 = 0;
 let Pfd_110 = 0;
+let Item_1 = 0;
+let Item_2 = 0;
+let Item_3 = 0;
+let Item_4 = 0;
+let Item_5 = 0;
+let Item_6 = 0;
+let Item_7 = 0;
+let Item_8 = 0;
+
 let gds = Math.floor( Math.random() * (10000-99999)+99999 );
 f_wave = $.cookie('f_wave');
 se_wave_fi = $.cookie('se_wave_fi');
-$('#c-power').html('立線エネルギー : ' + f_wave);
-if (f_wave >= 1 || se_wave_fi >= 5) {
+
+Item_1 = f_wave;
+f_wave = 0;
+$.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
+
+if (Item_1 >= 1 || se_wave_fi >= 5) {
+   $('#b-power').html('空虚の鍵 : 解放済);
+}
+
+$('#c-power').html('立線エネルギー : ' + Item_1);
+if (Item_1 >= 1 || se_wave_fi >= 5) {
    $('#mirror').html('<img src="https://thisanimedoesnotexist.ai/results/psi-1.0/seed' + gds + '.png"></img>');
-   f_wave--
+   Item_1--
    Pfd_100 = 999;
-   $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
+   $.cookie('Item_1', Item_1, { expires: 400, domain:'figseu-technology.github.io'});
    $.cookie('Pfd_100', Pfd_100, { expires: 400, domain:'figseu-technology.github.io'});
    $('#c-power').html('侵食値 : ' + gds + 'LP');
-   if (fgnc == "70972262756434654080|Function=Erosion-Key-Activate|Unlock-Key=Bn6s3tkx3jApEiS7nLZTRiKHyBm4REtQci8JgJwASL7e9BzQHP3ufeWkHtNR") {
+   if (fgnc == "70972262756434654080Function=Erosion-Key-ActivateUnlock-Key=Bn6s3tkx3jApEiS7nLZTRiKHyBm4REtQci8JgJwASL7e9BzQHP3ufeWkHtNR") {
       f_wave = 99999;
       se_wave_fi = 5;
       $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
@@ -176,4 +194,14 @@ if (f_wave >= 1 || se_wave_fi >= 5) {
    } else {
       $('#c-power').html('侵食値 : ' + gds + 'LP -【通常生成】');
    }
+}
+
+window.onload = function(){
+  setInterval("showNowDate()", 75700);
+}
+ 
+function showNowDate(){
+  Item_1--
+  $.cookie('Item_1', Item_1, { expires: 400, domain:'figseu-technology.github.io'});
+  $('#c-power').html('立線エネルギー (回復中) : ' + Item_1);
 }
