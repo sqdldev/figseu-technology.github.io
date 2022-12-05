@@ -43,7 +43,7 @@ if (typeof f_wave == 'undefined') {
         $.cookie('f_wave', f_wave, { expires: 30, domain:'figseu-technology.github.io'});
 }
 if (typeof Item_1 == 'undefined') {
-        Item_1 = 0;
+        Item_1 = 10;
         $.cookie('Item_1', Item_1, { expires: 30, domain:'figseu-technology.github.io'});
 }
 if (typeof lock_key_1 == 'undefined') {
