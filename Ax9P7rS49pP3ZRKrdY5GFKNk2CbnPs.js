@@ -52,12 +52,6 @@ if (typeof lock_key_1 == 'undefined') {
 }
 se_wave_fi = $.cookie('se_wave_fi');
 
-if (lock_key_1 == 0) {
-   Item_1 = 5;
-   lock_key_1 = 27;
-   $.cookie('lock_key_1', lock_key_1, { expires: 1, domain:'figseu-technology.github.io'});
-}
-
 Item_1 = Item_1 + f_wave;
 f_wave = 0;
 $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
