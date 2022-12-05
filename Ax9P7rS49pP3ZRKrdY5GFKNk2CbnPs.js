@@ -11,6 +11,19 @@ let Pfd_107 = 0;
 let Pfd_108 = 0;
 let Pfd_109 = 0;
 let Pfd_110 = 0;
+let Pfd_111 = 0;
+let Pfd_112 = 0;
+let Pfd_113 = 0;
+let Pfd_114 = 0;
+let Pfd_115 = 0;
+let Pfd_116 = 0;
+let Pfd_117 = 0;
+let Pfd_118 = 0;
+let Pfd_119 = 0;
+let Pfd_120 = 0;
+let Pfd_121 = 0;
+let Pfd_122 = 0;
+let Pfd_123 = 0;
 let Item_1 = 0;
 let Item_2 = 0;
 let Item_3 = 0;
@@ -99,6 +112,71 @@ if (Item_1 >= 1 || se_wave_fi >= 5) {
       Pfd_110 = 999;
       $.cookie('Pfd_110', Pfd_110, { expires: 400, domain:'figseu-technology.github.io'});
       $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 97040) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/e591bde381aee5a696e7b2be97040.jpg"></img>');
+      Pfd_111 = 999;
+      $.cookie('Pfd_111', Pfd_111, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 55831) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/e5bb83e5a29fe381aee5a696e7b2be55831.jpg"></img>');
+      Pfd_112 = 999;
+      $.cookie('Pfd_112', Pfd_112, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 28796) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/e5b9bbe8a69ae381aee5a696e7b2be28796.jpg"></img>');
+      Pfd_113 = 999;
+      $.cookie('Pfd_113', Pfd_113, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 58541) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/e69d9fe7b89be381aee5a696e7b2be58541.jpg"></img>');
+      Pfd_114 = 999;
+      $.cookie('Pfd_114', Pfd_114, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 63528) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/wp-1670242413716.jpg"></img>');
+      Pfd_115 = 999;
+      $.cookie('Pfd_115', Pfd_115, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 44100) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/wp-1670242413729.jpg"></img>');
+      Pfd_116 = 999;
+      $.cookie('Pfd_116', Pfd_116, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 55555) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/wp-1670242413704.jpg"></img>');
+      Pfd_117 = 999;
+      $.cookie('Pfd_117', Pfd_117, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : √-1LP -【新たな実績を解除しました。】');
+   } else if (gds == 93953) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/wp-1670242413688.jpg"></img>');
+      Pfd_118 = 999;
+      $.cookie('Pfd_118', Pfd_118, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : -95LP -【新たな実績を解除しました。】');
+   } else if (gds == 34105) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/wp-1670242413670.jpg"></img>');
+      Pfd_119 = 999;
+      $.cookie('Pfd_119', Pfd_119, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 85361) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/wp-1670242413742.jpg"></img>');
+      Pfd_120 = 999;
+      $.cookie('Pfd_120', Pfd_120, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 73733) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/wp-1670242413769.jpg"></img>');
+      Pfd_121 = 999;
+      $.cookie('Pfd_121', Pfd_121, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 54205) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/wp-1670242413756.jpg"></img>');
+      Pfd_122 = 999;
+      $.cookie('Pfd_122', Pfd_122, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 52759) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/mt_1p84yq5we3u389pdvyoltiihh.jpg"></img>');
+      Pfd_123 = 999;
+      $.cookie('Pfd_123', Pfd_123, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : -59LP -【新たな実績を解除しました。】');
    } else if (gds == 77365) {
       $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde77365.jpg"></img>');
       $('#c-power').html('侵食値 : 65LP -【レア生成 S (©SEON Processor)】');
