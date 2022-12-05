@@ -167,6 +167,20 @@ let Pfd_107 = 0;
 let Pfd_108 = 0;
 let Pfd_109 = 0;
 let Pfd_110 = 0;
+let Pfd_111 = 0;
+let Pfd_112 = 0;
+let Pfd_113 = 0;
+let Pfd_114 = 0;
+let Pfd_115 = 0;
+let Pfd_116 = 0;
+let Pfd_117 = 0;
+let Pfd_118 = 0;
+let Pfd_119 = 0;
+let Pfd_120 = 0;
+let Pfd_121 = 0;
+let Pfd_122 = 0;
+let Pfd_123 = 0;
+let Item_1 = 0;
 function Performance_Data() {
 terms = $.cookie('terms');
 o_wave = $.cookie('o_wave');
@@ -224,6 +238,7 @@ te_wave_f = $.cookie('te_wave_f');
 te_wave_fi = $.cookie('te_wave_fi');
 te_wave_s = $.cookie('te_wave_s');
 z_wave = $.cookie('z_wave');
+Item_1 = $.cookie('Item_1');
 Pfd_0 = $.cookie('Pfd_0');
 Pfd_1 = $.cookie('Pfd_1');
 Pfd_2 = $.cookie('Pfd_2');
@@ -335,6 +350,19 @@ Pfd_107 = $.cookie('Pfd_107');
 Pfd_108 = $.cookie('Pfd_108');
 Pfd_109 = $.cookie('Pfd_109');
 Pfd_110 = $.cookie('Pfd_110');
+Pfd_111 = $.cookie('Pfd_111');
+Pfd_112 = $.cookie('Pfd_112');
+Pfd_113 = $.cookie('Pfd_113');
+Pfd_114 = $.cookie('Pfd_114');
+Pfd_115 = $.cookie('Pfd_115');
+Pfd_116 = $.cookie('Pfd_116');
+Pfd_117 = $.cookie('Pfd_117');
+Pfd_118 = $.cookie('Pfd_118');
+Pfd_119 = $.cookie('Pfd_119');
+Pfd_120 = $.cookie('Pfd_120');
+Pfd_121 = $.cookie('Pfd_121');
+Pfd_122 = $.cookie('Pfd_122');
+Pfd_123 = $.cookie('Pfd_123');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -445,6 +473,10 @@ $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.git
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io'});
 $('#Data_Warn').html('⌥⌥データ更新中⌥⌥');
+
+// Items
+
+$('#It_3').html('立線エネルギー - ' + Item_1);
 
 // Terms
 
