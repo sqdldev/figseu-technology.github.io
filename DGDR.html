@@ -54,10 +54,14 @@ hr {
 </style>
 <script>
 function BGM() {
-	$('#bgm').get(0).play();
+   $('#bgm').get(0).play();
+}
+function cl() {
+   $('#cd_1').get(0).play();
 }
 </script>
 <audio rel="preload" src="bgm/Bolero.mp3" id="bgm" preload="auto" loop></audio>
+<audio rel="preload" src="se_A/clickdown.mp3" id="cd_1" preload="auto"></audio>
 </head>
 <body onload="BGM()" onclick="BGM()" oncontextmenu="return false;">
 <br><div id="c-power">？？？ : 0</div></br>
@@ -69,7 +73,7 @@ function BGM() {
 <br> </br>
 <div align="center" id="mirror"><img src="textures/StandEC.png"></img></div>
 <br> </br>
-<p align="center"><a align="center" href="https://figseu-technology.github.io/DGDR.html?flag=Reload" class="button">　　再生成　　</a></p>
+<p align="center"><a align="center" href="https://figseu-technology.github.io/DGDR.html?flag=Reload" class="button" onclick="cl()">　　再生成　　</a></p>
 <br> </br>
 <p>Bluestone Alley (☆4) をクリアするとポイントを獲得でき、ポイントを消費してAIイラストを1枚作成できます。</p>
 <p>The Magician Dream (☆7) を5回連続クリアすると空虚の鍵を獲得でき、無限にAIイラストを作成できます。(ただし、連続クリア回数が途絶えると鍵は消滅します)</p>
