@@ -25,6 +25,7 @@ let Pfd_120 = 0;
 let Pfd_121 = 0;
 let Pfd_122 = 0;
 let Pfd_123 = 0;
+let Pfd_124 = 0;
 let Item_1 = 0;
 let Item_2 = 0;
 let Item_3 = 0;
@@ -180,6 +181,11 @@ if (Item_1 >= 1 || se_wave_fi >= 5) {
       Pfd_122 = 999;
       $.cookie('Pfd_122', Pfd_122, { expires: 400, domain:'figseu-technology.github.io'});
       $('#c-power').html('侵食値 : ' + gds + 'LP -【新たな実績を解除しました。】');
+   } else if (gds == 52604) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/e382aae383abe38395e382a3e382b9.jpg"></img>');
+      Pfd_124 = 999;
+      $.cookie('Pfd_124', Pfd_124, { expires: 400, domain:'figseu-technology.github.io'});
+      $('#c-power').html('侵食値 : 1217LP -【新たな実績を解除しました。】');
    } else if (gds == 52759) {
       $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/mt_1p84yq5we3u389pdvyoltiihh.jpg"></img>');
       Pfd_123 = 999;
@@ -278,6 +284,93 @@ if (Item_1 >= 1 || se_wave_fi >= 5) {
    } else if (gds == 91559) {
       $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde90239x.jpg"></img>');
       $('#c-power').html('終土値 : -39LP -【レア生成 X (©SEON Processor)】');
+   } else if (gds == 32651) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde32651.jpg"></img>');
+      $('#c-power').html('侵食値 : 651LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 47482) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde47482.jpg"></img>');
+      $('#c-power').html('侵食値 : 7482LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 67368) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde67368.jpg"></img>');
+      $('#c-power').html('侵食値 : 7368LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 94821) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde94821.jpg"></img>');
+      $('#c-power').html('侵食値 : 821LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 19741) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde19741.jpg"></img>');
+      $('#c-power').html('侵食値 : 41LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 63866) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde63866.jpg"></img>');
+      $('#c-power').html('侵食値 : 3866LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 63326) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde63326.jpg"></img>');
+      $('#c-power').html('侵食値 : 3326LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 34137) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde34137.jpg"></img>');
+      $('#c-power').html('侵食値 : 4137LP -【レア生成 A (©SEON Processor)】');
+   } else if (gds == 65137) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde65137.jpg"></img>');
+      $('#c-power').html('侵食値 : 5137LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 41354) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde41354.jpg"></img>');
+      $('#c-power').html('侵食値 : 1354LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 96670) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde96670.jpg"></img>');
+      $('#c-power').html('侵食値 : 6670LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 85762) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde85762.jpg"></img>');
+      $('#c-power').html('侵食値 : 5762LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 36758) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde36758.jpg"></img>');
+      $('#c-power').html('侵食値 : 6758LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 84613) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde84613.jpg"></img>');
+      $('#c-power').html('侵食値 : 613LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 96106) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde96106.jpg"></img>');
+      $('#c-power').html('侵食値 : 106LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 82695) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde82695.jpg"></img>');
+      $('#c-power').html('侵食値 : 4LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 95993) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde95993.jpg"></img>');
+      $('#c-power').html('侵食値 : 5993LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 78329) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde78329.jpg"></img>');
+      $('#c-power').html('侵食値 : 8329LP -【レア生成 A (©SEON Processor)】');
+   } else if (gds == 86863) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde86863.jpg"></img>');
+      $('#c-power').html('侵食値 : 863LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 90944) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde90944.jpg"></img>');
+      $('#c-power').html('侵食値 : 44LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 84427) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde84427.jpg"></img>');
+      $('#c-power').html('侵食値 : 427LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 26071) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde26071.jpg"></img>');
+      $('#c-power').html('侵食値 : 71LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 22631) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde22631.jpg"></img>');
+      $('#c-power').html('侵食値 : 2631LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 99310) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde99310.jpg"></img>');
+      $('#c-power').html('侵食値 : 9310LP -【レア生成 S (©SEON Processor)】');
+   } else if (gds == 16420) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde16420.jpg"></img>');
+      $('#c-power').html('侵食値 : 6420LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 60083) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde60083.jpg"></img>');
+      $('#c-power').html('侵食値 : 83LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 27913) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde27913.jpg"></img>');
+      $('#c-power').html('侵食値 : 13LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 93921) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde93921.jpg"></img>');
+      $('#c-power').html('侵食値 : 1LP -【レア生成 SS (©SEON Processor)】');
+   } else if (gds == 17115) {
+      $('#mirror').html('<img src="https://rollingskyevolutiondata.files.wordpress.com/2022/12/rde17115.jpg"></img>');
+      $('#c-power').html('侵食値 : 115LP -【レア生成 SS (©SEON Processor)】');
    } else {
       $('#c-power').html('侵食値 : ' + gds + 'LP -【通常生成】');
    }
