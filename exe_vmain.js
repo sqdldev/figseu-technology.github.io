@@ -57,6 +57,18 @@ function start(e) {
       }
     });
     world.forEach(v => {
+      if (v instanceof Downobstacle) {
+        v.mesh.position.y = 0.4;
+        v.line.position.y = 0.4;
+      }
+    });
+    world.forEach(v => {
+      if (v instanceof Upobstacle) {
+        v.mesh.position.y = 0;
+        v.line.position.y = 0;
+      }
+    });
+    world.forEach(v => {
       if (v instanceof Mysterybox) {
         v.mesh.position.y = 1.1;
       }
@@ -64,6 +76,12 @@ function start(e) {
     world.forEach(v => {
       if (v instanceof Gem) {
         v.mesh.position.y = 1.1;
+      }
+    });
+    world.forEach(v => {
+      if (v instanceof Deltemat) {
+        v.mesh.position.y = 0;
+        v.line.position.y = 0;
       }
     });
     $('#main').css('pointer-events', 'none');
