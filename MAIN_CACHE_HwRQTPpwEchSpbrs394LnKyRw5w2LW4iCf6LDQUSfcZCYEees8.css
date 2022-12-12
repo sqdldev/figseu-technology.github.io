@@ -185,7 +185,7 @@ button:active {
   height: 350px;
   display: block;
   overflow: auto;
-  font-size: 1px;
+  font-size: 5px;
   padding: 2px;
   border-radius: 2px;
 }
