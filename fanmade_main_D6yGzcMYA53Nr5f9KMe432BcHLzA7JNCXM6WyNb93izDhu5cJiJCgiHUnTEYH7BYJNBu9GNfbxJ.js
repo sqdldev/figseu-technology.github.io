@@ -46,9 +46,9 @@ $.getJSON('Entry-level.rse', d => {
   $('#next').hide();
   $('#score').hide();
   $('#level-d').html('エントリーステージ');
-  $('#level').html('The Leukocyte');
-  $('#stars').html('☆☆☆☆☆☆☆☆☆☆');
-  $('#Waves').html('☆ × ');
+  $('#level').html('T■■ L■■ko■y■e■■');
+  $('#stars').html('☆☆☆☆☆☆');
+  $('#Waves').html('☆ × -90');
 
   // ブラウザ判定
 
