@@ -56,6 +56,7 @@ let te_wave_f = 0;
 let te_wave_fi = 0;
 let te_wave_s = 0;
 let z_wave = 0;
+let exe_wave = 0;
 let Pfd_0 = 0;
 let Pfd_1 = 0;
 let Pfd_2 = 0;
@@ -181,6 +182,11 @@ let Pfd_121 = 0;
 let Pfd_122 = 0;
 let Pfd_123 = 0;
 let Pfd_124 = 0;
+let Pfd_125 = 0;
+let Pfd_126 = 0;
+let Pfd_127 = 0;
+let Pfd_128 = 0;
+let Pfd_129 = 0;
 let Item_1 = 0;
 function Performance_Data() {
 terms = $.cookie('terms');
@@ -239,6 +245,7 @@ te_wave_f = $.cookie('te_wave_f');
 te_wave_fi = $.cookie('te_wave_fi');
 te_wave_s = $.cookie('te_wave_s');
 z_wave = $.cookie('z_wave');
+exe_wave = $.cookie('exe_wave');
 Item_1 = $.cookie('Item_1');
 Pfd_0 = $.cookie('Pfd_0');
 Pfd_1 = $.cookie('Pfd_1');
@@ -365,6 +372,11 @@ Pfd_121 = $.cookie('Pfd_121');
 Pfd_122 = $.cookie('Pfd_122');
 Pfd_123 = $.cookie('Pfd_123');
 Pfd_124 = $.cookie('Pfd_124');
+Pfd_125 = $.cookie('Pfd_125');
+Pfd_126 = $.cookie('Pfd_126');
+Pfd_127 = $.cookie('Pfd_127');
+Pfd_128 = $.cookie('Pfd_128');
+Pfd_129 = $.cookie('Pfd_129');
 $('#Waves_1').html('☆ × ' + $.cookie('o_wave'));
 $('#Waves_2').html('☆ × ' + $.cookie('o_wave_t'));
 $('#Waves_3').html('☆ × ' + $.cookie('o_wave_th'));
@@ -474,11 +486,12 @@ $.cookie('te_wave_f', te_wave_f, { expires: 400, domain:'figseu-technology.githu
 $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io'});
+$.cookie('exe_wave', exe_wave, { expires: 400, domain:'figseu-technology.github.io'});
 $('#Data_Warn').html('⌥⌥データ更新中⌥⌥');
 
 // Items
 
-$('#It_3').html('立線エネルギー - ' + Item_1);
+$('#It_3').html('立線エネルギー - ' + f_wave);
 
 // Terms
 
@@ -1146,34 +1159,72 @@ if (n_wave_fi >= 300) {
 if (n_wave_s >= 50) {
    $('#Pf_88').html('黒の世界 - ✾取得済✾');
    Pfd_88 = 107558856528741996791037612619;
-   $.cookie('Pfd_88', Pfd_88, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+   $.cookie('Pfd_88', Pfd_88, { expires: 400, domain:'figseu-technology.github.io'});
 } else if (Pfd_88 == 107558856528741996791037612619) {
    $('#Pf_88').html('黒の世界 - ✾取得済✾');
 }
 if (n_wave_s >= 100) {
    $('#Pf_89').html('封印された少女 - ✾取得済✾');
    Pfd_89 = 107558856528741996791037612619;
-   $.cookie('Pfd_89', Pfd_89, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+   $.cookie('Pfd_89', Pfd_89, { expires: 400, domain:'figseu-technology.github.io'});
 } else if (Pfd_89 == 107558856528741996791037612619) {
    $('#Pf_89').html('封印された少女 - ✾取得済✾');
 }
 if (n_wave_s >= 300) {
    $('#Pf_90').html('紫色巫女 - ✾取得済✾');
    Pfd_90 = 107558856528741996791037612619;
-   $.cookie('Pfd_90', Pfd_90, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+   $.cookie('Pfd_90', Pfd_90, { expires: 400, domain:'figseu-technology.github.io'});
 } else if (Pfd_90 == 107558856528741996791037612619) {
    $('#Pf_90').html('紫色巫女 - ✾取得済✾');
 }
 if (n_wave_s >= 1000) {
    $('#Pf_91').html('True Singularity - ✾取得済✾');
    Pfd_91 = 107558856528741996791037612619;
-   $.cookie('Pfd_91', Pfd_91, { expires: 400, domain:'figseu-technology.github.io', path:'/RollingSkyEvolution/'});
+   $.cookie('Pfd_91', Pfd_91, { expires: 400, domain:'figseu-technology.github.io'});
 } else if (Pfd_91 == 107558856528741996791037612619) {
    $('#Pf_91').html('True Singularity - ✾取得済✾');
 }
 
 if (Pfd_95 >= 107558856528741996791037612619) {
    $('#Pf_95').html('破滅の鼓動 - ✾取得済✾');
+}
+
+// The Execution
+
+if (exe_wave >= 1) {
+   $('#Pf_125').html('Rolling Sky Evolution - ✾取得済✾');
+   Pfd_125 = 107558856528741996791037612619;
+   $.cookie('Pfd_125', Pfd_125, { expires: 400, domain:'figseu-technology.github.io'});
+} else if (Pfd_125 == 107558856528741996791037612619) {
+   $('#Pf_125').html('Rolling Sky Delta - ✾取得済✾');
+}
+if (exe_wave >= 50) {
+   $('#Pf_126').html('新たな時代へと - ✾取得済✾');
+   Pfd_126 = 107558856528741996791037612619;
+   $.cookie('Pfd_126', Pfd_126, { expires: 400, domain:'figseu-technology.github.io'});
+} else if (Pfd_126 == 107558856528741996791037612619) {
+   $('#Pf_126').html('新たな時代へと - ✾取得済✾');
+}
+if (exe_wave >= 100) {
+   $('#Pf_127').html('妖精の帝 - ✾取得済✾');
+   Pfd_127 = 107558856528741996791037612619;
+   $.cookie('Pfd_127', Pfd_127, { expires: 400, domain:'figseu-technology.github.io'});
+} else if (Pfd_127 == 107558856528741996791037612619) {
+   $('#Pf_127').html('妖精の帝 - ✾取得済✾');
+}
+if (exe_wave >= 700) {
+   $('#Pf_128').html('全ての歴史が変わる - ✾取得済✾');
+   Pfd_128 = 107558856528741996791037612619;
+   $.cookie('Pfd_128', Pfd_128, { expires: 400, domain:'figseu-technology.github.io'});
+} else if (Pfd_128 == 107558856528741996791037612619) {
+   $('#Pf_128').html('全ての歴史が変わる - ✾取得済✾');
+}
+if (exe_wave >= 1000) {
+   $('#Pf_129').html('The Execution - ✾取得済✾');
+   Pfd_129 = 107558856528741996791037612619;
+   $.cookie('Pfd_129', Pfd_129, { expires: 400, domain:'figseu-technology.github.io'});
+} else if (Pfd_129 == 107558856528741996791037612619) {
+   $('#Pf_129').html('ヴァルチュエラ - ✾取得済✾');
 }
 
 // Holiday
