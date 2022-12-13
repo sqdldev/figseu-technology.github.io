@@ -2,6 +2,7 @@ let Master_Icon = 0;
 let Luncher = 0;
 
 function Submit() {
+   Luncher = $('#avatar_url').val();
    Luncher = sample.includes('.jpg');
    if (Luncher = true) {
       Master_Icon = $('#avatar_url').val();
