@@ -6,8 +6,6 @@ if (typeof UserName == 'undefined' && typeof Password == 'undefined') {
    location.href = "https://figseu-technology.github.io/Signup.html";
 }
 
-$('#AC_Name').html(UserName);
-
 let o_wave = 0;
 let o_wave_t = 0;
 let o_wave_th = 0;
@@ -196,16 +194,13 @@ let Pfd_126 = 0;
 let Pfd_127 = 0;
 let Pfd_128 = 0;
 let Pfd_129 = 0;
-
 let Master_Stars = 0;
 let Master_Stars_EX = 0;
 let Master_Delta = 0;
 let Master_Delta_EX = 0;
 let Master_Performance = 0;
 let Master_Comments = 0;
-
 function Loading_Data() {
-
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
 o_wave_th = $.cookie('o_wave_th');
@@ -393,6 +388,8 @@ Pfd_127 = $.cookie('Pfd_127');
 Pfd_128 = $.cookie('Pfd_128');
 Pfd_129 = $.cookie('Pfd_129');
 
+$('#AC_Name').html(UserName);
+
 if (o_wave >= 1) {
    Master_Stars++
 }
@@ -454,12 +451,6 @@ if (f_wave_th >= 1) {
    Master_Stars++
 }
 if (f_wave_f >= 1) {
-   Master_Stars++
-}
-if (f_wave_fi >= 1) {
-   Master_Stars++
-}
-if (f_wave_s >= 1) {
    Master_Stars++
 }
 if (fi_wave >= 1) {
@@ -661,4 +652,6 @@ $('#Delta_1').html("集めたΔエネルギーの数 ｜　　　　 Δ × " + M
 $('#Delta_30').html("集めたΔエネルギーの数 (Δ36以降) ｜ Δ × " + Master_Delta_EX);
 $('#C_Performances').html("準備中");
 $('#comment').html("<h3>" + Master_Comments + "</h3>");
+
+return false;
 }
