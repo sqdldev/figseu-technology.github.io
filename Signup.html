@@ -6,11 +6,13 @@
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <style>
+@font-face {font-family: 'dgdr';src: url('https://figseu-technology.github.io/DGDR/JKG-L_3.ttf') format('truetype');}
 body{
+    font-family: 'dgdr', sans-serif, serif;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #34495e;
+    background: #000B3F;
 }
  
 /*ログインフォームのエリア内のスタイル*/
@@ -77,11 +79,14 @@ body{
 </style>
 </head>
 <body>
-    <form class="box" action="index.htyml" method="post">
-        <h1>Login</h1>
-        <input type="text" name="" placeholder="ユーザー名">
-        <input type="password" name="" placeholder="パスワード">
-        <input type="submit" name="" value="サインイン">
+    <form class="box" action="https://figseu-technology.github.io/index.html" method="post">
+        <h1>Rolling Sky Evolution</h1>
+        <h4>サインアップ</h4>
+        <input type="text" name="name" placeholder="ユーザー名">
+        <input type="password" name="pass" placeholder="パスワード">
+        <input type="submit" name="geted" value="サインイン">
     </form>
 </body>
+<script src="System/jquery.js"></script>
+<script src="System/cookie.js"></script>
 </html>
