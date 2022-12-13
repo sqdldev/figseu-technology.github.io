@@ -3,6 +3,14 @@ const grid = $('#grid');
 let gridLength = 20;
 let mouseDown = false;
 
+let UserName = 0;
+let Password = 0;
+UserName = $.cookie('UserName');
+Password = $.cookie('Password');
+if (typeof UserName == 'undefined' && typeof Password == 'undefined') {
+   location.href = "https://figseu-technology.github.io/Signup.html";
+}
+
 const data = [];
 for (let i = 0; i < gridLength; i++) {
 	grid.append('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
