@@ -144,35 +144,35 @@ if (typeof Master_Icon == 'undefined') {
 $('#AC_Name').html(UserName);
 
 if (se_wave >= 1 && se_wave_t >= 1 && se_wave_th >= 1 && se_wave_f >= 1 && se_wave_fi >= 1 && se_wave_s >= 1 && se_wave_se >= 1) {
-   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 147 ⟬ Perfect! ⟭</h3>");
+   $('#Stars_1').html("<h3>集めた☆の数　　　　　　　　　　　　☆ × 147 ⟬ Perfect! ⟭</h3>");
 } else if (s_wave >= 1 && s_wave_t >= 1 && s_wave_th >= 1) {
-   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 98</h3>");
+   $('#Stars_1').html("<h3>集めた☆の数　　　　　　　　　　　　☆ × 98</h3>");
 } else if (fi_wave >= 1 && fi_wave_t >= 1 && fi_wave_th >= 1 && fi_wave_f >= 1 && fi_wave_fi >= 1) {
-   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 80</h3>");
+   $('#Stars_1').html("<h3>集めた☆の数　　　　　　　　　　　　☆ × 80</h3>");
 } else if (f_wave >= 1 && f_wave_t >= 1 && f_wave_th >= 1 && f_wave_f >= 1) {
-   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 55</h3>");
+   $('#Stars_1').html("<h3>集めた☆の数　　　　　　　　　　　　☆ × 55</h3>");
 } else if (th_wave >= 1 && th_wave_t >= 1 && th_wave_th >= 1 && th_wave_f >= 1 && th_wave_fi >= 1) {
-   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 37</h3>");
+   $('#Stars_1').html("<h3>集めた☆の数　　　　　　　　　　　　☆ × 37</h3>");
 } else if (t_wave >= 1 && t_wave_t >= 1 && t_wave_th >= 1 && t_wave_f >= 1 && t_wave_fi >= 1) {
-   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 22</h3>");
+   $('#Stars_1').html("<h3>集めた☆の数　　　　　　　　　　　　☆ × 22</h3>");
 } else if (o_wave >= 1 && o_wave_t >= 1 && o_wave_th >= 1 && o_wave_f >= 1 && o_wave_fi >= 1 && o_wave_s >= 1) {
-   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 12</h3>");
+   $('#Stars_1').html("<h3>集めた☆の数　　　　　　　　　　　　☆ × 12</h3>");
 } else {
-   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 0</h3>");
+   $('#Stars_1').html("<h3>集めた☆の数　　　　　　　　　　　　☆ × 0</h3>");
 }
 
 if (exe_wave >= 1 && n_wave_s >= 1 && n_wave_f >= 1 && te_wave >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
-   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 2000 ⟬ Perfect! ⟭</h3>");
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) 　☆ × 2000 ⟬ Perfect! ⟭</h3>");
 } else if (z_wave >= 1 && n_wave_s >= 1) {
-   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 1000</h3>");
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) 　☆ × 1000</h3>");
 } else if (te_wave >= 1 && te_wave_t >= 1 && te_wave_th >= 1 && te_wave_f >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
-   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 990</h3>");
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) 　☆ × 990</h3>");
 } else if (n_wave >= 1 && n_wave_t >= 1 && n_wave_th >= 1 && n_wave_f >= 1 && n_wave_fi >= 1 && n_wave_s >= 1) {
-   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 510</h3>");
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) 　☆ × 510</h3>");
 } else if (e_wave >= 1 && e_wave_t >= 1 && e_wave_th >= 1 && e_wave_f >= 1 && e_wave_fi >= 1 && e_wave_s >= 1 && e_wave_se >= 1) {
-   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 156</h3>");
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) 　☆ × 156</h3>");
 } else {
-   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 0</h3>");
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) 　☆ × 0</h3>");
 }
 
 Master_Comments = $.cookie('Master_Comments');
@@ -240,8 +240,8 @@ $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.githu
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('exe_wave', exe_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
-$('#Delta_1').html("<h3>集めたΔの数 　　　　　　｜　　　　 Δ × " + Master_Delta + "</h3>");
-$('#Delta_30').html("<h3>集めたΔの数 (Δ36以降) ｜　　　　Δ × " + Master_Delta_EX + "</h3>");
+$('#Delta_1').html("<h3>集めたΔの数 　　　　　　Δ × " + Master_Delta + "</h3>");
+$('#Delta_30').html("<h3>集めたΔの数 (Δ36以降)　Δ × " + Master_Delta_EX + "</h3>");
 $('#comment').html("<h3><a href='https://figseu-technology.github.io/CommentEdit.html'>" + Master_Comments + "</a></h3>");
 
 return false;
