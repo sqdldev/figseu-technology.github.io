@@ -391,178 +391,178 @@ Pfd_129 = $.cookie('Pfd_129');
 $('#AC_Name').html(UserName);
 
 if (o_wave >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (o_wave_t >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (o_wave_th >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (o_wave_f >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (o_wave_fi >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (o_wave_s >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (o_wave_se >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (t_wave >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (t_wave_t >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (t_wave_th >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (t_wave_f >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (t_wave_fi >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (th_wave >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (th_wave_t >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (th_wave_th >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (th_wave_f >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (th_wave_fi >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (f_wave >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (f_wave_t >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (f_wave_th >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (f_wave_f >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (fi_wave >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (fi_wave_t >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (fi_wave_th >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (fi_wave_f >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (fi_wave_fi >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (s_wave >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (s_wave_t >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (s_wave_th >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (se_wave >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (se_wave_t >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (se_wave_th >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (se_wave_f >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (se_wave_fi >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (se_wave_s >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 if (se_wave_se >= 1) {
-   Master_Stars++
+   Master_Stars++;
 }
 
 $.cookie('Master_Stars', Master_Stars, { expires: 400, domain:'figseu-technology.github.io'});
 
 if (e_wave >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (e_wave_t >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (e_wave_th >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (e_wave_f >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (e_wave_fi >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (e_wave_s >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (e_wave_se >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (n_wave >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (n_wave_t >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (n_wave_th >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (n_wave_f >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (n_wave_fi >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (n_wave_s >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (te_wave >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (te_wave_t >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (te_wave_th >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (te_wave_f >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (te_wave_fi >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (te_wave_s >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (z_wave >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 if (exe_wave >= 1) {
-   Master_Stars_EX++
+   Master_Stars_EX++;
 }
 
 $.cookie('Master_Stars_EX', Master_Stars_EX, { expires: 400, domain:'figseu-technology.github.io'});
