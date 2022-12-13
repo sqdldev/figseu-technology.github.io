@@ -295,7 +295,7 @@ class Ball {
         if (v instanceof RiserMat && this.landed) {
           if (v.detect() && started) {
             this.landed = true;
-            v.line.position.y -= 0.5;
+            v.line.position.y = -500;
           }
         }
       });
