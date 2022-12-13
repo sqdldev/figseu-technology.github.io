@@ -577,11 +577,6 @@ if (exe_wave >= 1) {
 
 $.cookie('Master_Stars_EX', Master_Stars_EX, { expires: 400, domain:'figseu-technology.github.io'});
 
-Master_Stars = $.cookie('Master_Stars');
-Master_Stars_EX = $.cookie('Master_Stars_EX');
-Master_Delta = $.cookie('Master_Delta');
-Master_Delta_EX = $.cookie('Master_Delta_EX');
-Master_Performance = $.cookie('Master_Performance');
 Master_Comments = $.cookie('Master_Comments');
 
 if (typeof Master_Stars == 'undefined') {
