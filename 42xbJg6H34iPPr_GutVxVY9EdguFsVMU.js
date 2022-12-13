@@ -157,6 +157,8 @@ if (se_wave >= 1 && se_wave_t >= 1 && se_wave_th >= 1 && se_wave_f >= 1 && se_wa
    $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 22</h3>");
 } else if (o_wave >= 1 && o_wave_t >= 1 && o_wave_th >= 1 && o_wave_f >= 1 && o_wave_fi >= 1 && o_wave_s >= 1) {
    $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 12</h3>");
+} else {
+   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 0</h3>");
 }
 
 if (exe_wave >= 1 && n_wave_s >= 1 && n_wave_f >= 1 && te_wave >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
@@ -166,9 +168,11 @@ if (exe_wave >= 1 && n_wave_s >= 1 && n_wave_f >= 1 && te_wave >= 1 && te_wave_f
 } else if (te_wave >= 1 && te_wave_t >= 1 && te_wave_th >= 1 && te_wave_f >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
    $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 990</h3>");
 } else if (n_wave >= 1 && n_wave_t >= 1 && n_wave_th >= 1 && n_wave_f >= 1 && n_wave_fi >= 1 && n_wave_s >= 1) {
-   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 210</h3>");
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 510</h3>");
 } else if (e_wave >= 1 && e_wave_t >= 1 && e_wave_th >= 1 && e_wave_f >= 1 && e_wave_fi >= 1 && e_wave_s >= 1 && e_wave_se >= 1) {
    $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 156</h3>");
+} else {
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 0</h3>");
 }
 
 Master_Comments = $.cookie('Master_Comments');
