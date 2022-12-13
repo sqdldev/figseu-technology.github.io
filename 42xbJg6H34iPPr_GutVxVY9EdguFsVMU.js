@@ -262,7 +262,6 @@ te_wave_fi = $.cookie('te_wave_fi');
 te_wave_s = $.cookie('te_wave_s');
 z_wave = $.cookie('z_wave');
 exe_wave = $.cookie('exe_wave');
-Item_1 = $.cookie('Item_1');
 Pfd_0 = $.cookie('Pfd_0');
 Pfd_1 = $.cookie('Pfd_1');
 Pfd_2 = $.cookie('Pfd_2');
