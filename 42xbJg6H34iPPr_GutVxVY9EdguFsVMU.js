@@ -64,12 +64,16 @@ let te_wave_fi = 0;
 let te_wave_s = 0;
 let z_wave = 0;
 let exe_wave = 0;
+
 let Master_Stars = 0;
 let Master_Stars_EX = 0;
 let Master_Delta = 0;
 let Master_Delta_EX = 0;
 let Master_Performance = 0;
+
+let Master_Icon = 0;
 let Master_Comments = 0;
+
 function Loading_Data() {
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
@@ -128,103 +132,48 @@ te_wave_s = $.cookie('te_wave_s');
 z_wave = $.cookie('z_wave');
 exe_wave = $.cookie('exe_wave');
 
+Master_Icon = $.cookie('Master_Icon');
+if (typeof Master_Icon == 'undefined') {
+   Master_Icon = "https://figseu-technology.github.io/Fortitude/img/839_RSE_Chara_Unknown.png";
+   $.cookie('Master_Icon', Master_Icon, { expires: 40, domain:'figseu-technology.github.io'});
+   $('#AC_Icon').html("<img src='" + Master_Icon + "'></img>");
+} else {
+   $('#AC_Icon').html("<img src='" + Master_Icon + "'></img>");
+}
+
 $('#AC_Name').html(UserName);
 
-if (o_wave >= 1 && o_wave_t >= 1 && o_wave_th >= 1 && o_wave_f >= 1 && o_wave_fi >= 1 && o_wave_s >= 1) {
-   $('#Stars_1').html("<h3>集めた☆の数　　　　　　｜　　　　　☆ × 1</h3>");
+if (se_wave >= 1 && se_wave_t >= 1 && se_wave_th >= 1 && se_wave_f >= 1 && se_wave_fi >= 1 && se_wave_s >= 1 && se_wave_se >= 1) {
+   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 147 ⟬ Perfect! ⟭</h3>");
+} else if (s_wave >= 1 && s_wave_t >= 1 && s_wave_th >= 1) {
+   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 98</h3>");
+} else if (fi_wave >= 1 && fi_wave_t >= 1 && fi_wave_th >= 1 && fi_wave_f >= 1 && fi_wave_fi >= 1) {
+   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 80</h3>");
+} else if (f_wave >= 1 && f_wave_t >= 1 && f_wave_th >= 1 && f_wave_f >= 1) {
+   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 55</h3>");
+} else if (th_wave >= 1 && th_wave_t >= 1 && th_wave_th >= 1 && th_wave_f >= 1 && th_wave_fi >= 1) {
+   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 37</h3>");
+} else if (t_wave >= 1 && t_wave_t >= 1 && t_wave_th >= 1 && t_wave_f >= 1 && t_wave_fi >= 1) {
+   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 22</h3>");
+} else if (o_wave >= 1 && o_wave_t >= 1 && o_wave_th >= 1 && o_wave_f >= 1 && o_wave_fi >= 1 && o_wave_s >= 1) {
+   $('#Stars_1').html("<h3>集めた☆の数｜　　　　　　　　　　　☆ × 12</h3>");
 }
 
-let Stars_Result = o_wave + o_wave_t + o_wave_th + o_wave_f + o_wave_fi + o_wave_s + o_wave_se + t_wave + t_wave_t + t_wave_th + t_wave_f + t_wave_fi + th_wave + th_wave_t + th_wave_th + th_wave_f + th_wave_fi + f_wave + f_wave_t + f_wave_th + f_wave_f + fi_wave + fi_wave_t + fi_wave_th + fi_wave_f + fi_wave_fi + s_wave + s_wave_t + s_wave_th + se_wave + se_wave_t + se_wave_th + se_wave_f + se_wave_fi + se_wave_s + se_wave_se;
-Master_Stars = Stars_Result.reduce(function(sum, element){
-  return sum + element;
-}, 0);
-$.cookie('Master_Stars', Master_Stars, { expires: 400, domain:'figseu-technology.github.io'});
-$('#Stars_1').html("<h3>集めた☆の数　　　　　　｜　　　　　☆ × " + Master_Stars + "</h3>");
-
-if (e_wave >= 1) {
-   Master_Stars_EX++;
+if (exe_wave >= 1 && n_wave_s >= 1 && n_wave_f >= 1 && te_wave >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 2000 ⟬ Perfect! ⟭</h3>");
+} else if (z_wave >= 1 && n_wave_s >= 1) {
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 1000</h3>");
+} else if (te_wave >= 1 && te_wave_t >= 1 && te_wave_th >= 1 && te_wave_f >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 990</h3>");
+} else if (n_wave >= 1 && n_wave_t >= 1 && n_wave_th >= 1 && n_wave_f >= 1 && n_wave_fi >= 1 && n_wave_s >= 1) {
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 210</h3>");
+} else if (e_wave >= 1 && e_wave_t >= 1 && e_wave_th >= 1 && e_wave_f >= 1 && e_wave_fi >= 1 && e_wave_s >= 1 && e_wave_se >= 1) {
+   $('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × 156</h3>");
 }
-if (e_wave_t >= 1) {
-   Master_Stars_EX++;
-}
-if (e_wave_th >= 1) {
-   Master_Stars_EX++;
-}
-if (e_wave_f >= 1) {
-   Master_Stars_EX++;
-}
-if (e_wave_fi >= 1) {
-   Master_Stars_EX++;
-}
-if (e_wave_s >= 1) {
-   Master_Stars_EX++;
-}
-if (e_wave_se >= 1) {
-   Master_Stars_EX++;
-}
-if (n_wave >= 1) {
-   Master_Stars_EX++;
-}
-if (n_wave_t >= 1) {
-   Master_Stars_EX++;
-}
-if (n_wave_th >= 1) {
-   Master_Stars_EX++;
-}
-if (n_wave_f >= 1) {
-   Master_Stars_EX++;
-}
-if (n_wave_fi >= 1) {
-   Master_Stars_EX++;
-}
-if (n_wave_s >= 1) {
-   Master_Stars_EX++;
-}
-if (te_wave >= 1) {
-   Master_Stars_EX++;
-}
-if (te_wave_t >= 1) {
-   Master_Stars_EX++;
-}
-if (te_wave_th >= 1) {
-   Master_Stars_EX++;
-}
-if (te_wave_f >= 1) {
-   Master_Stars_EX++;
-}
-if (te_wave_fi >= 1) {
-   Master_Stars_EX++;
-}
-if (te_wave_s >= 1) {
-   Master_Stars_EX++;
-}
-if (z_wave >= 1) {
-   Master_Stars_EX++;
-}
-if (exe_wave >= 1) {
-   Master_Stars_EX++;
-}
-
-$.cookie('Master_Stars_EX', Master_Stars_EX, { expires: 400, domain:'figseu-technology.github.io'});
 
 Master_Comments = $.cookie('Master_Comments');
 $('#C_Performances').html("　");
 
-if (typeof Master_Stars == 'undefined') {
-   Master_Stars = 0;
-}
-if (typeof Master_Stars_EX == 'undefined') {
-   Master_Stars_EX = 0;
-}
-if (typeof Master_Delta == 'undefined') {
-   Master_Delta = 0;
-}
-if (typeof Master_Delta_EX == 'undefined') {
-   Master_Delta_EX = 0;
-}
-if (typeof Master_Performance == 'undefined') {
-   Master_Performance = 0;
-}
 if (typeof Master_Comments == 'undefined') {
    Master_Comments = "コメントが設定されていません";
 }
@@ -287,7 +236,6 @@ $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.githu
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('exe_wave', exe_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
-$('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × " + Master_Stars_EX + "</h3>");
 $('#Delta_1').html("<h3>集めたΔの数 　　　　　　｜　　　　 Δ × " + Master_Delta + "</h3>");
 $('#Delta_30').html("<h3>集めたΔの数 (Δ36以降) ｜　　　　Δ × " + Master_Delta_EX + "</h3>");
 $('#comment').html("<h3>" + Master_Comments + "</h3>");
