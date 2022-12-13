@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="UTF-8">
+<title>Rolling Sky Evolution - サインイン</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #34495e;
+}
+ 
+/*ログインフォームのエリア内のスタイル*/
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+}
+ 
+.box{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ 
+/* ユーザーIDとパスワード入力ボックスのスタイル */
+.box input[type="text"], .box input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #BADB34;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+ 
+/* 入力ボックスがフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
+.box input[type="text"]:focus, .box input[type="password"]:focus{
+    width: 280px;
+    border-color: #D6B531;
+}
+ 
+/* Loginボタンのスタイル */
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #D6B531;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+ 
+/* Loginボタンをマウスオーバーしたときのスタイル */
+.box input[type="submit"]:hover{
+    background: #CC6AB2;
+     
+}
+</style>
+</head>
+<body>
+    <form class="box" action="index.htyml" method="post">
+        <h1>Login</h1>
+        <input type="text" name="" placeholder="ユーザー名">
+        <input type="password" name="" placeholder="パスワード">
+        <input type="submit" name="" value="サインイン">
+    </form>
+</body>
+</html>
