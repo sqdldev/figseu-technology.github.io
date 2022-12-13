@@ -204,6 +204,8 @@ let Master_Delta_EX = 0;
 let Master_Performance = 0;
 let Master_Comments = 0;
 
+function Loading_Data() {
+
 o_wave = $.cookie('o_wave');
 o_wave_t = $.cookie('o_wave_t');
 o_wave_th = $.cookie('o_wave_th');
@@ -665,3 +667,4 @@ $('#Delta_1').html("集めたΔエネルギーの数 ｜　　　　 Δ × " + M
 $('#Delta_30').html("集めたΔエネルギーの数 (Δ36以降) ｜ Δ × " + Master_Delta_EX);
 $('#C_Performances').html("準備中");
 $('#comment').html("<h3>" + Master_Comments + "</h3>");
+}
