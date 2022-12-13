@@ -568,6 +568,7 @@ if (exe_wave >= 1) {
 $.cookie('Master_Stars_EX', Master_Stars_EX, { expires: 400, domain:'figseu-technology.github.io'});
 
 Master_Comments = $.cookie('Master_Comments');
+$('#C_Performances').html("　");
 
 if (typeof Master_Stars == 'undefined') {
    Master_Stars = 0;
@@ -646,11 +647,10 @@ $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.githu
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('exe_wave', exe_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
-$('#Stars_1').html("集めた☆の数 ｜ ☆ × " + Master_Stars);
-$('#Stars_8').html("集めた☆の数 (☆8以降) ｜　　　　 ☆ × " + Master_Stars_EX);
-$('#Delta_1').html("集めたΔエネルギーの数 ｜　　　　 Δ × " + Master_Delta);
-$('#Delta_30').html("集めたΔエネルギーの数 (Δ36以降) ｜ Δ × " + Master_Delta_EX);
-$('#C_Performances').html("準備中");
+$('#Stars_1').html("<h3>集めた☆の数 ｜ ☆ × " + Master_Stars + "</h3>");
+$('#Stars_8').html("<h3>集めた☆の数 (☆8以降) ｜　　　　 ☆ × " + Master_Stars_EX + "</h3>");
+$('#Delta_1').html("<h3>集めたΔエネルギーの数 ｜　　　　 Δ × " + Master_Delta + "</h3>");
+$('#Delta_30').html("<h3>集めたΔエネルギーの数 (Δ36以降) ｜ Δ × " + Master_Delta_EX + "</h3>");
 $('#comment').html("<h3>" + Master_Comments + "</h3>");
 
 return false;
