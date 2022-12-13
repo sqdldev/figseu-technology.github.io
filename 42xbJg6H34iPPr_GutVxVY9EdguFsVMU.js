@@ -130,7 +130,11 @@ exe_wave = $.cookie('exe_wave');
 
 $('#AC_Name').html(UserName);
 
-let Stars_Result = [o_wave, o_wave_t, o_wave_th, o_wave_f, o_wave_fi, o_wave_s, o_wave_se, t_wave, t_wave_t, t_wave_th, t_wave_f, t_wave_fi, th_wave, th_wave_t, th_wave_th, th_wave_f, th_wave_fi, f_wave, f_wave_t, f_wave_th, f_wave_f, fi_wave, fi_wave_t, fi_wave_th, fi_wave_f, fi_wave_fi, s_wave, s_wave_t, s_wave_th, se_wave, se_wave_t, se_wave_th, se_wave_f, se_wave_fi, se_wave_s, se_wave_se];
+if (o_wave >= 1 && o_wave_t >= 1 && o_wave_th >= 1 && o_wave_f >= 1 && o_wave_fi >= 1 && o_wave_s >= 1) {
+   $('#Stars_1').html("<h3>集めた☆の数　　　　　　｜　　　　　☆ × 1</h3>");
+}
+
+let Stars_Result = o_wave + o_wave_t + o_wave_th + o_wave_f + o_wave_fi + o_wave_s + o_wave_se + t_wave + t_wave_t + t_wave_th + t_wave_f + t_wave_fi + th_wave + th_wave_t + th_wave_th + th_wave_f + th_wave_fi + f_wave + f_wave_t + f_wave_th + f_wave_f + fi_wave + fi_wave_t + fi_wave_th + fi_wave_f + fi_wave_fi + s_wave + s_wave_t + s_wave_th + se_wave + se_wave_t + se_wave_th + se_wave_f + se_wave_fi + se_wave_s + se_wave_se;
 Master_Stars = Stars_Result.reduce(function(sum, element){
   return sum + element;
 }, 0);
