@@ -3,7 +3,7 @@ let Luncher = 0;
 
 function Submit() {
    Luncher = $('#avatar_url').val();
-   Luncher = sample.includes('.jpg');
+   Luncher = Luncher.includes('.jpg');
    if (Luncher = true) {
       Master_Icon = $('#avatar_url').val();
       $.cookie('Master_Icon', Master_Icon, { expires: 500, domain:'figseu-technology.github.io'});
