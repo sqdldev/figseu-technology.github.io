@@ -240,7 +240,7 @@ $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.githu
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('exe_wave', exe_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
-$('#Delta_1').html("<h3>集めたΔの数 　　　Δ × " + Master_Delta + "</h3>");
+$('#Delta_1').html("<h3>集めたΔの数 　　　　　Δ × " + Master_Delta + "</h3>");
 $('#Delta_30').html("<h3>集めたΔの数 (Δ36以降)　Δ × " + Master_Delta_EX + "</h3>");
 $('#comment').html("<h3><a href='https://figseu-technology.github.io/CommentEdit.html'>" + Master_Comments + "</a></h3>");
 
