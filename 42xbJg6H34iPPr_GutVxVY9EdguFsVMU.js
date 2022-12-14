@@ -162,17 +162,17 @@ if (se_wave >= 1 && se_wave_t >= 1 && se_wave_th >= 1 && se_wave_f >= 1 && se_wa
 }
 
 if (exe_wave >= 1 && n_wave_s >= 1 && n_wave_f >= 1 && te_wave >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
-   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜☆ × 2000 ⟬ Perfect! ⟭</p>");
+   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 2000 ⟬ Perfect! ⟭</p>");
 } else if (z_wave >= 1 && n_wave_s >= 1) {
-   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜☆ × 1000</p>");
+   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 1000</p>");
 } else if (te_wave >= 1 && te_wave_t >= 1 && te_wave_th >= 1 && te_wave_f >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
-   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜☆ × 990</p>");
+   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 990</p>");
 } else if (n_wave >= 1 && n_wave_t >= 1 && n_wave_th >= 1 && n_wave_f >= 1 && n_wave_fi >= 1 && n_wave_s >= 1) {
-   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜☆ × 510</p>");
+   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 510</p>");
 } else if (e_wave >= 1 && e_wave_t >= 1 && e_wave_th >= 1 && e_wave_f >= 1 && e_wave_fi >= 1 && e_wave_s >= 1 && e_wave_se >= 1) {
-   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜☆ × 156</p>");
+   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 156</p>");
 } else {
-   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜☆ × 0</p>");
+   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 0</p>");
 }
 
 Master_Comments = $.cookie('Master_Comments');
@@ -241,7 +241,7 @@ $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io'}
 $.cookie('exe_wave', exe_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
 $('#Delta_1').html("<p>集めたΔの数｜Δ × " + Master_Delta + "</p>");
-$('#Delta_30').html("<p>集めたΔの数 (Δ36以降)｜Δ × " + Master_Delta_EX + "</p>");
+$('#Delta_30').html("<p>集めたΔの数 (Δ36以降)｜　　Δ × " + Master_Delta_EX + "</p>");
 $('#comment').html("<p><a href='https://figseu-technology.github.io/CommentEdit.html'>" + Master_Comments + "</a></p>");
 
 return false;
