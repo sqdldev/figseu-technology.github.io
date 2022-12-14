@@ -136,9 +136,9 @@ Master_Icon = $.cookie('Master_Icon');
 if (typeof Master_Icon == 'undefined') {
    Master_Icon = "https://figseu-technology.github.io/Fortitude/img/839_RSE_Chara_Unknown.png";
    $.cookie('Master_Icon', Master_Icon, { expires: 40, domain:'figseu-technology.github.io'});
-   $('#AC_Icon').html("<a href="https://figseu-technology.github.io/AvatarEdit.html"><img src='" + Master_Icon + "'></img></a>");
+   $('#AC_Icon').html("<a href='https://figseu-technology.github.io/AvatarEdit.html'><img src='" + Master_Icon + "'></img></a>");
 } else {
-   $('#AC_Icon').html("<a href="https://figseu-technology.github.io/AvatarEdit.html"><img src='" + Master_Icon + "'></img></a>");
+   $('#AC_Icon').html("<a href='https://figseu-technology.github.io/AvatarEdit.html'><img src='" + Master_Icon + "'></img></a>");
 }
 
 $('#AC_Name').html(UserName);
