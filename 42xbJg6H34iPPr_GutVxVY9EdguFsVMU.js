@@ -141,7 +141,7 @@ if (typeof Master_Icon == 'undefined') {
    $('#AC_Icon').html("<a href='https://figseu-technology.github.io/AvatarEdit.html'><img src='" + Master_Icon + "'></img></a>");
 }
 
-$('#AC_Name').html(UserName);
+$('#AC_Name').html("<a href='https://figseu-technology.github.io/UsernameEdit.html'>" + UserName + "</a>");
 
 if (se_wave >= 1 && se_wave_t >= 1 && se_wave_th >= 1 && se_wave_f >= 1 && se_wave_fi >= 1 && se_wave_s >= 1 && se_wave_se >= 1) {
    $('#Stars_1').html("<p>集めた☆の数｜☆ × 147 ⟬ Perfect! ⟭</p>");
