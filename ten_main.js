@@ -185,7 +185,7 @@ function nextLevel() {
   $('#prev').show();
   $('#retry').hide();
   $('#play').show();
-  if (level == 7) {
+  if (level == 6) {
     $('#next').hide();
   }
   if (level == 1) {
