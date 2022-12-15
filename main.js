@@ -25,6 +25,7 @@ let wave_f = 0;
 let wave_fi = 0;
 let wave_s = 0;
 let wave_se = 0;
+let wave_e = 0;
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('o_wave');
 wave_t = $.cookie('o_wave_t');
@@ -33,6 +34,7 @@ wave_f = $.cookie('o_wave_f');
 wave_fi = $.cookie('o_wave_fi');
 wave_s = $.cookie('o_wave_s');
 wave_se = $.cookie('o_wave_se');
+wave_e = $.cookie('o_wave_e');
 let url = location.href;
 let fgnc = url.substr( 42 );
 let data;
@@ -177,6 +179,10 @@ function start(e) {
         wave_se = 0;
         $.cookie('o_wave_se', wave_se, { expires: 1, domain:'figseu-technology.github.io'});
      }
+     if (typeof wave_se == 'undefined') {
+        wave_e = 0;
+        $.cookie('o_wave_e', wave_se, { expires: 1, domain:'figseu-technology.github.io'});
+     }
     if (level == 1) {
         $('#cloud').get(0).play();
         wave++;
@@ -198,6 +204,9 @@ function start(e) {
             } else if (level == 7) {
             $('#holiday').get(0).play();
             wave_se++;
+            } else if (level == 8) {
+            $('#leukocyte').get(0).play();
+            wave_e++;
             } else {
             $('#cloud').get(0).play();
             }
@@ -297,6 +306,11 @@ function nextLevel() {
          $('#level').html('休日');
          $('#stars').html('☆');
          $('#Waves').html('☆ × ' + $.cookie('o_wave_se'));
+        } else if (level == 8) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('Leukocyte');
+         $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('o_wave_e'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -360,6 +374,11 @@ function prevLevel() {
          $('#level').html('休日');
          $('#stars').html('☆');
          $('#Waves').html('☆ × ' + $.cookie('o_wave_se'));
+        } else if (level == 8) {
+         $('#level-d').html('Designed by 星空めたる');
+         $('#level').html('Leukocyte');
+         $('#stars').html('☆');
+         $('#Waves').html('☆ × ' + $.cookie('o_wave_e'));
         } else {
             $('#level-d').html('開発中');
             $('#level').html('Level ' + level);
@@ -492,6 +511,8 @@ function gameover() {
      wave_s = 0;
      } else if (level == 7) {
      wave_se = 0;
+     } else if (level == 8) {
+     wave_e = 0;
      }
   }
   $.cookie('o_wave', wave, { expires: 252, domain:'figseu-technology.github.io'});
@@ -501,6 +522,7 @@ function gameover() {
   $.cookie('o_wave_fi', wave_fi, { expires: 252, domain:'figseu-technology.github.io'});
   $.cookie('o_wave_s', wave_s, { expires: 252, domain:'figseu-technology.github.io'});
   $.cookie('o_wave_se', wave_se, { expires: 252, domain:'figseu-technology.github.io'});
+  $.cookie('o_wave_e', wave_e, { expires: 252, domain:'figseu-technology.github.io'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -558,6 +580,15 @@ function gameover() {
       }
       $('#Waves').html('☆ × ' + $.cookie('o_wave_se'));
       $('#holiday').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 8) {
+      if (star == 2) {
+      $('#level-d').html('渦に呑まれた　影');
+      }
+      $('#Waves').html('☆ × ' + $.cookie('o_wave_e'));
+      $('#leukocyte').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
