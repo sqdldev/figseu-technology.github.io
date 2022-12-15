@@ -5,7 +5,7 @@
     "ball": "0xFFDF00",
     "mat": "0x6341FF",
     "bouncer": "0x66FF91",
-    "obstacle": "0xFFDB38",
+    "obstacle": "0xB9AB00",
     "data":
     [
       [1, 0, 1, 0, 1],
