@@ -276,6 +276,7 @@ function loadLevel(level) {
           world.push(new Skyobstacle(j - 2, -i, data[index].obstacle));
           break;
         case 6:
+          world.push(new Mat(j - 2, -i, data[index].mat));
           world.push(new Trskyobstacle(j - 2, -i, data[index].obstacle));
           break;
         case 60:
@@ -324,7 +325,8 @@ function loadLevel(level) {
           world.push(new Downobstacle(j - 2, -i, data[index].mat));
           break;
         case 20:
-          world.push(new Deltemat(j - 2, -i, data[index].mat));
+          world.push(new DummyMat(j - 2, -i, data[index].obstacle));
+          world.push(new Crystal(j - 2, -i, data[index].obstacle));
           break;
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
@@ -344,9 +346,7 @@ function loadLevel(level) {
           }
           break;
         case 200:
-          world.push(new RiserMat(j - 2, -i, data[index].obstacle));
-          world.push(new DummyMat(j - 2, -i, data[index].obstacle));
-          world.push(new Crystal(j - 2, -i, data[index].obstacle));
+          world.push(new Deltemat(j - 2, -i, data[index].mat));
           break;
         case 39:
           world.push(new Obstacle(j - 2, -i, data[index].bouncer));
