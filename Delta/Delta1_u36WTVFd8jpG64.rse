@@ -3,7 +3,7 @@
     "name": "Time Crystal",
     "background": "0xFFDCD8",
     "ball": "0xFFDF00",
-    "mat": "0x00FFF2",
+    "mat": "0x6341FF",
     "bouncer": "0x66FF91",
     "obstacle": "0xFFDB38",
     "data":
