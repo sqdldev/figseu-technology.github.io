@@ -326,7 +326,7 @@ function loadLevel(level) {
           break;
         case 20:
           world.push(new DummyMat(j - 2, -i, data[index].obstacle));
-          world.push(new Crystal(j - 2, -i, data[index].obstacle));
+          world.push(new Crystal(j - 2, -i, data[index].mat));
           break;
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
