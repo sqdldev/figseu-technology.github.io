@@ -956,13 +956,13 @@ class Crystal {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
     this.geometry = new THREE.SphereGeometry(1000, 4, 4);
-    this.material = new THREE.MeshPhongMaterial({ color: 0xFF0018 });
+    this.material = new THREE.MeshPhongMaterial({ color: color });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
-    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xFF0018 });
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: color });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, -2, zpos);
-    this.line.position.set(xpos, -2, zpos);
+    this.mesh.position.set(xpos, 0, zpos);
+    this.line.position.set(xpos, 0, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.line);
