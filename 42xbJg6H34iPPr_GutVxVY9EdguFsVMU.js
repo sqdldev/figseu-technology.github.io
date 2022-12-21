@@ -138,13 +138,14 @@ if (typeof Master_Icon == 'undefined') {
    $.cookie('Master_Icon', Master_Icon, { expires: 40, domain:'figseu-technology.github.io'});
    $('#AC_Icon').html("<a href='https://figseu-technology.github.io/AvatarEdit.html'><img src='" + Master_Icon + "'></img></a>");
 } else {
+   $.cookie('Master_Icon', Master_Icon, { expires: 600, domain:'figseu-technology.github.io'});
    $('#AC_Icon').html("<a href='https://figseu-technology.github.io/AvatarEdit.html'><img src='" + Master_Icon + "'></img></a>");
 }
 
 $('#AC_Name').html("<a href='https://figseu-technology.github.io/UsernameEdit.html'>" + UserName + "</a>");
 
-if (se_wave >= 1 && se_wave_t >= 1 && se_wave_th >= 1 && se_wave_f >= 1 && se_wave_fi >= 1 && se_wave_s >= 1 && se_wave_se >= 1) {
-   $('#Stars_1').html("<p>集めた☆の数｜☆ × 147 ⟬ Perfect! ⟭</p>");
+if (se_wave >= 1 && se_wave_t >= 1 && se_wave_th >= 1 && se_wave_f >= 1 && se_wave_fi >= 1) {
+   $('#Stars_1').html("<p>集めた☆の数｜☆ × 147 👑</p>");
 } else if (s_wave >= 1 && s_wave_t >= 1 && s_wave_th >= 1) {
    $('#Stars_1').html("<p>集めた☆の数｜☆ × 98</p>");
 } else if (fi_wave >= 1 && fi_wave_t >= 1 && fi_wave_th >= 1 && fi_wave_f >= 1 && fi_wave_fi >= 1) {
@@ -162,7 +163,7 @@ if (se_wave >= 1 && se_wave_t >= 1 && se_wave_th >= 1 && se_wave_f >= 1 && se_wa
 }
 
 if (exe_wave >= 1 && n_wave_s >= 1 && n_wave_f >= 1 && te_wave >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
-   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 2000 ⟬ Perfect! ⟭</p>");
+   $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 2000 👑</p>");
 } else if (z_wave >= 1 && n_wave_s >= 1) {
    $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 1000</p>");
 } else if (te_wave >= 1 && te_wave_t >= 1 && te_wave_th >= 1 && te_wave_f >= 1 && te_wave_fi >= 1 && te_wave_s >= 1) {
@@ -240,9 +241,14 @@ $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.githu
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('exe_wave', exe_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
+$.cookie('UserName', UserName, { expires: 600, domain:'figseu-technology.github.io'});
+$.cookie('Password', Password, { expires: 600, domain:'figseu-technology.github.io'});
+
 $('#Delta_1').html("<p>集めたΔの数｜Δ × " + Master_Delta + "</p>");
 $('#Delta_30').html("<p>集めたΔの数 (Δ36以降)｜　　Δ × " + Master_Delta_EX + "</p>");
 $('#comment').html("<p><a href='https://figseu-technology.github.io/CommentEdit.html'>" + Master_Comments + "</a></p>");
+
+$.cookie('Master_Comments', Master_Comments, { expires: 600, domain:'figseu-technology.github.io'});
 
 return false;
 }
