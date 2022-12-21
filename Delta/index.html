@@ -47,7 +47,7 @@ body{
 }
  
 /* ユーザーIDとパスワード入力ボックスのスタイル */
-.box input[type="text"], .box input[type="password"]{
+.box select{
     border: 0;
     background: none;
     display: block;
@@ -63,7 +63,7 @@ body{
 }
  
 /* 入力ボックスがフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
-.box input[type="text"]:focus, .box input[type="password"]:focus{
+.box select:focus{
     width: 280px;
     border-color: #D6B531;
 }
@@ -123,7 +123,13 @@ body{
         <a href="https://figseu-technology.github.io/Profile.html">デルタパスポート</a>
         <hr size="3"/>
         <h4>〘 ステージ選択 〙</h4>
-        <a href="https://figseu-technology.github.io/Delta/Delta1_u36WTVFd8jpG64.html">Δ1</a>
+        <select name="Stages" id="stage-select">
+        <option value="DGDR">Stage Select</option>
+        <option value="Time Crystal">Time Crystal</option>
+        <option value="The Helix">The Helix</option>
+        <option value="The Amethyst">The Amethyst</option>
+        </select>
+        <button onclick="Submit()">Play</button>
     </div>
 </body>
 <script src="https://figseu-technology.github.io/System/jquery.js"></script>
