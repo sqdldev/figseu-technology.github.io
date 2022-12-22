@@ -1,0 +1,127 @@
+body {
+	background-color: #F4F4F4;
+	color: #ABABAB;
+}
+.footer {
+	color: #9F9F9F;
+}
+hr {
+	position: relative;
+	z-index: 3;
+	background: #ABABAB;
+	border: #ABABAB;
+	border-radius: 2px;
+}
+img.ip {
+	background: url(null84443404304038804);
+	height: 80%;
+	width: 80%;
+	border: solid #FF8200;
+}
+video {
+	width: 76.6%;
+	height: 169px;
+	border: solid #FFA800;
+}
+iframe {
+	width: 76.6%;
+	height: 169px;
+	border: solid #FFA800;
+}
+a {
+	text-decoration:none;
+	color:#A4A4A4 ;
+}
+h3 {
+	color: #FF8800;
+	height: 25px;
+	width: 100px;
+	text-align: center;
+	background: #00FFF5;
+	border: solid #FF8200;
+}
+button.input {
+	color: #FFFFFF;
+	background: #FF9300;
+	border: solid #FFCF00;
+	width: 70px;
+	padding: 5px;
+	transition: 1s;
+}
+button.input:hover {
+	background: #0082FF;
+}
+.URL {
+	width: 300px;
+	padding: 5px;
+	color: #E8E8E8;
+	background: #323232;
+	border-radius: 0.5px;
+}
+img.youtube {
+	width: 300px;
+	height: 169px;
+	border: solid #FF8200;
+}
+.bar {
+	position: absolute;
+	z-index: 3;
+	width: 80%;
+	background-color: #FFFFFF;
+	outline: none;
+	box-shadow: 0px 2px 3px rgba( 0, 0, 0, 0.25 );
+}
+.s_bar {
+	position: relative;
+	z-index: 3;
+	width: 99%;
+	border-radius: 1px;
+	padding: 2px;
+	background-color: #FFFFFF;
+	outline: none;
+	box-shadow: 0px 2px 3px rgba( 0, 0, 0, 0.25 );
+}
+input {
+	font-size: 15px;
+	outline: none;
+	border: 1px solid #FFFFFF;
+}
+.Home_button {
+	position: absolute;
+	z-index: 1;
+	height: 1px;
+	width: 1px;
+	color: #ABABAB;
+	font-size: 50px;
+	border: solid #F4F4F4;
+	background: #F4F4F4;
+	transition: 0.4s;
+}
+.Home_button:focus {
+	position: absolute;
+	z-index: 4;
+	font-size: 0px;
+	color: #616161;
+	height: 110%;
+	width: 50%;
+	border: solid #F4F4F4;
+	background: #616161;
+	border-left: solid;
+	border-top: solid;
+	border-right: double 5px #F4F4F4;
+	outline: none;
+}
+.Home_activity {
+	z-index: 5;
+	color: #F4F4F4;
+	font-size: 10px;
+}
+.Home_p {
+	z-index: 5;
+	fontsize: 10px;
+}
+.Home_a {
+	z-index: 2;
+	color: #F4F4F4;
+	text-decoration:none;
+}
