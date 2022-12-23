@@ -30,59 +30,59 @@ $('#color').on('click', e => {
   $('#chenge_c').get(0).play();
   e.preventDefault();
   e.handled = true;
-	color = (color + 1) % 21;
+	color = (color + 1) % 23;
 	if (color == 1) {
-		$('#color_type').html('Mat');
+		$('#color_type').html('通常床');
 	} else if (color == 2) {
-		$('#color_type').html('Bouncer');
+		$('#color_type').html('ジャンプ台');
 	} else if (color == 3) {
-		$('#color_type').html('Obstacle');
+		$('#color_type').html('ブロック');
 	} else if (color == 4) {
-		$('#color_type').html('Dream Cube');
+		$('#color_type').html('ドリームキューブ');
 	} else if (color == 5) {
-		$('#color_type').html('Sky Obstacle');
+		$('#color_type').html('トンネル');
 	} else if (color == 6) {
-		$('#color_type').html('Three Obstacle');
+		$('#color_type').html('高いトンネル');
 	} else if (color == 7) {
-		$('#color_type').html('Crown');
+		$('#color_type').html('王冠');
 	} else if (color == 8) {
-		$('#color_type').html('Gem');
+		$('#color_type').html('宝石');
 	} else if (color == 9) {
-		$('#color_type').html('Goal');
+		$('#color_type').html('ゴール');
 	} else if (color == 10) {
-		$('#color_type').html('Speed UP');
+		$('#color_type').html('スピードアップ');
 	} else if (color == 11) {
-		$('#color_type').html('Speed Normal');
+		$('#color_type').html('エフェクトクリア');
 	} else if (color == 12) {
-		$('#color_type').html('Speed Down');
+		$('#color_type').html('スピードダウン');
 	} else if (color == 13) {
-		$('#color_type').html('Back');
+		$('#color_type').html('進行方向反転');
 	} else if (color == 14) {
-		$('#color_type').html('Warp Hole');
+		$('#color_type').html('ワープホール');
 	} else if (color == 15) {
-		$('#color_type').html('Fast Bouncer');
+		$('#color_type').html('ジャンプ床(加速時)');
 	} else if (color == 16) {
-		$('#color_type').html('High Obstacle');
+		$('#color_type').html('高いブロック');
 	} else if (color == 17) {
-		$('#color_type').html('Tower');
+		$('#color_type').html('タワーブロック');
 	} else if (color == 18) {
-		$('#color_type').html('UP Obstacle');
+		$('#color_type').html('通行不可の床');
 	} else if (color == 19) {
-		$('#color_type').html('Down Obstacle');
+		$('#color_type').html('通行可能ブロック');
 	} else if (color == 20) {
-		$('#color_type').html('Delte Mat');
+		$('#color_type').html('落ちる床');
 	} else if (color == 21) {
-		$('#color_type').html('Floot mat');
+		$('#color_type').html('Function mat');
+	} else if (color == 22) {
+		$('#color_type').html('Function Block');
 	} else if (color == 23) {
-		$('#color_type').html('Delte Obstacle');
-	} else if (color == 33) {
 		$('#color_type').html('Delte Obstacle S');
 	} else if (color == 50) {
 		$('#color_type').html('Sky Obstacle N');
 	} else if (color == 0) {
-		$('#color_type').html('Clear');
+		$('#color_type').html('空白');
 	} else {
-		$('#color_type').html('オブジェクトなし');
+		$('#color_type').html('オブジェクトエラー');
 	}
 	$('#color').css('background-color', colors[color]);
 });
