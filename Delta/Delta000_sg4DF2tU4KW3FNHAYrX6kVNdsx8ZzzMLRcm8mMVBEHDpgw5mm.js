@@ -355,6 +355,16 @@ class Ball {
       if (v.detect()) gameover();
       star = 1;
     });
+    world.forEach(v => {
+      if (v instanceof RubyCrystal)
+      if (v.detect()) gameover();
+      star = 1;
+    });
+    world.forEach(v => {
+      if (v instanceof XRiser)
+      if (v.detect()) gameover();
+      star = 1;
+    });
   }
 }
 
@@ -1191,6 +1201,116 @@ class RiserMat {
       ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
       ball.mesh.position.z <= this.mesh.position.z + 7 &&
       ball.mesh.position.z <= 1
+    ) return true;
+  }
+}
+
+class TimeCrystal {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.PlaneGeometry(5, 5, 5);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/TimeCrystal.cmr'), transparent: true});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 2.4, zpos);
+    this.line.position.set(xpos, 2.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
+      ball.mesh.position.z <= 0.5 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
+    ) return true;
+  }
+}
+class RubyCrystal {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.PlaneGeometry(1, 5, 1);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/Ruby-Crystal.cmr'), transparent: true});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 2.4, zpos);
+    this.line.position.set(xpos, 2.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
+      ball.mesh.position.z <= 0.5 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
+    ) return true;
+  }
+}
+class XRiser {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.BoxGeometry(1, 1, 1);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/Riser.cmr'), transparent: true});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0.4, zpos);
+    this.line.position.set(xpos, 0.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
+    scene.add(this.line);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
+      ball.mesh.position.z <= 0.5 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
+    ) return true;
+  }
+}
+class ACCloud {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.PlaneGeometry(5, 5, 5);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/AC-Cloud.cmr'), transparent: true});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 2.4, zpos);
+    this.line.position.set(xpos, 2.4, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
+      ball.mesh.position.z <= 0.5 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
     ) return true;
   }
 }
