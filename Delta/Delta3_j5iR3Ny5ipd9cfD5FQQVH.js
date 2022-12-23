@@ -331,6 +331,19 @@ function loadLevel(level) {
         case 21:
           world.push(new Worpmat(j - 2, -i, data[index].mat));
           break;
+        case 22:
+          world.push(new TimeCrystal(j - 2, -i, data[index].mat));
+          world.push(new Mat(j - 2, -i, data[index].obstacle));
+          break;
+        case 23:
+          world.push(new RubyCrystal(j - 2, -i, data[index].mat));
+          break;
+        case 24:
+          world.push(new XRiser(j - 2, -i, data[index].obstacle));
+          break;
+        case 25:
+          world.push(new ACCloud(j - 2, -i, data[index].mat));
+          break;
         case 31:
           if (girls == 0) {
              world.push(new RandomMat(j - 2, -i, data[index].obstacle));
