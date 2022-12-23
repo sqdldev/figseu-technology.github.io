@@ -329,7 +329,10 @@ function loadLevel(level) {
           world.push(new Crystal(j - 2, -i, data[index].mat));
           break;
         case 21:
-          world.push(new Worpmat(j - 2, -i, data[index].mat));
+          world.push(new XRiser(j - 2, -i, data[index].obstacle));
+          break;
+        case 22:
+          world.push(new TimeCrystal(j - 2, -i, data[index].mat));
           break;
         case 31:
           if (girls == 0) {
