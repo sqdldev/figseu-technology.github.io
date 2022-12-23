@@ -13,26 +13,8 @@
 <hr size="3"/>
 <br> </br>
 <div class="s_bar" align="center">
-<p class="URL">&#60a href&#61&#34[url]&#34&#62</p>
-<button class="input" onclick="G()">INPUT</button>
-</head>
-<body>
-<hr size="3"/>
-<div align="center" id="greet">
-<h3><a href="A">HTTPS</a></h3>
-</div></div>
-<p>&#12288;</p>
-<div class="s_bar" align="center">
-<p class="URL">&#60a href&#61&#34[url]&#34&#62</p>
-<button class="input" onclick="D()">INPUT</button>
-<hr size="3"/>
-<div align="center" id="verow">
-<h3><a href="B">HTTP</a></h3>
-</div></div>
-<p>&#12288;</p>
-<div class="s_bar" align="center">
-<p class="URL">&#60img src&#61&#34[image url]&#34&#62</p>
-<button class="input" onclick="R()">INPUT</button>
+<input type="text" class="box_input" id="image_url" placeholder="画像のURL">
+<button class="box_button" onclick="R()">INPUT</button>
 <hr size="3"/>
 <h3>IMAGE</h3>
 <div align="center" id="agreat">
@@ -42,8 +24,8 @@
 </img>
 <p>&#12288;</p>
 <div class="s_bar" align="center">
-<p class="URL">&#60video src&#61&#34[Video url]&#34 controls loop &#62</p>
-<button class="input" onclick="U()">INPUT</button>
+<input type="text" class="box_input" id="video_url" placeholder="動画のURL">
+<button class="box_button" onclick="U()">INPUT</button>
 <hr size="3"/>
 <h3>Video</h3>
 <div align="center" id="wender">
@@ -51,7 +33,7 @@
 </div></div>
 <p>&#12288;</p>
 <div class="s_bar" align="center">
-<p class="URL">https&#58;&#47;&#47;m.youtube.com&#47;watch?v=[Video ID]</p>
+<input type="text" class="box_input" id="youtube_url" placeholder="YoutubeのURL(例:https://m.youtube.com/watch?v=XXXXXXXXXXX)">
 <button class="input" onclick="Y()">INPUT</button>
 <hr size="3"/>
 <h3>YouTube</h3>
@@ -60,5 +42,4 @@
 </div></div>
 <hr/>
 </body>
-<br> </br>
-<br> </br>
+<script src="https://figseu-technology.github.io/System/jquery.js"></script>
