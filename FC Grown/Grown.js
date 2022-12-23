@@ -1,25 +1,20 @@
-function G() {
-let A = prompt("url")
-var greet = document.getElementById("greet")
-greet.innerHTML = "<h3><a href='" + A + "' download='file'>HTTPS</a></h3><br> <br/>"
-}
-function D() {
-let B = prompt("url")
-var verow = document.getElementById("verow")
-verow.innerHTML = "<h3><a href='" + B + "' download='file'>HTTP</a></h3><br> <br/>"
-}
+let image_pin = 0;
+let video_pin = 0;
+let youtube_pin = 0;
+let fgnc = 0;
+
 function R() {
-let C = prompt("image url")
+image_pin = $('#image_url').val();
 var agreat = document.getElementById("agreat")
-agreat.innerHTML = "<a href='" + C + "'><img class='ip' alt='' src='C'></img></a>"
+agreat.innerHTML = "<a href='" + image_pin + "'><img class='ip' alt='' src='C'></img></a>"
 }
 function U() {
-let D = prompt("Video url")
+video_pin = $('#video_url').val();
 var wender = document.getElementById("wender")
-wender.innerHTML = "<video src='" + D + "' controls loop poster='file:///android_asset/FeX_Uranus_Music/images/FU.jpg'></video>"
+wender.innerHTML = "<video src='" + video_pin + "' controls loop poster='https://figseu-technology.github.io/img/45470902252844274267090914130269011921726211338300.cmr'></video>"
 }
 function Y() {
-let E = prompt("Video ID");
+youtube_pin = $('#youtube_url').val();
 var youigreat = document.getElementById("youigreat")
-youigreat.innerHTML = "<iframe id='downloder' src='https://www.youtube.com/embed/" + E +"' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+youigreat.innerHTML = "<iframe id='downloder' src='https://www.youtube.com/embed/" + youtube_pin +"' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
 }
