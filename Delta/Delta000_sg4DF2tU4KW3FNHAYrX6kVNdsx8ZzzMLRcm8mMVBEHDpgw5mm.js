@@ -303,7 +303,7 @@ class Ball {
         if (v instanceof TimeCrystal && this.landed) {
           if (v.detect() && started) {
             this.landed = true;
-            v.mesh.rotation.x += 0.2;
+            v.mesh.rotation.z += 0.05;
           }
         }
       });
