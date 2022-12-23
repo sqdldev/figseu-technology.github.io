@@ -125,3 +125,39 @@ input {
 	color: #F4F4F4;
 	text-decoration:none;
 }
+
+.box_input[type="text"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #BADB34;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box_input[type="text"]:focus{
+    width: 280px;
+    border-color: #D6B531;
+}
+.box_button{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #D6B531;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box_button:hover{
+    background: #CC6AB2;
+}
