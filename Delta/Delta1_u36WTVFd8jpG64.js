@@ -333,6 +333,7 @@ function loadLevel(level) {
           break;
         case 22:
           world.push(new TimeCrystal(j - 2, -i, data[index].mat));
+          world.push(new Mat(j - 2, -i, data[index].obstacle));
           break;
         case 31:
           if (girls == 0) {
