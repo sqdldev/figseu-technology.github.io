@@ -1,39 +1,39 @@
 body {
-	background-color: #F4F4F4;
-	color: #ABABAB;
+	background-color: #532000;
+	color: #FFFFFF;
 }
 .footer {
-	color: #9F9F9F;
+	color: #FFFFFF;
 }
 hr {
 	position: relative;
 	z-index: 3;
-	background: #ABABAB;
-	border: #ABABAB;
+	background: #FFFFFF;
+	border: #FFFFFF;
 	border-radius: 2px;
 }
 img.ip {
 	background: url(null84443404304038804);
 	height: 80%;
 	width: 80%;
-	border: solid #FF8200;
+	border: solid #FFFFFF;
 }
 video {
 	width: 76.6%;
 	height: 169px;
-	border: solid #FFA800;
+	border: solid #FFFFFF;
 }
 iframe {
 	width: 76.6%;
 	height: 169px;
-	border: solid #FFA800;
+	border: solid #FFFFFF;
 }
 a {
 	text-decoration:none;
-	color:#A4A4A4 ;
+	color: #FFFFFF;
 }
 h3 {
-	color: #FF8800;
+	color: #FFFFFF;
 	height: 25px;
 	width: 100px;
 	text-align: center;
@@ -61,13 +61,13 @@ button.input:hover {
 img.youtube {
 	width: 300px;
 	height: 169px;
-	border: solid #FF8200;
+	border: solid #FFFFFF;
 }
 .bar {
 	position: absolute;
 	z-index: 3;
 	width: 80%;
-	background-color: #FFFFFF;
+	background-color: #323232;
 	outline: none;
 	box-shadow: 0px 2px 3px rgba( 0, 0, 0, 0.25 );
 }
@@ -77,7 +77,7 @@ img.youtube {
 	width: 99%;
 	border-radius: 1px;
 	padding: 2px;
-	background-color: #FFFFFF;
+	background-color: #323232;
 	outline: none;
 	box-shadow: 0px 2px 3px rgba( 0, 0, 0, 0.25 );
 }
