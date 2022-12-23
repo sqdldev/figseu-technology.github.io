@@ -65,6 +65,9 @@ let te_wave_s = 0;
 let z_wave = 0;
 let exe_wave = 0;
 
+let delta_one_wave = 0;
+let delta_two_wave = 0;
+
 let Master_Stars = 0;
 let Master_Stars_EX = 0;
 let Master_Delta = 0;
@@ -132,6 +135,9 @@ te_wave_s = $.cookie('te_wave_s');
 z_wave = $.cookie('z_wave');
 exe_wave = $.cookie('exe_wave');
 
+delta_one_wave = $.cookie('delta_one_wave');
+delta_two_wave = $.cookie('delta_two_wave');
+
 Master_Icon = $.cookie('Master_Icon');
 if (typeof Master_Icon == 'undefined') {
    Master_Icon = "https://figseu-technology.github.io/Fortitude/img/839_RSE_Chara_Unknown.png";
@@ -174,6 +180,14 @@ if (exe_wave >= 1 && n_wave_s >= 1 && n_wave_f >= 1 && te_wave >= 1 && te_wave_f
    $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 156</p>");
 } else {
    $('#Stars_8').html("<p>集めた☆の数 (☆8以降)｜　☆ × 0</p>");
+}
+
+if (delta_one_wave >= 1) {
+   $('#Delta_1').html("<p>集めたΔの数｜Δ × 33</p>");
+} else if (delta_two_wave >= 1) {
+   $('#Delta_1').html("<p>集めたΔの数｜Δ × 13</p>");
+} else {
+   $('#Delta_1').html("<p>集めたΔの数｜Δ × 0</p>");
 }
 
 Master_Comments = $.cookie('Master_Comments');
@@ -240,12 +254,13 @@ $.cookie('te_wave_fi', te_wave_fi, { expires: 400, domain:'figseu-technology.git
 $.cookie('te_wave_s', te_wave_s, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('z_wave', z_wave, { expires: 400, domain:'figseu-technology.github.io'});
 $.cookie('exe_wave', exe_wave, { expires: 400, domain:'figseu-technology.github.io'});
+$.cookie('delta_one_wave', delta_one_wave, { expires: 400, domain:'figseu-technology.github.io'});
+$.cookie('delta_two_wave', delta_two_wave, { expires: 400, domain:'figseu-technology.github.io'});
 
 $.cookie('UserName', UserName, { expires: 600, domain:'figseu-technology.github.io'});
 $.cookie('Password', Password, { expires: 600, domain:'figseu-technology.github.io'});
 
-$('#Delta_1').html("<p>集めたΔの数｜Δ × " + Master_Delta + "</p>");
-$('#Delta_30').html("<p>集めたΔの数 (Δ36以降)｜　　Δ × " + Master_Delta_EX + "</p>");
+$('#Delta_30').html("<p>集めたΛの数｜Λ × " + Master_Delta_EX + "</p>");
 $('#comment').html("<p><a href='https://figseu-technology.github.io/CommentEdit.html'>" + Master_Comments + "</a></p>");
 
 $.cookie('Master_Comments', Master_Comments, { expires: 600, domain:'figseu-technology.github.io'});
