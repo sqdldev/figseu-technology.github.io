@@ -1231,12 +1231,12 @@ class TimeCrystal {
   }
   detect() {
     if (
-      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
-      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
-      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
-      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
-      ball.mesh.position.z <= 0.5 &&
-      ball.mesh.position.y < this.mesh.position.y + 10
+      ball.mesh.position.x >= this.mesh.position.x - 10 &&
+      ball.mesh.position.x <= this.mesh.position.x + 10 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.8 &&
+      ball.mesh.position.z <= this.mesh.position.z + 7 &&
+      ball.mesh.position.z <= 7 &&
+      ball.mesh.position.y < this.mesh.position.y + 0.8
     ) return true;
   }
 }
