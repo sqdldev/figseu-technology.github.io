@@ -1243,7 +1243,7 @@ class TimeCrystal {
 class RubyCrystal {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.PlaneGeometry(1, 5, 1);
+    this.geometry = new THREE.PlaneGeometry(1.5, 5, 1.5);
     this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/Ruby-Crystal.cmr'), transparent: true});
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
