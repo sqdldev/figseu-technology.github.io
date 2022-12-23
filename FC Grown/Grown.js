@@ -15,6 +15,7 @@ wender.innerHTML = "<video src='" + video_pin + "' controls loop poster='https:/
 }
 function Y() {
 youtube_pin = $('#youtube_url').val();
+fgnc = youtube_pin.substr( 30 );
 var youigreat = document.getElementById("youigreat")
-youigreat.innerHTML = "<iframe id='downloder' src='https://www.youtube.com/embed/" + youtube_pin +"' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+youigreat.innerHTML = "<iframe id='downloder' src='https://www.youtube.com/embed/" + fgnc +"' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
 }
