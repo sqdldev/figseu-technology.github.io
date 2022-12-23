@@ -299,6 +299,14 @@ class Ball {
           }
         }
       });
+      world.forEach(v => {
+        if (v instanceof TimeCrystal && this.landed) {
+          if (v.detect() && started) {
+            this.landed = true;
+            v.mesh.rotation.x += 0.2;
+          }
+        }
+      });
    if (fgnc == 'Function_---Eshell---_-Deltemat-_Landing-True-') {
    
    } else {
@@ -1214,8 +1222,8 @@ class TimeCrystal {
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
     this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xC8A600 });
     this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
-    this.mesh.position.set(xpos, 2.4, zpos);
-    this.line.position.set(xpos, 2.4, zpos);
+    this.mesh.position.set(xpos, 0.4, zpos);
+    this.line.position.set(xpos, 0.4, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
     scene.add(this.mesh);
