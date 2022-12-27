@@ -973,7 +973,7 @@ class Worpmat {
 class Crystal {
   constructor(xpos, zpos, color) {
     color = parseInt(color);
-    this.geometry = new THREE.SphereGeometry(1000, 4, 4);
+    this.geometry = new THREE.BoxGeometry(3.5, 10, 3.5);
     this.material = new THREE.MeshPhongMaterial({ color: color });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
