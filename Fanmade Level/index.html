@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Rolling Sky Evolution - ステージテスター</title>
+        <link rel="canonical" href="https://figseu-technology.github.io/RollingSkyEvolution/index.html">
+        <meta property="twitter:card" content="summary_large_image">
+	<meta name="robots" content="noindex">
+        <meta property="og:url" content="https://figseu-technology.github.io/RollingSkyEvolution/fanmade_index.html">
+        <meta property="og:site_name" content="Rolling Sky Evolution - エントリーステージ">
+        <meta property="og:title" content="Rolling Sky Evolution">
+        <meta property="og:description" content="あなたが作ったステージで遊ぼう！">
+        <meta property="description" content="あなたが作ったステージで遊ぼう！">
+        <meta property="og:image" content="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
+        <meta name="keywords" content="ゲーム,難しい,ローリングスカイ,rolling sky,楽しい,無料,スマホ,アクション,世界一難しいゲーム,人間卒業">
+	<link rel="stylesheet" href="https://figseu-technology.github.io/style.css">
+	<link href="https://figseu-technology.github.io/css.css" rel="stylesheet">
+	<link rel="icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
+        <link rel="shortcut icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
+        <link rel="apple-touch-icon" href="https://figseu-technology.github.io/RollingSkyEvolution/img/icon.png">
+  <audio rel="preload" src="https://figseu-technology.github.io/se/jump.mp3" id="jump" preload="auto"></audio>
+  <audio rel="preload" src="https://figseu-technology.github.io/se/Crown.mp3" id="crown" preload="auto"></audio>
+  <audio rel="preload" src="https://figseu-technology.github.io/se/Gem.mp3" id="gem" preload="auto"></audio>
+  <audio rel="preload" src="https://figseu-technology.github.io/se/Speed UP.mp3" id="speedup" preload="auto"></audio>
+  <audio rel="preload" src="https://figseu-technology.github.io/se/Speed Down.mp3" id="speeddown" preload="auto"></audio>
+  <audio rel="preload" src="file:///sdcard/RollingSkyEvolution/music.mp3" id="sakura" preload="auto"></audio>
+</head>
+<body onContextmenu=”return false”>
+  <div id="canvascontainer">
+    <div id="percent">0%</div>
+  </div>
+  <div id="main">
+    <div id="level"> </div>
+    <div id="score">Stage Tester</div>
+    <div id="stars"></div>
+        <div id="level-d" > </div>
+        <a href="https://figseu-technology.github.io/" id="one_level">▷</a>
+        <div id="Waves">☆ × 0</div>
+    <div class="button" id="play">➣</div>
+    <div class="button" id="retry">
+      <img id="retry-icon" src="img/arrow-right.svg">
+    </div>
+    <div class="button" id="next" onclick="nextLevel()">▷</div>
+    <div class="button" id="prev" onclick="prevLevel()">◁</div>
+  </div>
+  <script src="https://figseu-technology.github.io/System/three.js"></script>
+	<script src="https://figseu-technology.github.io/System/jquery.js"></script>
+        <script src="https://figseu-technology.github.io/System/cookie.js"></script>
+	<script src="https://figseu-technology.github.io/classes.js"></script>
+	<script src="main.js"></script>
+	<script src="https://figseu-technology.github.io/System/controls.js"></script>
+</body>
+</html>
