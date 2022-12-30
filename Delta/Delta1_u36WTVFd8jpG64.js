@@ -246,7 +246,7 @@ scene.add(light);
 const world = [];
 function loadLevel(level) {
   const index = level - 1;
-  renderer.setClearColor(parseInt(data[index].background));
+  renderer.THREE.ImageUtils.loadTexture( 'textures/163_20221230123545.cmr' );
   ball.mesh.material.color.setHex(parseInt(data[index].ball));
   scene.fog = new THREE.Fog(parseInt(data[index].background), 10, 30);
   for (var i in data[index].data) {
