@@ -14,7 +14,7 @@ if (typeof UserName == 'undefined' && typeof Password == 'undefined') {
 const data = [];
 for (let i = 0; i < gridLength; i++) {
 	grid.append('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
-	data.push(0,0,0,0,0);
+	data.push([0,0,0,0,0]);
 }
 
 $('#designer').scrollTop($('#designer')[0].scrollHeight);
@@ -96,7 +96,7 @@ $('#add').on('click', e => {
   e.preventDefault();
   e.handled = true;
   $('#grid').prepend('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
-  data.push(0,0,0,0,0);
+  data.push([0,0,0,0,0]);
   gridLength++;
 });
 
