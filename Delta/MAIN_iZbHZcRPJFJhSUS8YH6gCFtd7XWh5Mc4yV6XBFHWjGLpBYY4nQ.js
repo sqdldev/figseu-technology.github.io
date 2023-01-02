@@ -1,6 +1,6 @@
 const grid = $('#grid');
 
-let gridLength = 3000;
+let gridLength = 2000;
 let mouseDown = false;
 
 let UserName = 0;
@@ -126,7 +126,7 @@ $('#color').on('click', e => {
 	} else if (color == 47) {
 		$('#color_type').html('浮かぶ星 (空中)');
 	} else if (color == 48) {
-		$('#color_type').html('不明');
+		$('#color_type').html('空白');
 	} else if (color == 49) {
 		$('#color_type').html('大型の電波塔');
 	} else if (color == 50) {
@@ -215,6 +215,102 @@ $('#color').on('click', e => {
 		$('#color_type').html('左に動くブロック2');
 	} else if (color == 92) {
 		$('#color_type').html('右に動くブロック2');
+	} else if (color == 93) {
+		$('#color_type').html('テトリスブロック(緑)');
+	} else if (color == 94) {
+		$('#color_type').html('テトリスブロック(赤)');
+	} else if (color == 95) {
+		$('#color_type').html('テトリスブロック(桃)');
+	} else if (color == 96) {
+		$('#color_type').html('テトリスブロック(水)');
+	} else if (color == 97) {
+		$('#color_type').html('テトリスブロック(黄)');
+	} else if (color == 98) {
+		$('#color_type').html('テトリスブロック(青)');
+	} else if (color == 99) {
+		$('#color_type').html('テトリスブロック(黄金)');
+	} else if (color == 100) {
+		$('#color_type').html('テトリスブロック(紫)');
+	} else if (color == 101) {
+		$('#color_type').html('横回転ハンマー(左)');
+	} else if (color == 102) {
+		$('#color_type').html('横回転ハンマー(右)');
+	} else if (color == 103) {
+		$('#color_type').html('横回転ハンマー2(左)');
+	} else if (color == 104) {
+		$('#color_type').html('横回転ハンマー2(右)');
+	} else if (color == 105) {
+		$('#color_type').html('横回転する棒(左)');
+	} else if (color == 106) {
+		$('#color_type').html('横回転する棒(右)');
+	} else if (color == 107) {
+		$('#color_type').html('横回転する棒2(左)');
+	} else if (color == 108) {
+		$('#color_type').html('横回転する棒2(右)');
+	} else if (color == 109) {
+		$('#color_type').html('横回転ハンマー3(左)');
+	} else if (color == 110) {
+		$('#color_type').html('横回転ハンマー3(右)');
+	} else if (color == 111) {
+		$('#color_type').html('横回転ハンマー4(左)');
+	} else if (color == 112) {
+		$('#color_type').html('横回転ハンマー4(右)');
+	} else if (color == 113) {
+		$('#color_type').html('横回転する棒3(左)');
+	} else if (color == 114) {
+		$('#color_type').html('横回転する棒3(右)');
+	} else if (color == 115) {
+		$('#color_type').html('横回転する棒4(左)');
+	} else if (color == 116) {
+		$('#color_type').html('横回転する棒4(右)');
+	} else if (color == 117) {
+		$('#color_type').html('空白');
+	} else if (color == 118) {
+		$('#color_type').html('U F O');
+	} else if (color == 119) {
+		$('#color_type').html('TCD 回転刃');
+	} else if (color == 120) {
+		$('#color_type').html('レーザーキャノン(判定なし)');
+	} else if (color == 121) {
+		$('#color_type').html('レーザー(下)');
+	} else if (color == 122) {
+		$('#color_type').html('レーザー(左)');
+	} else if (color == 123) {
+		$('#color_type').html('レーザー(右)');
+	} else if (color == 124) {
+		$('#color_type').html('レーザー2(下)');
+	} else if (color == 125) {
+		$('#color_type').html('レーザー2(左)');
+	} else if (color == 126) {
+		$('#color_type').html('レーザー2(右)');
+	} else if (color == 127) {
+		$('#color_type').html('レーザー(左｜左6行目)');
+	} else if (color == 128) {
+		$('#color_type').html('レーザー(右｜左6行目)');
+	} else if (color == 129) {
+		$('#color_type').html('レーザー(左｜右6行目)');
+	} else if (color == 130) {
+		$('#color_type').html('レーザー(右｜右6行目)');
+	} else if (color == 131) {
+		$('#color_type').html('レーザー2(左｜左6行目)');
+	} else if (color == 132) {
+		$('#color_type').html('レーザー2(右｜左6行目)');
+	} else if (color == 133) {
+		$('#color_type').html('レーザー2(左｜右6行目)');
+	} else if (color == 134) {
+		$('#color_type').html('レーザー2(右｜右6行目)');
+	} else if (color == 135) {
+		$('#color_type').html('TL スネーク(アーチ)');
+	} else if (color == 136) {
+		$('#color_type').html('TL スネーク(壁)');
+	} else if (color == 137) {
+		$('#color_type').html('TL スネーク(壁｜右)');
+	} else if (color == 138) {
+		$('#color_type').html('TL スネーク(壁｜左)');
+	} else if (color == 139) {
+		$('#color_type').html('TL スネーク(直線｜下｜5タイル)');
+	} else if (color == 140) {
+		$('#color_type').html('TL スネーク(ループ)');
 	} else if (color == 0) {
 		$('#color_type').html('空白');
 	} else {
@@ -288,7 +384,7 @@ function up(e){
   mouseDown = false;
   let str = `[header]
 width=5
-height=1200
+height=2000
 tilewidth=40
 tileheight=40
 orientation=orthogonal
