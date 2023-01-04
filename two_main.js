@@ -278,7 +278,7 @@ function nextLevel() {
          $('#Waves').html('☆ × ' + $.cookie('t_wave_fi'));
         } else if (level == 6) {
          $('#level-d').html('Designed by 星空めたる');
-         $('#level').html('Last Battle');
+         $('#level').html('■■■■ ■■■■■■');
          $('#stars').html('☆☆');
          $('#Waves').html('☆ × ' + $.cookie('t_wave_s'));
         } else {
