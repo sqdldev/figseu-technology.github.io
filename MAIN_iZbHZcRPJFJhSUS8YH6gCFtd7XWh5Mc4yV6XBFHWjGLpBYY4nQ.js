@@ -19,7 +19,7 @@ for (let i = 0; i < gridLength; i++) {
 
 $('#designer').scrollTop($('#designer')[0].scrollHeight);
 
-var colors = '#000B3F';
+let colors = '#000B3F';
 var color = 1;
 
 $('#color').on('click', e => {
@@ -121,7 +121,7 @@ $('#color').on('click', e => {
 	} else {
 		$('#color_type').html('オブジェクトエラー');
 	}
-	$('#color').css('background-color', colors[color]);
+	$('#color').css('background-color', colors);
 });
 
 $('#add').on('click', e => {
@@ -160,7 +160,7 @@ $('#dg_color1').on('click', e => {
   $('#chenge_c').get(0).play();
   color = 0;
   	$('#color_type').html('Clear');
-  	$('#color').css('background-color', colors[color]);
+  	$('#color').css('background-color', colors);
 });
 
 mouseDown = false;
