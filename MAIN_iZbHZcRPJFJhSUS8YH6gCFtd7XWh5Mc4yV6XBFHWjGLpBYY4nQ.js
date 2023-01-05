@@ -30,7 +30,7 @@ $('#color').on('click', e => {
   $('#chenge_c').get(0).play();
   e.preventDefault();
   e.handled = true;
-	color = (color + 1) % 23;
+	color = $('#tile-select').val();
 	if (color == 1) {
 		$('#color_type').html('通常床');
 	} else if (color == 2) {
