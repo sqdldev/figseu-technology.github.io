@@ -19,7 +19,7 @@ for (let i = 0; i < gridLength; i++) {
 
 $('#designer').scrollTop($('#designer')[0].scrollHeight);
 
-const colors = , , , ];
+var colors = '#000B3F';
 var color = 1;
 
 $('#color').on('click', e => {
