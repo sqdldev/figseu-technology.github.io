@@ -172,7 +172,7 @@ function down(e){
   const x = $(this).index();
 	const y = gridLength - 1 - $(this).parent().index();
 	data[y][x] = color;
-	$(this).css('background-color', colors[color]);
+	$(this).css('background-color', colors);
 	mouseDown = true;
 }
 
@@ -181,7 +181,7 @@ function move(e){
 		const x = $(this).index();
 		const y = gridLength - 1 - $(this).parent().index();
 		data[y][x] = color;
-		$(this).css('background-color', colors[color]);
+		$(this).css('background-color', colors);
 	}
 }
 function up(e){
