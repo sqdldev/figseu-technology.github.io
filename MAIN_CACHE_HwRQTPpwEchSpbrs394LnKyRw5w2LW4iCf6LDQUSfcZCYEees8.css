@@ -67,15 +67,15 @@ button:active {
 }
 
 select {
-  color: #B18900;
+  color: #FFFFFF;
   border: double #1E3D00;
   width: 80%;
   height: 5%;
   display: inline-block;
   border: 2px solid #FFFFFF;
-  background-color: #FFD300;
+  background-color: #5A5A5A;
   outline: none;
-  font-size: 50%;
+  font-size: 80%;
   text-shadow: 1px 2px 3px #808080;
   border-radius: 1px;
 }
