@@ -65,6 +65,21 @@ button:active {
   text-shadow: 1px 2px 3px #808080;
   border-radius: 1px;
 }
+
+select {
+  color: #FFFFFF;
+  border: double #1E3D00;
+  width: 80%;
+  height: 5%;
+  display: inline-block;
+  border: 2px solid #FFFFFF;
+  background-color: #5A5A5A;
+  outline: none;
+  font-size: 80%;
+  text-shadow: 1px 2px 3px #808080;
+  border-radius: 1px;
+}
+
 #dg_color1 {
   color: #B18900;
   border: double #1E3D00;
