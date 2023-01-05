@@ -4655,10 +4655,10 @@
   {
     "author": "はぐれメタル",
     "background": "0x000000",
-    "ball": "0x9ACD32",
-    "mat": "0xC0C0C0",
-    "bouncer": "0xAFEEEE",
-    "obstacle": "0x8B4513",
+    "ball": "0x000000",
+    "mat": "0x000000",
+    "bouncer": "0x000000",
+    "obstacle": "0x000000",
     "data":
     [
       [0, 0, 1, 0, 0],
