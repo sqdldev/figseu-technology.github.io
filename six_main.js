@@ -276,12 +276,12 @@ function nextLevel() {
          $('#Waves').html('☆ × ' + $.cookie('s_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('Extra ステージ');
-         $('#level').html('Redo');
+         $('#level').html('Re■■');
          $('#stars').html('☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('s_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Designed by 星空めたる');
-         $('#level').html('Crystal');
+         $('#level').html('C■■st■■');
          $('#stars').html('☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('s_wave_fi'));
         } else {
@@ -329,12 +329,12 @@ function prevLevel() {
          $('#Waves').html('☆ × ' + $.cookie('s_wave_th'));
         } else if (level == 4) {
          $('#level-d').html('Extra ステージ');
-         $('#level').html('Redo');
+         $('#level').html('Re■■');
          $('#stars').html('☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('s_wave_f'));
         } else if (level == 5) {
          $('#level-d').html('Designed by 星空めたる');
-         $('#level').html('Crystal');
+         $('#level').html('C■■st■■');
          $('#stars').html('☆☆☆☆☆☆');
          $('#Waves').html('☆ × ' + $.cookie('s_wave_fi'));
         } else {
