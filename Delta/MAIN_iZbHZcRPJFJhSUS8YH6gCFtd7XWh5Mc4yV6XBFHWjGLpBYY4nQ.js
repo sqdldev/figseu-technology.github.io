@@ -1,6 +1,6 @@
 const grid = $('#grid');
 
-let gridLength = 20;
+let gridLength = 2000;
 let mouseDown = false;
 
 let UserName = 0;
@@ -14,7 +14,7 @@ if (typeof UserName == 'undefined' && typeof Password == 'undefined') {
 const data = [];
 for (let i = 0; i < gridLength; i++) {
 	grid.append('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
-	data.push([0, 0, 0, 0, 0]);
+	data.push([0,0,0,0,0]);
 }
 
 $('#designer').scrollTop($('#designer')[0].scrollHeight);
@@ -31,7 +31,7 @@ $('#color').on('click', e => {
   e.preventDefault();
   e.handled = true;
 	color = $('#tile-select').val();
-        $('#color_type').html('　');
+        $('#color_type').html('タイル選択');
 	if (color == 1) {
                 colors = '#FFD300';
 	} else if (color == 2) {
@@ -88,6 +88,14 @@ $('#color').on('click', e => {
                 colors = '#FFD300';
 	} else if (color == 28) {
                 colors = '#FFD300';
+	} else if (color == 45) {
+                colors = '#AFAA00';
+	} else if (color == 46) {
+                colors = '#AFAA00';
+	} else if (color == 47) {
+                colors = '#AFAA00';
+	} else if (color == 51) {
+                colors = '#37F3C3';
 	} else if (color == 181) {
                 colors = '#5B1E6A';
 	} else if (color == 182) {
@@ -114,7 +122,7 @@ $('#add').on('click', e => {
   e.preventDefault();
   e.handled = true;
   $('#grid').prepend('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
-  data.push([0, 0, 0, 0, 0]);
+  data.push([0,0,0,0,0]);
   gridLength++;
 });
 
@@ -168,20 +176,23 @@ function move(e){
 function up(e){
   e.preventDefault();
   mouseDown = false;
-  let str = `[
-  {
-    "name": "ステージの名前",
-    "author": "作成者名称",
-    "background": "背景色",
-    "ball": "ボールの色",
-    "mat": "床の色",
-    "bouncer": "ジャンプ床の色",
-    "obstacle": "障害物の色",
-    "data":
-    [
+  let str = `[header]
+levelname=ステージ名
+auther=ステージ作者名
+width=5
+height=2000
+tilewidth=64
+tileheight=64
+orientation=orthogonal
+delta=587
+[tilesets]
+tileset=../tileset/tileset01.png,64,64,0,0
+[layer]
+type=Level
+data=
 `;
   data.forEach((r, i) => 
-    str += "      [" + r.join(", ") + "]" + (i == data.length - 1? "": ",\n")
+    str += "" + r.join(",") + "" + (i == data.length - 1? "": ",\n")
   );
   $("#output").val(str + `
     ]
