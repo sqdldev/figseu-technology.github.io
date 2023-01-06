@@ -1,6 +1,6 @@
 const grid = $('#grid');
 
-let gridLength = 2000;
+let gridLength = 20;
 let mouseDown = false;
 
 let UserName = 0;
@@ -14,12 +14,12 @@ if (typeof UserName == 'undefined' && typeof Password == 'undefined') {
 const data = [];
 for (let i = 0; i < gridLength; i++) {
 	grid.append('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
-	data.push([0,0,0,0,0]);
+	data.push([0, 0, 0, 0, 0]);
 }
 
 $('#designer').scrollTop($('#designer')[0].scrollHeight);
 
-const colors = ['#191919', '#FFD300', '#E16E00', '#00E4D5', '#00E4D5', '#00E4D5', '#00E4D5', '#00E4D5', '#00E4D5', '#3A4C78', '#8282A3', '#3A4C78', '#8282A3', '#B2E200', '#B2E200', '#B2E200', '#B2E200', '#B2E200', '#B2E200', '#B2E200', '#B2E200', '#7B7B7B', '#7B7B7B', '#7B7B7B', '#7B7B7B', '#7B7B7B', '#7B7B7B', '#FFD300', '#FFD300', '#00D225', '#00D225', '#00D225', '#00D225', '#C5BE00', '#C5BE00', '#C5BE00', '#C5BE00', '#005367', '#005367', '#005367', '#005367', '#AAAAAA', '#AAAAAA', '#AAAAAA', '#AAAAAA', '#FFBD00', '#FFBD00', '#FFBD00', '#000000', '#003A9A', '#003A9A', '#00DB92', '#00DB92', '#00DB92', '#00DB92', '#FF3545', '#FF3545', '#3A75FF', '#3A75FF', '#00738E', '#00738E', '#D1A869', '#D1A869', '#D1A869', '#D1A869', '#DB0059', '#DB0059', '#DB0059', '#DB0059', '#DB0059', '#DB0059', '#DB0059', '#DB0059', '#DB0059', '#DB0059', '#DB0059', '#DB0059', '#FF1A3A', '#2C6AFF', '#845262', '#7E7E7E', '#00D085', '#00D085', '#00D085', '#00D085', '#00D085', '#00D085', '#00D085', '#00D085', '#72838B', '#72838B', '#72838B', '#72838B'];
+let colors = '#000B3F';
 var color = 1;
 
 $('#color').on('click', e => {
@@ -30,293 +30,79 @@ $('#color').on('click', e => {
   $('#chenge_c').get(0).play();
   e.preventDefault();
   e.handled = true;
-	color = (color + 1) % 93;
+	color = $('#tile-select').val();
+        $('#color_type').html('　');
 	if (color == 1) {
-		$('#color_type').html('通常床');
+                colors = '#FFD300';
 	} else if (color == 2) {
-		$('#color_type').html('ジャンプ台');
+                colors = '#E16E00';
 	} else if (color == 3) {
-		$('#color_type').html('落ちる床 (連結1)');
+                colors = '#00E4D5';
 	} else if (color == 4) {
-		$('#color_type').html('落ちる床 (連結2)');
+                colors = '#00E4D5';
 	} else if (color == 5) {
-		$('#color_type').html('落ちる床 (連結3)');
+                colors = '#00E4D5';
 	} else if (color == 6) {
-		$('#color_type').html('落ちる床');
+                colors = '#00E4D5';
 	} else if (color == 7) {
-		$('#color_type').html('落ちる床 (横連結)');
+                colors = '#00E4D5';
 	} else if (color == 8) {
-		$('#color_type').html('落ちる床 (縦連結)');
+                colors = '#00E4D5';
 	} else if (color == 9) {
-		$('#color_type').html('落ちるハンマー');
+                colors = '#3A4C78';
 	} else if (color == 10) {
-		$('#color_type').html('浮かぶハンマー');
+                colors = '#8282A3';
 	} else if (color == 11) {
-		$('#color_type').html('落ちるハンマー1');
+                colors = '#3A4C78';
 	} else if (color == 12) {
-		$('#color_type').html('浮かぶハンマー2');
+                colors = '#8282A3';
 	} else if (color == 13) {
-		$('#color_type').html('稼働床 (上と連結しない)');
+                colors = '#B2E200';
 	} else if (color == 14) {
-		$('#color_type').html('稼働床 (下と連結しない)');
+                colors = '#B2E200';
 	} else if (color == 15) {
-		$('#color_type').html('稼働床 (左と連結しない)');
+                colors = '#B2E200';
 	} else if (color == 16) {
-		$('#color_type').html('稼働床 (右と連結しない)');
+                colors = '#B2E200';
 	} else if (color == 17) {
-		$('#color_type').html('稼働床 (左&上と連結しない)');
+                colors = '#B2E200';
 	} else if (color == 18) {
-		$('#color_type').html('稼働床 (左&下と連結しない)');
+                colors = '#B2E200';
 	} else if (color == 19) {
-		$('#color_type').html('稼働床 (右&上と連結しない)');
+                colors = '#B2E200';
 	} else if (color == 20) {
-		$('#color_type').html('稼働床 (右&下と連結しない)');
+                colors = '#B2E200';
 	} else if (color == 21) {
-		$('#color_type').html('せり出すブロック');
+                colors = '#7B7B7B';
 	} else if (color == 22) {
-		$('#color_type').html('せり出すブロック2');
+                colors = '#7B7B7B';
 	} else if (color == 23) {
-		$('#color_type').html('せり出すブロック3');
+                colors = '#7B7B7B';
 	} else if (color == 24) {
-		$('#color_type').html('せり出すブロック3 (横連結)');
+                colors = '#7B7B7B';
 	} else if (color == 25) {
-		$('#color_type').html('せり出すブロック1 (左移動)');
+                colors = '#7B7B7B';
 	} else if (color == 26) {
-		$('#color_type').html('せり出すブロック1 (右移動)');
+                colors = '#7B7B7B';
 	} else if (color == 27) {
-		$('#color_type').html('左へ移動する床');
+                colors = '#FFD300';
 	} else if (color == 28) {
-		$('#color_type').html('右へ移動する床');
-	} else if (color == 29) {
-		$('#color_type').html('高い木');
-	} else if (color == 30) {
-		$('#color_type').html('高い木2');
-	} else if (color == 31) {
-		$('#color_type').html('高い木 (左移動)');
-	} else if (color == 32) {
-		$('#color_type').html('高い木 (右移動)');
-	} else if (color == 33) {
-		$('#color_type').html('ヤシの木');
-	} else if (color == 34) {
-		$('#color_type').html('ヤシの木2');
-	} else if (color == 35) {
-		$('#color_type').html('ヤシの木 (左移動)');
-	} else if (color == 36) {
-		$('#color_type').html('ヤシの木 (右移動)');
-	} else if (color == 37) {
-		$('#color_type').html('上方向接続禁止');
-	} else if (color == 38) {
-		$('#color_type').html('下方向接続禁止');
-	} else if (color == 39) {
-		$('#color_type').html('左方向接続禁止');
-	} else if (color == 40) {
-		$('#color_type').html('右方向接続禁止');
-	} else if (color == 41) {
-		$('#color_type').html('左に転がる玉');
-	} else if (color == 42) {
-		$('#color_type').html('右に転がる玉');
-	} else if (color == 43) {
-		$('#color_type').html('左に転がる玉2');
-	} else if (color == 44) {
-		$('#color_type').html('右に転がる玉2');
-	} else if (color == 45) {
-		$('#color_type').html('浮かぶ星');
-	} else if (color == 46) {
-		$('#color_type').html('浮かぶ星2');
-	} else if (color == 47) {
-		$('#color_type').html('浮かぶ星 (空中)');
-	} else if (color == 48) {
-		$('#color_type').html('空白');
-	} else if (color == 49) {
-		$('#color_type').html('大型の電波塔');
-	} else if (color == 50) {
-		$('#color_type').html('大型の電波塔2');
-	} else if (color == 51) {
-		$('#color_type').html('ゲート');
-	} else if (color == 52) {
-		$('#color_type').html('ゲート2');
-	} else if (color == 53) {
-		$('#color_type').html('ゲート (閉)');
-	} else if (color == 54) {
-		$('#color_type').html('ゲート2 (閉)');
-	} else if (color == 55) {
-		$('#color_type').html('レーザー (縦｜赤)');
-	} else if (color == 56) {
-		$('#color_type').html('レーザー (横｜赤)');
-	} else if (color == 57) {
-		$('#color_type').html('レーザー (縦｜青)');
-	} else if (color == 58) {
-		$('#color_type').html('レーザー (横｜青)');
-	} else if (color == 59) {
-		$('#color_type').html('上下方向接続禁止');
-	} else if (color == 60) {
-		$('#color_type').html('左右方向接続禁止');
-	} else if (color == 61) {
-		$('#color_type').html('稼働床 (上)');
-	} else if (color == 62) {
-		$('#color_type').html('稼働床 (下)');
-	} else if (color == 63) {
-		$('#color_type').html('稼働床 (左)');
-	} else if (color == 64) {
-		$('#color_type').html('稼働床 (右)');
-	} else if (color == 65) {
-		$('#color_type').html('連動稼働床 (上)');
-	} else if (color == 66) {
-		$('#color_type').html('連動稼働床 (下)');
-	} else if (color == 67) {
-		$('#color_type').html('連動稼働床 (左)');
-	} else if (color == 68) {
-		$('#color_type').html('連動稼働床 (右)');
-	} else if (color == 69) {
-		$('#color_type').html('連動稼働床 (上｜連結なし)');
-	} else if (color == 70) {
-		$('#color_type').html('連動稼働床 (下｜連結なし)');
-	} else if (color == 71) {
-		$('#color_type').html('連動稼働床 (左｜連結なし)');
-	} else if (color == 72) {
-		$('#color_type').html('連動稼働床 (右｜連結なし)');
-	} else if (color == 73) {
-		$('#color_type').html('連動稼働床 (上｜左連結)');
-	} else if (color == 74) {
-		$('#color_type').html('連動稼働床 (下｜右連結)');
-	} else if (color == 75) {
-		$('#color_type').html('連動稼働床 (左｜右連結)');
-	} else if (color == 76) {
-		$('#color_type').html('連動稼働床 (右｜左連結)');
-	} else if (color == 77) {
-		$('#color_type').html('スイッチ (赤)');
-	} else if (color == 78) {
-		$('#color_type').html('スイッチ (青)');
-	} else if (color == 79) {
-		$('#color_type').html('レーザー発射装置');
-	} else if (color == 80) {
-		$('#color_type').html('下がるブロック');
-	} else if (color == 81) {
-		$('#color_type').html('宝石');
-	} else if (color == 82) {
-		$('#color_type').html('宝石2');
-	} else if (color == 83) {
-		$('#color_type').html('宝石3');
-	} else if (color == 84) {
-		$('#color_type').html('宝石4');
-	} else if (color == 85) {
-		$('#color_type').html('宝石5');
-	} else if (color == 86) {
-		$('#color_type').html('宝石 (ジャンプ床)');
-	} else if (color == 87) {
-		$('#color_type').html('宝石 (左移動)');
-	} else if (color == 88) {
-		$('#color_type').html('宝石 (右移動)');
-	} else if (color == 89) {
-		$('#color_type').html('左に動くブロック');
-	} else if (color == 90) {
-		$('#color_type').html('右に動くブロック');
-	} else if (color == 91) {
-		$('#color_type').html('左に動くブロック2');
-	} else if (color == 92) {
-		$('#color_type').html('右に動くブロック2');
-	} else if (color == 93) {
-		$('#color_type').html('テトリスブロック(緑)');
-	} else if (color == 94) {
-		$('#color_type').html('テトリスブロック(赤)');
-	} else if (color == 95) {
-		$('#color_type').html('テトリスブロック(桃)');
-	} else if (color == 96) {
-		$('#color_type').html('テトリスブロック(水)');
-	} else if (color == 97) {
-		$('#color_type').html('テトリスブロック(黄)');
-	} else if (color == 98) {
-		$('#color_type').html('テトリスブロック(青)');
-	} else if (color == 99) {
-		$('#color_type').html('テトリスブロック(黄金)');
-	} else if (color == 100) {
-		$('#color_type').html('テトリスブロック(紫)');
-	} else if (color == 101) {
-		$('#color_type').html('横回転ハンマー(左)');
-	} else if (color == 102) {
-		$('#color_type').html('横回転ハンマー(右)');
-	} else if (color == 103) {
-		$('#color_type').html('横回転ハンマー2(左)');
-	} else if (color == 104) {
-		$('#color_type').html('横回転ハンマー2(右)');
-	} else if (color == 105) {
-		$('#color_type').html('横回転する棒(左)');
-	} else if (color == 106) {
-		$('#color_type').html('横回転する棒(右)');
-	} else if (color == 107) {
-		$('#color_type').html('横回転する棒2(左)');
-	} else if (color == 108) {
-		$('#color_type').html('横回転する棒2(右)');
-	} else if (color == 109) {
-		$('#color_type').html('横回転ハンマー3(左)');
-	} else if (color == 110) {
-		$('#color_type').html('横回転ハンマー3(右)');
-	} else if (color == 111) {
-		$('#color_type').html('横回転ハンマー4(左)');
-	} else if (color == 112) {
-		$('#color_type').html('横回転ハンマー4(右)');
-	} else if (color == 113) {
-		$('#color_type').html('横回転する棒3(左)');
-	} else if (color == 114) {
-		$('#color_type').html('横回転する棒3(右)');
-	} else if (color == 115) {
-		$('#color_type').html('横回転する棒4(左)');
-	} else if (color == 116) {
-		$('#color_type').html('横回転する棒4(右)');
-	} else if (color == 117) {
-		$('#color_type').html('空白');
-	} else if (color == 118) {
-		$('#color_type').html('U F O');
-	} else if (color == 119) {
-		$('#color_type').html('TCD 回転刃');
-	} else if (color == 120) {
-		$('#color_type').html('レーザーキャノン(判定なし)');
-	} else if (color == 121) {
-		$('#color_type').html('レーザー(下)');
-	} else if (color == 122) {
-		$('#color_type').html('レーザー(左)');
-	} else if (color == 123) {
-		$('#color_type').html('レーザー(右)');
-	} else if (color == 124) {
-		$('#color_type').html('レーザー2(下)');
-	} else if (color == 125) {
-		$('#color_type').html('レーザー2(左)');
-	} else if (color == 126) {
-		$('#color_type').html('レーザー2(右)');
-	} else if (color == 127) {
-		$('#color_type').html('レーザー(左｜左6行目)');
-	} else if (color == 128) {
-		$('#color_type').html('レーザー(右｜左6行目)');
-	} else if (color == 129) {
-		$('#color_type').html('レーザー(左｜右6行目)');
-	} else if (color == 130) {
-		$('#color_type').html('レーザー(右｜右6行目)');
-	} else if (color == 131) {
-		$('#color_type').html('レーザー2(左｜左6行目)');
-	} else if (color == 132) {
-		$('#color_type').html('レーザー2(右｜左6行目)');
-	} else if (color == 133) {
-		$('#color_type').html('レーザー2(左｜右6行目)');
-	} else if (color == 134) {
-		$('#color_type').html('レーザー2(右｜右6行目)');
-	} else if (color == 135) {
-		$('#color_type').html('TL スネーク(アーチ)');
-	} else if (color == 136) {
-		$('#color_type').html('TL スネーク(壁)');
-	} else if (color == 137) {
-		$('#color_type').html('TL スネーク(壁｜右)');
-	} else if (color == 138) {
-		$('#color_type').html('TL スネーク(壁｜左)');
-	} else if (color == 139) {
-		$('#color_type').html('TL スネーク(直線｜下｜5タイル)');
-	} else if (color == 140) {
-		$('#color_type').html('TL スネーク(ループ)');
+                colors = '#FFD300';
+	} else if (color == 181) {
+                colors = '#5B1E6A';
+	} else if (color == 182) {
+                colors = '#FFE57C';
+	} else if (color == 183) {
+                colors = '#2DFBF6';
+	} else if (color == 184) {
+                colors = '#F8C56D';
 	} else if (color == 0) {
-		$('#color_type').html('空白');
+                colors = '#191919';
 	} else {
-		$('#color_type').html('オブジェクトエラー');
+		$('#color_type').html('不明なオブジェクト');
+                colors = '#8E2720';
 	}
-	$('#color').css('background-color', colors[color]);
+	$('#color').css('background-color', colors);
 });
 
 $('#add').on('click', e => {
@@ -328,7 +114,7 @@ $('#add').on('click', e => {
   e.preventDefault();
   e.handled = true;
   $('#grid').prepend('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
-  data.push([0,0,0,0,0]);
+  data.push([0, 0, 0, 0, 0]);
   gridLength++;
 });
 
@@ -354,8 +140,8 @@ $('#dg_color1').on('click', e => {
   });
   $('#chenge_c').get(0).play();
   color = 0;
-  	$('#color_type').html('空白');
-  	$('#color').css('background-color', colors[color]);
+  	$('#color_type').html('Clear');
+  	$('#color').css('background-color', colors);
 });
 
 mouseDown = false;
@@ -367,7 +153,7 @@ function down(e){
   const x = $(this).index();
 	const y = gridLength - 1 - $(this).parent().index();
 	data[y][x] = color;
-	$(this).css('background-color', colors[color]);
+	$(this).css('background-color', colors);
 	mouseDown = true;
 }
 
@@ -376,30 +162,31 @@ function move(e){
 		const x = $(this).index();
 		const y = gridLength - 1 - $(this).parent().index();
 		data[y][x] = color;
-		$(this).css('background-color', colors[color]);
+		$(this).css('background-color', colors);
 	}
 }
 function up(e){
   e.preventDefault();
   mouseDown = false;
-  let str = `[header]
-width=5
-height=2000
-tilewidth=40
-tileheight=40
-orientation=orthogonal
-
-[tilesets]
-tileset=../tileset/tileset01.png,64,64,0,0
-
-[layer]
-type=Level
-data=
+  let str = `[
+  {
+    "name": "ステージの名前",
+    "author": "作成者名称",
+    "background": "背景色",
+    "ball": "ボールの色",
+    "mat": "床の色",
+    "bouncer": "ジャンプ床の色",
+    "obstacle": "障害物の色",
+    "data":
+    [
 `;
   data.forEach((r, i) => 
-    str += "" + r.join(",") + "" + (i == data.length - 1? "": ",\n")
+    str += "      [" + r.join(", ") + "]" + (i == data.length - 1? "": ",\n")
   );
-  $("#output").val(str + ``);
+  $("#output").val(str + `
+    ]
+  }
+]`);
 var anceg = $("#output").val();
 var anccg = $("#output").val().length;
 $("#DGDR").html("行数 :" + gridLength);
