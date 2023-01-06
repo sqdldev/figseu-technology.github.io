@@ -73,7 +73,7 @@ select {
   height: 5%;
   display: inline-block;
   border: 2px solid #FFFFFF;
-  background-color: #5A5A5A;
+  background-color: #191919;
   outline: none;
   font-size: 80%;
   text-shadow: 1px 2px 3px #808080;
@@ -193,7 +193,7 @@ select {
 }
 #output{
   color: #FFFFFF;
-  background: #000B3F;
+  background: #191919;
   border-radius: 0;
   border: 1.5px solid;
   width: 95%;
