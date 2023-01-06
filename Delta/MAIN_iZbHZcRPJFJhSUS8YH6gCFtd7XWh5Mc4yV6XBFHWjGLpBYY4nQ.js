@@ -96,6 +96,24 @@ $('#color').on('click', e => {
                 colors = '#AFAA00';
 	} else if (color == 51) {
                 colors = '#37F3C3';
+	} else if (color == 81) {
+                colors = '#00A548';
+	} else if (color == 82) {
+                colors = '#00A548';
+	} else if (color == 83) {
+                colors = '#00A548';
+	} else if (color == 84) {
+                colors = '#00A548';
+	} else if (color == 85) {
+                colors = '#00A548';
+	} else if (color == 86) {
+                colors = '#00A548';
+	} else if (color == 87) {
+                colors = '#00A548';
+	} else if (color == 88) {
+                colors = '#00A548';
+	} else if (color == 149) {
+                colors = '#E6E6E6';
 	} else if (color == 181) {
                 colors = '#5B1E6A';
 	} else if (color == 182) {
@@ -104,6 +122,22 @@ $('#color').on('click', e => {
                 colors = '#2DFBF6';
 	} else if (color == 184) {
                 colors = '#F8C56D';
+	} else if (color == 210) {
+                colors = '#962974';
+	} else if (color == 247) {
+                colors = '#E448E2';
+	} else if (color == 261) {
+                colors = '#C4B500';
+	} else if (color == 262) {
+                colors = '#C4B500';
+	} else if (color == 267) {
+                colors = '#635FAC';
+	} else if (color == 301) {
+                colors = '#E6985B';
+	} else if (color == 307) {
+                colors = '#FF000A';
+	} else if (color == 308) {
+                colors = '#00C5FF';
 	} else if (color == 0) {
                 colors = '#191919';
 	} else {
@@ -195,9 +229,8 @@ data=
     str += "" + r.join(",") + "" + (i == data.length - 1? "": ",\n")
   );
   $("#output").val(str + `
-    ]
-  }
-]`);
+
+`);
 var anceg = $("#output").val();
 var anccg = $("#output").val().length;
 $("#DGDR").html("行数 :" + gridLength);
