@@ -35,6 +35,17 @@ wave_s = $.cookie('se_wave_s');
 wave_se = $.cookie('se_wave_se');
 let url = location.href;
 let fgnc = url.substr( 55 );
+if (fgnc == 28) {
+   level = 1;
+} else if (fgnc == 29) {
+   level = 2;
+} else if (fgnc == 30) {
+   level = 3;
+} else if (fgnc == 31) {
+   level = 4;
+} else if (fgnc == 32) {
+   level = 5;
+}
 $('#shrine').get(0);
 $('#ts').get(0);
 $('#tmp').get(0);
