@@ -35,6 +35,19 @@ wave_s = $.cookie('t_wave_s');
 wave_se = $.cookie('t_wave_se');
 let url = location.href;
 let fgnc = url.substr( 46 );
+if (fgnc == 4) {
+   level = 1;
+} else if (fgnc == 5) {
+   level = 2;
+} else if (fgnc == 6) {
+   level = 3;
+} else if (fgnc == 19) {
+   level = 4;
+} else if (fgnc == 8) {
+   level = 5;
+} else if (fgnc == 60) {
+   level = 6;
+}
 let data;
 let reqId;
 $.getJSON('two_levels.json', d => {
