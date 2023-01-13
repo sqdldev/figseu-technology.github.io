@@ -36,7 +36,24 @@ wave_s = $.cookie('o_wave_s');
 wave_se = $.cookie('o_wave_se');
 wave_e = $.cookie('o_wave_e');
 let url = location.href;
-let fgnc = url.substr( 42 );
+let fgnc = url.substr( 53 );
+if (fgnc == 1) {
+   level = 5;
+} else if (fgnc == 55) {
+   level = 2;
+} else if (fgnc == 2) {
+   level = 3;
+} else if (fgnc == 53) {
+   level = 4;
+} else if (fgnc == 54) {
+   level = 1;
+} else if (fgnc == 3) {
+   level = 7;
+} else if (fgnc == 56) {
+   level = 6;
+} else if (fgnc == 57) {
+   level = 8;
+}
 let data;
 let reqId;
 $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
