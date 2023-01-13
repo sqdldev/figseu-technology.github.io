@@ -16,6 +16,21 @@ wave = $.cookie('n_wave');wave_t = $.cookie('n_wave_t');wave_th = $.cookie('n_wa
 let girls = Math.floor( Math.random() * 2 );
 let url = location.href;
 let fgnc = url.substr( 77 );
+if (fgnc == 39) {
+   level = 1;
+} else if (fgnc == 40) {
+   level = 2;
+} else if (fgnc == 41) {
+   level = 3;
+} else if (fgnc == 42) {
+   level = 4;
+} else if (fgnc == 43) {
+   level = 5;
+   girls = 0;
+} else if (fgnc == 44) {
+   level = 5;
+   girls = 1;
+}
 $('#FELL').get(0);
 $('#TFE').get(0);
 $('#DAYS').get(0);
