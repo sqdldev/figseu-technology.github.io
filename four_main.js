@@ -26,6 +26,15 @@ let wave_fi = 0;
 let wave_s = 0;
 let url = location.href;
 let fgnc = url.substr( 54 );
+if (fgnc == 14) {
+   level = 1;
+} else if (fgnc == 15) {
+   level = 2;
+} else if (fgnc == 16) {
+   level = 3;
+} else if (fgnc == 17) {
+   level = 4;
+}
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('f_wave');
 wave_t = $.cookie('f_wave_t');
