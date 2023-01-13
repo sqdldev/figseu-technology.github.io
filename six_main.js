@@ -35,6 +35,17 @@ wave_s = $.cookie('s_wave_s');
 wave_se = $.cookie('s_wave_se');
 let url = location.href;
 let fgnc = url.substr( 53 );
+if (fgnc == 25) {
+   level = 1;
+} else if (fgnc == 26) {
+   level = 2;
+} else if (fgnc == 27) {
+   level = 3;
+} else if (fgnc == 58) {
+   level = 4;
+} else if (fgnc == 59) {
+   level = 5;
+}
 let data;
 let reqId;
 $.getJSON('6DE_GSYgzp54UpyS6mEenh6DWmipMsw5wgYy6cJabwxbEeZR9WANPU.rse', d => {
