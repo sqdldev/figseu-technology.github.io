@@ -36,6 +36,19 @@ wave_se = $.cookie('e_wave_se');
 let train = Math.floor( Math.random() * 11 );
 let url = location.href;
 let fgnc = url.substr( 55 );
+if (fgnc == 33) {
+   level = 1;
+} else if (fgnc == 34) {
+   level = 2;
+} else if (fgnc == 35) {
+   level = 3;
+} else if (fgnc == 36) {
+   level = 4;
+} else if (fgnc == 37) {
+   level = 5;
+} else if (fgnc == 38) {
+   level = 6;
+}
 $('#mai').get(0);
 $('#edu').get(0);
 $('#prin').get(0);
