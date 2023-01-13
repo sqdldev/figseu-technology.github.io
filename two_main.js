@@ -34,7 +34,7 @@ wave_fi = $.cookie('t_wave_fi');
 wave_s = $.cookie('t_wave_s');
 wave_se = $.cookie('t_wave_se');
 let url = location.href;
-let fgnc = url.substr( 46 );
+let fgnc = url.substr( 53 );
 if (fgnc == 4) {
    level = 1;
 } else if (fgnc == 5) {
