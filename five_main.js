@@ -25,6 +25,8 @@ let wave_f = 0;
 let wave_fi = 0;
 let wave_s = 0;
 let wave_se = 0;
+let wave_e = 0;
+let wave_n = 0;
 let url = location.href;
 let fgnc = url.substr( 54 );
 if (fgnc == 18) {
@@ -39,6 +41,12 @@ if (fgnc == 18) {
    level = 5;
 } else if (fgnc == 24) {
    level = 6;
+} else if (fgnc == 64) {
+   level = 7;
+} else if (fgnc == 65) {
+   level = 8;
+} else if (fgnc == 66) {
+   level = 9;
 }
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('fi_wave');
@@ -48,6 +56,8 @@ wave_f = $.cookie('fi_wave_f');
 wave_fi = $.cookie('fi_wave_fi');
 wave_s = $.cookie('fi_wave_s');
 wave_se = $.cookie('fi_wave_se');
+wave_e = $.cookie('fi_wave_e');
+wave_n = $.cookie('fi_wave_n');
 let data;
 let reqId;
 $.getJSON('5DU_SbJYuLsQ48h5zrxzTT3bQL64apD9WjnU8R6rGbdtMZTjN7gA.rse', d => {
@@ -192,6 +202,14 @@ function start(e) {
         wave_se = 0;
         $.cookie('fi_wave_se', wave_se, { expires: 30, domain:'figseu-technology.github.io'});
      }
+     if (typeof wave_e == 'undefined') {
+        wave_e = 0;
+        $.cookie('fi_wave_e', wave_e, { expires: 30, domain:'figseu-technology.github.io'});
+     }
+     if (typeof wave_n == 'undefined') {
+        wave_n = 0;
+        $.cookie('fi_wave_n', wave_n, { expires: 30, domain:'figseu-technology.github.io'});
+     }
     if (level == 1) {
             $('#sakura').get(0).play();
             wave++;
@@ -211,7 +229,13 @@ function start(e) {
             $('#pinsir').get(0).play();
             wave_s++;
             } else if (level == 7) {
-            $('#cloud').get(0).play();
+            $('#sintakarajima').get(0).play();
+            wave_se++;
+            } else if (level == 8) {
+            $('#moonpride').get(0).play();
+            wave_se++;
+            } else if (level == 9) {
+            $('#kimetu').get(0).play();
             wave_se++;
             } else {
             $('#cloud').get(0).play();
@@ -511,6 +535,10 @@ function gameover() {
      wave_s = 0;
      } else if (level == 7) {
      wave_se = 0;
+     } else if (level == 8) {
+     wave_e = 0;
+     } else if (level == 9) {
+     wave_n = 0;
      }
   }
   if (fgnc == 'Function_Landing-True-') {
@@ -528,6 +556,10 @@ function gameover() {
      wave_s = $.cookie('fi_wave_s');
      } else if (level == 7) {
      wave_se = $.cookie('fi_wave_se');
+     } else if (level == 8) {
+     wave_e = $.cookie('fi_wave_e');
+     } else if (level == 9) {
+     wave_n = $.cookie('fi_wave_n');
      }
   }
   $.cookie('fi_wave', wave, { expires: 400, domain:'figseu-technology.github.io'});
@@ -537,6 +569,8 @@ function gameover() {
   $.cookie('fi_wave_fi', wave_fi, { expires: 400, domain:'figseu-technology.github.io'});
   $.cookie('fi_wave_s', wave_s, { expires: 400, domain:'figseu-technology.github.io'});
   $.cookie('fi_wave_se', wave_se, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('fi_wave_e', wave_e, { expires: 400, domain:'figseu-technology.github.io'});
+  $.cookie('fi_wave_n', wave_n, { expires: 400, domain:'figseu-technology.github.io'});
   started = false;
   ball.speed.z = 0;
   $('#main').fadeIn(500);
@@ -604,6 +638,24 @@ function gameover() {
 });
      } else if (level == 7) {
       $('#Waves').html('☆ × ' + $.cookie('fi_wave_se'));
+      if (star == 2) {
+          $('#level-d').html('君の歌を歌う');
+      }
+      $('#sintakarajima').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 8) {
+      $('#Waves').html('☆ × ' + $.cookie('fi_wave_e'));
+      if (star == 2) {
+          $('#level-d').html('新しい伝説が今ここから始まる');
+      }
+      $('#moonpride').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 9) {
+      $('#Waves').html('☆ × ' + $.cookie('fi_wave_n'));
       if (star == 2) {
           $('#level-d').html('運命を照らして');
       }
