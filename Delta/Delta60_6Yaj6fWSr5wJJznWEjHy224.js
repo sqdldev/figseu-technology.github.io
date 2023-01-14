@@ -246,14 +246,14 @@ scene.add(light);
 const world = [];
 function loadLevel(level) {
   const index = level - 1;
-  renderer.setClearColor(parseInt(0x1ffffff));
+  renderer.setClearColor(parseInt(data[index].background));
   ball.mesh.material.color.setHex(parseInt(data[index].ball));
   scene.fog = new THREE.Fog(parseInt(data[index].background), 10, 30);
   for (var i in data[index].data) {
     for (var j in data[index].data[i]) {
       switch (data[index].data[i][j]) {
         case 1:
-          world.push(new DebugMat(j - 2, -i, data[index].mat));
+          world.push(new Mat(j - 2, -i, data[index].mat));
           break;
         case 2:
           world.push(new Bouncer(j - 2, -i, data[index].bouncer));
