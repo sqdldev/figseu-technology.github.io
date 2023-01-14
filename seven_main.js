@@ -45,6 +45,10 @@ if (fgnc == 28) {
    level = 4;
 } else if (fgnc == 32) {
    level = 5;
+} else if (fgnc == 67) {
+   level = 6;
+} else if (fgnc == 68) {
+   level = 7;
 }
 $('#shrine').get(0);
 $('#ts').get(0);
@@ -180,6 +184,10 @@ function start(e) {
         wave_s = 0;
         $.cookie('se_wave_s', wave_s, { expires: 30, domain:'figseu-technology.github.io'});
      }
+     if (typeof wave_se == 'undefined') {
+        wave_se = 0;
+        $.cookie('se_wave_se', wave_se, { expires: 30, domain:'figseu-technology.github.io'});
+     }
     if (level == 1) {
             $('#shrine').get(0).play();
             wave++;
@@ -195,6 +203,12 @@ function start(e) {
             } else if (level == 5) {
             $('#TMD').get(0).play();
             wave_fi++;
+            } else if (level == 6) {
+            $('#SleepForest').get(0).play();
+            wave_s++;
+            } else if (level == 7) {
+            $('#SunsetGreen').get(0).play();
+            wave_se++;
             } else {
             $('#cloud').get(0).play();
             }
@@ -471,6 +485,8 @@ function gameover() {
      wave_fi = 0;
      } else if (level == 6) {
      wave_s = 0;
+     } else if (level == 7) {
+     wave_se = 0;
      }
   }
   if (fgnc == 'Function_Landing-True-') {
@@ -486,6 +502,8 @@ function gameover() {
      wave_fi = $.cookie('se_wave_fi');
      } else if (level == 6) {
      wave_s = $.cookie('se_wave_s');
+     } else if (level == 7) {
+     wave_se = $.cookie('se_wave_se');
      }
   }
   $.cookie('se_wave', wave, { expires: 400, domain:'figseu-technology.github.io'});
@@ -548,6 +566,24 @@ function gameover() {
       $('#level-d').html('多種多様な夢');
       }
       $('#TMD').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 6) { 
+      $('#Waves').html('☆ × ' + $.cookie('se_wave_s'));
+     if (star == 2) {
+      $('#level-d').html('天空の夢');
+      }
+      $('#SleepForest').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+     } else if (level == 7) { 
+      $('#Waves').html('☆ × ' + $.cookie('se_wave_se'));
+     if (star == 2) {
+      $('#level-d').html('緑の追憶を追う');
+      }
+      $('#SunsetGreen').each(function(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
