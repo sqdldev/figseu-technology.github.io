@@ -233,10 +233,10 @@ function start(e) {
             wave_se++;
             } else if (level == 8) {
             $('#moonpride').get(0).play();
-            wave_se++;
+            wave_e++;
             } else if (level == 9) {
             $('#kimetu').get(0).play();
-            wave_se++;
+            wave_n++;
             } else {
             $('#cloud').get(0).play();
             }
