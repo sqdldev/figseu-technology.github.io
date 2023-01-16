@@ -20,6 +20,10 @@
 
 <hr size="3"/>
 
+<a href="https://ko-fi.com/udalice">Rolling Sky Evolution を支援する</a>
+
+<hr size="3">
+
 # Dancing Line Evolution
 
 [◇◇ Play Now ◇◇](https://figseu-technology.github.io/Dancing%20Line/)
