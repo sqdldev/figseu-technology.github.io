@@ -1,8 +1,10 @@
 let UserName = 0;
 let Password = 0;
+let RE_SaveData = 0;
 UserName = $.cookie('UserName');
 Password = $.cookie('Password');
-if (typeof UserName == 'undefined' && typeof Password == 'undefined') {
+RE_SaveData = $.cookie('RE_SaveData');
+if (typeof UserName == 'undefined' && typeof Password == 'undefined' && typeof RE_SaveData == 'undefined') {
    location.href = "https://figseu-technology.github.io/Signup.html";
 }
 
@@ -259,9 +261,16 @@ $.cookie('delta_two_wave', delta_two_wave, { expires: 400, domain:'figseu-techno
 
 $.cookie('UserName', UserName, { expires: 600, domain:'figseu-technology.github.io'});
 $.cookie('Password', Password, { expires: 600, domain:'figseu-technology.github.io'});
+$.cookie('RE_SaveData', RE_SaveData, { expires: 600, domain:'figseu-technology.github.io'});
 
 $('#Delta_30').html("<p>集めたΛの数｜Λ × " + Master_Delta_EX + "</p>");
 $('#comment').html("<p><a href='https://figseu-technology.github.io/CommentEdit.html'>" + Master_Comments + "</a></p>");
+
+if (RE_SaveData == 'com.fex.cloud@gmail.com' && UserName == 'UD Alice') {
+   $('#Premium').html("<p>ゴールドパスポート</p>");
+} else {
+   $('#Premium').html("<p>ノーマルパスポート</p>");
+}
 
 $.cookie('Master_Comments', Master_Comments, { expires: 600, domain:'figseu-technology.github.io'});
 
