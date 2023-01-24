@@ -7,6 +7,12 @@ let UserName = 0;
 let Password = 0;
 UserName = $.cookie('UserName');
 Password = $.cookie('Password');
+
+if (UserName == '星空めたる' || UserName == 'はぐれめたる' || UserName == 'はぐれメタル') {
+   $.removeCookie('UserName');
+   $.removeCookie('Password');
+}
+
 if (typeof UserName == 'undefined' && typeof Password == 'undefined') {
    location.href = "https://figseu-technology.github.io/Signup.html";
 }
