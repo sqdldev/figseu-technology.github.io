@@ -268,8 +268,13 @@ $('#comment').html("<p><a href='https://figseu-technology.github.io/CommentEdit.
 
 if (RE_SaveData == 'com.fex.cloud@gmail.com' && UserName == 'UD Alice') {
    $('#Premium').html("<p>ゴールドパスポート</p>");
+} else if (UserName == '星空めたる' || UserName == 'はぐれめたる' || UserName == 'はぐれメタル') {
+   $.removeCookie('UserName');
+   $.removeCookie('Password');
+   $.removeCookie('RE_SaveData');
+   $('#AC_Name').html("該当アカウントは利用規約に違反したと見なされた為、凍結されています。　誤った凍結の場合、異議申し立てをしてください。");
 } else {
-   $('#Premium').html("<p>ノーマルパスポート</p>");
+   $('#Premium').html("<p>未認証パスポート</p>");
 }
 
 $.cookie('Master_Comments', Master_Comments, { expires: 600, domain:'figseu-technology.github.io'});
