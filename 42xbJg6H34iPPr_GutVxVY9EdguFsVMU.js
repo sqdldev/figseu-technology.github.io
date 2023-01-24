@@ -273,6 +273,7 @@ if (RE_SaveData == 'com.fex.cloud@gmail.com' && UserName == 'UD Alice') {
    $.removeCookie('Password');
    $.removeCookie('RE_SaveData');
    $('#AC_Name').html("該当アカウントは利用規約に違反したと見なされた為、凍結されています。　誤った凍結の場合、異議申し立てをしてください。");
+   $('#Premium').html("<p>凍結されたパスポート</p>");
 } else {
    $('#Premium').html("<p>未認証パスポート</p>");
 }
