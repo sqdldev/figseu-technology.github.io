@@ -49,12 +49,12 @@ $.getJSON('4RW_yu8b9CCRmnEgMAg8m7bXTrbSchLYtj92Nd4xVbjyc6MQKzCF.rse', d => {
   loadLevel(level);
   $('#play').show();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
   $('#level-d').html('ボーナスステージ');
-  $('#level').html('Bluestone Alley');
-  $('#stars').html('☆☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('f_wave'));
+  $('#level').html('　');
+  $('#stars').html('　');
+  $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
 
