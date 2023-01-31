@@ -61,12 +61,12 @@ $.getJSON('YQDpcYbgMMstP5y34XUyVRyL38bheWu4PgQ973f5DUsBFgjEAc.json', d => {
   loadLevel(level);
   $('#play').show();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
   $('#level-d').html('⌥⌥⌥データ取得中⌥⌥⌥');
-  $('#level').html('Rolling Sky');
-  $('#stars').html('☆');
-  $('#Waves').html('☆ × ' + $.cookie('o_wave'));
+  $('#level').html('　');
+  $('#stars').html('　');
+  $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
 
