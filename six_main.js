@@ -53,12 +53,12 @@ $.getJSON('6DE_GSYgzp54UpyS6mEenh6DWmipMsw5wgYy6cJabwxbEeZR9WANPU.rse', d => {
   loadLevel(level);
   $('#play').show();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
   $('#level-d').html('ボーナスステージ');
-  $('#level').html('Dream of Space');
-  $('#stars').html('☆☆☆☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('s_wave'));
+  $('#level').html('　');
+  $('#stars').html('　');
+  $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
 
@@ -101,7 +101,7 @@ $.getJSON('6DE_GSYgzp54UpyS6mEenh6DWmipMsw5wgYy6cJabwxbEeZR9WANPU.rse', d => {
      $('#stars').html('ERROR 666');
   }
 
-  $('#level-d').html('ボーナスステージ');
+  $('#level-d').html('高難度ステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
