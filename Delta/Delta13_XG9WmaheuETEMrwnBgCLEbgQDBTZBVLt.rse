@@ -1,11 +1,11 @@
 [
   {
     "name": "Alone Remix",
-    "background": "0x1B3900",
+    "background": "0x342B00",
     "ball": "0xEFC400",
     "mat": "0xC7B900",
     "bouncer": "0x45BCFF",
-    "obstacle": "0x00C83E",
+    "obstacle": "0x9E8ED6",
     "data":
     [
       [0, 76, 1, 76, 0],
