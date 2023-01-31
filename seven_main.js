@@ -61,12 +61,12 @@ $.getJSON('7DA_ZIP6mD6WwBr4bLnbwyHb3t8976MVW8YAuy7Yp5fAXd5MxFbnJyy.rse', d => {
   $('#play').show();
   $('#PresentCode').hide();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
   $('#level-d').html('Extra ステージ');
-  $('#level').html('Shrine');
-  $('#stars').html('☆☆☆☆☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('se_wave'));
+  $('#level').html('　');
+  $('#stars').html('　');
+  $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
 
