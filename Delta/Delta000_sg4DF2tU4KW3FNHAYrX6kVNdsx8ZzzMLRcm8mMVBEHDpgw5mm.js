@@ -167,6 +167,28 @@ class Ball {
               this.tmpZ = 0;
             }
           }
+        } else if (v instanceof AloneMat || v instanceof Bouncer) {
+          if (v.detect()) {
+            this.landed = true;
+            this.speed.y = 0;
+            this.mesh.position.y = 0.6;
+            if (this.tmpZ) {
+              this.mesh.position.z = this.tmpZ - 4;
+              camera.position.z = this.tmpZ - 4 + distance;
+              this.tmpZ = 0;
+            }
+          }
+        } else if (v instanceof Xmat || v instanceof Bouncer) {
+          if (v.detect()) {
+            this.landed = true;
+            this.speed.y = 0;
+            this.mesh.position.y = 0.6;
+            if (this.tmpZ) {
+              this.mesh.position.z = this.tmpZ - 4;
+              camera.position.z = this.tmpZ - 4 + distance;
+              this.tmpZ = 0;
+            }
+          }
         } else if (v instanceof Deltemat && fgnc == 'Function_---Eshell---_-Deltemat-_Landing-True-' || v instanceof Bouncer) {
           if (v.detect()) {
             this.landed = true;
@@ -1011,6 +1033,62 @@ class Dreamtower {
     this.line.position.set(xpos, 4, zpos);
     this.mesh.name = 'level component';
     this.line.name = 'level component';
+    scene.add(this.line);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
+      ball.mesh.position.z <= 0.5 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
+    ) return true;
+  }
+}
+
+class AloneMat {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.CylinderGeometry(0.5, 0.5, 0.2);
+    this.material = new THREE.MeshPhongMaterial({ color: 0x9900AF });
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xE8A2FF });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0, zpos);
+    this.line.position.set(xpos, 0, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.line);
+
+  }
+  detect() {
+    if (
+      ball.mesh.position.x >= this.mesh.position.x - 0.5 &&
+      ball.mesh.position.x <= this.mesh.position.x + 0.5 &&
+      ball.mesh.position.z >= this.mesh.position.z - 0.5 &&
+      ball.mesh.position.z <= this.mesh.position.z + 0.5 &&
+      ball.mesh.position.z <= 0.5 &&
+      ball.mesh.position.y < this.mesh.position.y + 10
+    ) return true;
+  }
+}
+class Xmat {
+  constructor(xpos, zpos, color) {
+    color = parseInt(color);
+    this.geometry = new THREE.BoxGeometry(1, 0.2, 1);
+    this.material = new THREE.MeshStandardMaterial({ map: new THREE.TextureLoader().load('textures/186_Mat.cmr'), transparent: true});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.edgesGeometry = new THREE.EdgesGeometry(this.geometry);
+    this.edgesMaterial = new THREE.LineBasicMaterial({ color: 0xE8A2FF });
+    this.line = new THREE.LineSegments(this.edgesGeometry, this.edgesMaterial);
+    this.mesh.position.set(xpos, 0, zpos);
+    this.line.position.set(xpos, 0, zpos);
+    this.mesh.name = 'level component';
+    this.line.name = 'level component';
+    scene.add(this.mesh);
     scene.add(this.line);
 
   }
