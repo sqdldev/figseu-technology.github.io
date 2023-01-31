@@ -65,12 +65,12 @@ $.getJSON('8GW_bmsGTFSxKPGRfgbeNgXJzSgzQfbLPjZxwuVKWGbCDNz9PmKrS4trK9GGJhFNk2KTC
   $('#play').show();
   $('#PresentCode').hide();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
   $('#level-d').html('ボーナスステージ');
-  $('#level').html('Maison');
-  $('#stars').html('☆☆☆☆☆☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('e_wave'));
+  $('#level').html('　');
+  $('#stars').html('　');
+  $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
 
