@@ -44,11 +44,11 @@ $.getJSON('5Unsunzm3QHz6NjH6wZyCitzJdwYTyTEwFERAXSGYeQDzCmzym.rse', d => {
   $('#play').show();
   $('#PresentCode').hide();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
-  $('#level').html('Fell Gate');
-  $('#stars').html('☆☆☆☆☆☆☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('n_wave'));
+  $('#level').html('　');
+  $('#stars').html('　');
+  $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
 
@@ -92,7 +92,7 @@ if (fgnc == 'nof') {$('#level-d').html('Extra ステージ');}
 else if (fgnc == 'Function_-Deltemat-_Landing-True-') {$('#level-d').html('⌥⌥ Function_Landing ⌥⌥');}else if (fgnc == 'Function_---Eshell---_-Deltemat-_Landing-True-') {$('#level-d').html('⌥⌥ Function_Landing ⌥⌥');}
 else if (fgnc == 'Function_Landing-True-') {$('#level-d').html('練習モード 起動中');}
 else {
-$('#level-d').html('⌥⌥ Unknown Function ⌥⌥');  } 
+$('#level-d').html('Extra ステージ');  } 
 
 
   reqId = requestAnimationFrame(render);
