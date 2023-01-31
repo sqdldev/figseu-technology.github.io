@@ -55,12 +55,12 @@ $.getJSON('two_levels.json', d => {
   loadLevel(level);
   $('#play').show();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
   $('#level-d').html('ボーナスステージ');
-  $('#level').html('霧の洞窟');
-  $('#stars').html('☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('t_wave'));
+  $('#level').html('　');
+  $('#stars').html('　');
+  $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
 
