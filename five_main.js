@@ -65,12 +65,12 @@ $.getJSON('5DU_SbJYuLsQ48h5zrxzTT3bQL64apD9WjnU8R6rGbdtMZTjN7gA.rse', d => {
   loadLevel(level);
   $('#play').show();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
   $('#level-d').html('Designed by Itary Cogu ');
-  $('#level').html('桜');
-  $('#stars').html('☆☆☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('fi_wave'));
+  $('#level').html('　');
+  $('#stars').html('　');
+  $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
 
@@ -113,7 +113,7 @@ $.getJSON('5DU_SbJYuLsQ48h5zrxzTT3bQL64apD9WjnU8R6rGbdtMZTjN7gA.rse', d => {
      $('#stars').html('ERROR 666');
   }
 
-  $('#level-d').html('Designed by フリースタイル');
+  $('#level-d').html('☆5 ステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
