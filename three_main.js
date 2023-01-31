@@ -53,12 +53,12 @@ $.getJSON('QrJSs7WNhkQM4mkdWzwu8jGCtHVenGBz7VVEYG35FYwtF36TKt.json', d => {
   loadLevel(level);
   $('#play').show();
   $('#play').click(start);
-  $('#next').show();
+  $('#next').hide();
   $('#score').hide();
-  $('#level-d').html('Designed by ムー');
-  $('#level').html('スタジアム');
-  $('#stars').html('☆☆☆');
-  $('#Waves').html('☆ × ' + $.cookie('th_wave'));
+  $('#level-d').html('☆3 ステージ');
+  $('#level').html('　');
+  $('#stars').html('　');
+  $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
 
@@ -106,7 +106,7 @@ $.getJSON('QrJSs7WNhkQM4mkdWzwu8jGCtHVenGBz7VVEYG35FYwtF36TKt.json', d => {
      $('#stars').html('ERROR 666');
   }
   
-  $('#level-d').html('Designed by ムー');
+  $('#level-d').html('☆3 ステージ');
   reqId = requestAnimationFrame(render);
   console.clear();
   console.log(
