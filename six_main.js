@@ -35,6 +35,8 @@ wave_s = $.cookie('s_wave_s');
 wave_se = $.cookie('s_wave_se');
 let url = location.href;
 let fgnc = url.substr( 53 );
+$('#stars').html('　');
+$('#play').show();
 if (fgnc == 25) {
    level = 1;
 } else if (fgnc == 26) {
@@ -45,19 +47,19 @@ if (fgnc == 25) {
    level = 4;
 } else if (fgnc == 59) {
    level = 5;
+   $('#stars').html('当該ステージは 利用規約9条3番違反 及び 当運営への挑発行為による業務執行妨害 により永久削除されました');
+   $('#play').hide();
 }
 let data;
 let reqId;
 $.getJSON('6DE_GSYgzp54UpyS6mEenh6DWmipMsw5wgYy6cJabwxbEeZR9WANPU.rse', d => {
   data = d;
   loadLevel(level);
-  $('#play').show();
   $('#play').click(start);
   $('#next').hide();
   $('#score').hide();
   $('#level-d').html('ボーナスステージ');
   $('#level').html('　');
-  $('#stars').html('　');
   $('#Waves').html('☆ × ？');
 
   // ブラウザ判定
