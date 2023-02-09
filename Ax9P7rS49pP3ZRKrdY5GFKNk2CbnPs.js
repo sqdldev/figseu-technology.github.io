@@ -1,3 +1,5 @@
+let url = location.href;
+let fgnc = url.substr( 51 );
 let f_wave = 0;
 let se_wave_fi = 0;
 let lock_key_1 = 0;
@@ -61,6 +63,12 @@ $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'}
 
 if (se_wave_fi >= 5) {
    $('#b-power').html('空虚の鍵 : 解放済');
+}
+
+if (fgnc == 'AdsReload') {
+   f_wave = 1;
+   $.cookie('f_wave', f_wave, { expires: 400, domain:'figseu-technology.github.io'});
+   location.href = "https://figseu-technology.github.io/DGDR.html";
 }
 
 $('#c-power').html('立線エネルギー : ' + Item_1);
