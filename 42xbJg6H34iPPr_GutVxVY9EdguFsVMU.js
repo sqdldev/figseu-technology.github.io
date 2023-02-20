@@ -7,6 +7,7 @@ RE_SaveData = $.cookie('RE_SaveData');
 if (typeof UserName == 'undefined' && typeof Password == 'undefined' && typeof RE_SaveData == 'undefined') {
    location.href = "https://figseu-technology.github.io/Signup.html";
 }
+$('#XProfile').html( UserName );
 
 let o_wave = 0;
 let o_wave_t = 0;
