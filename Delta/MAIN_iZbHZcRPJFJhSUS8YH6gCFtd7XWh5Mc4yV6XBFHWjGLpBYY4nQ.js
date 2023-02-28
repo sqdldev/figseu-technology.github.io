@@ -88,14 +88,100 @@ $('#color').on('click', e => {
                 colors = '#FFD300';
 	} else if (color == 28) {
                 colors = '#FFD300';
+	} else if (color == 29) {
+                colors = '#00B615';
+	} else if (color == 30) {
+                colors = '#00B615';
+	} else if (color == 31) {
+                colors = '#00B615';
+	} else if (color == 32) {
+                colors = '#00B615';
+	} else if (color == 33) {
+                colors = '#71A32C';
+	} else if (color == 34) {
+                colors = '#71A32C';
+	} else if (color == 35) {
+                colors = '#71A32C';
+	} else if (color == 36) {
+                colors = '#71A32C';
+	} else if (color == 37) {
+                colors = '#FFD300';
+	} else if (color == 38) {
+                colors = '#FFD300';
+	} else if (color == 39) {
+                colors = '#FFD300';
+	} else if (color == 40) {
+                colors = '#FFD300';
+	} else if (color == 41) {
+                colors = '#315067';
+	} else if (color == 42) {
+                colors = '#315067';
+	} else if (color == 43) {
+                colors = '#315067';
+	} else if (color == 44) {
+                colors = '#315067';
 	} else if (color == 45) {
                 colors = '#AFAA00';
 	} else if (color == 46) {
                 colors = '#AFAA00';
 	} else if (color == 47) {
                 colors = '#AFAA00';
+	} else if (color == 49) {
+                colors = '#B249A4';
+	} else if (color == 50) {
+                colors = '#B249A4';
 	} else if (color == 51) {
                 colors = '#37F3C3';
+	} else if (color == 52) {
+                colors = '#37F3C3';
+	} else if (color == 53) {
+                colors = '#37F3C3';
+	} else if (color == 54) {
+                colors = '#37F3C3';
+	} else if (color == 55) {
+                colors = '#FF0019';
+	} else if (color == 56) {
+                colors = '#FF0019';
+	} else if (color == 57) {
+                colors = '#005CFF';
+	} else if (color == 58) {
+                colors = '#005CFF';
+	} else if (color == 59) {
+                colors = '#FFD300';
+	} else if (color == 60) {
+                colors = '#FFD300';
+	} else if (color == 61) {
+                colors = '#E89C18';
+	} else if (color == 62) {
+                colors = '#E89C18';
+	} else if (color == 63) {
+                colors = '#E89C18';
+	} else if (color == 64) {
+                colors = '#E89C18';
+	} else if (color == 65) {
+                colors = '#00BACB';
+	} else if (color == 66) {
+                colors = '#00BACB';
+	} else if (color == 67) {
+                colors = '#00BACB';
+	} else if (color == 68) {
+                colors = '#00BACB';
+	} else if (color == 69) {
+                colors = '#00BACB';
+	} else if (color == 70) {
+                colors = '#00BACB';
+	} else if (color == 71) {
+                colors = '#00BACB';
+	} else if (color == 72) {
+                colors = '#00BACB';
+	} else if (color == 73) {
+                colors = '#00BACB';
+	} else if (color == 74) {
+                colors = '#00BACB';
+	} else if (color == 75) {
+                colors = '#00BACB';
+	} else if (color == 76) {
+                colors = '#00BACB';
 	} else if (color == 81) {
                 colors = '#00A548';
 	} else if (color == 82) {
