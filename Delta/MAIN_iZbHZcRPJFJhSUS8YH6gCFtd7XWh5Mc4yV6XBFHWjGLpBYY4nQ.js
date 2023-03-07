@@ -319,9 +319,9 @@ if (filer == 'Dec') {
 
 `);
 } else if (filer == 'Enc') {
-  $("#output").val(window.btoa(str + `
+  $("#output").val(window.btoa(unescape(encodeURIComponent(str + `
 
-`));
+`))));
 }
 var anceg = $("#output").val();
 var anccg = $("#output").val().length;
