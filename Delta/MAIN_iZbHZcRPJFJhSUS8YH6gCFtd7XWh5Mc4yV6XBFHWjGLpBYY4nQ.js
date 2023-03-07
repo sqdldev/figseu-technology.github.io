@@ -227,8 +227,7 @@ $('#color').on('click', e => {
 	} else if (color == 0) {
                 colors = '#191919';
 	} else {
-		$('#color_type').html('不明なオブジェクト');
-                colors = '#8E2720';
+                colors = '#FFFFFF';
 	}
 	$('#color').css('background-color', colors);
 });
@@ -314,9 +313,19 @@ data=
   data.forEach((r, i) => 
     str += "" + r.join(",") + "" + (i == data.length - 1? "": ",\n")
   );
+filer = $('#filer-select').val();
+if (filer == 'Dec') {
   $("#output").val(str + `
 
 `);
+} else if (filer == 'Enc') {
+  $("#output").val(str + `
+
+`);
+var cross = $("#output").val();
+var encoded = btoa(cross);
+$("#output").val(encoded);
+}
 var anceg = $("#output").val();
 var anccg = $("#output").val().length;
 $("#DGDR").html("行数 :" + gridLength);
