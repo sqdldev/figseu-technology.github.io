@@ -319,12 +319,9 @@ if (filer == 'Dec') {
 
 `);
 } else if (filer == 'Enc') {
-  $("#output").val(str + `
+  $("#output").val(window.btoa(str + `
 
-`);
-var cross = $("#output").val();
-var encoded = btoa(cross);
-$("#output").val(encoded);
+`));
 }
 var anceg = $("#output").val();
 var anccg = $("#output").val().length;
