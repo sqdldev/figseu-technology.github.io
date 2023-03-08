@@ -1,4 +1,5 @@
 let Stages = 0;
+location.href = "https://figseu-technology.github.io/UD/";
 
 function Submit() {
    Stages = $('#stage-select').val();
