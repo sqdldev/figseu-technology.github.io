@@ -18,8 +18,6 @@ if (fgnc == 45) {
    level = 6;
 } else if (fgnc == 52) {
    level = 7;
-   $('#stars').html('当該ステージは 利用規約9条3番違反 及び 当運営への挑発行為による業務執行妨害 により永久削除されました');
-   $('#play').hide();
 }
 let star = 0;let wave = 0;let wave_t = 0;let wave_th = 0;let wave_f = 0;let wave_fi = 0;let wave_s = 0;let wave_se = 0;let userAgent = window.navigator.userAgent.toLowerCase();wave = $.cookie('te_wave');wave_t = $.cookie('te_wave_t');wave_th = $.cookie('te_wave_th');wave_f = $.cookie('te_wave_f');wave_fi = $.cookie('te_wave_fi');wave_s = $.cookie('te_wave_s');wave_se = $.cookie('te_wave_se');
 let gya = Math.floor( Math.random() * 11 );$('#ruby').get(0);$('#rgw').get(0);$('#dia').get(0);$('#kya').get(0);$('#ef').get(0);$('#eft').get(0);$('#kya_e').get(0);$('#kya_g').get(0);$('#eft_g ').get(0);let data;let reqId;$.getJSON('bLYKUiRJJY7RYQZNbWtdA3ANGJgBnwJxDf5Z6yWiWa9DQ32Rzz.rse', d => {data = d;loadLevel(level);$('#PresentCode').hide();$('#play').click(start);$('#next').hide();$('#score').hide();$('#level-d').html('超難関');$('#level').html('　');$('#Waves').html('☆ × ？');
