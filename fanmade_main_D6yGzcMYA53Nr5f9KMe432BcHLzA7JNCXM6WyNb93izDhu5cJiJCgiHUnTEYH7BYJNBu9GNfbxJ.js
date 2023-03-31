@@ -27,7 +27,7 @@ let wave_s = 0;
 let wave_se = 0;
 let girls = Math.floor( Math.random() * 2 );
 let url = location.href;
-let fgnc = url.substr( 57 );
+let fgnc = decodeURIComponent(atob(url.substr( 65 )));
 let userAgent = window.navigator.userAgent.toLowerCase();
 wave = $.cookie('fi_wave');
 wave_t = $.cookie('fi_wave_t');
@@ -39,7 +39,7 @@ wave_se = $.cookie('fi_wave_se');
 let data;
 let reqId;
 $.getJSON('Entry-level.rse', d => {
-  data = d;
+  data = fgnc;
   loadLevel(level);
   $('#play').show();
   $('#play').click(start);
