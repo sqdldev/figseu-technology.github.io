@@ -51,14 +51,10 @@ if (fgnc == 1) {
    level = 1;
 } else if (fgnc == 3) {
    level = 7;
-   $('#stars').html('当該ステージは 利用規約9条3番違反 及び 当運営への挑発行為による業務執行妨害 により永久削除されました');
-   $('#play').hide();
 } else if (fgnc == 56) {
    level = 6;
 } else if (fgnc == 57) {
    level = 8;
-   $('#stars').html('当該ステージは 利用規約9条3番違反 及び 当運営への挑発行為による業務執行妨害 により永久削除されました');
-   $('#play').hide();
 }
 let data;
 let reqId;
