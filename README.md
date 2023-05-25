@@ -18,6 +18,8 @@
 
 [確認する](https://figseu-technology.github.io/RCN_6N7eGCtczZLUxhJAud24RSH4D6QCdbTJpM9nYpFtQetriKYnka.html)
 
+※ Rolling Sky Evolution は 5月からフリー素材になり、Rolling Sky Evolution のプロジェクトをコピーして自由にステージやオリジナルRSを作れるようになりました。
+
 <hr size="3"/>
 
 <a href="https://ko-fi.com/udalice">Rolling Sky Evolution を支援する</a>
