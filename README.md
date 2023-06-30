@@ -18,8 +18,6 @@
 
 [確認する](https://figseu-technology.github.io/RCN_6N7eGCtczZLUxhJAud24RSH4D6QCdbTJpM9nYpFtQetriKYnka.html)
 
-※ Rolling Sky Evolution は 5月からフリー素材になり、Rolling Sky Evolution のプロジェクトをコピーして自由にステージやオリジナルRSを作れるようになりました。
-
 <a href="https://github.com/Figseu-Technology/figseu-technology.github.io/releases/download/RSE_Infinity/RollingSkyEvolution_.zip">制作キットのダウンロード</a>
 
 <hr size="3"/>
@@ -34,4 +32,4 @@
 
 # 公式サーバー (Discord)
 
-https://discord.gg/TaJ9f9PAsW
+(閉鎖中)
