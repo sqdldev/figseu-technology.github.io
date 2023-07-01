@@ -8,7 +8,7 @@
 
 [◇◇ Play Now ◇◇](https://figseu-technology.github.io/)
 
-<a href="https://github.com/Figseu-Technology/figseu-technology.github.io/releases/download/RSE_v1.0%CE%94/FeXBrowser.apk">Download (FeX Browser)</a>
+<a href="https://github.com/Figseu-Technology/FeXBrowser/releases/download/FBX_Client-6.0.0/FeXBrowser_V6.0.1.apk">Download (FeX Browser)</a>
 
 <a href="https://github.com/Figseu-Technology/figseu-technology.github.io/releases/download/RSE_vE2.2/Rolling.Sky.Evolution.VerE2.2.zip">Download (旧バージョン)</a>
 
